@@ -7,3 +7,11 @@ build/
 *.pdb
 *.obj
 *.zip
+
+# Generated local game assets must never enter source or release packages.
+icons/
+*.cv2
+*.dat
+IconExtraction.log
+staging/
+dist/

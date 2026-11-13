@@ -1,0 +1,8 @@
+{
+  "name": "SokuMaxDamage",
+  "description": "A companion damage HUD for Touhou Hisoutensoku 1.10a. CN / JP / EN.",
+  "author": "HawkingChen",
+  "version": "@PROJECT_VERSION@",
+  "main": "WhatHurtsMost.dll",
+  "configFiles": ["WhatHurtsMost.ini"]
+}

@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   pull_request:
 permissions:
-  contents: write
+  contents: read
 jobs:
   windows:
     runs-on: windows-2022
@@ -14,46 +14,63 @@ jobs:
       - name: Configure x86
         run: cmake -S . -B build -A Win32 -DWHM_BUILD_TESTS=ON
       - name: Build Release
-        run: cmake --build build --config Release --target WhatHurtsMost whm_tests whm_effects_tests --parallel
-      - name: Test core
+        run: cmake --build build --config Release --target WhatHurtsMost whm_tests whm_effects_tests whm_assets_tests --parallel
+      - name: Run tests
         run: ctest --test-dir build -C Release --output-on-failure
       - name: Stage and validate release ZIP
+        id: package
         shell: pwsh
         run: |
           $ErrorActionPreference = 'Stop'
+          $version = (Get-Content VERSION -Raw).Trim()
+          if ($version -notmatch '^\d+\.\d+\.\d+$') { throw 'Invalid VERSION' }
+          $artifact = "SokuMaxDamage-v$version-win32"
           $root = Join-Path $PWD 'dist/WhatHurtsMost'
           cmake --install build --config Release --prefix $root
           if ($LASTEXITCODE -ne 0) { throw 'CMake install failed' }
-          $required = @('WhatHurtsMost.dll','FrameData.txt','MoveProfiles.txt','WikiMaxProfiles.txt','WhatHurtsMost.ini','MoveNames.tsv')
+          $required = @('WhatHurtsMost.dll','FrameData.txt','MoveProfiles.txt','WikiMaxProfiles.txt','WhatHurtsMost.ini','MoveNames.tsv','mod.json','README.md','README.en.md','README.ja.md','LICENSE','docs/BUILD.md','docs/hud-panel.png')
           foreach ($name in $required) {
             $p = Join-Path $root $name
             if (!(Test-Path -LiteralPath $p) -or (Get-Item -LiteralPath $p).Length -eq 0) { throw "Missing package file: $name" }
           }
-          $dllPath = Join-Path $root 'WhatHurtsMost.dll'
-          $data = [System.IO.File]::ReadAllBytes($dllPath)
+          $data = [IO.File]::ReadAllBytes((Join-Path $root 'WhatHurtsMost.dll'))
           if ($data.Length -lt 4096 -or $data[0] -ne 0x4d -or $data[1] -ne 0x5a) { throw 'Invalid PE/DLL header' }
           $pe = [BitConverter]::ToInt32($data, 0x3c)
           if ($pe -lt 64 -or $pe + 6 -ge $data.Length -or [BitConverter]::ToUInt16($data, $pe + 4) -ne 0x14c) { throw 'Expected Windows x86 DLL' }
-          Copy-Item deploy/INSTALL-STEAMDECK.txt (Join-Path $root 'INSTALL-STEAMDECK.txt')
-          $script = [IO.File]::ReadAllText((Join-Path $PWD 'deploy/install-steamdeck.sh')).Replace("`r`n", "`n")
-          [IO.File]::WriteAllText((Join-Path $root 'install-steamdeck.sh'), $script, [System.Text.UTF8Encoding]::new($false))
-          $lines = foreach ($name in ($required + 'install-steamdeck.sh' + 'INSTALL-STEAMDECK.txt')) {
+          $meta = Get-Content (Join-Path $root 'mod.json') -Raw | ConvertFrom-Json
+          if ($meta.name -ne 'SokuMaxDamage' -or $meta.main -ne 'WhatHurtsMost.dll' -or $meta.version -ne $version) {
+            throw 'Launcher metadata does not match package'
+          }
+          if (Test-Path (Join-Path $root 'icons')) { throw 'Game artwork must not be packaged' }
+          $lines = foreach ($name in $required) {
             $hash = (Get-FileHash -Algorithm SHA256 -LiteralPath (Join-Path $root $name)).Hash.ToLowerInvariant()
             "$hash  $name"
           }
-          [IO.File]::WriteAllLines((Join-Path $root 'SHA256SUMS.txt'), $lines, [System.Text.UTF8Encoding]::new($false))
-          New-Item -ItemType Directory -Force -Path 'dist' | Out-Null
-          Compress-Archive -Path (Join-Path $root '*') -DestinationPath 'dist/SokuMaxDamage-v0.4.0-win32.zip' -Force
+          [IO.File]::WriteAllLines((Join-Path $root 'SHA256SUMS.txt'), $lines, [Text.UTF8Encoding]::new($false))
+          $zip = "dist/$artifact.zip"
+          Compress-Archive -Path $root -DestinationPath $zip -Force
+          Add-Type -AssemblyName System.IO.Compression.FileSystem
+          $archive = [IO.Compression.ZipFile]::OpenRead((Join-Path $PWD $zip))
+          try {
+            foreach ($name in ($required + 'SHA256SUMS.txt')) {
+              if (!$archive.GetEntry("WhatHurtsMost/$name")) { throw "Missing ZIP entry: $name" }
+            }
+            foreach ($entry in $archive.Entries) {
+              if ($entry.FullName -notlike 'WhatHurtsMost/*' -or $entry.FullName -like '*/icons/*') {
+                throw "Unexpected ZIP entry: $($entry.FullName)"
+              }
+            }
+          } finally { $archive.Dispose() }
+          "artifact=$artifact" >> $env:GITHUB_OUTPUT
+          "zip=$zip" >> $env:GITHUB_OUTPUT
           Get-ChildItem $root | Select-Object Name,Length | Format-Table
-          Get-Item 'dist/SokuMaxDamage-v0.4.0-win32.zip' | Select-Object Name,Length | Format-Table
+          Get-Item $zip | Select-Object Name,Length | Format-Table
       - name: Upload release ZIP artifact
         if: github.event_name != 'pull_request'
         uses: actions/upload-artifact@v4
         with:
-          name: SokuMaxDamage-v0.4.0-win32
-          path: dist/SokuMaxDamage-v0.4.0-win32.zip
+          name: ${{ steps.package.outputs.artifact }}
+          path: ${{ steps.package.outputs.zip }}
           if-no-files-found: error
           retention-days: 30
-      # Releases are published manually with `gh release create` after a green
-      # run. The old one-off [package-test] prerelease step was removed: it
-      # hard-coded v0.3.0-test.2 and would overwrite that existing tag.
+      # Publishing a GitHub Release is a separate, explicit action.

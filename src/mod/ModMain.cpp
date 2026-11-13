@@ -14,6 +14,7 @@
 #include "HudText.hpp"
 #include "HudPalette.hpp"
 #include "FirstHit.hpp"
+#include "GameAssets.hpp"
 
 #include <windows.h>
 #include <algorithm>
@@ -73,21 +74,25 @@ static int (SokuLib::BattleManager::*g_originalProcess)() = nullptr;
 static void (SokuLib::BattleManager::*g_originalRender)() = nullptr;
 static void (SokuLib::BattleManager::*g_originalExit)() = nullptr;
 
+std::filesystem::path moduleFolder() {
+    wchar_t buf[32768]{};
+    const auto n=GetModuleFileNameW(g_module,buf,32768);
+    return n&&n<32768?std::filesystem::path(buf).parent_path():std::filesystem::path(L".");
+}
 std::string dllFolder() {
-    char buf[MAX_PATH] = {};
-    GetModuleFileNameA(g_module, buf, MAX_PATH);
-    std::string full(buf);
-    auto last = full.find_last_of("\\/");
-    return last == std::string::npos ? ".\\" : full.substr(0, last + 1);
+    // GDI's PNG loader expects UTF-8 before converting to UTF-16. Windows'
+    // ANSI module filename breaks image/data loading in non-ASCII folders.
+    const auto utf8=moduleFolder().u8string();
+    return std::string(utf8.begin(),utf8.end())+"/";
 }
 
 void saveHudPreferences() {
-    const std::string ini = dllFolder() + "WhatHurtsMost.ini";
-    static const char *const codes[] = {"CN", "JP", "EN"};
-    WritePrivateProfileStringA("HUD", "Language",
+    const auto ini=moduleFolder()/L"WhatHurtsMost.ini";
+    static const wchar_t *const codes[] = {L"CN", L"JP", L"EN"};
+    WritePrivateProfileStringW(L"HUD", L"Language",
         codes[std::clamp(g_language.load(), 0, 2)], ini.c_str());
-    WritePrivateProfileStringA("HUD", "Collapsed",
-        g_collapsed.load() ? "1" : "0", ini.c_str());
+    WritePrivateProfileStringW(L"HUD", L"Collapsed",
+        g_collapsed.load() ? L"1" : L"0", ini.c_str());
 }
 
 // Check that the SokuLib runtime enum values match the portable mapping.
@@ -565,7 +570,7 @@ void refreshPanel() {
         cls.lpszClassName = L"SokuMaxDamagePanel";
         RegisterClassW(&cls);
         g_panel = CreateWindowExW(WS_EX_TOOLWINDOW | WS_EX_NOACTIVATE,
-            cls.lpszClassName, L"SokuMaxDamage", WS_POPUP, 0, 0, 1, 1,
+            cls.lpszClassName, L"SokuMaxDamage · 什么最痛", WS_POPUP, 0, 0, 1, 1,
             game, nullptr, g_module, nullptr);
     }
     if (!g_panel) return;
@@ -624,6 +629,23 @@ void refreshPanel() {
 }
 
 DWORD WINAPI panelThread(void *) {
+    // Filesystem work runs outside DllMain and never calls into game code.
+    // Finish before the first paint, whose bitmap cache remembers missing art.
+    try {
+        wchar_t exe[32768]{},module[32768]{};
+        const auto exelen=GetModuleFileNameW(nullptr,exe,32768);
+        const auto modlen=GetModuleFileNameW(g_module,module,32768);
+        if(exelen&&exelen<32768&&modlen&&modlen<32768) {
+            const auto folder=std::filesystem::path(module).parent_path();
+            const auto result=whm::assets::extractIcons(
+                std::filesystem::path(exe).parent_path(),folder/L"icons");
+            std::ofstream log(folder/L"IconExtraction.log",std::ios::trunc);
+            log << "archives=" << result.archives << " generated=" << result.written
+                << " preserved=" << result.preserved << " failed=" << result.failed << "\n";
+        }
+    } catch(const std::exception &) {
+        OutputDebugStringA("SokuMaxDamage: icon extraction failed; using fallback icons.\n");
+    }
     SetTimer(nullptr, 0, 100, nullptr);
     MSG msg;
     while (GetMessageW(&msg, nullptr, 0, 0) > 0) {
@@ -794,20 +816,21 @@ void __fastcall onRender(SokuLib::BattleManager *mgr) {
 }
 
 void loadSettings() {
-    const std::string ini = dllFolder() + "WhatHurtsMost.ini";
-    g_allowUnverifiedProbes = GetPrivateProfileIntA("Damage", "EnableExperimentalFrameProbe", 1, ini.c_str()) != 0;
-    g_x = GetPrivateProfileIntA("HUD", "X", g_x, ini.c_str());
-    g_y = GetPrivateProfileIntA("HUD", "Y", g_y, ini.c_str());
-    g_w = std::max(170, std::min(400, static_cast<int>(GetPrivateProfileIntA("HUD", "Width", g_w, ini.c_str()))));
-    g_h = std::max(170, std::min(430, static_cast<int>(GetPrivateProfileIntA("HUD", "Height", g_h, ini.c_str()))));
-    char language[8] = {};
-    GetPrivateProfileStringA("HUD", "Language", "CN", language, sizeof(language), ini.c_str());
-    const std::string chosen(language);
-    g_language.store(chosen == "JP" ? 1 : chosen == "EN" ? 2 : 0);
-    g_collapsed.store(GetPrivateProfileIntA("HUD", "Collapsed", 0, ini.c_str()) != 0);
+    const auto folder=moduleFolder();
+    const auto ini=folder/L"WhatHurtsMost.ini";
+    g_allowUnverifiedProbes = GetPrivateProfileIntW(L"Damage", L"EnableExperimentalFrameProbe", 1, ini.c_str()) != 0;
+    g_x = GetPrivateProfileIntW(L"HUD", L"X", g_x, ini.c_str());
+    g_y = GetPrivateProfileIntW(L"HUD", L"Y", g_y, ini.c_str());
+    g_w = std::max(170, std::min(400, static_cast<int>(GetPrivateProfileIntW(L"HUD", L"Width", g_w, ini.c_str()))));
+    g_h = std::max(170, std::min(430, static_cast<int>(GetPrivateProfileIntW(L"HUD", L"Height", g_h, ini.c_str()))));
+    wchar_t language[8] = {};
+    GetPrivateProfileStringW(L"HUD", L"Language", L"CN", language, 8, ini.c_str());
+    const std::wstring chosen(language);
+    g_language.store(chosen == L"JP" ? 1 : chosen == L"EN" ? 2 : 0);
+    g_collapsed.store(GetPrivateProfileIntW(L"HUD", L"Collapsed", 0, ini.c_str()) != 0);
     // 1602 sourced rows: character, card, notation, zh-CN, en, ja, source.
     // Index 0/1/2 of names follows HudLanguage (Chinese/Japanese/English).
-    std::ifstream names(dllFolder()+"MoveNames.tsv");
+    std::ifstream names(folder/L"MoveNames.tsv");
     std::string nameLine;
     while(std::getline(names,nameLine)) {
         if(nameLine.empty()||nameLine[0]=='#')continue;
@@ -819,7 +842,7 @@ void loadSettings() {
                 MoveNameEntry{{cells[3],cells[5],cells[4]}};
         } catch(...) {}
     }
-    std::ifstream data(dllFolder()+"FrameData.txt");
+    std::ifstream data(folder/L"FrameData.txt");
     std::string line;
     while(std::getline(data,line)) {
         if(line.empty()||line[0]=='#')continue;
@@ -828,9 +851,9 @@ void loadSettings() {
         if(cells.size()!=7)continue;
         try { g_staticMoves.push_back({std::stoi(cells[0]),std::stoi(cells[2]),std::stoi(cells[3]),cells[1],cells[4],cells[5]}); } catch(...) {}
     }
-    std::ifstream in(dllFolder() + "MoveProfiles.txt");
+    std::ifstream in(folder/L"MoveProfiles.txt");
     if (in) g_catalog.read(in);
-    std::ifstream wiki(dllFolder() + "WikiMaxProfiles.txt");
+    std::ifstream wiki(folder/L"WikiMaxProfiles.txt");
     if (wiki) g_wikiMax.read(wiki);
 }
 } // anonymous namespace

@@ -1,4 +1,5 @@
 # character	card	notation	zh-CN	en	ja	source
+# ja: checked against original TH12.3 v1.10a data/csv/<character>/spellcard.cv1; spelling and punctuation preserved.
 0	-1	66	66	66	66	https://soku.cleista.cc/framedata/reimu/66
 0	-1	44	44	44	44	https://soku.cleista.cc/framedata/reimu/44
 0	-1	j.66	j.66	j.66	j.66	https://soku.cleista.cc/framedata/reimu/j66
@@ -78,7 +79,7 @@
 0	201	j.sc201	神灵「梦想封印」	Divine Spirit "Fantasy Seal"	神霊「夢想封印」	https://soku.cleista.cc/framedata/reimu/sc201-divine-spirit-fantasy-seal-651
 0	207	j.sc207	结界「扩散结界」	Boundary "Expanding Boundary"	結界「拡散結界」	https://soku.cleista.cc/framedata/reimu/sc207-boundary-expanding-boundary-657
 0	208	j.sc208	珠符「明珠暗投」	Jewel Sign "Concealed Orbs of Light"	珠符「明珠暗投」	https://soku.cleista.cc/framedata/reimu/sc208-jewel-sign-concealed-orbs-of-light-658
-0	219	sc219	「梦想天生」（发动）	"Fantasy Heaven" (Activation)	「夢想天生」（発動）	https://soku.cleista.cc/framedata/reimu/sc219-fantasy-heaven-activation
+0	219	sc219	「梦想天生」（发动）	"Fantasy Heaven" (Activation)	「夢想天生」	https://soku.cleista.cc/framedata/reimu/sc219-fantasy-heaven-activation
 1	-1	66	66	66	66	https://soku.cleista.cc/framedata/marisa/66
 1	-1	44	44	44	44	https://soku.cleista.cc/framedata/marisa/44
 1	-1	j.66	j.66	j.66	j.66	https://soku.cleista.cc/framedata/marisa/j66
@@ -872,7 +873,7 @@
 10	200	j.sc200	惑视「离圆花冠(Corolla Vision)」（花冠幻视）	Charming Look "Corolla Vision"	惑視「離円花冠(カローラヴィジョン)」	https://soku.cleista.cc/framedata/reisen/sc200-charming-look-corolla-vision-650
 10	202	j.sc202	幻爆「近眼花火(Mind Star Mine)」（心灵烟花）	Illusion Bomb "Mind Starmine"	幻爆「近眼花火(マインドスターマイン)」	https://soku.cleista.cc/framedata/reisen/sc202-illusion-bomb-mind-starmine-652
 10	205	j.sc205	「幻胧月睨(Lunatic Red Eyes)」（疯狂红眼）	Lunatic Red Eyes	「幻朧月睨(ルナティックレッドアイズ)」	https://soku.cleista.cc/framedata/reisen/sc205-lunatic-red-eyes-655
-10	209	sc209	生药「国士无双之药」（发动）	Life Elixir "Grand Patriot's Elixir" (Activation)	生薬「国士無双の薬」（発動）	https://soku.cleista.cc/framedata/reisen/sc209-life-elixir-grand-patriots-elixir-activation
+10	209	sc209	生药「国士无双之药」（发动）	Life Elixir "Grand Patriot's Elixir" (Activation)	生薬「国士無双の薬」	https://soku.cleista.cc/framedata/reisen/sc209-life-elixir-grand-patriots-elixir-activation
 11	-1	66	66	66	66	https://soku.cleista.cc/framedata/aya/66
 11	-1	44	44	44	44	https://soku.cleista.cc/framedata/aya/44
 11	-1	j.66	j.66	j.66	j.66	https://soku.cleista.cc/framedata/aya/j66
@@ -1105,7 +1106,7 @@
 13	200	j.sc200	电符「雷鼓弹」	Electric Sign "Thunder Drum Shot"	電符「雷鼓弾」	https://soku.cleista.cc/framedata/iku/sc200-electric-sign-thunder-drum-shot-650
 13	210	j.sc210	龙鱼「龙宫使者的游泳弹」	Dragonfish "Swimming Oarfish Shot"	龍魚「龍宮の使い遊泳弾」	https://soku.cleista.cc/framedata/iku/sc210-dragonfish-swimming-oarfish-shot-660
 13	211	j.sc211	珠符「五爪龙之珠」	Orb Sign "Orb of the Five-Clawed Dragon"	珠符「五爪龍の珠」	https://soku.cleista.cc/framedata/iku/sc211-orb-sign-orb-of-the-five-clawed-dragon-661
-13	208	sc208	羽衣「羽衣若时」（发动）	Angel's Raiment "Veils like Time" (Activation)	羽衣「羽衣は時の如く」（発動）	https://soku.cleista.cc/framedata/iku/sc208-angels-raiment-veils-like-time-activation
+13	208	sc208	羽衣「羽衣若时」（发动）	Angel's Raiment "Veils like Time" (Activation)	羽衣「羽衣は時の如く」	https://soku.cleista.cc/framedata/iku/sc208-angels-raiment-veils-like-time-activation
 14	-1	66	66	66	66	https://soku.cleista.cc/framedata/tenshi/66
 14	-1	44	44	44	44	https://soku.cleista.cc/framedata/tenshi/44
 14	-1	j.66	j.66	j.66	j.66	https://soku.cleista.cc/framedata/tenshi/j66
@@ -1506,8 +1507,8 @@
 18	205	j.sc205	核符「Creeping Sun」（缓行的太阳）	Nuclear Sign "Creeping Sun"	核符「クリーピングサン」	https://soku.cleista.cc/framedata/utsuho/sc205-nuclear-sign-creeping-sun-655
 18	209	j.sc209	鸦符「八咫乌俯冲」	Crow Sign "Yatagarasu Dive"	鴉符「八咫烏ダイブ」	https://soku.cleista.cc/framedata/utsuho/sc209-crow-sign-yatagarasu-dive-659
 18	212	j.sc212	「Subterranean Sun」（地底太阳）	"Subterranean Sun"	「サブタレイニアンサン」	https://soku.cleista.cc/framedata/utsuho/sc212-subterranean-sun-662
-18	214	sc214	「Abyss Nova」（深渊新星）（发动）	"Abyss Nova" (Activation)	「アビスノヴァ」（発動）	https://soku.cleista.cc/framedata/utsuho/sc214-abyss-nova-activation
-18	211	sc211	控制「Self Tokamak」（自动托卡马克装置）（光环冲刺）	Control "Self Tokamak" (Aura dash)	制御「セルフトカマク」（オーラダッシュ）	https://soku.cleista.cc/framedata/utsuho/sc211-control-self-tokamak-aura-dash
+18	214	sc214	「Abyss Nova」（深渊新星）（发动）	"Abyss Nova" (Activation)	「アビスノヴァ」	https://soku.cleista.cc/framedata/utsuho/sc214-abyss-nova-activation
+18	211	sc211	控制「Self Tokamak」（自动托卡马克装置）（光环冲刺）	Control "Self Tokamak" (Aura dash)	制御「セルフトカマク」	https://soku.cleista.cc/framedata/utsuho/sc211-control-self-tokamak-aura-dash
 19	-1	66	66	66	66	https://soku.cleista.cc/framedata/suwako/66
 19	-1	44	44	44	44	https://soku.cleista.cc/framedata/suwako/44
 19	-1	j.66	j.66	j.66	j.66	https://soku.cleista.cc/framedata/suwako/j66

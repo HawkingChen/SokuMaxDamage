@@ -493,7 +493,7 @@ inline void paintStyledPanel(HWND window, const PanelView &v, const std::string 
             write(L"—",x+98,102,248,49,46,faded,DT_CENTER);
         }
         write(localized(focused?whm::HudTextKey::Theoretical:whm::HudTextKey::MatchBest),
-              x+109,151,240,17,11,RGB(187,162,147),DT_CENTER,L"Segoe UI");
+              x+109,151,240,17,11,RGB(187,162,147),DT_CENTER);
     };
     highlight(224,whm::HudTextKey::Strongest,v.strongest,
               whm::HudTextKey::NoSkill,true);
