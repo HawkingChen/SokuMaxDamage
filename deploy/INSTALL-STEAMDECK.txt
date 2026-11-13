@@ -1,31 +1,52 @@
-SokuMaxDamage v0.3.0-test.2 — 安装说明 (Steam Deck / Proton)
+SokuMaxDamage v0.4.0 — 安装说明（Steam Deck / Proton）
 =================================================
 
-此 ZIP 是《东方非想天则》1.10a 的实验性 MOD 构建（非稳定版）。
-本版修正联网对战主客机 P1/P2 的本机角色选择，避免显示对方手牌、技能和伤害纪录。
-已知限制：没有随包提供卡牌 icons/ PNG 素材，需保留你此前安装版本的 icons/。
-新增图1＋图2风格：制御棒卡堆、金紫边框、夜景剪影、发光数字、固定底部 SC。
-目前不保证所有招式/天气/角色 Buff 的伤害估值准确，也未完成联网测试。
+《东方非想天则》TH12.3 v1.10a 的本地只读伤害 HUD MOD（实验性构建）。
+本版为草图 v3 面板：大号共通百分比 + 灰色根性 + 独立必杀/SC 类型倍率、
+连续热度渐变、因素卡堆、三语言切换、右下 2×2 控制区与折叠＋，
+并统一了根性数值格式与记法（只显示一次全大写的 J2A / F5A）。
+
+已知限制：发布包不含卡牌 icons/ PNG 素材，需保留此前安装版本的 icons/；
+联网对战、观战、回放尚未完成真机验收；伤害数值为参考估算，不是逐帧模拟。
+
+包内文件：
+  WhatHurtsMost.dll        Windows x86 (PE32) 模块
+  FrameData.txt            1,372 条带来源的 Cleista 静态参考记录
+  MoveNames.tsv            1,602 条中/英/日名称
+  MoveProfiles.txt         手工补充数据
+  WikiMaxProfiles.txt      Wiki 最大伤害数据
+  WhatHurtsMost.ini        配置样例
+  install-steamdeck.sh     备份优先的安装脚本
+  INSTALL-STEAMDECK.txt    本说明
+  SHA256SUMS.txt           上述 8 个文件的 SHA256 校验清单
 
 安装：
-1. 完全退出 TH123、SokuLauncher 和正在使用游戏文件的程序。
-2. 将 ZIP 解压到任意目录；不要覆盖原游戏整个目录。
-3. 在 Steam Deck 桌面模式打开 Konsole，进入解压目录：
-   cd "/path/to/extracted"
-   bash install-steamdeck.sh /run/media/deck/share/fxtz/th123
-4. 脚本自动备份原有 modules/WhatHurtsMost，并只替换 DLL 和数据/配置文件；
-   原有 icons/、art/、其它 MOD、游戏文件、SokuLauncher/SokuModLoader 配置保留。
-5. 如果是第一次安装，需要在实际使用的 SWRSToys/SokuModLoader 模块配置中启用
-   modules/WhatHurtsMost/WhatHurtsMost.dll；
-   你此前已安装 0.2.0-test，通常无需重复配置。
-6. 推荐先用 VS Player 或练习模式确认可进入/退出、不卡死、扩展窗口能显示。
+1. 解压 ZIP 到任意目录，不要覆盖整个游戏目录。
+2. 桌面模式打开 Konsole，进入解压目录：
+     cd "/path/to/extracted"
+     bash install-steamdeck.sh /run/media/deck/share/fxtz/th123
+3. 脚本先把原有 modules/WhatHurtsMost/ 整目录备份到
+   ~/Backups/SokuMaxDamage/<时间戳>/，再只替换 6 个文件：
+   WhatHurtsMost.dll、FrameData.txt、MoveProfiles.txt、
+   WikiMaxProfiles.txt、WhatHurtsMost.ini、MoveNames.tsv。
+   原有 icons/、art/、其它 MOD、游戏文件与 SWRSToys/SokuModLoader 配置保留。
+4. 首次安装需在实际使用的模块配置中启用：
+     WhatHurtsMost=modules/WhatHurtsMost/WhatHurtsMost.dll
+5. 建议先用 VS Player 或练习模式确认可进入/退出、不卡死、面板能显示。
 
-回滚：脚本会打印备份目录，退出游戏后将备份中全部内容复制回
+脚本会检查游戏/启动器是否仍在运行并要求先退出。在 Steam Deck 上也可以
+不退出游戏，按同样的 6 文件白名单手动替换，重启游戏后生效；
+此时请务必自行先做整目录备份。
+
+回滚：脚本会打印备份目录。退出游戏后把备份内容复制回
  /run/media/deck/share/fxtz/th123/modules/WhatHurtsMost/
-（例如 cp -a /home/deck/Backups/SokuMaxDamage/test-某个时间/. /run/media/deck/share/fxtz/th123/modules/WhatHurtsMost/）
+例如：
+ cp -a /home/deck/Backups/SokuMaxDamage/<时间戳>/. \
+       /run/media/deck/share/fxtz/th123/modules/WhatHurtsMost/
 
 注意：
-- 没有游戏内点击操作，SC 底部统一排布，按实际手牌顺序更新。
-- 额外 PNG 背景可选 art/panel-bg.png；不提供时使用内置夜景。
-- 伤害估值依据运行时倍率和 1372 条 Cleista 参考数据，部分值标示估算。
-- 本包由 Windows x86 GitHub Actions 自动构建，未在本会话中操作 Steam Deck 实机。
+- 面板在游戏窗口下方，由独立 UI 线程绘制；非置顶，失焦或非对战场景自动隐藏。
+- 右下 2×2 控制区切换 CN / JP / EN 并收起面板，偏好写入 WhatHurtsMost.ini。
+- 可选 art/panel-bg.png 作为自定义背景；不提供时使用内置夜景，缺卡图时绘制占位图。
+- MOD 只读游戏状态，不修改伤害、网络与 RNG。
+- 本包由 Windows x86 GitHub Actions 构建，SHA256SUMS.txt 可用于逐项校验。
