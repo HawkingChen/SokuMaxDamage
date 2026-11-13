@@ -25,7 +25,7 @@ ctest --test-dir build -C Release --output-on-failure
 cmake --install build --config Release --prefix staging
 ```
 
-CMake fetches pinned upstream [SokuLib](https://github.com/SokuDev/SokuLib) and [ModTemplate](https://github.com/SokuDev/ModTemplate) sources. The Windows x86 DLL build is **not yet verified**. A GitHub Actions workflow runs the Windows build/tests on pushes and uploads an **unverified** CI artifact, not a release.
+CMake fetches pinned upstream [SokuLib](https://github.com/SokuDev/SokuLib) and [ModTemplate](https://github.com/SokuDev/ModTemplate) sources. Windows x86 compilation and linking, as well as portable core tests, **passed GitHub Actions on 2026-11-13** ([CI run](https://github.com/HawkingChen/SokuMaxDamage/actions/runs/43396029191)). This confirms buildability only: **loading in the game and online compatibility remain unverified**. The workflow does not publish artifacts or releases.
 
 ## Installation (unverified)
 
