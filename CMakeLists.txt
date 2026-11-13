@@ -51,7 +51,7 @@ if(WIN32)
         FetchContent_Populate(whm_template)
     endif()
     add_library(WhatHurtsMost MODULE src/mod/ModMain.cpp)
-    target_compile_definitions(WhatHurtsMost PRIVATE DIRECTINPUT_VERSION=0x0800 _CRT_SECURE_NO_WARNINGS)
+    target_compile_definitions(WhatHurtsMost PRIVATE NOMINMAX DIRECTINPUT_VERSION=0x0800 _CRT_SECURE_NO_WARNINGS)
     target_include_directories(WhatHurtsMost PRIVATE "${whm_sokulib_SOURCE_DIR}/directx")
     target_link_libraries(WhatHurtsMost PRIVATE whm_core SokuLib shlwapi
         "${whm_template_SOURCE_DIR}/lib/d3d9.lib"
