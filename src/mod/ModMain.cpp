@@ -216,7 +216,7 @@ std::vector<HudRow> composeHUD(const SokuLib::BattleManager *mgr) {
         return static_cast<int>(m.damage*multiplier*whm::gutsFactor(enemy->HP));
     };
     for(const auto &m:g_staticMoves){
-        if(m.character!=view.character||m.kind=="spell")continue;
+        if(m.character!=view.character||m.kind!="skill")continue; // A non-SC featured move must be a special skill.
         if(m.kind=="skill" && (m.card<100||m.card>=132||own->skilledSkillLevel[m.card-100]<0))continue;
         int damage=amount(m);
         if(damage>view.strongest.damage)view.strongest={view.character,m.card,damage,m.name+" · "+m.notation,true};
