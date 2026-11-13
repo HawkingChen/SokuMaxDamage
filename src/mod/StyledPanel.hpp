@@ -165,19 +165,28 @@ inline void paintStyledPanel(HWND window, const PanelView &v, const std::string 
     };
     auto number = [&](const std::wstring &value, int x, int y, int w, int h,
                       int fontSize, UINT alignment = DT_CENTER) {
-        // Deliberately use text-outline layers, not AlphaBlend: keeps the same
-        // GDI import set as the verified game-compatible window.
-        const int offsets[][2] = {{-3,0},{3,0},{0,-3},{0,3},
-                                  {-2,-2},{2,2},{-2,2},{2,-2}};
-        for (auto &p : offsets)
-            write(value, x+p[0], y+p[1], w, h, fontSize,
-                  RGB(113, 58, 39), alignment, L"Georgia", true);
-        for (int dx=-1; dx<=1; ++dx)
-            for (int dy=-1; dy<=1; ++dy)
-                write(value, x+dx, y+dy, w, h, fontSize,
-                      RGB(225, 124, 57), alignment, L"Georgia", true);
-        write(value, x, y-1, w, h, fontSize, RGB(255, 238, 191),
-              alignment, L"Georgia", true);
+        // Use ONE font for all glow passes (rather than creating ~20 per
+        // number every 100ms) to keep the UI thread lightweight on Proton.
+        HFONT font=CreateFontW(-fontSize,0,0,0,FW_BOLD,TRUE,FALSE,FALSE,
+                              DEFAULT_CHARSET,OUT_DEFAULT_PRECIS,
+                              CLIP_DEFAULT_PRECIS,CLEARTYPE_QUALITY,
+                              DEFAULT_PITCH,L"Georgia");
+        HGDIOBJ old=SelectObject(dc,font);
+        auto drawNumber=[&](int dx,int dy,COLORREF color) {
+            RECT r{x+dx,y+dy,x+w+dx,y+h+dy};
+            SetTextColor(dc,color);
+            DrawTextW(dc,value.c_str(),-1,&r,alignment|DT_VCENTER|
+                      DT_SINGLELINE|DT_END_ELLIPSIS|DT_NOPREFIX);
+        };
+        const int offsets[][2]={{-3,0},{3,0},{0,-3},{0,3},
+                                {-2,-2},{2,2},{-2,2},{2,-2}};
+        for(const auto &p:offsets) drawNumber(p[0],p[1],RGB(113,58,39));
+        for(int dx=-1;dx<=1;++dx)
+            for(int dy=-1;dy<=1;++dy)
+                drawNumber(dx,dy,RGB(225,124,57));
+        drawNumber(0,-1,RGB(255,238,191));
+        SelectObject(dc,old);
+        DeleteObject(font);
     };
     auto art = [&](int ch, int card, int x, int y, int w, int h,
                    const std::wstring &fallback) {
