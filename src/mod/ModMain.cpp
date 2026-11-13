@@ -203,7 +203,11 @@ std::vector<HudRow> composeHUD(const SokuLib::BattleManager *mgr) {
     const auto *own=viewPlayer(mgr,ownSide());const auto *enemy=viewPlayer(mgr,1-ownSide());
     PanelView view;view.character=static_cast<int>(own->characterIndex);
     view.attack=own->attackPower;view.defense=enemy->defensePower;
-    view.rods=static_cast<int>(own->controlRod);view.dolls=static_cast<int>(own->sacrificialDolls);
+    view.opponentCharacter=static_cast<int>(enemy->characterIndex);
+    view.rods=static_cast<int>(own->controlRod);
+    view.dolls=static_cast<int>(enemy->sacrificialDolls); // Damage dealt: use opponent's defense cards.
+    view.skillMultiplier=own->specialDmgMultiplier;
+    view.spellMultiplier=own->spellDmgMultiplier;
     view.weather=static_cast<int>(SokuLib::activeWeather);
     auto amount=[&](const StaticMove &m){
         double type=m.kind=="spell"?own->spellDmgMultiplier:m.kind=="skill"?own->specialDmgMultiplier:1.;
@@ -226,7 +230,7 @@ std::vector<HudRow> composeHUD(const SokuLib::BattleManager *mgr) {
     const auto &best=g_record.best();
     if(best.attributed&&best.damage>0){
         int card=best.actionId>=600&&best.actionId<620?best.actionId-400:-1;
-        view.record={view.character,card,best.damage,card>=0?cardName(*own,card):"动作 "+std::to_string(best.actionId),false};
+        view.record={view.character,card,best.damage,card>=0?cardName(*own,card):actionName(*own,best.actionId),false};
     }
     {std::lock_guard<std::mutex> guard(g_panelMutex);g_panelView=std::move(view);}
     return {{"什么最痛",-1}};
