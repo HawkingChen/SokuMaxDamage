@@ -28,7 +28,7 @@ jobs:
           $root = Join-Path $PWD 'dist/SokuMaxDamageHUD'
           cmake --install build --config Release --prefix $root
           if ($LASTEXITCODE -ne 0) { throw 'CMake install failed' }
-          $required = @('SokuMaxDamageHUD.dll','FrameData.txt','MoveProfiles.txt','WikiMaxProfiles.txt','SokuMaxDamageHUD.ini','MoveNames.tsv','mod.json','README.md','README.en.md','README.ja.md','LICENSE','docs/BUILD.md','docs/hud-panel.png')
+          $required = @('SokuMaxDamageHUD.dll','FrameData.txt','MoveProfiles.txt','WikiMaxProfiles.txt','SokuMaxDamageHUD.ini','MoveNames.tsv','mod.json','README.md','README.en.md','README.ja.md','LICENSE','docs/BUILD.md','docs/hud-meiling.png','docs/hud-youmu.png')
           foreach ($name in $required) {
             $p = Join-Path $root $name
             if (!(Test-Path -LiteralPath $p) -or (Get-Item -LiteralPath $p).Length -eq 0) { throw "Missing package file: $name" }
