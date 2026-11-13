@@ -10,6 +10,8 @@
 #include <utility>
 #include <vector>
 
+static_assert(L"中文"[0] == 0x4E2D, "Compile HUD source as UTF-8 (/utf-8).");
+
 struct PanelCard {
     int character = -1, card = -1, damage = 0;
     std::string name;

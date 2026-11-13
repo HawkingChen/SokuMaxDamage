@@ -7,6 +7,7 @@
 #include "RecordTracker.hpp"
 #include "FrameProbe.hpp"
 #include "StyledPanel.hpp"
+#include "PanelVisibility.hpp"
 #include "LocalPlayerSide.hpp"
 
 #include <windows.h>
@@ -266,6 +267,12 @@ void refreshPanel() {
             game, nullptr, g_module, nullptr);
     }
     if (!g_panel) return;
+    // Owned popups can remain above unrelated windows under Wine. Keep the
+    // companion visible only while this game's process owns the foreground.
+    if(!panelOwnsForeground(game)) {
+        ShowWindow(g_panel,SW_HIDE);
+        return;
+    }
     const bool battleScene = SokuLib::sceneId == SokuLib::SCENE_BATTLE ||
         SokuLib::sceneId == SokuLib::SCENE_BATTLESV || SokuLib::sceneId == SokuLib::SCENE_BATTLECL;
     if (IsIconic(game) || !battleScene || !g_panelWanted.load()) { ShowWindow(g_panel, SW_HIDE); return; }
@@ -287,9 +294,9 @@ void refreshPanel() {
     }
     size_t rowCount;
     { std::lock_guard<std::mutex> guard(g_panelMutex); rowCount = g_panelRows.size(); }
-    SetWindowPos(g_panel, nullptr, frame.left, frame.bottom, frame.right-frame.left,
+    SetWindowPos(g_panel, HWND_NOTOPMOST, frame.left, frame.bottom, frame.right-frame.left,
         std::max<LONG>(180, (frame.right-frame.left)*290/1000),
-        SWP_NOACTIVATE | SWP_NOZORDER | SWP_SHOWWINDOW);
+        SWP_NOACTIVATE | SWP_SHOWWINDOW);
     InvalidateRect(g_panel, nullptr, FALSE);
     // The game render thread does not pump a standard Win32 message loop.
     // Deliver WM_PAINT synchronously instead of leaving it queued forever.

@@ -70,3 +70,6 @@ Do not assume normal online 1v1 or Steam Deck/Proton compatibility until tested.
 Detailed private design decisions and agent handoff are maintained separately in **AgentHandoff**. This public source repository is for code, technical usage and reproducible tests, not private design documents.
 
 License: MIT (see `LICENSE`).
+### UTF-8 and foreground visibility
+
+MSVC builds explicitly use `/utf-8`; a compile-time Chinese-literal check rejects an incorrectly decoded HUD source file. The companion is non-topmost and hides while another process owns the foreground, then returns during a supported battle when the game regains focus. Independent Windows rendering and two-process focus checks were performed; actual game mode transitions still require runtime verification.
