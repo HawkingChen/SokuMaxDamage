@@ -73,3 +73,11 @@ License: MIT (see `LICENSE`).
 ### UTF-8 and foreground visibility
 
 MSVC builds explicitly use `/utf-8`; a compile-time Chinese-literal check rejects an incorrectly decoded HUD source file. The companion is non-topmost and hides while another process owns the foreground, then returns during a supported battle when the game regains focus. Independent Windows rendering and two-process focus checks were performed; actual game mode transitions still require runtime verification.
+
+### Damage-effect stacks
+
+The effect area now leads with separate effective skill and spell totals (attack × target defense × type multiplier × the existing HP approximation). Card stacks underneath explain active effects; these rows do not reapply their displayed factors. Rods and target dolls use original shared system-card artwork (`icons/common-18.png`, `icons/common-4.png`). Local game assets may be extracted for personal installation; they are not distributed in this source repository.
+
+Named state readers cover elixir, vampire/enlightenment defense, Suwako curse states, type/weather multipliers, CH-only bonuses, reflection, life steal and weather suppression. State layouts are based on SokuLib plus the publicly documented web-engine implementation. Snapshot tests verify handling and no-double-counting, but do not prove each original-game state has been exercised. Residual effective multipliers are shown without guessing a specific skill name. CH and reflection are marked conditional/separate and are not multiplied into the entire reference move.
+
+`config/MoveNames.tsv` retains 1,602 move-name rows in Chinese, English and Japanese, with character/card/notation and source links for future language selection. This does not introduce a language-switching interface yet.

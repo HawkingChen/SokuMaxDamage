@@ -1,0 +1,1603 @@
+# character	card	notation	zh-CN	en	ja	source
+0	-1	66	66	66	66	https://soku.cleista.cc/framedata/reimu/66
+0	-1	44	44	44	44	https://soku.cleista.cc/framedata/reimu/44
+0	-1	j.66	j.66	j.66	j.66	https://soku.cleista.cc/framedata/reimu/j66
+0	-1	j.44	j.44	j.44	j.44	https://soku.cleista.cc/framedata/reimu/j44
+0	-1	5A	5A	5A	5A	https://soku.cleista.cc/framedata/reimu/5a
+0	-1	f.5A	f.5A	f.5A	f.5A	https://soku.cleista.cc/framedata/reimu/f5a
+0	-1	6A	6A	6A	6A	https://soku.cleista.cc/framedata/reimu/6a
+0	-1	2A	2A	2A	2A	https://soku.cleista.cc/framedata/reimu/2a
+0	-1	3A	3A	3A	3A	https://soku.cleista.cc/framedata/reimu/3a
+0	-1	66A	66A	66A	66A	https://soku.cleista.cc/framedata/reimu/66a
+0	-1	j.5A	j.5A	j.5A	j.5A	https://soku.cleista.cc/framedata/reimu/j5a
+0	-1	j.6A	j.6A	j.6A	j.6A	https://soku.cleista.cc/framedata/reimu/j6a
+0	-1	j.2A	j.2A	j.2A	j.2A	https://soku.cleista.cc/framedata/reimu/j2a
+0	-1	j.8A	j.8A	j.8A	j.8A	https://soku.cleista.cc/framedata/reimu/j8a
+0	-1	5AA	5AA	5AA	5AA	https://soku.cleista.cc/framedata/reimu/5aa
+0	-1	5AAA	5AAA	5AAA	5AAA	https://soku.cleista.cc/framedata/reimu/5aaa
+0	-1	5AAAA	5AAAA	5AAAA	5AAAA	https://soku.cleista.cc/framedata/reimu/5aaaa
+0	-1	4A	4A	4A	4A	https://soku.cleista.cc/framedata/reimu/4a
+0	-1	5B	5B	5B	5B	https://soku.cleista.cc/framedata/reimu/5b
+0	-1	6B	6B	6B	6B	https://soku.cleista.cc/framedata/reimu/6b
+0	-1	2B	2B	2B	2B	https://soku.cleista.cc/framedata/reimu/2b
+0	-1	j.5B	j.5B	j.5B	j.5B	https://soku.cleista.cc/framedata/reimu/j5b
+0	-1	j.2B	j.2B	j.2B	j.2B	https://soku.cleista.cc/framedata/reimu/j2b
+0	-1	66B	66B	66B	66B	https://soku.cleista.cc/framedata/reimu/66b
+0	-1	5C	5C	5C	5C	https://soku.cleista.cc/framedata/reimu/5c
+0	-1	2C	2C	2C	2C	https://soku.cleista.cc/framedata/reimu/2c
+0	-1	j.5C	j.5C	j.5C	j.5C	https://soku.cleista.cc/framedata/reimu/j5c
+0	-1	j.2C	j.2C	j.2C	j.2C	https://soku.cleista.cc/framedata/reimu/j2c
+0	-1	66C	66C	66C	66C	https://soku.cleista.cc/framedata/reimu/66c
+0	100	236B	博丽护符	Hakurei Amulet	博麗アミュレット	https://soku.cleista.cc/framedata/reimu/236b-hakurei-amulet
+0	100	236C	博丽护符	Hakurei Amulet	博麗アミュレット	https://soku.cleista.cc/framedata/reimu/236c-hakurei-amulet
+0	100	j.236B	博丽护符	Hakurei Amulet	博麗アミュレット	https://soku.cleista.cc/framedata/reimu/j236b-hakurei-amulet
+0	100	j.236C	博丽护符	Hakurei Amulet	博麗アミュレット	https://soku.cleista.cc/framedata/reimu/j236c-hakurei-amulet
+0	104	236B	妖怪破坏者	Youkai Buster	妖怪バスター	https://soku.cleista.cc/framedata/reimu/236b-youkai-buster
+0	104	236C	妖怪破坏者	Youkai Buster	妖怪バスター	https://soku.cleista.cc/framedata/reimu/236c-youkai-buster
+0	104	j.236B	妖怪破坏者	Youkai Buster	妖怪バスター	https://soku.cleista.cc/framedata/reimu/j236b-youkai-buster
+0	104	j.236C	妖怪破坏者	Youkai Buster	妖怪バスター	https://soku.cleista.cc/framedata/reimu/j236c-youkai-buster
+0	108	236B	扩散灵符	Spread Amulet	拡散アミュレット	https://soku.cleista.cc/framedata/reimu/236b-spread-amulet
+0	108	236C	扩散灵符	Spread Amulet	拡散アミュレット	https://soku.cleista.cc/framedata/reimu/236c-spread-amulet
+0	108	j.236B	扩散灵符	Spread Amulet	拡散アミュレット	https://soku.cleista.cc/framedata/reimu/j236b-spread-amulet
+0	108	j.236C	扩散灵符	Spread Amulet	拡散アミュレット	https://soku.cleista.cc/framedata/reimu/j236c-spread-amulet
+0	101	214B	警醒阵	Cautionary Border	警醒陣	https://soku.cleista.cc/framedata/reimu/214b-cautionary-border
+0	101	214C	警醒阵	Cautionary Border	警醒陣	https://soku.cleista.cc/framedata/reimu/214c-cautionary-border
+0	101	j.214B	警醒阵	Cautionary Border	警醒陣	https://soku.cleista.cc/framedata/reimu/j214b-cautionary-border
+0	101	j.214C	警醒阵	Cautionary Border	警醒陣	https://soku.cleista.cc/framedata/reimu/j214c-cautionary-border
+0	105	214B	系缚阵	Binding Border	繋縛陣	https://soku.cleista.cc/framedata/reimu/214b-binding-border
+0	105	214C	系缚阵	Binding Border	繋縛陣	https://soku.cleista.cc/framedata/reimu/214c-binding-border
+0	105	j.214B	系缚阵	Binding Border	繋縛陣	https://soku.cleista.cc/framedata/reimu/j214b-binding-border
+0	105	j.214C	系缚阵	Binding Border	繋縛陣	https://soku.cleista.cc/framedata/reimu/j214c-binding-border
+0	109	214B	常置阵	Permanent Border	常置陣	https://soku.cleista.cc/framedata/reimu/214b-permanent-border
+0	109	214C	常置阵	Permanent Border	常置陣	https://soku.cleista.cc/framedata/reimu/214c-permanent-border
+0	102	421B	亚空穴	Dimensional Rift	亜空穴	https://soku.cleista.cc/framedata/reimu/421b-dimensional-rift
+0	102	421C	亚空穴	Dimensional Rift	亜空穴	https://soku.cleista.cc/framedata/reimu/421c-dimensional-rift
+0	106	421B	封魔亚空穴	Demon Sealing Dimensional Rift	封魔亜空穴	https://soku.cleista.cc/framedata/reimu/421b-demon-sealing-dimensional-rift
+0	106	421C	封魔亚空穴	Demon Sealing Dimensional Rift	封魔亜空穴	https://soku.cleista.cc/framedata/reimu/421c-demon-sealing-dimensional-rift
+0	110	421B	刹那亚空穴	Instant Dimensional Rift	刹那亜空穴	https://soku.cleista.cc/framedata/reimu/421b-instant-dimensional-rift
+0	110	421C	刹那亚空穴	Instant Dimensional Rift	刹那亜空穴	https://soku.cleista.cc/framedata/reimu/421c-instant-dimensional-rift
+0	103	623B	升天脚	Ascension Kick	昇天脚	https://soku.cleista.cc/framedata/reimu/623b-ascension-kick
+0	103	623C	升天脚	Ascension Kick	昇天脚	https://soku.cleista.cc/framedata/reimu/623c-ascension-kick
+0	107	623B	抄地升天脚	Sliding Ascension Kick	抄地昇天脚	https://soku.cleista.cc/framedata/reimu/623b-sliding-ascension-kick
+0	107	623C	抄地升天脚	Sliding Ascension Kick	抄地昇天脚	https://soku.cleista.cc/framedata/reimu/623c-sliding-ascension-kick
+0	111	623B	祈雨之仪	Rain Dance	雨乞祈り	https://soku.cleista.cc/framedata/reimu/623b-rain-dance
+0	111	623C	祈雨之仪	Rain Dance	雨乞祈り	https://soku.cleista.cc/framedata/reimu/623c-rain-dance
+0	111	j.623B	祈雨之仪	Rain Dance	雨乞祈り	https://soku.cleista.cc/framedata/reimu/j623b-rain-dance
+0	111	j.623C	祈雨之仪	Rain Dance	雨乞祈り	https://soku.cleista.cc/framedata/reimu/j623c-rain-dance
+0	200	sc200	灵符「梦想妙珠」	Spirit Sign "Fantasy Orb"	霊符「夢想妙珠」	https://soku.cleista.cc/framedata/reimu/sc200-spirit-sign-fantasy-orb
+0	201	sc201	神灵「梦想封印」	Divine Spirit "Fantasy Seal"	神霊「夢想封印」	https://soku.cleista.cc/framedata/reimu/sc201-divine-spirit-fantasy-seal
+0	204	sc204	梦符「封魔阵」	Dream Sign "Demon Binding Array"	夢符「封魔陣」	https://soku.cleista.cc/framedata/reimu/sc204-dream-sign-demon-binding-array
+0	206	sc206	神技「八方鬼缚阵」	Divine Arts "Demon Binding Circle"	神技「八方鬼縛陣」	https://soku.cleista.cc/framedata/reimu/sc206-divine-arts-demon-binding-circle
+0	207	sc207	结界「扩散结界」	Boundary "Expanding Boundary"	結界「拡散結界」	https://soku.cleista.cc/framedata/reimu/sc207-boundary-expanding-boundary
+0	208	sc208	珠符「明珠暗投」	Jewel Sign "Concealed Orbs of Light"	珠符「明珠暗投」	https://soku.cleista.cc/framedata/reimu/sc208-jewel-sign-concealed-orbs-of-light
+0	209	sc209	宝符「阴阳宝玉」	Treasure Sign "Ying-Yang Orb"	宝符「陰陽宝玉」	https://soku.cleista.cc/framedata/reimu/sc209-treasure-sign-ying-yang-orb
+0	210	sc210	宝具「阴阳鬼神玉」	Holy Relic "Ying-Yang Sanctifier Orb"	宝具「陰陽鬼神玉」	https://soku.cleista.cc/framedata/reimu/sc210-holy-relic-ying-yang-sanctifier-orb
+0	214	sc214	神技「天霸风神脚」	Divine Arts "Wind God Kick"	神技「天覇風神脚」	https://soku.cleista.cc/framedata/reimu/sc214-divine-arts-wind-god-kick
+0	219	sc219	「梦想天生」	"Fantasy Heaven"	「夢想天生」	https://soku.cleista.cc/framedata/reimu/sc219-fantasy-heaven
+0	200	j.sc200	灵符「梦想妙珠」	Spirit Sign "Fantasy Orb"	霊符「夢想妙珠」	https://soku.cleista.cc/framedata/reimu/sc200-spirit-sign-fantasy-orb-650
+0	201	j.sc201	神灵「梦想封印」	Divine Spirit "Fantasy Seal"	神霊「夢想封印」	https://soku.cleista.cc/framedata/reimu/sc201-divine-spirit-fantasy-seal-651
+0	207	j.sc207	结界「扩散结界」	Boundary "Expanding Boundary"	結界「拡散結界」	https://soku.cleista.cc/framedata/reimu/sc207-boundary-expanding-boundary-657
+0	208	j.sc208	珠符「明珠暗投」	Jewel Sign "Concealed Orbs of Light"	珠符「明珠暗投」	https://soku.cleista.cc/framedata/reimu/sc208-jewel-sign-concealed-orbs-of-light-658
+0	219	sc219	「梦想天生」（发动）	"Fantasy Heaven" (Activation)	「夢想天生」（発動）	https://soku.cleista.cc/framedata/reimu/sc219-fantasy-heaven-activation
+1	-1	66	66	66	66	https://soku.cleista.cc/framedata/marisa/66
+1	-1	44	44	44	44	https://soku.cleista.cc/framedata/marisa/44
+1	-1	j.66	j.66	j.66	j.66	https://soku.cleista.cc/framedata/marisa/j66
+1	-1	j.44	j.44	j.44	j.44	https://soku.cleista.cc/framedata/marisa/j44
+1	-1	5A	5A	5A	5A	https://soku.cleista.cc/framedata/marisa/5a
+1	-1	f.5A	f.5A	f.5A	f.5A	https://soku.cleista.cc/framedata/marisa/f5a
+1	-1	6A	6A	6A	6A	https://soku.cleista.cc/framedata/marisa/6a
+1	-1	2A	2A	2A	2A	https://soku.cleista.cc/framedata/marisa/2a
+1	-1	3A	3A	3A	3A	https://soku.cleista.cc/framedata/marisa/3a
+1	-1	66A	66A	66A	66A	https://soku.cleista.cc/framedata/marisa/66a
+1	-1	j.5A	j.5A	j.5A	j.5A	https://soku.cleista.cc/framedata/marisa/j5a
+1	-1	j.6A	j.6A	j.6A	j.6A	https://soku.cleista.cc/framedata/marisa/j6a
+1	-1	j.2A	j.2A	j.2A	j.2A	https://soku.cleista.cc/framedata/marisa/j2a
+1	-1	j.8A	j.8A	j.8A	j.8A	https://soku.cleista.cc/framedata/marisa/j8a
+1	-1	5AA	5AA	5AA	5AA	https://soku.cleista.cc/framedata/marisa/5aa
+1	-1	5AAA	5AAA	5AAA	5AAA	https://soku.cleista.cc/framedata/marisa/5aaa
+1	-1	5AAAA	5AAAA	5AAAA	5AAAA	https://soku.cleista.cc/framedata/marisa/5aaaa
+1	-1	4A	4A	4A	4A	https://soku.cleista.cc/framedata/marisa/4a
+1	-1	5B	5B	5B	5B	https://soku.cleista.cc/framedata/marisa/5b
+1	-1	6B	6B	6B	6B	https://soku.cleista.cc/framedata/marisa/6b
+1	-1	2B	2B	2B	2B	https://soku.cleista.cc/framedata/marisa/2b
+1	-1	j.5B	j.5B	j.5B	j.5B	https://soku.cleista.cc/framedata/marisa/j5b
+1	-1	j.2B	j.2B	j.2B	j.2B	https://soku.cleista.cc/framedata/marisa/j2b
+1	-1	66B	66B	66B	66B	https://soku.cleista.cc/framedata/marisa/66b
+1	-1	5C	5C	5C	5C	https://soku.cleista.cc/framedata/marisa/5c
+1	-1	6C	6C	6C	6C	https://soku.cleista.cc/framedata/marisa/6c
+1	-1	2C	2C	2C	2C	https://soku.cleista.cc/framedata/marisa/2c
+1	-1	j.5C	j.5C	j.5C	j.5C	https://soku.cleista.cc/framedata/marisa/j5c
+1	-1	j.6C	j.6C	j.6C	j.6C	https://soku.cleista.cc/framedata/marisa/j6c
+1	-1	j.2C	j.2C	j.2C	j.2C	https://soku.cleista.cc/framedata/marisa/j2c
+1	-1	66C	66C	66C	66C	https://soku.cleista.cc/framedata/marisa/66c
+1	-1	5B	5B	5B	5B	https://soku.cleista.cc/framedata/marisa/5b-420
+1	-1	j.5B	j.5B	j.5B	j.5B	https://soku.cleista.cc/framedata/marisa/j5b-422
+1	-1	5C	5C	5C	5C	https://soku.cleista.cc/framedata/marisa/5c-430
+1	-1	j.5C	j.5C	j.5C	j.5C	https://soku.cleista.cc/framedata/marisa/j5c-432
+1	100	214B	Witch Ley Line	Witch Leyline	ウィッチレイライン	https://soku.cleista.cc/framedata/marisa/214b-witch-leyline
+1	104	214B	Radial Strike	Radial Strike	ラジアルストライク	https://soku.cleista.cc/framedata/marisa/214b-radial-strike
+1	104	214C	Radial Strike	Radial Strike	ラジアルストライク	https://soku.cleista.cc/framedata/marisa/214c-radial-strike
+1	108	214B	Up Sweep	Up Sweeper	アップスウィープ	https://soku.cleista.cc/framedata/marisa/214b-up-sweeper
+1	108	214C	Up Sweep	Up Sweeper	アップスウィープ	https://soku.cleista.cc/framedata/marisa/214c-up-sweeper
+1	108	j.214B	Up Sweep	Up Sweeper	アップスウィープ	https://soku.cleista.cc/framedata/marisa/j214b-up-sweeper
+1	108	j.214C	Up Sweep	Up Sweeper	アップスウィープ	https://soku.cleista.cc/framedata/marisa/j214c-up-sweeper
+1	101	623B	Miasma Sweep	Miasma Sweep	ミアズマスウィープ	https://soku.cleista.cc/framedata/marisa/623b-miasma-sweep
+1	101	623C	Miasma Sweep	Miasma Sweep	ミアズマスウィープ	https://soku.cleista.cc/framedata/marisa/623c-miasma-sweep
+1	105	623B	Bosky Sweeper	Bosky Sweeper	バスキースウィーパー	https://soku.cleista.cc/framedata/marisa/623b-bosky-sweeper
+1	105	623C	Bosky Sweeper	Bosky Sweeper	バスキースウィーパー	https://soku.cleista.cc/framedata/marisa/623c-bosky-sweeper
+1	109	623B	Stellar Missile	Stellar Missile	ステラミサイル	https://soku.cleista.cc/framedata/marisa/623b-stellar-missile
+1	109	623C	Stellar Missile	Stellar Missile	ステラミサイル	https://soku.cleista.cc/framedata/marisa/623c-stellar-missile
+1	102	22B	Ground Stardust	Grand Stardust	グラウンドスターダスト	https://soku.cleista.cc/framedata/marisa/22b-grand-stardust
+1	102	22C	Ground Stardust	Grand Stardust	グラウンドスターダスト	https://soku.cleista.cc/framedata/marisa/22c-grand-stardust
+1	102	j.22B	Ground Stardust	Grand Stardust	グラウンドスターダスト	https://soku.cleista.cc/framedata/marisa/j22b-grand-stardust
+1	102	j.22C	Ground Stardust	Grand Stardust	グラウンドスターダスト	https://soku.cleista.cc/framedata/marisa/j22c-grand-stardust
+1	106	22B	Devildom Torch	Devildom Torch	デビルダムトーチ	https://soku.cleista.cc/framedata/marisa/22b-devildom-torch
+1	106	22C	Devildom Torch	Devildom Torch	デビルダムトーチ	https://soku.cleista.cc/framedata/marisa/22c-devildom-torch
+1	106	j.22B	Devildom Torch	Devildom Torch	デビルダムトーチ	https://soku.cleista.cc/framedata/marisa/j22b-devildom-torch
+1	106	j.22C	Devildom Torch	Devildom Torch	デビルダムトーチ	https://soku.cleista.cc/framedata/marisa/j22c-devildom-torch
+1	110	22B	魔法废物再利用炸弹	Magical Reusable Bomb	マジカル産廃再利用ボム	https://soku.cleista.cc/framedata/marisa/22b-magical-reusable-bomb
+1	110	22C	魔法废物再利用炸弹	Magical Reusable Bomb	マジカル産廃再利用ボム	https://soku.cleista.cc/framedata/marisa/22c-magical-reusable-bomb
+1	110	j.22B	魔法废物再利用炸弹	Magical Reusable Bomb	マジカル産廃再利用ボム	https://soku.cleista.cc/framedata/marisa/j22b-magical-reusable-bomb
+1	110	j.22C	魔法废物再利用炸弹	Magical Reusable Bomb	マジカル産廃再利用ボム	https://soku.cleista.cc/framedata/marisa/j22c-magical-reusable-bomb
+1	103	236B	Meteonic Debris	Meteonic Debris	メテオニックデブリ	https://soku.cleista.cc/framedata/marisa/236b-meteonic-debris
+1	103	236C	Meteonic Debris	Meteonic Debris	メテオニックデブリ	https://soku.cleista.cc/framedata/marisa/236c-meteonic-debris
+1	103	j.236B	Meteonic Debris	Meteonic Debris	メテオニックデブリ	https://soku.cleista.cc/framedata/marisa/j236b-meteonic-debris
+1	103	j.236C	Meteonic Debris	Meteonic Debris	メテオニックデブリ	https://soku.cleista.cc/framedata/marisa/j236c-meteonic-debris
+1	107	236B	Narrow Spark	Narrow Spark	ナロースパーク	https://soku.cleista.cc/framedata/marisa/236b-narrow-spark
+1	107	236C	Narrow Spark	Narrow Spark	ナロースパーク	https://soku.cleista.cc/framedata/marisa/236c-narrow-spark
+1	107	j.236B	Narrow Spark	Narrow Spark	ナロースパーク	https://soku.cleista.cc/framedata/marisa/j236b-narrow-spark
+1	107	j.236C	Narrow Spark	Narrow Spark	ナロースパーク	https://soku.cleista.cc/framedata/marisa/j236c-narrow-spark
+1	111	236B	Green Spread	Green Spread	グリーンスプレッド	https://soku.cleista.cc/framedata/marisa/236b-green-spread
+1	111	236C	Green Spread	Green Spread	グリーンスプレッド	https://soku.cleista.cc/framedata/marisa/236c-green-spread
+1	111	j.236B	Green Spread	Green Spread	グリーンスプレッド	https://soku.cleista.cc/framedata/marisa/j236b-green-spread
+1	111	j.236C	Green Spread	Green Spread	グリーンスプレッド	https://soku.cleista.cc/framedata/marisa/j236c-green-spread
+1	200	sc200	恋符「Master Spark」（极限火花）	Love Sign "Master Spark"	恋符「マスタースパーク」	https://soku.cleista.cc/framedata/marisa/sc200-love-sign-master-spark
+1	202	sc202	魔炮「Final Spark」（究极火花）	Magicannon "Final Spark"	魔砲「ファイナルスパーク」	https://soku.cleista.cc/framedata/marisa/sc202-magicannon-final-spark
+1	203	sc203	星符「Dragon Meteor」（龙流星）	Star Sign "Dragon Meteor"	星符「ドラゴンメテオ」	https://soku.cleista.cc/framedata/marisa/sc203-star-sign-dragon-meteor
+1	204	sc204	恋符「Non-Directional Laser」（非定向激光）	Love Sign "Non-Directional Laser"	恋符「ノンディレクショナルレーザー」	https://soku.cleista.cc/framedata/marisa/sc204-love-sign-non-directional-laser
+1	205	sc205	魔符「Stardust Reverie」（星尘幻想）	Magic Sign "Stardust Reverie"	魔符「スターダストレヴァリエ」	https://soku.cleista.cc/framedata/marisa/sc205-magic-sign-stardust-reverie
+1	206	sc206	星符「Escape Velocity」（逃逸速度）	Star Sign "Escape Velocity"	星符「エスケープベロシティ」	https://soku.cleista.cc/framedata/marisa/sc206-star-sign-escape-velocity
+1	207	sc207	彗星「Blazing Star」（闪亮之星）	Comet "Blazing Star"	彗星「ブレイジングスター」	https://soku.cleista.cc/framedata/marisa/sc207-comet-blazing-star
+1	208	sc208	星符「Meteonic Shower」（流星雨）	Star Sign "Meteonic Shower"	星符「メテオニックシャワー」	https://soku.cleista.cc/framedata/marisa/sc208-star-sign-meteonic-shower
+1	209	sc209	星符「Gravity Beat」（重力一击）	Star Sign "Gravity Beat"	星符「グラビティビート」	https://soku.cleista.cc/framedata/marisa/sc209-star-sign-gravity-beat
+1	211	sc211	光符「Luminous Strike」（闪光冲击）	Light Sign "Luminous Strike"	光符「ルミネスストライク」	https://soku.cleista.cc/framedata/marisa/sc211-light-sign-luminous-strike
+1	212	sc212	光符「Earth Light Ray」（地球光）	Light Sign "Earthlight Ray"	光符「アースライトレイ」	https://soku.cleista.cc/framedata/marisa/sc212-light-sign-earthlight-ray
+1	214	sc214	魔废「Deep Ecological Bomb」（深层生态炸弹）	Magical Research "Deep Ecological Bomb"	魔廃「ディープエコロジカルボム」	https://soku.cleista.cc/framedata/marisa/sc214-magical-research-deep-ecological-bomb
+1	215	sc215	仪符「Orrery's Sun」（太阳仪）	Ritual Sign "Orreries Sun"	儀符「オーレリーズサン」	https://soku.cleista.cc/framedata/marisa/sc215-ritual-sign-orreries-sun
+1	-1	2B (sc215)	2B (sc215)	2B (sc215)	2B (sc215)	https://soku.cleista.cc/framedata/marisa/2b-sc215
+1	-1	2C (sc215)	2C (sc215)	2C (sc215)	2C (sc215)	https://soku.cleista.cc/framedata/marisa/2c-sc215
+1	219	sc219	邪恋「容易结果的Master Spark」（容易结果的极限火花）	Perversion "Sure-Fire Master Spark"	邪恋「実りやすいマスタースパーク」	https://soku.cleista.cc/framedata/marisa/sc219-perversion-sure-fire-master-spark
+1	208	j.sc208	星符「Meteonic Shower」（流星雨）	Star Sign "Meteonic Shower"	星符「メテオニックシャワー」	https://soku.cleista.cc/framedata/marisa/sc208-star-sign-meteonic-shower-658
+2	-1	66	66	66	66	https://soku.cleista.cc/framedata/sakuya/66
+2	-1	44	44	44	44	https://soku.cleista.cc/framedata/sakuya/44
+2	-1	j.66	j.66	j.66	j.66	https://soku.cleista.cc/framedata/sakuya/j66
+2	-1	j.44	j.44	j.44	j.44	https://soku.cleista.cc/framedata/sakuya/j44
+2	-1	5A	5A	5A	5A	https://soku.cleista.cc/framedata/sakuya/5a
+2	-1	f.5A	f.5A	f.5A	f.5A	https://soku.cleista.cc/framedata/sakuya/f5a
+2	-1	6A	6A	6A	6A	https://soku.cleista.cc/framedata/sakuya/6a
+2	-1	2A	2A	2A	2A	https://soku.cleista.cc/framedata/sakuya/2a
+2	-1	3A	3A	3A	3A	https://soku.cleista.cc/framedata/sakuya/3a
+2	-1	66A	66A	66A	66A	https://soku.cleista.cc/framedata/sakuya/66a
+2	-1	j.5A	j.5A	j.5A	j.5A	https://soku.cleista.cc/framedata/sakuya/j5a
+2	-1	j.6A	j.6A	j.6A	j.6A	https://soku.cleista.cc/framedata/sakuya/j6a
+2	-1	j.2A	j.2A	j.2A	j.2A	https://soku.cleista.cc/framedata/sakuya/j2a
+2	-1	j.8A	j.8A	j.8A	j.8A	https://soku.cleista.cc/framedata/sakuya/j8a
+2	-1	5AA	5AA	5AA	5AA	https://soku.cleista.cc/framedata/sakuya/5aa
+2	-1	5AAA	5AAA	5AAA	5AAA	https://soku.cleista.cc/framedata/sakuya/5aaa
+2	-1	5AAAA	5AAAA	5AAAA	5AAAA	https://soku.cleista.cc/framedata/sakuya/5aaaa
+2	-1	4A	4A	4A	4A	https://soku.cleista.cc/framedata/sakuya/4a
+2	-1	5B	5B	5B	5B	https://soku.cleista.cc/framedata/sakuya/5b
+2	-1	6B	6B	6B	6B	https://soku.cleista.cc/framedata/sakuya/6b
+2	-1	2B	2B	2B	2B	https://soku.cleista.cc/framedata/sakuya/2b
+2	-1	j.5B	j.5B	j.5B	j.5B	https://soku.cleista.cc/framedata/sakuya/j5b
+2	-1	j.2B	j.2B	j.2B	j.2B	https://soku.cleista.cc/framedata/sakuya/j2b
+2	-1	66B	66B	66B	66B	https://soku.cleista.cc/framedata/sakuya/66b
+2	-1	5C	5C	5C	5C	https://soku.cleista.cc/framedata/sakuya/5c
+2	-1	6C	6C	6C	6C	https://soku.cleista.cc/framedata/sakuya/6c
+2	-1	2C	2C	2C	2C	https://soku.cleista.cc/framedata/sakuya/2c
+2	-1	j.5C	j.5C	j.5C	j.5C	https://soku.cleista.cc/framedata/sakuya/j5c
+2	-1	j.6C	j.6C	j.6C	j.6C	https://soku.cleista.cc/framedata/sakuya/j6c
+2	-1	j.2C	j.2C	j.2C	j.2C	https://soku.cleista.cc/framedata/sakuya/j2c
+2	-1	66C	66C	66C	66C	https://soku.cleista.cc/framedata/sakuya/66c
+2	100	623B	Close-up Magic	Close-Up Magic	クロースアップマジック	https://soku.cleista.cc/framedata/sakuya/623b-close-up-magic
+2	100	623C	Close-up Magic	Close-Up Magic	クロースアップマジック	https://soku.cleista.cc/framedata/sakuya/623c-close-up-magic
+2	100	j.623B	Close-up Magic	Close-Up Magic	クロースアップマジック	https://soku.cleista.cc/framedata/sakuya/j623b-close-up-magic
+2	100	j.623C	Close-up Magic	Close-Up Magic	クロースアップマジック	https://soku.cleista.cc/framedata/sakuya/j623c-close-up-magic
+2	104	623B	Propelling Silver	Propelling Silver	プロペリングシルバー	https://soku.cleista.cc/framedata/sakuya/623b-propelling-silver
+2	104	623C	Propelling Silver	Propelling Silver	プロペリングシルバー	https://soku.cleista.cc/framedata/sakuya/623c-propelling-silver
+2	108	623B	Dancing Star Sword	Dancing Star Sword	ダンシングスターソード	https://soku.cleista.cc/framedata/sakuya/623b-dancing-star-sword
+2	108	623C	Dancing Star Sword	Dancing Star Sword	ダンシングスターソード	https://soku.cleista.cc/framedata/sakuya/623c-dancing-star-sword
+2	101	214B	Bounce No-Bounce	Bounce No-Bounce	バウンスノーバウンス	https://soku.cleista.cc/framedata/sakuya/214b-bounce-no-bounce
+2	101	214C	Bounce No-Bounce	Bounce No-Bounce	バウンスノーバウンス	https://soku.cleista.cc/framedata/sakuya/214c-bounce-no-bounce
+2	105	214B	Square Ricochet（空间跳弹）	Square Ricochet	スクウェアリコシェ	https://soku.cleista.cc/framedata/sakuya/214b-square-ricochet
+2	105	214C	Square Ricochet（空间跳弹）	Square Ricochet	スクウェアリコシェ	https://soku.cleista.cc/framedata/sakuya/214c-square-ricochet
+2	109	214B	Misdirection	Misdirection	ミスディレクション	https://soku.cleista.cc/framedata/sakuya/214b-misdirection
+2	109	214C	Misdirection	Misdirection	ミスディレクション	https://soku.cleista.cc/framedata/sakuya/214c-misdirection
+2	102	236B	Magic Stars Sword	Magic Star Sword	マジックスターソード	https://soku.cleista.cc/framedata/sakuya/236b-magic-star-sword
+2	102	236C	Magic Stars Sword	Magic Star Sword	マジックスターソード	https://soku.cleista.cc/framedata/sakuya/236c-magic-star-sword
+2	102	j.236B	Magic Stars Sword	Magic Star Sword	マジックスターソード	https://soku.cleista.cc/framedata/sakuya/j236b-magic-star-sword
+2	102	j.236C	Magic Stars Sword	Magic Star Sword	マジックスターソード	https://soku.cleista.cc/framedata/sakuya/j236c-magic-star-sword
+2	106	236B	离剑之见	Sense of Thrown Edge	離剣の見	https://soku.cleista.cc/framedata/sakuya/236b-sense-of-thrown-edge
+2	106	236C	离剑之见	Sense of Thrown Edge	離剣の見	https://soku.cleista.cc/framedata/sakuya/236c-sense-of-thrown-edge
+2	106	j.236B	离剑之见	Sense of Thrown Edge	離剣の見	https://soku.cleista.cc/framedata/sakuya/j236b-sense-of-thrown-edge
+2	106	j.236C	离剑之见	Sense of Thrown Edge	離剣の見	https://soku.cleista.cc/framedata/sakuya/j236c-sense-of-thrown-edge
+2	110	236B	Parallel Brane	Parallel Brane	パラレルブレーン	https://soku.cleista.cc/framedata/sakuya/236b-parallel-brane
+2	110	236C	Parallel Brane	Parallel Brane	パラレルブレーン	https://soku.cleista.cc/framedata/sakuya/236c-parallel-brane
+2	110	j.236B	Parallel Brane	Parallel Brane	パラレルブレーン	https://soku.cleista.cc/framedata/sakuya/j236b-parallel-brane
+2	110	j.236C	Parallel Brane	Parallel Brane	パラレルブレーン	https://soku.cleista.cc/framedata/sakuya/j236c-parallel-brane
+2	103	22B	Vanishing Everything	Vanishing Everything	バニシングエブリシング	https://soku.cleista.cc/framedata/sakuya/22b-vanishing-everything
+2	103	22C	Vanishing Everything	Vanishing Everything	バニシングエブリシング	https://soku.cleista.cc/framedata/sakuya/22c-vanishing-everything
+2	103	j.22B	Vanishing Everything	Vanishing Everything	バニシングエブリシング	https://soku.cleista.cc/framedata/sakuya/j22b-vanishing-everything
+2	103	j.22C	Vanishing Everything	Vanishing Everything	バニシングエブリシング	https://soku.cleista.cc/framedata/sakuya/j22c-vanishing-everything
+2	107	22B	Perfect Maid（完美女仆）	Perfect Maid	パーフェクトメイド	https://soku.cleista.cc/framedata/sakuya/22b-perfect-maid
+2	107	22C	Perfect Maid（完美女仆）	Perfect Maid	パーフェクトメイド	https://soku.cleista.cc/framedata/sakuya/22c-perfect-maid
+2	107	j.22B	Perfect Maid（完美女仆）	Perfect Maid	パーフェクトメイド	https://soku.cleista.cc/framedata/sakuya/j22b-perfect-maid
+2	107	j.22C	Perfect Maid（完美女仆）	Perfect Maid	パーフェクトメイド	https://soku.cleista.cc/framedata/sakuya/j22c-perfect-maid
+2	111	22B	Time Paradox	Time Paradox	タイムパラドックス	https://soku.cleista.cc/framedata/sakuya/22b-time-paradox
+2	111	22C	Time Paradox	Time Paradox	タイムパラドックス	https://soku.cleista.cc/framedata/sakuya/22c-time-paradox
+2	200	sc200	幻符「杀人玩偶」	Illusion Sign "Killing Doll"	幻符「殺人ドール」	https://soku.cleista.cc/framedata/sakuya/sc200-illusion-sign-killing-doll
+2	201	sc201	时符「Private Square」（个人空间）	Time Sign "Private Square"	時符「プライベートスクウェア」	https://soku.cleista.cc/framedata/sakuya/sc201-time-sign-private-square
+2	202	sc202	伤符「Inscribe Red Soul」（铭刻于红魂）	Wound Sign "Inscribed Red Soul"	傷符「インスクライブレッドソウル」	https://soku.cleista.cc/framedata/sakuya/sc202-wound-sign-inscribed-red-soul
+2	203	sc203	幻葬「夜雾幻影杀人鬼」	Buriallusion "Phantasmic Killer"	幻葬「夜霧の幻影殺人鬼」	https://soku.cleista.cc/framedata/sakuya/sc203-buriallusion-phantasmic-killer
+2	204	sc204	「咲夜的世界」	Sakuya's World	「咲夜の世界」	https://soku.cleista.cc/framedata/sakuya/sc204-sakuyas-world
+2	205	sc205	伤魂「Soul Sculpture」（灵魂雕塑）	Scarred Soul "Soul Sculpture"	傷魂「ソウルスカルプチュア」	https://soku.cleista.cc/framedata/sakuya/sc205-scarred-soul-soul-sculpture
+2	206	sc206	银符「Silver Bound」（银之跳跃）	Silver Sign "Silver Bound"	銀符「シルバーバウンド」	https://soku.cleista.cc/framedata/sakuya/sc206-silver-sign-silver-bound
+2	207	sc207	奇术「Eternal Meek」（永恒的温柔）	Conjuring "Eternal Meek"	奇術「エターナルミーク」	https://soku.cleista.cc/framedata/sakuya/sc207-conjuring-eternal-meek
+2	208	sc208	速符「Luminous Ricochet」（闪光跳弹）	Speed Sign "Luminous Ricochet"	速符「ルミネスリコシェ」	https://soku.cleista.cc/framedata/sakuya/sc208-speed-sign-luminous-ricochet
+2	209	sc209	时符「咲夜特制秒表」	Time Sign "Sakuya's Special Stopwatch"	時符「咲夜特製ストップウォッチ」	https://soku.cleista.cc/framedata/sakuya/sc209-time-sign-sakuyas-special-stopwatch
+2	210	sc210	光速「C. Ricochet」（光速跳弹）	Lightspeed "C. Ricochet"	光速「Ｃ．リコシェ」	https://soku.cleista.cc/framedata/sakuya/sc210-lightspeed-c-ricochet
+2	211	sc211	时符「Imaginary Vertical Time」（假想时轴）	Time Sign "Imaginary Vertical Time"	時符「イマジナリバーチカルタイム」	https://soku.cleista.cc/framedata/sakuya/sc211-time-sign-imaginary-vertical-time
+2	212	sc212	时计「Luna Dial」（月晷）	Watch "Luna Dial"	時計「ルナダイアル」	https://soku.cleista.cc/framedata/sakuya/sc212-watch-luna-dial
+2	203	j.sc203	幻葬「夜雾幻影杀人鬼」	Buriallusion "Phantasmic Killer"	幻葬「夜霧の幻影殺人鬼」	https://soku.cleista.cc/framedata/sakuya/sc203-buriallusion-phantasmic-killer-653
+2	206	j.sc206	银符「Silver Bound」（银之跳跃）	Silver Sign "Silver Bound"	銀符「シルバーバウンド」	https://soku.cleista.cc/framedata/sakuya/sc206-silver-sign-silver-bound-656
+3	-1	66	66	66	66	https://soku.cleista.cc/framedata/alice/66
+3	-1	44	44	44	44	https://soku.cleista.cc/framedata/alice/44
+3	-1	j.66	j.66	j.66	j.66	https://soku.cleista.cc/framedata/alice/j66
+3	-1	j.44	j.44	j.44	j.44	https://soku.cleista.cc/framedata/alice/j44
+3	-1	5A	5A	5A	5A	https://soku.cleista.cc/framedata/alice/5a
+3	-1	f.5A	f.5A	f.5A	f.5A	https://soku.cleista.cc/framedata/alice/f5a
+3	-1	6A	6A	6A	6A	https://soku.cleista.cc/framedata/alice/6a
+3	-1	2A	2A	2A	2A	https://soku.cleista.cc/framedata/alice/2a
+3	-1	3A	3A	3A	3A	https://soku.cleista.cc/framedata/alice/3a
+3	-1	66A	66A	66A	66A	https://soku.cleista.cc/framedata/alice/66a
+3	-1	j.5A	j.5A	j.5A	j.5A	https://soku.cleista.cc/framedata/alice/j5a
+3	-1	j.6A	j.6A	j.6A	j.6A	https://soku.cleista.cc/framedata/alice/j6a
+3	-1	j.2A	j.2A	j.2A	j.2A	https://soku.cleista.cc/framedata/alice/j2a
+3	-1	j.8A	j.8A	j.8A	j.8A	https://soku.cleista.cc/framedata/alice/j8a
+3	-1	5AA	5AA	5AA	5AA	https://soku.cleista.cc/framedata/alice/5aa
+3	-1	5AAA	5AAA	5AAA	5AAA	https://soku.cleista.cc/framedata/alice/5aaa
+3	-1	5AAAA	5AAAA	5AAAA	5AAAA	https://soku.cleista.cc/framedata/alice/5aaaa
+3	-1	4A	4A	4A	4A	https://soku.cleista.cc/framedata/alice/4a
+3	-1	5B	5B	5B	5B	https://soku.cleista.cc/framedata/alice/5b
+3	-1	6B	6B	6B	6B	https://soku.cleista.cc/framedata/alice/6b
+3	-1	2B	2B	2B	2B	https://soku.cleista.cc/framedata/alice/2b
+3	-1	j.5B	j.5B	j.5B	j.5B	https://soku.cleista.cc/framedata/alice/j5b
+3	-1	j.6B	j.6B	j.6B	j.6B	https://soku.cleista.cc/framedata/alice/j6b
+3	-1	j.2B	j.2B	j.2B	j.2B	https://soku.cleista.cc/framedata/alice/j2b
+3	-1	66B	66B	66B	66B	https://soku.cleista.cc/framedata/alice/66b
+3	-1	5C	5C	5C	5C	https://soku.cleista.cc/framedata/alice/5c
+3	-1	6C	6C	6C	6C	https://soku.cleista.cc/framedata/alice/6c
+3	-1	2C	2C	2C	2C	https://soku.cleista.cc/framedata/alice/2c
+3	-1	j.5C	j.5C	j.5C	j.5C	https://soku.cleista.cc/framedata/alice/j5c
+3	-1	j.6C	j.6C	j.6C	j.6C	https://soku.cleista.cc/framedata/alice/j6c
+3	-1	j.2C	j.2C	j.2C	j.2C	https://soku.cleista.cc/framedata/alice/j2c
+3	-1	66C	66C	66C	66C	https://soku.cleista.cc/framedata/alice/66c
+3	-1	4C	4C	4C	4C	https://soku.cleista.cc/framedata/alice/4c
+3	100	236B	人偶操创	Doll Placement	人形操創	https://soku.cleista.cc/framedata/alice/236b-doll-placement
+3	100	236C	人偶操创	Doll Placement	人形操創	https://soku.cleista.cc/framedata/alice/236c-doll-placement
+3	104	236B	人偶归巢	Returning Dolls	人形帰巣	https://soku.cleista.cc/framedata/alice/236b-returning-dolls
+3	104	236C	人偶归巢	Returning Dolls	人形帰巣	https://soku.cleista.cc/framedata/alice/236c-returning-dolls
+3	104	j.236B	人偶归巢	Returning Dolls	人形帰巣	https://soku.cleista.cc/framedata/alice/j236b-returning-dolls
+3	104	j.236C	人偶归巢	Returning Dolls	人形帰巣	https://soku.cleista.cc/framedata/alice/j236c-returning-dolls
+3	108	236B	人偶伏兵	Doll Ambush	人形伏兵	https://soku.cleista.cc/framedata/alice/236b-doll-ambush
+3	108	236C	人偶伏兵	Doll Ambush	人形伏兵	https://soku.cleista.cc/framedata/alice/236c-doll-ambush
+3	108	j.236B	人偶伏兵	Doll Ambush	人形伏兵	https://soku.cleista.cc/framedata/alice/j236b-doll-ambush
+3	108	j.236C	人偶伏兵	Doll Ambush	人形伏兵	https://soku.cleista.cc/framedata/alice/j236c-doll-ambush
+3	101	623B	人偶无操	Volatile Doll	人形無操	https://soku.cleista.cc/framedata/alice/623b-volatile-doll
+3	101	623C	人偶无操	Volatile Doll	人形無操	https://soku.cleista.cc/framedata/alice/623c-volatile-doll
+3	101	j.623B	人偶无操	Volatile Doll	人形無操	https://soku.cleista.cc/framedata/alice/j623b-volatile-doll
+3	101	j.623C	人偶无操	Volatile Doll	人形無操	https://soku.cleista.cc/framedata/alice/j623c-volatile-doll
+3	105	623B	人偶火葬	Doll Cremation	人形火葬	https://soku.cleista.cc/framedata/alice/623b-doll-cremation
+3	105	623C	人偶火葬	Doll Cremation	人形火葬	https://soku.cleista.cc/framedata/alice/623c-doll-cremation
+3	109	623B	大江户炸药机关人偶	Edo High-Explosive Pawn	大江戸爆薬からくり人形	https://soku.cleista.cc/framedata/alice/623b-edo-high-explosive-pawn
+3	109	623C	大江户炸药机关人偶	Edo High-Explosive Pawn	大江戸爆薬からくり人形	https://soku.cleista.cc/framedata/alice/623c-edo-high-explosive-pawn
+3	102	214B	人偶置操	Doll Arrangement	人形置操	https://soku.cleista.cc/framedata/alice/214b-doll-arrangement
+3	102	214C	人偶置操	Doll Arrangement	人形置操	https://soku.cleista.cc/framedata/alice/214c-doll-arrangement
+3	102	j.214B	人偶置操	Doll Arrangement	人形置操	https://soku.cleista.cc/framedata/alice/j214b-doll-arrangement
+3	102	j.214C	人偶置操	Doll Arrangement	人形置操	https://soku.cleista.cc/framedata/alice/j214c-doll-arrangement
+3	106	214B	人偶千枪	Thousand Spear Dolls	人形千槍	https://soku.cleista.cc/framedata/alice/214b-thousand-spear-dolls
+3	106	214C	人偶千枪	Thousand Spear Dolls	人形千槍	https://soku.cleista.cc/framedata/alice/214c-thousand-spear-dolls
+3	106	j.214B	人偶千枪	Thousand Spear Dolls	人形千槍	https://soku.cleista.cc/framedata/alice/j214b-thousand-spear-dolls
+3	106	j.214C	人偶千枪	Thousand Spear Dolls	人形千槍	https://soku.cleista.cc/framedata/alice/j214c-thousand-spear-dolls
+3	110	214B	人偶弓兵	Doll Archers	人形弓兵	https://soku.cleista.cc/framedata/alice/214b-doll-archers
+3	110	214C	人偶弓兵	Doll Archers	人形弓兵	https://soku.cleista.cc/framedata/alice/214c-doll-archers
+3	103	22B	人偶振起	Doll Activation	人形振起	https://soku.cleista.cc/framedata/alice/22b-doll-activation
+3	107	22B	人偶SP	SP Doll	人形ＳＰ	https://soku.cleista.cc/framedata/alice/22b-sp-doll
+3	107	22C	人偶SP	SP Doll	人形ＳＰ	https://soku.cleista.cc/framedata/alice/22c-sp-doll
+3	107	j.22B	人偶SP	SP Doll	人形ＳＰ	https://soku.cleista.cc/framedata/alice/j22b-sp-doll
+3	107	22B	人偶SP	SP Doll	人形ＳＰ	https://soku.cleista.cc/framedata/alice/22b-sp-doll-568
+3	111	22B	Seeker Wire（导引线）	Seeker Wire	シーカーワイヤー	https://soku.cleista.cc/framedata/alice/22b-seeker-wire
+3	200	sc200	魔符「Artful Sacrifice」（狡猾的献祭）	Magic Sign "Artful Sacrifice"	魔符「アーティフルサクリファイス」	https://soku.cleista.cc/framedata/alice/sc200-magic-sign-artful-sacrifice
+3	201	sc201	战符「Little Legion」（小小军势）	War Sign "Little Legion"	戦符「リトルレギオン」	https://soku.cleista.cc/framedata/alice/sc201-war-sign-little-legion
+3	202	sc202	咒符「上海人偶」	Curse Sign "Shanghai Doll"	咒符「上海人形」	https://soku.cleista.cc/framedata/alice/sc202-curse-sign-shanghai-doll
+3	203	sc203	魔操「Return Inanimateness」（回归虚无）	Demonic Control "Return Inanimate"	魔操「リターンイナニメトネス」	https://soku.cleista.cc/framedata/alice/sc203-demonic-control-return-inanimate
+3	204	sc204	战操「Doll's War」（玩偶战争）	War Command "Dolls of War"	戦操「ドールズウォー」	https://soku.cleista.cc/framedata/alice/sc204-war-command-dolls-of-war
+3	205	sc205	诅咒「蓬莱人偶」	Curse Sign "Hourai Doll"	咒詛「蓬莱人形」	https://soku.cleista.cc/framedata/alice/sc205-curse-sign-hourai-doll
+3	206	sc206	侦符「Seeker Dolls」（探索人偶）	Spy Sign "Seeker Dolls"	偵符「シーカードールズ」	https://soku.cleista.cc/framedata/alice/sc206-spy-sign-seeker-dolls
+3	207	sc207	红符「荷兰人偶」	Crimson Sign "Holland Doll"	紅符「和蘭人形」	https://soku.cleista.cc/framedata/alice/sc207-crimson-sign-holland-doll
+3	208	sc208	人偶「未来文乐」	Doll "Futuristic Puppet"	人形「未来文楽」	https://soku.cleista.cc/framedata/alice/sc208-doll-futuristic-puppet
+3	209	sc209	聚焦「Trip Wire」（绊线）	Focus Power "Trip Wire"	注力「トリップワイヤー」	https://soku.cleista.cc/framedata/alice/sc209-focus-power-trip-wire
+3	210	sc210	枪符「萌萌大千枪」	Lance Sign "Cute Phalanx"	槍符「キューティ大千槍」	https://soku.cleista.cc/framedata/alice/sc210-lance-sign-cute-phalanx
+3	211	sc211	人偶「Lemmings' Parade」（旅鼠的盛装游行）	Dolls "Lemmings' Parade"	人形「レミングスパレード」	https://soku.cleista.cc/framedata/alice/sc211-dolls-lemmings-parade
+3	202	j.sc202	咒符「上海人偶」	Curse Sign "Shanghai Doll"	咒符「上海人形」	https://soku.cleista.cc/framedata/alice/sc202-curse-sign-shanghai-doll-652
+3	207	j.sc207	红符「荷兰人偶」	Crimson Sign "Holland Doll"	紅符「和蘭人形」	https://soku.cleista.cc/framedata/alice/sc207-crimson-sign-holland-doll-657
+3	209	j.sc209	聚焦「Trip Wire」（绊线）	Focus Power "Trip Wire"	注力「トリップワイヤー」	https://soku.cleista.cc/framedata/alice/sc209-focus-power-trip-wire-659
+3	210	j.sc210	枪符「萌萌大千枪」	Lance Sign "Cute Phalanx"	槍符「キューティ大千槍」	https://soku.cleista.cc/framedata/alice/sc210-lance-sign-cute-phalanx-660
+4	-1	66	66	66	66	https://soku.cleista.cc/framedata/patchouli/66
+4	-1	44	44	44	44	https://soku.cleista.cc/framedata/patchouli/44
+4	-1	j.66	j.66	j.66	j.66	https://soku.cleista.cc/framedata/patchouli/j66
+4	-1	j.44	j.44	j.44	j.44	https://soku.cleista.cc/framedata/patchouli/j44
+4	-1	5A	5A	5A	5A	https://soku.cleista.cc/framedata/patchouli/5a
+4	-1	f.5A	f.5A	f.5A	f.5A	https://soku.cleista.cc/framedata/patchouli/f5a
+4	-1	6A	6A	6A	6A	https://soku.cleista.cc/framedata/patchouli/6a
+4	-1	2A	2A	2A	2A	https://soku.cleista.cc/framedata/patchouli/2a
+4	-1	3A	3A	3A	3A	https://soku.cleista.cc/framedata/patchouli/3a
+4	-1	66A	66A	66A	66A	https://soku.cleista.cc/framedata/patchouli/66a
+4	-1	j.5A	j.5A	j.5A	j.5A	https://soku.cleista.cc/framedata/patchouli/j5a
+4	-1	j.6A	j.6A	j.6A	j.6A	https://soku.cleista.cc/framedata/patchouli/j6a
+4	-1	j.2A	j.2A	j.2A	j.2A	https://soku.cleista.cc/framedata/patchouli/j2a
+4	-1	j.8A	j.8A	j.8A	j.8A	https://soku.cleista.cc/framedata/patchouli/j8a
+4	-1	5AA	5AA	5AA	5AA	https://soku.cleista.cc/framedata/patchouli/5aa
+4	-1	5AAA	5AAA	5AAA	5AAA	https://soku.cleista.cc/framedata/patchouli/5aaa
+4	-1	4A	4A	4A	4A	https://soku.cleista.cc/framedata/patchouli/4a
+4	-1	5B	5B	5B	5B	https://soku.cleista.cc/framedata/patchouli/5b
+4	-1	6B	6B	6B	6B	https://soku.cleista.cc/framedata/patchouli/6b
+4	-1	2B	2B	2B	2B	https://soku.cleista.cc/framedata/patchouli/2b
+4	-1	j.5B	j.5B	j.5B	j.5B	https://soku.cleista.cc/framedata/patchouli/j5b
+4	-1	j.2B	j.2B	j.2B	j.2B	https://soku.cleista.cc/framedata/patchouli/j2b
+4	-1	4B	4B	4B	4B	https://soku.cleista.cc/framedata/patchouli/4b
+4	-1	66B	66B	66B	66B	https://soku.cleista.cc/framedata/patchouli/66b
+4	-1	j.4B	j.4B	j.4B	j.4B	https://soku.cleista.cc/framedata/patchouli/j4b
+4	-1	5C	5C	5C	5C	https://soku.cleista.cc/framedata/patchouli/5c
+4	-1	6C	6C	6C	6C	https://soku.cleista.cc/framedata/patchouli/6c
+4	-1	2C	2C	2C	2C	https://soku.cleista.cc/framedata/patchouli/2c
+4	-1	j.5C	j.5C	j.5C	j.5C	https://soku.cleista.cc/framedata/patchouli/j5c
+4	-1	j.6C	j.6C	j.6C	j.6C	https://soku.cleista.cc/framedata/patchouli/j6c
+4	-1	j.2C	j.2C	j.2C	j.2C	https://soku.cleista.cc/framedata/patchouli/j2c
+4	-1	66C	66C	66C	66C	https://soku.cleista.cc/framedata/patchouli/66c
+4	100	236B	Summer Red	Summer Red	サマーレッド	https://soku.cleista.cc/framedata/patchouli/236b-summer-red
+4	100	236C	Summer Red	Summer Red	サマーレッド	https://soku.cleista.cc/framedata/patchouli/236c-summer-red
+4	100	j.236B	Summer Red	Summer Red	サマーレッド	https://soku.cleista.cc/framedata/patchouli/j236b-summer-red
+4	100	j.236C	Summer Red	Summer Red	サマーレッド	https://soku.cleista.cc/framedata/patchouli/j236c-summer-red
+4	105	236B	Summer Flame	Summer Flame	サマーフレイム	https://soku.cleista.cc/framedata/patchouli/236b-summer-flame
+4	105	236C	Summer Flame	Summer Flame	サマーフレイム	https://soku.cleista.cc/framedata/patchouli/236c-summer-flame
+4	105	j.236B	Summer Flame	Summer Flame	サマーフレイム	https://soku.cleista.cc/framedata/patchouli/j236b-summer-flame
+4	105	j.236C	Summer Flame	Summer Flame	サマーフレイム	https://soku.cleista.cc/framedata/patchouli/j236c-summer-flame
+4	110	236B	Wipe Moisture	Wipe Moisture	ワイプモイスチャー	https://soku.cleista.cc/framedata/patchouli/236b-wipe-moisture
+4	110	236C	Wipe Moisture	Wipe Moisture	ワイプモイスチャー	https://soku.cleista.cc/framedata/patchouli/236c-wipe-moisture
+4	101	22B	Winter Element	Winter Element	ウィンターエレメント	https://soku.cleista.cc/framedata/patchouli/22b-winter-element
+4	101	22C	Winter Element	Winter Element	ウィンターエレメント	https://soku.cleista.cc/framedata/patchouli/22c-winter-element
+4	106	22B	Condensed Bubble	Condensed Bubble	コンデンスドバブル	https://soku.cleista.cc/framedata/patchouli/22b-condensed-bubble
+4	106	22C	Condensed Bubble	Condensed Bubble	コンデンスドバブル	https://soku.cleista.cc/framedata/patchouli/22c-condensed-bubble
+4	106	j.22B	Condensed Bubble	Condensed Bubble	コンデンスドバブル	https://soku.cleista.cc/framedata/patchouli/j22b-condensed-bubble
+4	106	j.22C	Condensed Bubble	Condensed Bubble	コンデンスドバブル	https://soku.cleista.cc/framedata/patchouli/j22c-condensed-bubble
+4	111	22B	Sticky Bubbles	Sticky Bubbles	スティッキーバブル	https://soku.cleista.cc/framedata/patchouli/22b-sticky-bubbles
+4	111	22C	Sticky Bubbles	Sticky Bubbles	スティッキーバブル	https://soku.cleista.cc/framedata/patchouli/22c-sticky-bubbles
+4	111	j.22B	Sticky Bubbles	Sticky Bubbles	スティッキーバブル	https://soku.cleista.cc/framedata/patchouli/j22b-sticky-bubbles
+4	111	j.22C	Sticky Bubbles	Sticky Bubbles	スティッキーバブル	https://soku.cleista.cc/framedata/patchouli/j22c-sticky-bubbles
+4	102	623B	Spring Wind	Spring Wind	スプリングウィンド	https://soku.cleista.cc/framedata/patchouli/623b-spring-wind
+4	102	623C	Spring Wind	Spring Wind	スプリングウィンド	https://soku.cleista.cc/framedata/patchouli/623c-spring-wind
+4	107	623B	Flash Of Spring	Flash of Spring	フラッシュオブスプリング	https://soku.cleista.cc/framedata/patchouli/623b-flash-of-spring
+4	107	623C	Flash Of Spring	Flash of Spring	フラッシュオブスプリング	https://soku.cleista.cc/framedata/patchouli/623c-flash-of-spring
+4	107	j.623B	Flash Of Spring	Flash of Spring	フラッシュオブスプリング	https://soku.cleista.cc/framedata/patchouli/j623b-flash-of-spring
+4	107	j.623C	Flash Of Spring	Flash of Spring	フラッシュオブスプリング	https://soku.cleista.cc/framedata/patchouli/j623c-flash-of-spring
+4	112	623B	Static Green	Static Green	スタティックグリーン	https://soku.cleista.cc/framedata/patchouli/623b-static-green
+4	112	623C	Static Green	Static Green	スタティックグリーン	https://soku.cleista.cc/framedata/patchouli/623c-static-green
+4	103	214B	Autumn Edge	Autumn Edge	オータムエッジ	https://soku.cleista.cc/framedata/patchouli/214b-autumn-edge
+4	103	214C	Autumn Edge	Autumn Edge	オータムエッジ	https://soku.cleista.cc/framedata/patchouli/214c-autumn-edge
+4	108	214B	Autumn Blades	Autumn Blade	オータムブレード	https://soku.cleista.cc/framedata/patchouli/214b-autumn-blade
+4	108	214C	Autumn Blades	Autumn Blade	オータムブレード	https://soku.cleista.cc/framedata/patchouli/214c-autumn-blade
+4	108	j.214B	Autumn Blades	Autumn Blade	オータムブレード	https://soku.cleista.cc/framedata/patchouli/j214b-autumn-blade
+4	108	j.214C	Autumn Blades	Autumn Blade	オータムブレード	https://soku.cleista.cc/framedata/patchouli/j214c-autumn-blade
+4	113	214B	Fall Slasher	Fall Slasher	フォールスラッシャー	https://soku.cleista.cc/framedata/patchouli/214b-fall-slasher
+4	113	214C	Fall Slasher	Fall Slasher	フォールスラッシャー	https://soku.cleista.cc/framedata/patchouli/214c-fall-slasher
+4	104	421B	Doyou Spear	Dew Spear	ドヨースピア	https://soku.cleista.cc/framedata/patchouli/421b-dew-spear
+4	104	421C	Doyou Spear	Dew Spear	ドヨースピア	https://soku.cleista.cc/framedata/patchouli/421c-dew-spear
+4	109	421B	Emerald City	Emerald City	エメラルドシティ	https://soku.cleista.cc/framedata/patchouli/421b-emerald-city
+4	114	421B	Diamond Hardness	Diamond Hardness	ダイアモンドハードネス	https://soku.cleista.cc/framedata/patchouli/421b-diamond-hardness
+4	114	421C	Diamond Hardness	Diamond Hardness	ダイアモンドハードネス	https://soku.cleista.cc/framedata/patchouli/421c-diamond-hardness
+4	200	sc200	火金符「St. Elmo Pillar」（圣爱尔摩火柱）	Fire Metal Sign "St Elmo's Pillar"	火金符「セントエルモピラー」	https://soku.cleista.cc/framedata/patchouli/sc200-fire-metal-sign-st-elmos-pillar
+4	201	sc201	土水符「Noachian Deluge」（诺亚的大洪水）	Earth Water Sign "Noachian Deluge"	土水符「ノエキアンデリュージュ」	https://soku.cleista.cc/framedata/patchouli/sc201-earth-water-sign-noachian-deluge
+4	202	sc202	金木符「Elemental Harvester」（元素收获者）	Metal Wood Sign "Elemental Harvester"	金木符「エレメンタルハーベスター」	https://soku.cleista.cc/framedata/patchouli/sc202-metal-wood-sign-elemental-harvester
+4	203	sc203	日符「Royal Flare」（皇家烈焰）	Sun Sign "Royal Flare"	日符「ロイヤルフレア」	https://soku.cleista.cc/framedata/patchouli/sc203-sun-sign-royal-flare
+4	204	sc204	月符「Silent Selene」（沉静的月神）	Moon Sign "Silent Selene"	月符「サイレントセレナ」	https://soku.cleista.cc/framedata/patchouli/sc204-moon-sign-silent-selene
+4	205	sc205	火水木金土符「贤者之石」	Five Elements "Philosopher's Stone"	火水木金土符「賢者の石」	https://soku.cleista.cc/framedata/patchouli/sc205-five-elements-philosophers-stone
+4	206	sc206	水符「Jellyfish Princess」（水母公主）	Water Sign "Jellyfish Princess"	水符「ジェリーフィッシュプリンセス」	https://soku.cleista.cc/framedata/patchouli/sc206-water-sign-jellyfish-princess
+4	207	sc207	月木符「Satellite Himawari」（卫星向日葵）	Moon Wood Sign "Satellite Sunflower"	月木符「サテライトヒマワリ」	https://soku.cleista.cc/framedata/patchouli/sc207-moon-wood-sign-satellite-sunflower
+4	210	sc210	日木符「Photosynthesis」（光合作用）	Sun Wood Sign "Photosynthesis"	日木符「フォトシンセシス」	https://soku.cleista.cc/framedata/patchouli/sc210-sun-wood-sign-photosynthesis
+4	211	sc211	火水符「Phlogistic Pillar」（燃素之柱）	Fire Water Sign "Phlogistic Pillar"	火水符「フロギスティックピラー」	https://soku.cleista.cc/framedata/patchouli/sc211-fire-water-sign-phlogistic-pillar
+4	212	sc212	土金符「Emerald Megalopolis」（祖母绿都市）	Earth Metal Sign "Emerald Megalopolis"	土金符「エメラルドメガロポリス」	https://soku.cleista.cc/framedata/patchouli/sc212-earth-metal-sign-emerald-megalopolis
+4	213	sc213	日月符「Royal Diamond Ring」（皇家钻戒）	Sun Moon Sign "Royal Diamond Ring"	日月符「ロイヤルダイアモンドリング」	https://soku.cleista.cc/framedata/patchouli/sc213-sun-moon-sign-royal-diamond-ring
+4	201	j.sc201	土水符「Noachian Deluge」（诺亚的大洪水）	Earth Water Sign "Noachian Deluge"	土水符「ノエキアンデリュージュ」	https://soku.cleista.cc/framedata/patchouli/sc201-earth-water-sign-noachian-deluge-651
+4	211	j.sc211	火水符「Phlogistic Pillar」（燃素之柱）	Fire Water Sign "Phlogistic Pillar"	火水符「フロギスティックピラー」	https://soku.cleista.cc/framedata/patchouli/sc211-fire-water-sign-phlogistic-pillar-661
+5	-1	66	66	66	66	https://soku.cleista.cc/framedata/youmu/66
+5	-1	44	44	44	44	https://soku.cleista.cc/framedata/youmu/44
+5	-1	j.66	j.66	j.66	j.66	https://soku.cleista.cc/framedata/youmu/j66
+5	-1	j.44	j.44	j.44	j.44	https://soku.cleista.cc/framedata/youmu/j44
+5	-1	5A	5A	5A	5A	https://soku.cleista.cc/framedata/youmu/5a
+5	-1	f.5A	f.5A	f.5A	f.5A	https://soku.cleista.cc/framedata/youmu/f5a
+5	-1	6A	6A	6A	6A	https://soku.cleista.cc/framedata/youmu/6a
+5	-1	2A	2A	2A	2A	https://soku.cleista.cc/framedata/youmu/2a
+5	-1	3A	3A	3A	3A	https://soku.cleista.cc/framedata/youmu/3a
+5	-1	66A	66A	66A	66A	https://soku.cleista.cc/framedata/youmu/66a
+5	-1	66A6A	66A6A	66A6A	66A6A	https://soku.cleista.cc/framedata/youmu/66a6a
+5	-1	j.5A	j.5A	j.5A	j.5A	https://soku.cleista.cc/framedata/youmu/j5a
+5	-1	j.6A	j.6A	j.6A	j.6A	https://soku.cleista.cc/framedata/youmu/j6a
+5	-1	j.2A	j.2A	j.2A	j.2A	https://soku.cleista.cc/framedata/youmu/j2a
+5	-1	j.8A	j.8A	j.8A	j.8A	https://soku.cleista.cc/framedata/youmu/j8a
+5	-1	f.2A	f.2A	f.2A	f.2A	https://soku.cleista.cc/framedata/youmu/f2a
+5	-1	5AA	5AA	5AA	5AA	https://soku.cleista.cc/framedata/youmu/5aa
+5	-1	5AAA	5AAA	5AAA	5AAA	https://soku.cleista.cc/framedata/youmu/5aaa
+5	-1	5AAAA	5AAAA	5AAAA	5AAAA	https://soku.cleista.cc/framedata/youmu/5aaaa
+5	-1	5AAAAA	5AAAAA	5AAAAA	5AAAAA	https://soku.cleista.cc/framedata/youmu/5aaaaa
+5	-1	4A	4A	4A	4A	https://soku.cleista.cc/framedata/youmu/4a
+5	-1	5B	5B	5B	5B	https://soku.cleista.cc/framedata/youmu/5b
+5	-1	6B	6B	6B	6B	https://soku.cleista.cc/framedata/youmu/6b
+5	-1	2B	2B	2B	2B	https://soku.cleista.cc/framedata/youmu/2b
+5	-1	j.5B	j.5B	j.5B	j.5B	https://soku.cleista.cc/framedata/youmu/j5b
+5	-1	j.2B	j.2B	j.2B	j.2B	https://soku.cleista.cc/framedata/youmu/j2b
+5	-1	66B	66B	66B	66B	https://soku.cleista.cc/framedata/youmu/66b
+5	-1	5C	5C	5C	5C	https://soku.cleista.cc/framedata/youmu/5c
+5	-1	6C	6C	6C	6C	https://soku.cleista.cc/framedata/youmu/6c
+5	-1	2C	2C	2C	2C	https://soku.cleista.cc/framedata/youmu/2c
+5	-1	j.5C	j.5C	j.5C	j.5C	https://soku.cleista.cc/framedata/youmu/j5c
+5	-1	j.6C	j.6C	j.6C	j.6C	https://soku.cleista.cc/framedata/youmu/j6c
+5	-1	j.2C	j.2C	j.2C	j.2C	https://soku.cleista.cc/framedata/youmu/j2c
+5	-1	66C	66C	66C	66C	https://soku.cleista.cc/framedata/youmu/66c
+5	100	236B	反射下界斩	Netherworld Reflection Slash	反射下界斬	https://soku.cleista.cc/framedata/youmu/236b-netherworld-reflection-slash
+5	104	236B	结跏跗斩	Lotus Stance Cut	結跏趺斬	https://soku.cleista.cc/framedata/youmu/236b-lotus-stance-cut
+5	104	236C	结跏跗斩	Lotus Stance Cut	結跏趺斬	https://soku.cleista.cc/framedata/youmu/236c-lotus-stance-cut
+5	108	236B	燐气斩	Phosphoric Slash	燐気斬	https://soku.cleista.cc/framedata/youmu/236b-phosphoric-slash
+5	108	236C	燐气斩	Phosphoric Slash	燐気斬	https://soku.cleista.cc/framedata/youmu/236c-phosphoric-slash
+5	101	623B	弦月斩	Crescent Moon Slash	弦月斬	https://soku.cleista.cc/framedata/youmu/623b-crescent-moon-slash
+5	101	623C	弦月斩	Crescent Moon Slash	弦月斬	https://soku.cleista.cc/framedata/youmu/623c-crescent-moon-slash
+5	105	623B	折伏无间	Intolerant Avici	折伏無間	https://soku.cleista.cc/framedata/youmu/623b-intolerant-avici
+5	-1	623B[hold]	623B[hold]	623B[hold]	623B[hold]	https://soku.cleista.cc/framedata/youmu/623b-hold
+5	105	623C	折伏无间	Intolerant Avici	折伏無間	https://soku.cleista.cc/framedata/youmu/623c-intolerant-avici
+5	109	623B	炯眼剑	Insightful Sword	炯眼剣	https://soku.cleista.cc/framedata/youmu/623b-insightful-sword
+5	109	623C	炯眼剑	Insightful Sword	炯眼剣	https://soku.cleista.cc/framedata/youmu/623c-insightful-sword
+5	102	214B	生死流转斩	Slash of Life and Death	生死流転斬	https://soku.cleista.cc/framedata/youmu/214b-slash-of-life-and-death
+5	-1	214B214B	214B214B	214B214B	214B214B	https://soku.cleista.cc/framedata/youmu/214b214b
+5	-1	214B214B214B	214B214B214B	214B214B214B	214B214B214B	https://soku.cleista.cc/framedata/youmu/214b214b214b
+5	-1	214B214C	214B214C	214B214C	214B214C	https://soku.cleista.cc/framedata/youmu/214b214c
+5	102	214C	生死流转斩	Slash of Life and Death	生死流転斬	https://soku.cleista.cc/framedata/youmu/214c-slash-of-life-and-death
+5	106	214B	心抄斩	Heart Carving Cut	心抄斬	https://soku.cleista.cc/framedata/youmu/214b-heart-carving-cut
+5	106	214C	心抄斩	Heart Carving Cut	心抄斬	https://soku.cleista.cc/framedata/youmu/214c-heart-carving-cut
+5	110	214B	头上花剪斩	Slashing a Flower Upon One's Head	頭上花剪斬	https://soku.cleista.cc/framedata/youmu/214b-slashing-a-flower-upon-ones-head
+5	110	214C	头上花剪斩	Slashing a Flower Upon One's Head	頭上花剪斬	https://soku.cleista.cc/framedata/youmu/214c-slashing-a-flower-upon-ones-head
+5	103	22B	凭依之缚	Medium's Bind	憑坐の縛	https://soku.cleista.cc/framedata/youmu/22b-mediums-bind
+5	103	22C	凭依之缚	Medium's Bind	憑坐の縛	https://soku.cleista.cc/framedata/youmu/22c-mediums-bind
+5	107	22B	恶魂	Wicked Soul	悪し魂	https://soku.cleista.cc/framedata/youmu/22b-wicked-soul
+5	107	22C	恶魂	Wicked Soul	悪し魂	https://soku.cleista.cc/framedata/youmu/22c-wicked-soul
+5	111	22B	奇妙半身	Strange Half-Body	奇び半身	https://soku.cleista.cc/framedata/youmu/22b-strange-half-body
+5	111	22C	奇妙半身	Strange Half-Body	奇び半身	https://soku.cleista.cc/framedata/youmu/22c-strange-half-body
+5	111	j.22B	奇妙半身	Strange Half-Body	奇び半身	https://soku.cleista.cc/framedata/youmu/j22b-strange-half-body
+5	111	j.22C	奇妙半身	Strange Half-Body	奇び半身	https://soku.cleista.cc/framedata/youmu/j22c-strange-half-body
+5	200	sc200	人符「现世斩」	Human Sign "Slash of Present"	人符「現世斬」	https://soku.cleista.cc/framedata/youmu/sc200-human-sign-slash-of-present
+5	201	sc201	断命剑「冥想斩」	Life Ending Sword "Meditation"	断命剣「冥想斬」	https://soku.cleista.cc/framedata/youmu/sc201-life-ending-sword-meditation
+5	202	sc202	魂符「幽明的苦轮」	Soul Sign "Ghostly Wheel of Pain"	魂符「幽明の苦輪」	https://soku.cleista.cc/framedata/youmu/sc202-soul-sign-ghostly-wheel-of-pain
+5	203	sc203	人鬼「未来永劫斩」	Obsessor "Slash of Eternity"	人鬼「未来永劫斬」	https://soku.cleista.cc/framedata/youmu/sc203-obsessor-slash-of-eternity
+5	204	sc204	断迷剑「迷津慈航斩」	Enlightened Sword "Rise from Delusion"	断迷剣「迷津慈航斬」	https://soku.cleista.cc/framedata/youmu/sc204-enlightened-sword-rise-from-delusion
+5	205	sc205	魂魄「幽明求闻持聪明之法」	Spirit "Secret of Life and Death"	魂魄「幽明求聞持聡明の法」	https://soku.cleista.cc/framedata/youmu/sc205-spirit-secret-of-life-and-death
+5	206	sc206	剑伎「樱花闪闪」	Sword Skill "Thousand Cherry Blossoms"	剣伎「桜花閃々」	https://soku.cleista.cc/framedata/youmu/sc206-sword-skill-thousand-cherry-blossoms
+5	207	sc207	断灵剑「成佛得脱斩」	Soul Cutting "Ascension to Nirvana"	断霊剣「成仏得脱斬」	https://soku.cleista.cc/framedata/youmu/sc207-soul-cutting-ascension-to-nirvana
+5	208	sc208	空观剑「六根清净斩」	Empty Perception "6-root Cleansing"	空観剣「六根清浄斬」	https://soku.cleista.cc/framedata/youmu/sc208-empty-perception-6-root-cleansing
+5	212	sc212	转生剑「圆心流转斩」	Reincarnation Sword "Sword of Cycles"	転生剣「円心流転斬」	https://soku.cleista.cc/framedata/youmu/sc212-reincarnation-sword-sword-of-cycles
+6	-1	66	66	66	66	https://soku.cleista.cc/framedata/remilia/66
+6	-1	44	44	44	44	https://soku.cleista.cc/framedata/remilia/44
+6	-1	j.66	j.66	j.66	j.66	https://soku.cleista.cc/framedata/remilia/j66
+6	-1	j.44	j.44	j.44	j.44	https://soku.cleista.cc/framedata/remilia/j44
+6	-1	5A	5A	5A	5A	https://soku.cleista.cc/framedata/remilia/5a
+6	-1	f.5A	f.5A	f.5A	f.5A	https://soku.cleista.cc/framedata/remilia/f5a
+6	-1	6A	6A	6A	6A	https://soku.cleista.cc/framedata/remilia/6a
+6	-1	2A	2A	2A	2A	https://soku.cleista.cc/framedata/remilia/2a
+6	-1	3A	3A	3A	3A	https://soku.cleista.cc/framedata/remilia/3a
+6	-1	j.5A	j.5A	j.5A	j.5A	https://soku.cleista.cc/framedata/remilia/j5a
+6	-1	j.6A	j.6A	j.6A	j.6A	https://soku.cleista.cc/framedata/remilia/j6a
+6	-1	j.2A	j.2A	j.2A	j.2A	https://soku.cleista.cc/framedata/remilia/j2a
+6	-1	j.8A	j.8A	j.8A	j.8A	https://soku.cleista.cc/framedata/remilia/j8a
+6	-1	5AA	5AA	5AA	5AA	https://soku.cleista.cc/framedata/remilia/5aa
+6	-1	5AAA	5AAA	5AAA	5AAA	https://soku.cleista.cc/framedata/remilia/5aaa
+6	-1	5AAAA	5AAAA	5AAAA	5AAAA	https://soku.cleista.cc/framedata/remilia/5aaaa
+6	-1	j.5AA	j.5AA	j.5AA	j.5AA	https://soku.cleista.cc/framedata/remilia/j5aa
+6	-1	4A	4A	4A	4A	https://soku.cleista.cc/framedata/remilia/4a
+6	-1	5B	5B	5B	5B	https://soku.cleista.cc/framedata/remilia/5b
+6	-1	6B	6B	6B	6B	https://soku.cleista.cc/framedata/remilia/6b
+6	-1	2B	2B	2B	2B	https://soku.cleista.cc/framedata/remilia/2b
+6	-1	j.5B	j.5B	j.5B	j.5B	https://soku.cleista.cc/framedata/remilia/j5b
+6	-1	j.2B	j.2B	j.2B	j.2B	https://soku.cleista.cc/framedata/remilia/j2b
+6	-1	5C	5C	5C	5C	https://soku.cleista.cc/framedata/remilia/5c
+6	-1	2C	2C	2C	2C	https://soku.cleista.cc/framedata/remilia/2c
+6	-1	j.5C	j.5C	j.5C	j.5C	https://soku.cleista.cc/framedata/remilia/j5c
+6	-1	j.2C	j.2C	j.2C	j.2C	https://soku.cleista.cc/framedata/remilia/j2c
+6	100	236B	Demon Lord Walk	Demon Lord Walk	デーモンロードウォーク	https://soku.cleista.cc/framedata/remilia/236b-demon-lord-walk
+6	100	236C	Demon Lord Walk	Demon Lord Walk	デーモンロードウォーク	https://soku.cleista.cc/framedata/remilia/236c-demon-lord-walk
+6	104	236B	Vampire Claw	Vampire Claw	ヴァンパイアクロウ	https://soku.cleista.cc/framedata/remilia/236b-vampire-claw
+6	-1	236B236B	236B236B	236B236B	236B236B	https://soku.cleista.cc/framedata/remilia/236b236b
+6	-1	236B236B236B	236B236B236B	236B236B236B	236B236B236B	https://soku.cleista.cc/framedata/remilia/236b236b236b
+6	-1	236B236B236C	236B236B236C	236B236B236C	236B236B236C	https://soku.cleista.cc/framedata/remilia/236b236b236c
+6	104	236C	Vampire Claw	Vampire Claw	ヴァンパイアクロウ	https://soku.cleista.cc/framedata/remilia/236c-vampire-claw
+6	108	236B	Trickster Devil	Trickster Devil	トリックスターデビル	https://soku.cleista.cc/framedata/remilia/236b-trickster-devil
+6	108	236C	Trickster Devil	Trickster Devil	トリックスターデビル	https://soku.cleista.cc/framedata/remilia/236c-trickster-devil
+6	101	214B	Servant Flyer（飞行仆从）	Servant Flier	サーヴァントフライヤー	https://soku.cleista.cc/framedata/remilia/214b-servant-flier
+6	101	214C	Servant Flyer（飞行仆从）	Servant Flier	サーヴァントフライヤー	https://soku.cleista.cc/framedata/remilia/214c-servant-flier
+6	105	214B	Chain Gang	Chain Gang	チェーンギャング	https://soku.cleista.cc/framedata/remilia/214b-chain-gang
+6	105	214C	Chain Gang	Chain Gang	チェーンギャング	https://soku.cleista.cc/framedata/remilia/214c-chain-gang
+6	105	j.214B	Chain Gang	Chain Gang	チェーンギャング	https://soku.cleista.cc/framedata/remilia/j214b-chain-gang
+6	105	j.214C	Chain Gang	Chain Gang	チェーンギャング	https://soku.cleista.cc/framedata/remilia/j214c-chain-gang
+6	109	214B	Demon's Dinner Fork	Demon's Dinner Fork	デモンズディナーフォーク	https://soku.cleista.cc/framedata/remilia/214b-demons-dinner-fork
+6	109	214C	Demon's Dinner Fork	Demon's Dinner Fork	デモンズディナーフォーク	https://soku.cleista.cc/framedata/remilia/214c-demons-dinner-fork
+6	102	623B	Demon Lord Cradle	Demon Lord Cradle	デーモンロードクレイドル	https://soku.cleista.cc/framedata/remilia/623b-demon-lord-cradle
+6	102	623C	Demon Lord Cradle	Demon Lord Cradle	デーモンロードクレイドル	https://soku.cleista.cc/framedata/remilia/623c-demon-lord-cradle
+6	106	623B	Rocket Kick-up	Rocket Kick Upper	ロケットキックアップ	https://soku.cleista.cc/framedata/remilia/623b-rocket-kick-upper
+6	106	623C	Rocket Kick-up	Rocket Kick Upper	ロケットキックアップ	https://soku.cleista.cc/framedata/remilia/623c-rocket-kick-upper
+6	110	623B	Vampire Kiss	Vampire Kiss	バンパイアキス	https://soku.cleista.cc/framedata/remilia/623b-vampire-kiss
+6	110	623C	Vampire Kiss	Vampire Kiss	バンパイアキス	https://soku.cleista.cc/framedata/remilia/623c-vampire-kiss
+6	103	22B	Demon Lord Arrow	Demon Lord Arrow	デーモンロードアロー	https://soku.cleista.cc/framedata/remilia/22b-demon-lord-arrow
+6	103	22C	Demon Lord Arrow	Demon Lord Arrow	デーモンロードアロー	https://soku.cleista.cc/framedata/remilia/22c-demon-lord-arrow
+6	107	22B	Ceiling Fear	Ceiling Fear	シーリングフィア	https://soku.cleista.cc/framedata/remilia/22b-ceiling-fear
+6	107	22C	Ceiling Fear	Ceiling Fear	シーリングフィア	https://soku.cleista.cc/framedata/remilia/22c-ceiling-fear
+6	111	22B	Stigmanizer	Stigmanizer	スティグマナイザー	https://soku.cleista.cc/framedata/remilia/22b-stigmanizer
+6	111	22C	Stigmanizer	Stigmanizer	スティグマナイザー	https://soku.cleista.cc/framedata/remilia/22c-stigmanizer
+6	200	sc200	红符「红色不夜城」	Scarlet Sign "Red the Nightless Castle"	紅符「不夜城レッド」	https://soku.cleista.cc/framedata/remilia/sc200-scarlet-sign-red-the-nightless-castle
+6	201	sc201	必杀「Heart Break」（碎心）	Critical "Heart Break"	必殺「ハートブレイク」	https://soku.cleista.cc/framedata/remilia/sc201-critical-heart-break
+6	202	sc202	夜符「Demon King Cradle」（恶魔之王的摇篮）	Midnight Sign "Demon King Cradle"	夜符「デーモンキングクレイドル」	https://soku.cleista.cc/framedata/remilia/sc202-midnight-sign-demon-king-cradle
+6	203	sc203	红魔「Scarlet Devil」（绯红恶魔）	Scarlet Devil "Scarlet Devil"	紅魔「スカーレットデビル」	https://soku.cleista.cc/framedata/remilia/sc203-scarlet-devil-scarlet-devil
+6	204	sc204	神枪「Spear the Gungnir」（冈格尼尔之枪）	Divine Spear "Spear the Gungnir"	神槍「スピア・ザ・グングニル」	https://soku.cleista.cc/framedata/remilia/sc204-divine-spear-spear-the-gungnir
+6	205	sc205	夜王「Dracula Cradle」（德古拉的摇篮）	Midnight King "Dracula Cradle"	夜王「ドラキュラクレイドル」	https://soku.cleista.cc/framedata/remilia/sc205-midnight-king-dracula-cradle
+6	206	sc206	夜符「Bad Lady Scramble」（恶女置乱）	Midnight Sign "Bad Lady Scramble"	夜符「バッドレディスクランブル」	https://soku.cleista.cc/framedata/remilia/sc206-midnight-sign-bad-lady-scramble
+6	207	sc207	命运「Miserable Fate」（悲惨的命运）	Destiny "Miserable Fate"	運命「ミゼラブルフェイト」	https://soku.cleista.cc/framedata/remilia/sc207-destiny-miserable-fate
+6	208	sc208	「千年吸血鬼」	"Millenium Vampire"	「ミレニアムの吸血鬼」	https://soku.cleista.cc/framedata/remilia/sc208-millenium-vampire
+6	209	sc209	恶魔「Remilia Stretch」（蕾米莉亚伸展）	Demon "Remilia Stretch"	悪魔「レミリアストレッチ」	https://soku.cleista.cc/framedata/remilia/sc209-demon-remilia-stretch
+7	-1	66	66	66	66	https://soku.cleista.cc/framedata/yuyuko/66
+7	-1	44	44	44	44	https://soku.cleista.cc/framedata/yuyuko/44
+7	-1	j.66	j.66	j.66	j.66	https://soku.cleista.cc/framedata/yuyuko/j66
+7	-1	j.44	j.44	j.44	j.44	https://soku.cleista.cc/framedata/yuyuko/j44
+7	-1	5A	5A	5A	5A	https://soku.cleista.cc/framedata/yuyuko/5a
+7	-1	f.5A	f.5A	f.5A	f.5A	https://soku.cleista.cc/framedata/yuyuko/f5a
+7	-1	6A	6A	6A	6A	https://soku.cleista.cc/framedata/yuyuko/6a
+7	-1	2A	2A	2A	2A	https://soku.cleista.cc/framedata/yuyuko/2a
+7	-1	3A	3A	3A	3A	https://soku.cleista.cc/framedata/yuyuko/3a
+7	-1	66A	66A	66A	66A	https://soku.cleista.cc/framedata/yuyuko/66a
+7	-1	j.5A	j.5A	j.5A	j.5A	https://soku.cleista.cc/framedata/yuyuko/j5a
+7	-1	j.6A	j.6A	j.6A	j.6A	https://soku.cleista.cc/framedata/yuyuko/j6a
+7	-1	j.2A	j.2A	j.2A	j.2A	https://soku.cleista.cc/framedata/yuyuko/j2a
+7	-1	j.8A	j.8A	j.8A	j.8A	https://soku.cleista.cc/framedata/yuyuko/j8a
+7	-1	5AA	5AA	5AA	5AA	https://soku.cleista.cc/framedata/yuyuko/5aa
+7	-1	5AAA	5AAA	5AAA	5AAA	https://soku.cleista.cc/framedata/yuyuko/5aaa
+7	-1	4A	4A	4A	4A	https://soku.cleista.cc/framedata/yuyuko/4a
+7	-1	5B	5B	5B	5B	https://soku.cleista.cc/framedata/yuyuko/5b
+7	-1	2B	2B	2B	2B	https://soku.cleista.cc/framedata/yuyuko/2b
+7	-1	j.5B	j.5B	j.5B	j.5B	https://soku.cleista.cc/framedata/yuyuko/j5b
+7	-1	j.2B	j.2B	j.2B	j.2B	https://soku.cleista.cc/framedata/yuyuko/j2b
+7	-1	66B	66B	66B	66B	https://soku.cleista.cc/framedata/yuyuko/66b
+7	-1	5C	5C	5C	5C	https://soku.cleista.cc/framedata/yuyuko/5c
+7	-1	6C	6C	6C	6C	https://soku.cleista.cc/framedata/yuyuko/6c
+7	-1	2C	2C	2C	2C	https://soku.cleista.cc/framedata/yuyuko/2c
+7	-1	j.5C	j.5C	j.5C	j.5C	https://soku.cleista.cc/framedata/yuyuko/j5c
+7	-1	j.6C	j.6C	j.6C	j.6C	https://soku.cleista.cc/framedata/yuyuko/j6c
+7	-1	j.2C	j.2C	j.2C	j.2C	https://soku.cleista.cc/framedata/yuyuko/j2c
+7	-1	66C	66C	66C	66C	https://soku.cleista.cc/framedata/yuyuko/66c
+7	100	214B	幽蝴蝶	Ghostly Butterfly	幽胡蝶	https://soku.cleista.cc/framedata/yuyuko/214b-ghostly-butterfly
+7	100	214C	幽蝴蝶	Ghostly Butterfly	幽胡蝶	https://soku.cleista.cc/framedata/yuyuko/214c-ghostly-butterfly
+7	100	j.214B	幽蝴蝶	Ghostly Butterfly	幽胡蝶	https://soku.cleista.cc/framedata/yuyuko/j214b-ghostly-butterfly
+7	100	j.214C	幽蝴蝶	Ghostly Butterfly	幽胡蝶	https://soku.cleista.cc/framedata/yuyuko/j214c-ghostly-butterfly
+7	104	214B	好死之灵	Spirits that Died Well	好死の霊	https://soku.cleista.cc/framedata/yuyuko/214b-spirits-that-died-well
+7	104	214C	好死之灵	Spirits that Died Well	好死の霊	https://soku.cleista.cc/framedata/yuyuko/214c-spirits-that-died-well
+7	104	j.214B	好死之灵	Spirits that Died Well	好死の霊	https://soku.cleista.cc/framedata/yuyuko/j214b-spirits-that-died-well
+7	104	j.214C	好死之灵	Spirits that Died Well	好死の霊	https://soku.cleista.cc/framedata/yuyuko/j214c-spirits-that-died-well
+7	108	214B	Sphere Bloom	Sphere Bloom	スフィアブルーム	https://soku.cleista.cc/framedata/yuyuko/214b-sphere-bloom
+7	108	214C	Sphere Bloom	Sphere Bloom	スフィアブルーム	https://soku.cleista.cc/framedata/yuyuko/214c-sphere-bloom
+7	108	j.214B	Sphere Bloom	Sphere Bloom	スフィアブルーム	https://soku.cleista.cc/framedata/yuyuko/j214b-sphere-bloom
+7	108	j.214C	Sphere Bloom	Sphere Bloom	スフィアブルーム	https://soku.cleista.cc/framedata/yuyuko/j214c-sphere-bloom
+7	101	236B	未生之光	Light of the Undead	未生の光	https://soku.cleista.cc/framedata/yuyuko/236b-light-of-the-undead
+7	101	236C	未生之光	Light of the Undead	未生の光	https://soku.cleista.cc/framedata/yuyuko/236c-light-of-the-undead
+7	101	j.236B	未生之光	Light of the Undead	未生の光	https://soku.cleista.cc/framedata/yuyuko/j236b-light-of-the-undead
+7	101	j.236C	未生之光	Light of the Undead	未生の光	https://soku.cleista.cc/framedata/yuyuko/j236c-light-of-the-undead
+7	105	236B	凤蝶纹之枪	Lance of the Swallowtail Crest	鳳蝶紋の槍	https://soku.cleista.cc/framedata/yuyuko/236b-lance-of-the-swallowtail-crest
+7	109	236B	死还的大地	Land of Death	死還の大地	https://soku.cleista.cc/framedata/yuyuko/236b-land-of-death
+7	109	236C	死还的大地	Land of Death	死還の大地	https://soku.cleista.cc/framedata/yuyuko/236c-land-of-death
+7	102	421B	悉皆彷徨	Eternal Wandering	悉皆彷徨	https://soku.cleista.cc/framedata/yuyuko/421b-eternal-wandering
+7	102	421C	悉皆彷徨	Eternal Wandering	悉皆彷徨	https://soku.cleista.cc/framedata/yuyuko/421c-eternal-wandering
+7	102	j.421B	悉皆彷徨	Eternal Wandering	悉皆彷徨	https://soku.cleista.cc/framedata/yuyuko/j421b-eternal-wandering
+7	102	j.421C	悉皆彷徨	Eternal Wandering	悉皆彷徨	https://soku.cleista.cc/framedata/yuyuko/j421c-eternal-wandering
+7	106	421B	诱灵的甘蜜	Spirit-Luring Nectar	誘霊の甘蜜	https://soku.cleista.cc/framedata/yuyuko/421b-spirit-luring-nectar
+7	106	421C	诱灵的甘蜜	Spirit-Luring Nectar	誘霊の甘蜜	https://soku.cleista.cc/framedata/yuyuko/421c-spirit-luring-nectar
+7	110	421B	故人的遗物	Gifts to the Deceased	故人のお届け物	https://soku.cleista.cc/framedata/yuyuko/421b-gifts-to-the-deceased
+7	110	421C	故人的遗物	Gifts to the Deceased	故人のお届け物	https://soku.cleista.cc/framedata/yuyuko/421c-gifts-to-the-deceased
+7	103	623B	蝴蝶梦之舞	Dance of the Butterfly Dream	胡蝶夢の舞	https://soku.cleista.cc/framedata/yuyuko/623b-dance-of-the-butterfly-dream
+7	103	623C	蝴蝶梦之舞	Dance of the Butterfly Dream	胡蝶夢の舞	https://soku.cleista.cc/framedata/yuyuko/623c-dance-of-the-butterfly-dream
+7	107	623B	逆转屏风	Reverse Screens	逆さ屏風	https://soku.cleista.cc/framedata/yuyuko/623b-reverse-screens
+7	107	623C	逆转屏风	Reverse Screens	逆さ屏風	https://soku.cleista.cc/framedata/yuyuko/623c-reverse-screens
+7	111	623B	Sense of Elegance	Sense of Elegance	センスオブエレガンス	https://soku.cleista.cc/framedata/yuyuko/623b-sense-of-elegance
+7	111	623C	Sense of Elegance	Sense of Elegance	センスオブエレガンス	https://soku.cleista.cc/framedata/yuyuko/623c-sense-of-elegance
+7	200	sc200	死符「Ghastly Dream」（惊梦）	Death Sign "Ghastly Dream"	死符「ギャストリドリーム」	https://soku.cleista.cc/framedata/yuyuko/sc200-death-sign-ghastly-dream
+7	201	sc201	冥符「黄泉平坂行路」	Nether Sign "Passage to the Underworld"	冥符「黄泉平坂行路」	https://soku.cleista.cc/framedata/yuyuko/sc201-nether-sign-passage-to-the-underworld
+7	202	sc202	灵符「无寿之梦」	Ghost Sign "Ageless Dream"	霊符「无寿の夢」	https://soku.cleista.cc/framedata/yuyuko/sc202-ghost-sign-ageless-dream
+7	203	sc203	死蝶「华胥的永眠」	Deadly Butterfly "Endless Nap"	死蝶「華胥の永眠」	https://soku.cleista.cc/framedata/yuyuko/sc203-deadly-butterfly-endless-nap
+7	204	sc204	再迷「幻想乡的黄泉归」	Lost Again "Gensokyo's Hell"	再迷「幻想郷の黄泉還り」	https://soku.cleista.cc/framedata/yuyuko/sc204-lost-again-gensokyos-hell
+7	205	sc205	寿命「通向无寿国的期票」	Life Limit "Ticket to the Netherworld"	寿命「无寿国への約束手形」	https://soku.cleista.cc/framedata/yuyuko/sc205-life-limit-ticket-to-the-netherworld
+7	206	sc206	灵蝶「蝶之羽风暂留此世」	Psyche "As the Butterfly Flies"	霊蝶「蝶の羽風生に暫く」	https://soku.cleista.cc/framedata/yuyuko/sc206-psyche-as-the-butterfly-flies
+7	207	sc207	蝶符「凤蝶纹的死枪」	Butterfly Sign "Death Lance"	蝶符「鳳蝶紋の死槍」	https://soku.cleista.cc/framedata/yuyuko/sc207-butterfly-sign-death-lance
+7	208	sc208	幽雅「通向黄泉的诱蛾灯」	Elegance "Invitation to the Afterlife"	幽雅「死出の誘蛾灯」	https://soku.cleista.cc/framedata/yuyuko/sc208-elegance-invitation-to-the-afterlife
+7	209	sc209	樱符「Sense of Cherry Blossom」（樱之意志）	Cherry Sign "Sense of Cherry Blossom"	桜符「センスオブチェリーブロッサム」	https://soku.cleista.cc/framedata/yuyuko/sc209-cherry-sign-sense-of-cherry-blossom
+7	219	sc219	「反魂蝶」	"Resurrection Butterflies"	「反魂蝶」	https://soku.cleista.cc/framedata/yuyuko/sc219-resurrection-butterflies
+7	201	j.sc201	冥符「黄泉平坂行路」	Nether Sign "Passage to the Underworld"	冥符「黄泉平坂行路」	https://soku.cleista.cc/framedata/yuyuko/sc201-nether-sign-passage-to-the-underworld-651
+7	206	j.sc206	灵蝶「蝶之羽风暂留此世」	Psyche "As the Butterfly Flies"	霊蝶「蝶の羽風生に暫く」	https://soku.cleista.cc/framedata/yuyuko/sc206-psyche-as-the-butterfly-flies-656
+7	207	j.sc207	蝶符「凤蝶纹的死枪」	Butterfly Sign "Death Lance"	蝶符「鳳蝶紋の死槍」	https://soku.cleista.cc/framedata/yuyuko/sc207-butterfly-sign-death-lance-657
+8	-1	66	66	66	66	https://soku.cleista.cc/framedata/yukari/66
+8	-1	44	44	44	44	https://soku.cleista.cc/framedata/yukari/44
+8	-1	j.66	j.66	j.66	j.66	https://soku.cleista.cc/framedata/yukari/j66
+8	-1	j.44	j.44	j.44	j.44	https://soku.cleista.cc/framedata/yukari/j44
+8	-1	5A	5A	5A	5A	https://soku.cleista.cc/framedata/yukari/5a
+8	-1	f.5A	f.5A	f.5A	f.5A	https://soku.cleista.cc/framedata/yukari/f5a
+8	-1	6A	6A	6A	6A	https://soku.cleista.cc/framedata/yukari/6a
+8	-1	2A	2A	2A	2A	https://soku.cleista.cc/framedata/yukari/2a
+8	-1	3A	3A	3A	3A	https://soku.cleista.cc/framedata/yukari/3a
+8	-1	66A	66A	66A	66A	https://soku.cleista.cc/framedata/yukari/66a
+8	-1	j.5A	j.5A	j.5A	j.5A	https://soku.cleista.cc/framedata/yukari/j5a
+8	-1	j.6A	j.6A	j.6A	j.6A	https://soku.cleista.cc/framedata/yukari/j6a
+8	-1	j.2A	j.2A	j.2A	j.2A	https://soku.cleista.cc/framedata/yukari/j2a
+8	-1	j.8A	j.8A	j.8A	j.8A	https://soku.cleista.cc/framedata/yukari/j8a
+8	-1	5AA	5AA	5AA	5AA	https://soku.cleista.cc/framedata/yukari/5aa
+8	-1	5AAA	5AAA	5AAA	5AAA	https://soku.cleista.cc/framedata/yukari/5aaa
+8	-1	5AAAA	5AAAA	5AAAA	5AAAA	https://soku.cleista.cc/framedata/yukari/5aaaa
+8	-1	4A	4A	4A	4A	https://soku.cleista.cc/framedata/yukari/4a
+8	-1	5B	5B	5B	5B	https://soku.cleista.cc/framedata/yukari/5b
+8	-1	2B	2B	2B	2B	https://soku.cleista.cc/framedata/yukari/2b
+8	-1	j.5B	j.5B	j.5B	j.5B	https://soku.cleista.cc/framedata/yukari/j5b
+8	-1	j.2B	j.2B	j.2B	j.2B	https://soku.cleista.cc/framedata/yukari/j2b
+8	-1	66B	66B	66B	66B	https://soku.cleista.cc/framedata/yukari/66b
+8	-1	5C	5C	5C	5C	https://soku.cleista.cc/framedata/yukari/5c
+8	-1	6C	6C	6C	6C	https://soku.cleista.cc/framedata/yukari/6c
+8	-1	2C	2C	2C	2C	https://soku.cleista.cc/framedata/yukari/2c
+8	-1	j.5C	j.5C	j.5C	j.5C	https://soku.cleista.cc/framedata/yukari/j5c
+8	-1	j.6C	j.6C	j.6C	j.6C	https://soku.cleista.cc/framedata/yukari/j6c
+8	-1	j.2C	j.2C	j.2C	j.2C	https://soku.cleista.cc/framedata/yukari/j2c
+8	-1	66C	66C	66C	66C	https://soku.cleista.cc/framedata/yukari/66c
+8	100	236B	后悔打开的玉匣	Open, Lamented Box of Urashima	開けて悔しき玉手箱	https://soku.cleista.cc/framedata/yukari/236b-open-lamented-box-of-urashima
+8	100	236C	后悔打开的玉匣	Open, Lamented Box of Urashima	開けて悔しき玉手箱	https://soku.cleista.cc/framedata/yukari/236c-open-lamented-box-of-urashima
+8	100	j.236B	后悔打开的玉匣	Open, Lamented Box of Urashima	開けて悔しき玉手箱	https://soku.cleista.cc/framedata/yukari/j236b-open-lamented-box-of-urashima
+8	100	j.236C	后悔打开的玉匣	Open, Lamented Box of Urashima	開けて悔しき玉手箱	https://soku.cleista.cc/framedata/yukari/j236c-open-lamented-box-of-urashima
+8	104	236B	人间到处有青山	Bound to the Grave	至る処に青山あり	https://soku.cleista.cc/framedata/yukari/236b-bound-to-the-grave
+8	104	236C	人间到处有青山	Bound to the Grave	至る処に青山あり	https://soku.cleista.cc/framedata/yukari/236c-bound-to-the-grave
+8	108	236B	魅惑的诱饵	Bewitching Bait	魅惑のエサ	https://soku.cleista.cc/framedata/yukari/236b-bewitching-bait
+8	108	236C	魅惑的诱饵	Bewitching Bait	魅惑のエサ	https://soku.cleista.cc/framedata/yukari/236c-bewitching-bait
+8	108	j.236B	魅惑的诱饵	Bewitching Bait	魅惑のエサ	https://soku.cleista.cc/framedata/yukari/j236b-bewitching-bait
+8	108	j.236C	魅惑的诱饵	Bewitching Bait	魅惑のエサ	https://soku.cleista.cc/framedata/yukari/j236c-bewitching-bait
+8	101	623B	潜藏于禅寺的妖蝶	Ghostly Butterfly Hidden in Zen Temple	禅寺に潜む妖蝶	https://soku.cleista.cc/framedata/yukari/623b-ghostly-butterfly-hidden-in-zen-temple
+8	101	623C	潜藏于禅寺的妖蝶	Ghostly Butterfly Hidden in Zen Temple	禅寺に潜む妖蝶	https://soku.cleista.cc/framedata/yukari/623c-ghostly-butterfly-hidden-in-zen-temple
+8	105	623B	幻想卍伞	Illusion Manji Parasol	幻想卍傘	https://soku.cleista.cc/framedata/yukari/623b-illusion-manji-parasol
+8	105	623C	幻想卍伞	Illusion Manji Parasol	幻想卍傘	https://soku.cleista.cc/framedata/yukari/623c-illusion-manji-parasol
+8	105	j.623B	幻想卍伞	Illusion Manji Parasol	幻想卍傘	https://soku.cleista.cc/framedata/yukari/j623b-illusion-manji-parasol
+8	105	j.623C	幻想卍伞	Illusion Manji Parasol	幻想卍傘	https://soku.cleista.cc/framedata/yukari/j623c-illusion-manji-parasol
+8	109	623B	知能与脚的界线	Border between Brains and Feet	知能と脚の境界	https://soku.cleista.cc/framedata/yukari/623b-border-between-brains-and-feet
+8	109	623C	知能与脚的界线	Border between Brains and Feet	知能と脚の境界	https://soku.cleista.cc/framedata/yukari/623c-border-between-brains-and-feet
+8	102	214B	枕石漱流	Ride the Waves, Fight the Ocean	枕石漱流	https://soku.cleista.cc/framedata/yukari/214b-ride-the-waves-fight-the-ocean
+8	102	214C	枕石漱流	Ride the Waves, Fight the Ocean	枕石漱流	https://soku.cleista.cc/framedata/yukari/214c-ride-the-waves-fight-the-ocean
+8	102	j.214B	枕石漱流	Ride the Waves, Fight the Ocean	枕石漱流	https://soku.cleista.cc/framedata/yukari/j214b-ride-the-waves-fight-the-ocean
+8	106	214B	物质与反物质的宇宙	Universe of Matter and Antimatter	物質と反物質の宇宙	https://soku.cleista.cc/framedata/yukari/214b-universe-of-matter-and-antimatter
+8	106	214C	物质与反物质的宇宙	Universe of Matter and Antimatter	物質と反物質の宇宙	https://soku.cleista.cc/framedata/yukari/214c-universe-of-matter-and-antimatter
+8	106	j.214B	物质与反物质的宇宙	Universe of Matter and Antimatter	物質と反物質の宇宙	https://soku.cleista.cc/framedata/yukari/j214b-universe-of-matter-and-antimatter
+8	106	j.214C	物质与反物质的宇宙	Universe of Matter and Antimatter	物質と反物質の宇宙	https://soku.cleista.cc/framedata/yukari/j214c-universe-of-matter-and-antimatter
+8	110	214B	静观其变之眼	Eye of Changes	変容を見る眼	https://soku.cleista.cc/framedata/yukari/214b-eye-of-changes
+8	110	214C	静观其变之眼	Eye of Changes	変容を見る眼	https://soku.cleista.cc/framedata/yukari/214c-eye-of-changes
+8	110	j.214B	静观其变之眼	Eye of Changes	変容を見る眼	https://soku.cleista.cc/framedata/yukari/j214b-eye-of-changes
+8	110	j.214C	静观其变之眼	Eye of Changes	変容を見る眼	https://soku.cleista.cc/framedata/yukari/j214c-eye-of-changes
+8	103	421B	幻想狂想穴	Illusional Rift	幻想狂想穴	https://soku.cleista.cc/framedata/yukari/421b-illusional-rift
+8	103	421C	幻想狂想穴	Illusional Rift	幻想狂想穴	https://soku.cleista.cc/framedata/yukari/421c-illusional-rift
+8	103	j.421B	幻想狂想穴	Illusional Rift	幻想狂想穴	https://soku.cleista.cc/framedata/yukari/j421b-illusional-rift
+8	103	j.421C	幻想狂想穴	Illusional Rift	幻想狂想穴	https://soku.cleista.cc/framedata/yukari/j421c-illusional-rift
+8	107	421B	肉体分解机	Flesh Dismantler	肉体分解機	https://soku.cleista.cc/framedata/yukari/421b-flesh-dismantler
+8	107	421C	肉体分解机	Flesh Dismantler	肉体分解機	https://soku.cleista.cc/framedata/yukari/421c-flesh-dismantler
+8	111	421B	奇美拉之翼	Wings of the Chimera	キマイラの翼	https://soku.cleista.cc/framedata/yukari/421b-wings-of-the-chimera
+8	111	421C	奇美拉之翼	Wings of the Chimera	キマイラの翼	https://soku.cleista.cc/framedata/yukari/421c-wings-of-the-chimera
+8	111	j.421B	奇美拉之翼	Wings of the Chimera	キマイラの翼	https://soku.cleista.cc/framedata/yukari/j421b-wings-of-the-chimera
+8	111	j.421C	奇美拉之翼	Wings of the Chimera	キマイラの翼	https://soku.cleista.cc/framedata/yukari/j421c-wings-of-the-chimera
+8	200	sc200	境符「四重结界」	Border Sign "Quadruple Barrier"	境符「四重結界」	https://soku.cleista.cc/framedata/yukari/sc200-border-sign-quadruple-barrier
+8	201	sc201	式神「八云蓝」	Shikigami "Ran Yakumo"	式神「八雲藍」	https://soku.cleista.cc/framedata/yukari/sc201-shikigami-ran-yakumo
+8	202	sc202	境符「二次元与三次元的界线」	Boundary "Border Between 2D and 3D"	境符「二次元と三次元の境界」	https://soku.cleista.cc/framedata/yukari/sc202-boundary-border-between-2d-and-3d
+8	203	sc203	结界「充满魅力的四重结界」	Boundary "Charming Quadruple Barrier"	結界「魅力的な四重結界」	https://soku.cleista.cc/framedata/yukari/sc203-boundary-charming-quadruple-barrier
+8	204	sc204	式神「橙」	Shikigami "Chen"	式神「橙」	https://soku.cleista.cc/framedata/yukari/sc204-shikigami-chen
+8	205	sc205	结界「客观结界」	Boundary "Objective Border"	結界「客観結界」	https://soku.cleista.cc/framedata/yukari/sc205-boundary-objective-border
+8	206	sc206	幻巢「飞光虫之巢」	Fantasy Nest "Nest of Fireflies"	幻巣「飛光虫ネスト」	https://soku.cleista.cc/framedata/yukari/sc206-fantasy-nest-nest-of-fireflies
+8	207	sc207	空饵「具有中毒性的诱饵」	Aerial Bait "Laced With Venom"	空餌「中毒性のあるエサ」	https://soku.cleista.cc/framedata/yukari/sc207-aerial-bait-laced-with-venom
+8	208	sc208	魔眼「拉普拉斯之魔」	Magic Eye "The Magic Eye of Laplace"	魔眼「ラプラスの魔」	https://soku.cleista.cc/framedata/yukari/sc208-magic-eye-the-magic-eye-of-laplace
+8	215	sc215	废线「废弃车站下车之旅」	Obsolete Line "Trip to the Old Station"	廃線「ぶらり廃駅下車の旅」	https://soku.cleista.cc/framedata/yukari/sc215-obsolete-line-trip-to-the-old-station
+8	206	j.sc206	幻巢「飞光虫之巢」	Fantasy Nest "Nest of Fireflies"	幻巣「飛光虫ネスト」	https://soku.cleista.cc/framedata/yukari/sc206-fantasy-nest-nest-of-fireflies-656
+8	207	j.sc207	空饵「具有中毒性的诱饵」	Aerial Bait "Laced With Venom"	空餌「中毒性のあるエサ」	https://soku.cleista.cc/framedata/yukari/sc207-aerial-bait-laced-with-venom-657
+8	208	j.sc208	魔眼「拉普拉斯之魔」	Magic Eye "The Magic Eye of Laplace"	魔眼「ラプラスの魔」	https://soku.cleista.cc/framedata/yukari/sc208-magic-eye-the-magic-eye-of-laplace-658
+9	-1	66	66	66	66	https://soku.cleista.cc/framedata/suika/66
+9	-1	44	44	44	44	https://soku.cleista.cc/framedata/suika/44
+9	-1	j.66	j.66	j.66	j.66	https://soku.cleista.cc/framedata/suika/j66
+9	-1	j.44	j.44	j.44	j.44	https://soku.cleista.cc/framedata/suika/j44
+9	-1	5A	5A	5A	5A	https://soku.cleista.cc/framedata/suika/5a
+9	-1	f.5A	f.5A	f.5A	f.5A	https://soku.cleista.cc/framedata/suika/f5a
+9	-1	6A	6A	6A	6A	https://soku.cleista.cc/framedata/suika/6a
+9	-1	2A	2A	2A	2A	https://soku.cleista.cc/framedata/suika/2a
+9	-1	3A	3A	3A	3A	https://soku.cleista.cc/framedata/suika/3a
+9	-1	66A	66A	66A	66A	https://soku.cleista.cc/framedata/suika/66a
+9	-1	j.5A	j.5A	j.5A	j.5A	https://soku.cleista.cc/framedata/suika/j5a
+9	-1	j.6A	j.6A	j.6A	j.6A	https://soku.cleista.cc/framedata/suika/j6a
+9	-1	j.2A	j.2A	j.2A	j.2A	https://soku.cleista.cc/framedata/suika/j2a
+9	-1	j.8A	j.8A	j.8A	j.8A	https://soku.cleista.cc/framedata/suika/j8a
+9	-1	5AA	5AA	5AA	5AA	https://soku.cleista.cc/framedata/suika/5aa
+9	-1	5AAA	5AAA	5AAA	5AAA	https://soku.cleista.cc/framedata/suika/5aaa
+9	-1	5AAAA	5AAAA	5AAAA	5AAAA	https://soku.cleista.cc/framedata/suika/5aaaa
+9	-1	4A	4A	4A	4A	https://soku.cleista.cc/framedata/suika/4a
+9	-1	5B	5B	5B	5B	https://soku.cleista.cc/framedata/suika/5b
+9	-1	6B	6B	6B	6B	https://soku.cleista.cc/framedata/suika/6b
+9	-1	2B	2B	2B	2B	https://soku.cleista.cc/framedata/suika/2b
+9	-1	j.5B	j.5B	j.5B	j.5B	https://soku.cleista.cc/framedata/suika/j5b
+9	-1	j.6B	j.6B	j.6B	j.6B	https://soku.cleista.cc/framedata/suika/j6b
+9	-1	j.2B	j.2B	j.2B	j.2B	https://soku.cleista.cc/framedata/suika/j2b
+9	-1	66B	66B	66B	66B	https://soku.cleista.cc/framedata/suika/66b
+9	-1	5C	5C	5C	5C	https://soku.cleista.cc/framedata/suika/5c
+9	-1	6C	6C	6C	6C	https://soku.cleista.cc/framedata/suika/6c
+9	-1	2C	2C	2C	2C	https://soku.cleista.cc/framedata/suika/2c
+9	-1	j.5C	j.5C	j.5C	j.5C	https://soku.cleista.cc/framedata/suika/j5c
+9	-1	j.6C	j.6C	j.6C	j.6C	https://soku.cleista.cc/framedata/suika/j6c
+9	-1	66C	66C	66C	66C	https://soku.cleista.cc/framedata/suika/66c
+9	100	236B	妖鬼-密-	Spectre -Dense-	妖鬼-密-	https://soku.cleista.cc/framedata/suika/236b-spectre-dense
+9	100	236C	妖鬼-密-	Spectre -Dense-	妖鬼-密-	https://soku.cleista.cc/framedata/suika/236c-spectre-dense
+9	104	236B	元鬼玉	Oni Spirit Bomb	元鬼玉	https://soku.cleista.cc/framedata/suika/236b-oni-spirit-bomb
+9	104	236C	元鬼玉	Oni Spirit Bomb	元鬼玉	https://soku.cleista.cc/framedata/suika/236c-oni-spirit-bomb
+9	104	j.236B	元鬼玉	Oni Spirit Bomb	元鬼玉	https://soku.cleista.cc/framedata/suika/j236b-oni-spirit-bomb
+9	104	j.236C	元鬼玉	Oni Spirit Bomb	元鬼玉	https://soku.cleista.cc/framedata/suika/j236c-oni-spirit-bomb
+9	108	236B	踏鞴	Foot Bellows	踏鞴	https://soku.cleista.cc/framedata/suika/236b-foot-bellows
+9	108	236C	踏鞴	Foot Bellows	踏鞴	https://soku.cleista.cc/framedata/suika/236c-foot-bellows
+9	108	j.236B	踏鞴	Foot Bellows	踏鞴	https://soku.cleista.cc/framedata/suika/j236b-foot-bellows
+9	108	j.236C	踏鞴	Foot Bellows	踏鞴	https://soku.cleista.cc/framedata/suika/j236c-foot-bellows
+9	101	623B	地灵-密-	Gnome -Dense-	地霊-密-	https://soku.cleista.cc/framedata/suika/623b-gnome-dense
+9	101	623C	地灵-密-	Gnome -Dense-	地霊-密-	https://soku.cleista.cc/framedata/suika/623c-gnome-dense
+9	101	j.623B	地灵-密-	Gnome -Dense-	地霊-密-	https://soku.cleista.cc/framedata/suika/j623b-gnome-dense
+9	101	j.623C	地灵-密-	Gnome -Dense-	地霊-密-	https://soku.cleista.cc/framedata/suika/j623c-gnome-dense
+9	105	623B	地灵-疏-	Gnome -Thin-	地霊-疎-	https://soku.cleista.cc/framedata/suika/623b-gnome-thin
+9	105	623C	地灵-疏-	Gnome -Thin-	地霊-疎-	https://soku.cleista.cc/framedata/suika/623c-gnome-thin
+9	109	623B	火鬼	Fire Oni	火鬼	https://soku.cleista.cc/framedata/suika/623b-fire-oni
+9	109	623C	火鬼	Fire Oni	火鬼	https://soku.cleista.cc/framedata/suika/623c-fire-oni
+9	102	214B	妖鬼-疏-	Spectre -Thin-	妖鬼-疎-	https://soku.cleista.cc/framedata/suika/214b-spectre-thin
+9	102	214C	妖鬼-疏-	Spectre -Thin-	妖鬼-疎-	https://soku.cleista.cc/framedata/suika/214c-spectre-thin
+9	102	j.214B	妖鬼-疏-	Spectre -Thin-	妖鬼-疎-	https://soku.cleista.cc/framedata/suika/j214b-spectre-thin
+9	102	j.214C	妖鬼-疏-	Spectre -Thin-	妖鬼-疎-	https://soku.cleista.cc/framedata/suika/j214c-spectre-thin
+9	106	214B	厌雾	Unpleasant Mist	厭霧	https://soku.cleista.cc/framedata/suika/214b-unpleasant-mist
+9	106	214C	厌雾	Unpleasant Mist	厭霧	https://soku.cleista.cc/framedata/suika/214c-unpleasant-mist
+9	106	j.214B	厌雾	Unpleasant Mist	厭霧	https://soku.cleista.cc/framedata/suika/j214b-unpleasant-mist
+9	106	j.214C	厌雾	Unpleasant Mist	厭霧	https://soku.cleista.cc/framedata/suika/j214c-unpleasant-mist
+9	110	214B	鬼神磷火术	Ignis Fatuus	鬼神燐火術	https://soku.cleista.cc/framedata/suika/214b-ignis-fatuus
+9	110	214C	鬼神磷火术	Ignis Fatuus	鬼神燐火術	https://soku.cleista.cc/framedata/suika/214c-ignis-fatuus
+9	103	22B	萃鬼	Gathering Oni	萃鬼	https://soku.cleista.cc/framedata/suika/22b-gathering-oni
+9	103	22C	萃鬼	Gathering Oni	萃鬼	https://soku.cleista.cc/framedata/suika/22c-gathering-oni
+9	107	22B	疏鬼	Thin Oni	疎鬼	https://soku.cleista.cc/framedata/suika/22b-thin-oni
+9	107	22C	疏鬼	Thin Oni	疎鬼	https://soku.cleista.cc/framedata/suika/22c-thin-oni
+9	111	22B	攫鬼	Kidnapping Oni	攫鬼	https://soku.cleista.cc/framedata/suika/22b-kidnapping-oni
+9	111	22C	攫鬼	Kidnapping Oni	攫鬼	https://soku.cleista.cc/framedata/suika/22c-kidnapping-oni
+9	200	sc200	萃符「户隐山之投」	Gather Sign "Throwing Mt. Togakushi"	萃符「戸隠山投げ」	https://soku.cleista.cc/framedata/suika/sc200-gather-sign-throwing-mt-togakushi
+9	201	sc201	醉神「鬼缚之术」	Drunk Sign "Art of Oni Binding"	酔神「鬼縛りの術」	https://soku.cleista.cc/framedata/suika/sc201-drunk-sign-art-of-oni-binding
+9	202	sc202	鬼符「Missing Power」（遗失的力量）	Oni Sign "Missing Power"	鬼符「ミッシングパワー」	https://soku.cleista.cc/framedata/suika/sc202-oni-sign-missing-power
+9	203	sc203	萃鬼「天手力男之投」	Gathering Oni "Throwing Atlas"	萃鬼「天手力男投げ」	https://soku.cleista.cc/framedata/suika/sc203-gathering-oni-throwing-atlas
+9	204	sc204	醉梦「施饿鬼缚之术」	Drunken Dream "Art of Gaki Binding"	酔夢「施餓鬼縛りの術」	https://soku.cleista.cc/framedata/suika/sc204-drunken-dream-art-of-gaki-binding
+9	205	sc205	鬼神「Missing Purple Power」（遗失的高贵之力）	Great Oni "Missing Purple Power"	鬼神「ミッシングパープルパワー」	https://soku.cleista.cc/framedata/suika/sc205-great-oni-missing-purple-power
+9	206	sc206	雾符「云集雾散」	Mist Sign "Gathering and Dissipating"	霧符「雲集霧散」	https://soku.cleista.cc/framedata/suika/sc206-mist-sign-gathering-and-dissipating
+9	207	sc207	鬼火「超高密度磷祸术」	Will-o-wisp "Superdense Conflagration"	鬼火「超高密度燐禍術」	https://soku.cleista.cc/framedata/suika/sc207-will-o-wisp-superdense-conflagration
+9	208	sc208	鬼符「大江山悉皆杀」	Oni Sign "Massacre on Mt.Ooe"	鬼符「大江山悉皆殺し」	https://soku.cleista.cc/framedata/suika/sc208-oni-sign-massacre-on-mtooe
+9	212	sc212	四天王奥义「三步坏废」	Secret of Kings "3-Step Destruction"	四天王奥義「三歩壊廃」	https://soku.cleista.cc/framedata/suika/sc212-secret-of-kings-3-step-destruction
+9	200	j.sc200	萃符「户隐山之投」	Gather Sign "Throwing Mt. Togakushi"	萃符「戸隠山投げ」	https://soku.cleista.cc/framedata/suika/sc200-gather-sign-throwing-mt-togakushi-650
+10	-1	66	66	66	66	https://soku.cleista.cc/framedata/reisen/66
+10	-1	44	44	44	44	https://soku.cleista.cc/framedata/reisen/44
+10	-1	j.66	j.66	j.66	j.66	https://soku.cleista.cc/framedata/reisen/j66
+10	-1	j.44	j.44	j.44	j.44	https://soku.cleista.cc/framedata/reisen/j44
+10	-1	5A	5A	5A	5A	https://soku.cleista.cc/framedata/reisen/5a
+10	-1	f.5A	f.5A	f.5A	f.5A	https://soku.cleista.cc/framedata/reisen/f5a
+10	-1	6A	6A	6A	6A	https://soku.cleista.cc/framedata/reisen/6a
+10	-1	2A	2A	2A	2A	https://soku.cleista.cc/framedata/reisen/2a
+10	-1	3A	3A	3A	3A	https://soku.cleista.cc/framedata/reisen/3a
+10	-1	66A	66A	66A	66A	https://soku.cleista.cc/framedata/reisen/66a
+10	-1	j.5A	j.5A	j.5A	j.5A	https://soku.cleista.cc/framedata/reisen/j5a
+10	-1	j.6A	j.6A	j.6A	j.6A	https://soku.cleista.cc/framedata/reisen/j6a
+10	-1	j.2A	j.2A	j.2A	j.2A	https://soku.cleista.cc/framedata/reisen/j2a
+10	-1	j.8A	j.8A	j.8A	j.8A	https://soku.cleista.cc/framedata/reisen/j8a
+10	-1	5AA	5AA	5AA	5AA	https://soku.cleista.cc/framedata/reisen/5aa
+10	-1	5AAA	5AAA	5AAA	5AAA	https://soku.cleista.cc/framedata/reisen/5aaa
+10	-1	5AAAA	5AAAA	5AAAA	5AAAA	https://soku.cleista.cc/framedata/reisen/5aaaa
+10	-1	4A	4A	4A	4A	https://soku.cleista.cc/framedata/reisen/4a
+10	-1	5B	5B	5B	5B	https://soku.cleista.cc/framedata/reisen/5b
+10	-1	6B	6B	6B	6B	https://soku.cleista.cc/framedata/reisen/6b
+10	-1	2B	2B	2B	2B	https://soku.cleista.cc/framedata/reisen/2b
+10	-1	j.5B	j.5B	j.5B	j.5B	https://soku.cleista.cc/framedata/reisen/j5b
+10	-1	j.2B	j.2B	j.2B	j.2B	https://soku.cleista.cc/framedata/reisen/j2b
+10	-1	66B	66B	66B	66B	https://soku.cleista.cc/framedata/reisen/66b
+10	-1	5C	5C	5C	5C	https://soku.cleista.cc/framedata/reisen/5c
+10	-1	6C	6C	6C	6C	https://soku.cleista.cc/framedata/reisen/6c
+10	-1	2C	2C	2C	2C	https://soku.cleista.cc/framedata/reisen/2c
+10	-1	j.5C	j.5C	j.5C	j.5C	https://soku.cleista.cc/framedata/reisen/j5c
+10	-1	j.6C	j.6C	j.6C	j.6C	https://soku.cleista.cc/framedata/reisen/j6c
+10	-1	j.2C	j.2C	j.2C	j.2C	https://soku.cleista.cc/framedata/reisen/j2c
+10	-1	66C	66C	66C	66C	https://soku.cleista.cc/framedata/reisen/66c
+10	100	236B	Mind Explosion（心灵爆炸）	Mind Explosion	マインドエクスプロージョン	https://soku.cleista.cc/framedata/reisen/236b-mind-explosion
+10	100	236C	Mind Explosion（心灵爆炸）	Mind Explosion	マインドエクスプロージョン	https://soku.cleista.cc/framedata/reisen/236c-mind-explosion
+10	104	236B	Mind Bending	Mind Bending	マインドベンディング	https://soku.cleista.cc/framedata/reisen/236b-mind-bending
+10	104	236C	Mind Bending	Mind Bending	マインドベンディング	https://soku.cleista.cc/framedata/reisen/236c-mind-bending
+10	104	j.236B	Mind Bending	Mind Bending	マインドベンディング	https://soku.cleista.cc/framedata/reisen/j236b-mind-bending
+10	104	j.236C	Mind Bending	Mind Bending	マインドベンディング	https://soku.cleista.cc/framedata/reisen/j236c-mind-bending
+10	108	236B	Mind Dropping	Mind Dropping	マインドドロッピング	https://soku.cleista.cc/framedata/reisen/236b-mind-dropping
+10	108	236C	Mind Dropping	Mind Dropping	マインドドロッピング	https://soku.cleista.cc/framedata/reisen/236c-mind-dropping
+10	101	214B	Illusionary Blast	Illusionary Blast	イリュージョナリィブラスト	https://soku.cleista.cc/framedata/reisen/214b-illusionary-blast
+10	101	214C	Illusionary Blast	Illusionary Blast	イリュージョナリィブラスト	https://soku.cleista.cc/framedata/reisen/214c-illusionary-blast
+10	105	214B	Eyesight Cleaning	Eyesight Cleaning	アイサイトクリーニング	https://soku.cleista.cc/framedata/reisen/214b-eyesight-cleaning
+10	105	214C	Eyesight Cleaning	Eyesight Cleaning	アイサイトクリーニング	https://soku.cleista.cc/framedata/reisen/214c-eyesight-cleaning
+10	105	j.214B	Eyesight Cleaning	Eyesight Cleaning	アイサイトクリーニング	https://soku.cleista.cc/framedata/reisen/j214b-eyesight-cleaning
+10	105	j.214C	Eyesight Cleaning	Eyesight Cleaning	アイサイトクリーニング	https://soku.cleista.cc/framedata/reisen/j214c-eyesight-cleaning
+10	109	214B	Ripple Vision	Ripple Vision	リップルヴィジョン	https://soku.cleista.cc/framedata/reisen/214b-ripple-vision
+10	109	214C	Ripple Vision	Ripple Vision	リップルヴィジョン	https://soku.cleista.cc/framedata/reisen/214c-ripple-vision
+10	109	j.214B	Ripple Vision	Ripple Vision	リップルヴィジョン	https://soku.cleista.cc/framedata/reisen/j214b-ripple-vision
+10	109	j.214C	Ripple Vision	Ripple Vision	リップルヴィジョン	https://soku.cleista.cc/framedata/reisen/j214c-ripple-vision
+10	102	623B	Field Ultrared	Ultrared Field	フィールドウルトラレッド	https://soku.cleista.cc/framedata/reisen/623b-ultrared-field
+10	102	623C	Field Ultrared	Ultrared Field	フィールドウルトラレッド	https://soku.cleista.cc/framedata/reisen/623c-ultrared-field
+10	106	623B	Field Ultraviolet	Ultraviolet Field	フィールドウルトラバイオレット	https://soku.cleista.cc/framedata/reisen/623b-ultraviolet-field
+10	106	623C	Field Ultraviolet	Ultraviolet Field	フィールドウルトラバイオレット	https://soku.cleista.cc/framedata/reisen/623c-ultraviolet-field
+10	110	623B	Under Sense Break	Undersense Break	アンダーセンスブレイク	https://soku.cleista.cc/framedata/reisen/623b-undersense-break
+10	110	623C	Under Sense Break	Undersense Break	アンダーセンスブレイク	https://soku.cleista.cc/framedata/reisen/623c-undersense-break
+10	103	22B	Disbelief Aspect	Disbelief Aspect	ディスビリーフアスペクト	https://soku.cleista.cc/framedata/reisen/22b-disbelief-aspect
+10	103	22C	Disbelief Aspect	Disbelief Aspect	ディスビリーフアスペクト	https://soku.cleista.cc/framedata/reisen/22c-disbelief-aspect
+10	107	22B	Disorder Eye（混乱之眼）	Disorder Eye	ディスオーダーアイ	https://soku.cleista.cc/framedata/reisen/22b-disorder-eye
+10	107	22C	Disorder Eye（混乱之眼）	Disorder Eye	ディスオーダーアイ	https://soku.cleista.cc/framedata/reisen/22c-disorder-eye
+10	107	j.22B	Disorder Eye（混乱之眼）	Disorder Eye	ディスオーダーアイ	https://soku.cleista.cc/framedata/reisen/j22b-disorder-eye
+10	107	j.22C	Disorder Eye（混乱之眼）	Disorder Eye	ディスオーダーアイ	https://soku.cleista.cc/framedata/reisen/j22c-disorder-eye
+10	111	22B	Ocular Spectrum	Acura Spectral	アキュラースペクトル	https://soku.cleista.cc/framedata/reisen/22b-acura-spectral
+10	111	22C	Ocular Spectrum	Acura Spectral	アキュラースペクトル	https://soku.cleista.cc/framedata/reisen/22c-acura-spectral
+10	111	j.22B	Ocular Spectrum	Acura Spectral	アキュラースペクトル	https://soku.cleista.cc/framedata/reisen/j22b-acura-spectral
+10	111	j.22C	Ocular Spectrum	Acura Spectral	アキュラースペクトル	https://soku.cleista.cc/framedata/reisen/j22c-acura-spectral
+10	200	sc200	惑视「离圆花冠(Corolla Vision)」（花冠幻视）	Charming Look "Corolla Vision"	惑視「離円花冠(カローラヴィジョン)」	https://soku.cleista.cc/framedata/reisen/sc200-charming-look-corolla-vision
+10	202	sc202	幻爆「近眼花火(Mind Star Mine)」（心灵烟花）	Illusion Bomb "Mind Starmine"	幻爆「近眼花火(マインドスターマイン)」	https://soku.cleista.cc/framedata/reisen/sc202-illusion-bomb-mind-starmine
+10	203	sc203	幻惑「花冠视线(Crown Vision)」（王冠幻视）	Fascination "Crown Vision"	幻惑「花冠視線(クラウンヴィジョン)」	https://soku.cleista.cc/framedata/reisen/sc203-fascination-crown-vision
+10	204	sc204	赤眼「望见圆月(Lunatic Blast)」（疯狂爆破）	Red Eyes "Lunatic Blast"	赤眼「望見円月(ルナティックブラスト)」	https://soku.cleista.cc/framedata/reisen/sc204-red-eyes-lunatic-blast
+10	205	sc205	「幻胧月睨(Lunatic Red Eyes)」（疯狂红眼）	Lunatic Red Eyes	「幻朧月睨(ルナティックレッドアイズ)」	https://soku.cleista.cc/framedata/reisen/sc205-lunatic-red-eyes
+10	206	sc206	弱心「丧心丧意(Demotivation)」（丧失动力）	Weak Heart "Demotivation"	弱心「喪心喪意(ディモチヴェイション)」	https://soku.cleista.cc/framedata/reisen/sc206-weak-heart-demotivation
+10	207	sc207	丧心「丧心疮痍(Discarder)」（弃卡者）	Desolation "Discarder"	喪心「喪心創痍(ディスカーダー)」	https://soku.cleista.cc/framedata/reisen/sc207-desolation-discarder
+10	208	sc208	毒烟幕「瓦斯织物之玉」	Poison Smokescreen "Gas-Woven Orb"	毒煙幕「瓦斯織物の玉」	https://soku.cleista.cc/framedata/reisen/sc208-poison-smokescreen-gas-woven-orb
+10	209	sc209	生药「国士无双之药」	Life Elixir "Grand Patriot's Elixir"	生薬「国士無双の薬」	https://soku.cleista.cc/framedata/reisen/sc209-life-elixir-grand-patriots-elixir
+10	210	sc210	短视「超短脑波(X Wave)」（X射线）	Shortsight "X-Wave"	短視「超短脳波(エックスウェイブ)」	https://soku.cleista.cc/framedata/reisen/sc210-shortsight-x-wave
+10	211	sc211	长视「赤月下(Infrared Moon)」（红外线之月）	Farsight "Infrared Moon"	長視「赤月下(インフレアドムーン)」	https://soku.cleista.cc/framedata/reisen/sc211-farsight-infrared-moon
+10	200	j.sc200	惑视「离圆花冠(Corolla Vision)」（花冠幻视）	Charming Look "Corolla Vision"	惑視「離円花冠(カローラヴィジョン)」	https://soku.cleista.cc/framedata/reisen/sc200-charming-look-corolla-vision-650
+10	202	j.sc202	幻爆「近眼花火(Mind Star Mine)」（心灵烟花）	Illusion Bomb "Mind Starmine"	幻爆「近眼花火(マインドスターマイン)」	https://soku.cleista.cc/framedata/reisen/sc202-illusion-bomb-mind-starmine-652
+10	205	j.sc205	「幻胧月睨(Lunatic Red Eyes)」（疯狂红眼）	Lunatic Red Eyes	「幻朧月睨(ルナティックレッドアイズ)」	https://soku.cleista.cc/framedata/reisen/sc205-lunatic-red-eyes-655
+10	209	sc209	生药「国士无双之药」（发动）	Life Elixir "Grand Patriot's Elixir" (Activation)	生薬「国士無双の薬」（発動）	https://soku.cleista.cc/framedata/reisen/sc209-life-elixir-grand-patriots-elixir-activation
+11	-1	66	66	66	66	https://soku.cleista.cc/framedata/aya/66
+11	-1	44	44	44	44	https://soku.cleista.cc/framedata/aya/44
+11	-1	j.66	j.66	j.66	j.66	https://soku.cleista.cc/framedata/aya/j66
+11	-1	j.44	j.44	j.44	j.44	https://soku.cleista.cc/framedata/aya/j44
+11	-1	5A	5A	5A	5A	https://soku.cleista.cc/framedata/aya/5a
+11	-1	f.5A	f.5A	f.5A	f.5A	https://soku.cleista.cc/framedata/aya/f5a
+11	-1	6A	6A	6A	6A	https://soku.cleista.cc/framedata/aya/6a
+11	-1	2A	2A	2A	2A	https://soku.cleista.cc/framedata/aya/2a
+11	-1	3A	3A	3A	3A	https://soku.cleista.cc/framedata/aya/3a
+11	-1	66A	66A	66A	66A	https://soku.cleista.cc/framedata/aya/66a
+11	-1	j.5A	j.5A	j.5A	j.5A	https://soku.cleista.cc/framedata/aya/j5a
+11	-1	j.6A	j.6A	j.6A	j.6A	https://soku.cleista.cc/framedata/aya/j6a
+11	-1	j.2A	j.2A	j.2A	j.2A	https://soku.cleista.cc/framedata/aya/j2a
+11	-1	j.8A	j.8A	j.8A	j.8A	https://soku.cleista.cc/framedata/aya/j8a
+11	-1	5AA	5AA	5AA	5AA	https://soku.cleista.cc/framedata/aya/5aa
+11	-1	5AAA	5AAA	5AAA	5AAA	https://soku.cleista.cc/framedata/aya/5aaa
+11	-1	5AAAA	5AAAA	5AAAA	5AAAA	https://soku.cleista.cc/framedata/aya/5aaaa
+11	-1	4A	4A	4A	4A	https://soku.cleista.cc/framedata/aya/4a
+11	-1	5B	5B	5B	5B	https://soku.cleista.cc/framedata/aya/5b
+11	-1	6B	6B	6B	6B	https://soku.cleista.cc/framedata/aya/6b
+11	-1	2B	2B	2B	2B	https://soku.cleista.cc/framedata/aya/2b
+11	-1	j.5B	j.5B	j.5B	j.5B	https://soku.cleista.cc/framedata/aya/j5b
+11	-1	j.2B	j.2B	j.2B	j.2B	https://soku.cleista.cc/framedata/aya/j2b
+11	-1	66B	66B	66B	66B	https://soku.cleista.cc/framedata/aya/66b
+11	-1	5C	5C	5C	5C	https://soku.cleista.cc/framedata/aya/5c
+11	-1	6C	6C	6C	6C	https://soku.cleista.cc/framedata/aya/6c
+11	-1	2C	2C	2C	2C	https://soku.cleista.cc/framedata/aya/2c
+11	-1	j.5C	j.5C	j.5C	j.5C	https://soku.cleista.cc/framedata/aya/j5c
+11	-1	j.6C	j.6C	j.6C	j.6C	https://soku.cleista.cc/framedata/aya/j6c
+11	-1	j.2C	j.2C	j.2C	j.2C	https://soku.cleista.cc/framedata/aya/j2c
+11	-1	66C	66C	66C	66C	https://soku.cleista.cc/framedata/aya/66c
+11	100	236B	疾风扇	Gust Fan	疾風扇	https://soku.cleista.cc/framedata/aya/236b-gust-fan
+11	100	j.236B	疾风扇	Gust Fan	疾風扇	https://soku.cleista.cc/framedata/aya/j236b-gust-fan
+11	104	236B	烈风扇	Gale Fan	烈風扇	https://soku.cleista.cc/framedata/aya/236b-gale-fan
+11	104	236C	烈风扇	Gale Fan	烈風扇	https://soku.cleista.cc/framedata/aya/236c-gale-fan
+11	104	j.236B	烈风扇	Gale Fan	烈風扇	https://soku.cleista.cc/framedata/aya/j236b-gale-fan
+11	104	j.236C	烈风扇	Gale Fan	烈風扇	https://soku.cleista.cc/framedata/aya/j236c-gale-fan
+11	108	236B	枫扇风	Wind from the Maple Fan	楓扇風	https://soku.cleista.cc/framedata/aya/236b-wind-from-the-maple-fan
+11	108	236C	枫扇风	Wind from the Maple Fan	楓扇風	https://soku.cleista.cc/framedata/aya/236c-wind-from-the-maple-fan
+11	101	214B	疾走风靡	Domination Dash	疾走風靡	https://soku.cleista.cc/framedata/aya/214b-domination-dash
+11	101	214C	疾走风靡	Domination Dash	疾走風靡	https://soku.cleista.cc/framedata/aya/214c-domination-dash
+11	101	j.214B	疾走风靡	Domination Dash	疾走風靡	https://soku.cleista.cc/framedata/aya/j214b-domination-dash
+11	101	j.214C	疾走风靡	Domination Dash	疾走風靡	https://soku.cleista.cc/framedata/aya/j214c-domination-dash
+11	105	214B	疾走优美	Graceful Dash	疾走優美	https://soku.cleista.cc/framedata/aya/214b-graceful-dash
+11	-1	214B~A	214B~A	214B~A	214B~A	https://soku.cleista.cc/framedata/aya/214b-a
+11	105	214C	疾走优美	Graceful Dash	疾走優美	https://soku.cleista.cc/framedata/aya/214c-graceful-dash
+11	105	j.214B	疾走优美	Graceful Dash	疾走優美	https://soku.cleista.cc/framedata/aya/j214b-graceful-dash
+11	105	j.214C	疾走优美	Graceful Dash	疾走優美	https://soku.cleista.cc/framedata/aya/j214c-graceful-dash
+11	109	214B	天狗倒树	Tengu Felling	天狗ナメシ	https://soku.cleista.cc/framedata/aya/214b-tengu-felling
+11	109	214C	天狗倒树	Tengu Felling	天狗ナメシ	https://soku.cleista.cc/framedata/aya/214c-tengu-felling
+11	109	j.214B	天狗倒树	Tengu Felling	天狗ナメシ	https://soku.cleista.cc/framedata/aya/j214b-tengu-felling
+11	109	j.214C	天狗倒树	Tengu Felling	天狗ナメシ	https://soku.cleista.cc/framedata/aya/j214c-tengu-felling
+11	102	j.22B	天狗的立风露	Wind Standing of the Tengu	天狗の立風露	https://soku.cleista.cc/framedata/aya/j22b-wind-standing-of-the-tengu
+11	106	j.22B	天狗下爆流	Tengu's Downburst	天狗のダウンバースト	https://soku.cleista.cc/framedata/aya/j22b-tengus-downburst
+11	106	j.22C	天狗下爆流	Tengu's Downburst	天狗のダウンバースト	https://soku.cleista.cc/framedata/aya/j22c-tengus-downburst
+11	110	22B	天狗的太鼓	Tengu Drum	天狗の太鼓	https://soku.cleista.cc/framedata/aya/22b-tengu-drum
+11	-1	22B~B	22B~B	22B~B	22B~B	https://soku.cleista.cc/framedata/aya/22b-b
+11	-1	22B~A	22B~A	22B~A	22B~A	https://soku.cleista.cc/framedata/aya/22b-a
+11	-1	22B~C	22B~C	22B~C	22B~C	https://soku.cleista.cc/framedata/aya/22b-c
+11	110	22C	天狗的太鼓	Tengu Drum	天狗の太鼓	https://soku.cleista.cc/framedata/aya/22c-tengu-drum
+11	110	j.22B	天狗的太鼓	Tengu Drum	天狗の太鼓	https://soku.cleista.cc/framedata/aya/j22b-tengu-drum
+11	110	j.22C	天狗的太鼓	Tengu Drum	天狗の太鼓	https://soku.cleista.cc/framedata/aya/j22c-tengu-drum
+11	103	421B	暗夜之砾	Pelting in the Night	暗夜の礫	https://soku.cleista.cc/framedata/aya/421b-pelting-in-the-night
+11	103	421C	暗夜之砾	Pelting in the Night	暗夜の礫	https://soku.cleista.cc/framedata/aya/421c-pelting-in-the-night
+11	103	j.421B	暗夜之砾	Pelting in the Night	暗夜の礫	https://soku.cleista.cc/framedata/aya/j421b-pelting-in-the-night
+11	103	j.421C	暗夜之砾	Pelting in the Night	暗夜の礫	https://soku.cleista.cc/framedata/aya/j421c-pelting-in-the-night
+11	107	421B	镰风面纱	Wind Sickle Veiling	鎌風ベーリング	https://soku.cleista.cc/framedata/aya/421b-wind-sickle-veiling
+11	107	j.421B	镰风面纱	Wind Sickle Veiling	鎌風ベーリング	https://soku.cleista.cc/framedata/aya/j421b-wind-sickle-veiling
+11	111	421B	天狗砾	Tengu's Pebbles	天狗礫	https://soku.cleista.cc/framedata/aya/421b-tengus-pebbles
+11	111	421C	天狗砾	Tengu's Pebbles	天狗礫	https://soku.cleista.cc/framedata/aya/421c-tengus-pebbles
+11	111	j.421B	天狗砾	Tengu's Pebbles	天狗礫	https://soku.cleista.cc/framedata/aya/j421b-tengus-pebbles
+11	200	sc200	旋符「红叶扇风」	Whirl Sign "Maple Leaf Fan"	旋符「紅葉扇風」	https://soku.cleista.cc/framedata/aya/sc200-whirl-sign-maple-leaf-fan
+11	201	sc201	龙卷「天孙降临的道标」	Tornado "Indication to the Divine"	竜巻「天孫降臨の道しるべ」	https://soku.cleista.cc/framedata/aya/sc201-tornado-indication-to-the-divine
+11	202	sc202	逆风「人间禁制之道」	Headwind "Route Forbidden to Man"	逆風「人間禁制の道」	https://soku.cleista.cc/framedata/aya/sc202-headwind-route-forbidden-to-man
+11	203	sc203	突符「天狗巨暴流」	Thrust Sign "Tengu's Macroburst"	突符「天狗のマクロバースト」	https://soku.cleista.cc/framedata/aya/sc203-thrust-sign-tengus-macroburst
+11	205	sc205	风符「天狗道的开风」	Wind Sign "Wind of the Tengu Path"	風符「天狗道の開風」	https://soku.cleista.cc/framedata/aya/sc205-wind-sign-wind-of-the-tengu-path
+11	206	sc206	「幻想风靡」	Illusionary Dominance	「幻想風靡」	https://soku.cleista.cc/framedata/aya/sc206-illusionary-dominance
+11	207	sc207	风符「天狗报当日截稿」	Wind Sign "Tengu Limited Special"	風符「天狗報即日限」	https://soku.cleista.cc/framedata/aya/sc207-wind-sign-tengu-limited-special
+11	208	sc208	鸦符「暗夜昼魇」	Crow Sign "Dark Daymare"	鴉符「暗夜のデイメア」	https://soku.cleista.cc/framedata/aya/sc208-crow-sign-dark-daymare
+11	211	sc211	魔兽「镰鼬面纱」	Demonic Beast "Sickle Weasel Veiling"	魔獣「鎌鼬ベーリング」	https://soku.cleista.cc/framedata/aya/sc211-demonic-beast-sickle-weasel-veiling
+11	212	sc212	突风「猿田彦的先导」	Squall "Sarutahiko's Guidance"	突風「猿田彦の先導」	https://soku.cleista.cc/framedata/aya/sc212-squall-sarutahikos-guidance
+11	207	j.sc207	风符「天狗报当日截稿」	Wind Sign "Tengu Limited Special"	風符「天狗報即日限」	https://soku.cleista.cc/framedata/aya/sc207-wind-sign-tengu-limited-special-657
+11	208	j.sc208	鸦符「暗夜昼魇」	Crow Sign "Dark Daymare"	鴉符「暗夜のデイメア」	https://soku.cleista.cc/framedata/aya/sc208-crow-sign-dark-daymare-658
+11	211	j.sc211	魔兽「镰鼬面纱」	Demonic Beast "Sickle Weasel Veiling"	魔獣「鎌鼬ベーリング」	https://soku.cleista.cc/framedata/aya/sc211-demonic-beast-sickle-weasel-veiling-661
+11	212	j.sc212	突风「猿田彦的先导」	Squall "Sarutahiko's Guidance"	突風「猿田彦の先導」	https://soku.cleista.cc/framedata/aya/sc212-squall-sarutahikos-guidance-662
+12	-1	66	66	66	66	https://soku.cleista.cc/framedata/komachi/66
+12	-1	44	44	44	44	https://soku.cleista.cc/framedata/komachi/44
+12	-1	j.66	j.66	j.66	j.66	https://soku.cleista.cc/framedata/komachi/j66
+12	-1	j.44	j.44	j.44	j.44	https://soku.cleista.cc/framedata/komachi/j44
+12	-1	5A	5A	5A	5A	https://soku.cleista.cc/framedata/komachi/5a
+12	-1	f.5A	f.5A	f.5A	f.5A	https://soku.cleista.cc/framedata/komachi/f5a
+12	-1	6A	6A	6A	6A	https://soku.cleista.cc/framedata/komachi/6a
+12	-1	2A	2A	2A	2A	https://soku.cleista.cc/framedata/komachi/2a
+12	-1	3A	3A	3A	3A	https://soku.cleista.cc/framedata/komachi/3a
+12	-1	66A	66A	66A	66A	https://soku.cleista.cc/framedata/komachi/66a
+12	-1	j.5A	j.5A	j.5A	j.5A	https://soku.cleista.cc/framedata/komachi/j5a
+12	-1	j.6A	j.6A	j.6A	j.6A	https://soku.cleista.cc/framedata/komachi/j6a
+12	-1	j.2A	j.2A	j.2A	j.2A	https://soku.cleista.cc/framedata/komachi/j2a
+12	-1	j.8A	j.8A	j.8A	j.8A	https://soku.cleista.cc/framedata/komachi/j8a
+12	-1	5AA	5AA	5AA	5AA	https://soku.cleista.cc/framedata/komachi/5aa
+12	-1	5AAA	5AAA	5AAA	5AAA	https://soku.cleista.cc/framedata/komachi/5aaa
+12	-1	5AAAA	5AAAA	5AAAA	5AAAA	https://soku.cleista.cc/framedata/komachi/5aaaa
+12	-1	4A	4A	4A	4A	https://soku.cleista.cc/framedata/komachi/4a
+12	-1	5B	5B	5B	5B	https://soku.cleista.cc/framedata/komachi/5b
+12	-1	6B	6B	6B	6B	https://soku.cleista.cc/framedata/komachi/6b
+12	-1	2B	2B	2B	2B	https://soku.cleista.cc/framedata/komachi/2b
+12	-1	j.5B	j.5B	j.5B	j.5B	https://soku.cleista.cc/framedata/komachi/j5b
+12	-1	j.6B	j.6B	j.6B	j.6B	https://soku.cleista.cc/framedata/komachi/j6b
+12	-1	j.2B	j.2B	j.2B	j.2B	https://soku.cleista.cc/framedata/komachi/j2b
+12	-1	66B	66B	66B	66B	https://soku.cleista.cc/framedata/komachi/66b
+12	-1	5C	5C	5C	5C	https://soku.cleista.cc/framedata/komachi/5c
+12	-1	6C	6C	6C	6C	https://soku.cleista.cc/framedata/komachi/6c
+12	-1	2C	2C	2C	2C	https://soku.cleista.cc/framedata/komachi/2c
+12	-1	j.5C	j.5C	j.5C	j.5C	https://soku.cleista.cc/framedata/komachi/j5c
+12	-1	j.6C	j.6C	j.6C	j.6C	https://soku.cleista.cc/framedata/komachi/j6c
+12	-1	j.2C	j.2C	j.2C	j.2C	https://soku.cleista.cc/framedata/komachi/j2c
+12	-1	66C	66C	66C	66C	https://soku.cleista.cc/framedata/komachi/66c
+12	100	236B	无惑而生的人灵	Spirits of the Firm	迷わず生きた人霊	https://soku.cleista.cc/framedata/komachi/236b-spirits-of-the-firm
+12	100	236C	无惑而生的人灵	Spirits of the Firm	迷わず生きた人霊	https://soku.cleista.cc/framedata/komachi/236c-spirits-of-the-firm
+12	104	236B	死神的大镰	Scythe of the Reaper	死神の大鎌	https://soku.cleista.cc/framedata/komachi/236b-scythe-of-the-reaper
+12	104	236C	死神的大镰	Scythe of the Reaper	死神の大鎌	https://soku.cleista.cc/framedata/komachi/236c-scythe-of-the-reaper
+12	104	j.236B	死神的大镰	Scythe of the Reaper	死神の大鎌	https://soku.cleista.cc/framedata/komachi/j236b-scythe-of-the-reaper
+12	104	j.236C	死神的大镰	Scythe of the Reaper	死神の大鎌	https://soku.cleista.cc/framedata/komachi/j236c-scythe-of-the-reaper
+12	108	236B	偶然路过的人灵	A Human Spirit Passing By	通りすがりの人霊	https://soku.cleista.cc/framedata/komachi/236b-a-human-spirit-passing-by
+12	108	236C	偶然路过的人灵	A Human Spirit Passing By	通りすがりの人霊	https://soku.cleista.cc/framedata/komachi/236c-a-human-spirit-passing-by
+12	101	623B	无法超度的地缚灵	Bound Spirits of the Earth	浮かばれない地縛霊	https://soku.cleista.cc/framedata/komachi/623b-bound-spirits-of-the-earth
+12	101	623C	无法超度的地缚灵	Bound Spirits of the Earth	浮かばれない地縛霊	https://soku.cleista.cc/framedata/komachi/623c-bound-spirits-of-the-earth
+12	105	623B	死出之风	Wind on the Last Journey	死出の風	https://soku.cleista.cc/framedata/komachi/623b-wind-on-the-last-journey
+12	105	623C	死出之风	Wind on the Last Journey	死出の風	https://soku.cleista.cc/framedata/komachi/623c-wind-on-the-last-journey
+12	109	623B	三途之舟	Boat on the Sanzu	三途の舟	https://soku.cleista.cc/framedata/komachi/623b-boat-on-the-sanzu
+12	-1	623B~A	623B~A	623B~A	623B~A	https://soku.cleista.cc/framedata/komachi/623b-a
+12	109	623C	三途之舟	Boat on the Sanzu	三途の舟	https://soku.cleista.cc/framedata/komachi/623c-boat-on-the-sanzu
+12	-1	623C~A	623C~A	623C~A	623C~A	https://soku.cleista.cc/framedata/komachi/623c-a
+12	102	22B	脱魂的仪式	Ritual of Ecstacy	脱魂の儀	https://soku.cleista.cc/framedata/komachi/22b-ritual-of-ecstacy
+12	102	22C	脱魂的仪式	Ritual of Ecstacy	脱魂の儀	https://soku.cleista.cc/framedata/komachi/22c-ritual-of-ecstacy
+12	102	j.22B	脱魂的仪式	Ritual of Ecstacy	脱魂の儀	https://soku.cleista.cc/framedata/komachi/j22b-ritual-of-ecstacy
+12	102	j.22C	脱魂的仪式	Ritual of Ecstacy	脱魂の儀	https://soku.cleista.cc/framedata/komachi/j22c-ritual-of-ecstacy
+12	106	22B	无间之道	The Endless Way	無間の道	https://soku.cleista.cc/framedata/komachi/22b-the-endless-way
+12	106	22C	无间之道	The Endless Way	無間の道	https://soku.cleista.cc/framedata/komachi/22c-the-endless-way
+12	110	22B	催命体验版	Taste of Death	お迎え体験版	https://soku.cleista.cc/framedata/komachi/22b-taste-of-death
+12	110	22C	催命体验版	Taste of Death	お迎え体験版	https://soku.cleista.cc/framedata/komachi/22c-taste-of-death
+12	103	214B	懒惰而生的浮游灵	Floating Spirits of the Indolent Dead	怠惰に生きた浮遊霊	https://soku.cleista.cc/framedata/komachi/214b-floating-spirits-of-the-indolent-dead
+12	103	214C	懒惰而生的浮游灵	Floating Spirits of the Indolent Dead	怠惰に生きた浮遊霊	https://soku.cleista.cc/framedata/komachi/214c-floating-spirits-of-the-indolent-dead
+12	107	214B	寂寞之人的紧缚灵	Lonely Bound Spirit	寂しがり屋の緊縛霊	https://soku.cleista.cc/framedata/komachi/214b-lonely-bound-spirit
+12	107	214C	寂寞之人的紧缚灵	Lonely Bound Spirit	寂しがり屋の緊縛霊	https://soku.cleista.cc/framedata/komachi/214c-lonely-bound-spirit
+12	111	214B	离魂之镰	Scythe of Exorcism	離魂の鎌	https://soku.cleista.cc/framedata/komachi/214b-scythe-of-exorcism
+12	111	214C	离魂之镰	Scythe of Exorcism	離魂の鎌	https://soku.cleista.cc/framedata/komachi/214c-scythe-of-exorcism
+12	200	sc200	舟符「宛若河流般」	Nautical Sign "Flow of the River"	舟符「河の流れのように」	https://soku.cleista.cc/framedata/komachi/sc200-nautical-sign-flow-of-the-river
+12	201	sc201	薄命「余命无几许」	Poor Fate "Short Life Expectancy"	薄命「余命幾許も無し」	https://soku.cleista.cc/framedata/komachi/sc201-poor-fate-short-life-expectancy
+12	202	sc202	灵符「到处都是的浮游灵」	Spirit Sign "Abundant Floating Spirits"	霊符「何処にでもいる浮遊霊」	https://soku.cleista.cc/framedata/komachi/sc202-spirit-sign-abundant-floating-spirits
+12	203	sc203	死歌「八重雾中渡」	Death Song "Ferriage in the Deep Fog"	死歌「八重霧の渡し」	https://soku.cleista.cc/framedata/komachi/sc203-death-song-ferriage-in-the-deep-fog
+12	204	sc204	换命「不惜身命，可惜身命」	Exchange "Unpitiable, Pitiable Life"	換命「不惜身命、可惜身命」	https://soku.cleista.cc/framedata/komachi/sc204-exchange-unpitiable-pitiable-life
+12	205	sc205	恨符「充满留恋的紧缚灵」	Malice Sign "Irresolute Bound Spirit"	恨符「未練がましい緊縛霊」	https://soku.cleista.cc/framedata/komachi/sc205-malice-sign-irresolute-bound-spirit
+12	206	sc206	死符「区别死者的镰刀」	Death Sign "Scythe of Final Judgement"	死符「死者選別の鎌」	https://soku.cleista.cc/framedata/komachi/sc206-death-sign-scythe-of-final-judgement
+12	207	sc207	魂符「生魂流离的镰刀」	Soul Sign "Scythe of Wandering Spirits"	魂符「生魂流離の鎌」	https://soku.cleista.cc/framedata/komachi/sc207-soul-sign-scythe-of-wandering-spirits
+12	211	sc211	地狱「无间之狭间」	Hell "Narrow Confines of Avici"	地獄「無間の狭間」	https://soku.cleista.cc/framedata/komachi/sc211-hell-narrow-confines-of-avici
+13	-1	66	66	66	66	https://soku.cleista.cc/framedata/iku/66
+13	-1	44	44	44	44	https://soku.cleista.cc/framedata/iku/44
+13	-1	j.66	j.66	j.66	j.66	https://soku.cleista.cc/framedata/iku/j66
+13	-1	j.44	j.44	j.44	j.44	https://soku.cleista.cc/framedata/iku/j44
+13	-1	5A	5A	5A	5A	https://soku.cleista.cc/framedata/iku/5a
+13	-1	f.5A	f.5A	f.5A	f.5A	https://soku.cleista.cc/framedata/iku/f5a
+13	-1	6A	6A	6A	6A	https://soku.cleista.cc/framedata/iku/6a
+13	-1	2A	2A	2A	2A	https://soku.cleista.cc/framedata/iku/2a
+13	-1	3A	3A	3A	3A	https://soku.cleista.cc/framedata/iku/3a
+13	-1	66A	66A	66A	66A	https://soku.cleista.cc/framedata/iku/66a
+13	-1	j.5A	j.5A	j.5A	j.5A	https://soku.cleista.cc/framedata/iku/j5a
+13	-1	j.6A	j.6A	j.6A	j.6A	https://soku.cleista.cc/framedata/iku/j6a
+13	-1	j.2A	j.2A	j.2A	j.2A	https://soku.cleista.cc/framedata/iku/j2a
+13	-1	j.8A	j.8A	j.8A	j.8A	https://soku.cleista.cc/framedata/iku/j8a
+13	-1	5AA	5AA	5AA	5AA	https://soku.cleista.cc/framedata/iku/5aa
+13	-1	5AAA	5AAA	5AAA	5AAA	https://soku.cleista.cc/framedata/iku/5aaa
+13	-1	5AAAA	5AAAA	5AAAA	5AAAA	https://soku.cleista.cc/framedata/iku/5aaaa
+13	-1	4A	4A	4A	4A	https://soku.cleista.cc/framedata/iku/4a
+13	-1	5B	5B	5B	5B	https://soku.cleista.cc/framedata/iku/5b
+13	-1	6B	6B	6B	6B	https://soku.cleista.cc/framedata/iku/6b
+13	-1	2B	2B	2B	2B	https://soku.cleista.cc/framedata/iku/2b
+13	-1	j.5B	j.5B	j.5B	j.5B	https://soku.cleista.cc/framedata/iku/j5b
+13	-1	j.2B	j.2B	j.2B	j.2B	https://soku.cleista.cc/framedata/iku/j2b
+13	-1	66B	66B	66B	66B	https://soku.cleista.cc/framedata/iku/66b
+13	-1	5C	5C	5C	5C	https://soku.cleista.cc/framedata/iku/5c
+13	-1	6C	6C	6C	6C	https://soku.cleista.cc/framedata/iku/6c
+13	-1	2C	2C	2C	2C	https://soku.cleista.cc/framedata/iku/2c
+13	-1	j.5C	j.5C	j.5C	j.5C	https://soku.cleista.cc/framedata/iku/j5c
+13	-1	j.6C	j.6C	j.6C	j.6C	https://soku.cleista.cc/framedata/iku/j6c
+13	-1	j.2C	j.2C	j.2C	j.2C	https://soku.cleista.cc/framedata/iku/j2c
+13	-1	j.1C	j.1C	j.1C	j.1C	https://soku.cleista.cc/framedata/iku/j1c
+13	-1	66C	66C	66C	66C	https://soku.cleista.cc/framedata/iku/66c
+13	100	236B	龙鱼的一击	Dragon Fish's Strike	龍魚の一撃	https://soku.cleista.cc/framedata/iku/236b-dragon-fishs-strike
+13	100	236C	龙鱼的一击	Dragon Fish's Strike	龍魚の一撃	https://soku.cleista.cc/framedata/iku/236c-dragon-fishs-strike
+13	104	236B	龙神的一击	Dragon God's Strike	龍神の一撃	https://soku.cleista.cc/framedata/iku/236b-dragon-gods-strike
+13	104	236C	龙神的一击	Dragon God's Strike	龍神の一撃	https://soku.cleista.cc/framedata/iku/236c-dragon-gods-strike
+13	108	236B	龙鱼得水	Dragonfish, the Able Swimmer	水得の龍魚	https://soku.cleista.cc/framedata/iku/236b-dragonfish-the-able-swimmer
+13	108	236C	龙鱼得水	Dragonfish, the Able Swimmer	水得の龍魚	https://soku.cleista.cc/framedata/iku/236c-dragonfish-the-able-swimmer
+13	101	623B	羽衣若水	Veils like Water	羽衣は水の如く	https://soku.cleista.cc/framedata/iku/623b-veils-like-water
+13	101	623C	羽衣若水	Veils like Water	羽衣は水の如く	https://soku.cleista.cc/framedata/iku/623c-veils-like-water
+13	105	623B	羽衣若风	Veils like Wind	羽衣は風の如く	https://soku.cleista.cc/framedata/iku/623b-veils-like-wind
+13	105	623C	羽衣若风	Veils like Wind	羽衣は風の如く	https://soku.cleista.cc/framedata/iku/623c-veils-like-wind
+13	105	j.623B	羽衣若风	Veils like Wind	羽衣は風の如く	https://soku.cleista.cc/framedata/iku/j623b-veils-like-wind
+13	105	j.623C	羽衣若风	Veils like Wind	羽衣は風の如く	https://soku.cleista.cc/framedata/iku/j623c-veils-like-wind
+13	109	623B	天女的一击	The Smite of the Goddess	天女の一撃	https://soku.cleista.cc/framedata/iku/623b-the-smite-of-the-goddess
+13	109	623C	天女的一击	The Smite of the Goddess	天女の一撃	https://soku.cleista.cc/framedata/iku/623c-the-smite-of-the-goddess
+13	102	22B	龙鱼之怒	Dragon Fish's Wrath	龍魚の怒り	https://soku.cleista.cc/framedata/iku/22b-dragon-fishs-wrath
+13	106	22B	龙神之怒	Dragon God's Wrath	龍神の怒り	https://soku.cleista.cc/framedata/iku/22b-dragon-gods-wrath
+13	106	22C	龙神之怒	Dragon God's Wrath	龍神の怒り	https://soku.cleista.cc/framedata/iku/22c-dragon-gods-wrath
+13	110	22B	龙神之须	Whiskers of the Dragon God	龍神の髭	https://soku.cleista.cc/framedata/iku/22b-whiskers-of-the-dragon-god
+13	110	22C	龙神之须	Whiskers of the Dragon God	龍神の髭	https://soku.cleista.cc/framedata/iku/22c-whiskers-of-the-dragon-god
+13	103	214B	静电诱导弹	Electrostatic Guided Missile	静電誘導弾	https://soku.cleista.cc/framedata/iku/214b-electrostatic-guided-missile
+13	103	214C	静电诱导弹	Electrostatic Guided Missile	静電誘導弾	https://soku.cleista.cc/framedata/iku/214c-electrostatic-guided-missile
+13	103	j.214B	静电诱导弹	Electrostatic Guided Missile	静電誘導弾	https://soku.cleista.cc/framedata/iku/j214b-electrostatic-guided-missile
+13	103	j.214C	静电诱导弹	Electrostatic Guided Missile	静電誘導弾	https://soku.cleista.cc/framedata/iku/j214c-electrostatic-guided-missile
+13	107	214B	龙神的电光	Dragon God's Lightning Flash	龍神の稲光り	https://soku.cleista.cc/framedata/iku/214b-dragon-gods-lightning-flash
+13	107	214C	龙神的电光	Dragon God's Lightning Flash	龍神の稲光り	https://soku.cleista.cc/framedata/iku/214c-dragon-gods-lightning-flash
+13	107	j.214B	龙神的电光	Dragon God's Lightning Flash	龍神の稲光り	https://soku.cleista.cc/framedata/iku/j214b-dragon-gods-lightning-flash
+13	107	j.214C	龙神的电光	Dragon God's Lightning Flash	龍神の稲光り	https://soku.cleista.cc/framedata/iku/j214c-dragon-gods-lightning-flash
+13	111	214B	龙之眼	Dragon's Eye	龍の眼	https://soku.cleista.cc/framedata/iku/214b-dragons-eye
+13	111	214C	龙之眼	Dragon's Eye	龍の眼	https://soku.cleista.cc/framedata/iku/214c-dragons-eye
+13	111	j.214B	龙之眼	Dragon's Eye	龍の眼	https://soku.cleista.cc/framedata/iku/j214b-dragons-eye
+13	111	j.214C	龙之眼	Dragon's Eye	龍の眼	https://soku.cleista.cc/framedata/iku/j214c-dragons-eye
+13	200	sc200	电符「雷鼓弹」	Electric Sign "Thunder Drum Shot"	電符「雷鼓弾」	https://soku.cleista.cc/framedata/iku/sc200-electric-sign-thunder-drum-shot
+13	201	sc201	鱼符「龙鱼电钻」	Fish Sign "Dragonfish Drill"	魚符「龍魚ドリル」	https://soku.cleista.cc/framedata/iku/sc201-fish-sign-dragonfish-drill
+13	202	sc202	雷符「电气的龙宫」	Lightning Sign "Elekiter Dragon Palace"	雷符「エレキテルの龍宮」	https://soku.cleista.cc/framedata/iku/sc202-lightning-sign-elekiter-dragon-palace
+13	203	sc203	光星「光龙之叹息」	Star Light "Light Dragon's Sigh"	光星「光龍の吐息」	https://soku.cleista.cc/framedata/iku/sc203-star-light-light-dragons-sigh
+13	206	sc206	雷鱼「雷云鱼游泳弹」	Lightning Fish "Swimming Thunder Shot"	雷魚「雷雲魚遊泳弾」	https://soku.cleista.cc/framedata/iku/sc206-lightning-fish-swimming-thunder-shot
+13	207	sc207	羽衣「羽衣若空」	Angel's Raiment "Veils like Sky"	羽衣「羽衣は空の如く」	https://soku.cleista.cc/framedata/iku/sc207-angels-raiment-veils-like-sky
+13	208	sc208	羽衣「羽衣若时」	Angel's Raiment "Veils like Time"	羽衣「羽衣は時の如く」	https://soku.cleista.cc/framedata/iku/sc208-angels-raiment-veils-like-time
+13	209	sc209	棘符「雷云棘鱼」	Thorn Sign "Thundercloud Stickleback"	棘符「雷雲棘魚」	https://soku.cleista.cc/framedata/iku/sc209-thorn-sign-thundercloud-stickleback
+13	210	sc210	龙鱼「龙宫使者的游泳弹」	Dragonfish "Swimming Oarfish Shot"	龍魚「龍宮の使い遊泳弾」	https://soku.cleista.cc/framedata/iku/sc210-dragonfish-swimming-oarfish-shot
+13	211	sc211	珠符「五爪龙之珠」	Orb Sign "Orb of the Five-Clawed Dragon"	珠符「五爪龍の珠」	https://soku.cleista.cc/framedata/iku/sc211-orb-sign-orb-of-the-five-clawed-dragon
+13	200	j.sc200	电符「雷鼓弹」	Electric Sign "Thunder Drum Shot"	電符「雷鼓弾」	https://soku.cleista.cc/framedata/iku/sc200-electric-sign-thunder-drum-shot-650
+13	210	j.sc210	龙鱼「龙宫使者的游泳弹」	Dragonfish "Swimming Oarfish Shot"	龍魚「龍宮の使い遊泳弾」	https://soku.cleista.cc/framedata/iku/sc210-dragonfish-swimming-oarfish-shot-660
+13	211	j.sc211	珠符「五爪龙之珠」	Orb Sign "Orb of the Five-Clawed Dragon"	珠符「五爪龍の珠」	https://soku.cleista.cc/framedata/iku/sc211-orb-sign-orb-of-the-five-clawed-dragon-661
+13	208	sc208	羽衣「羽衣若时」（发动）	Angel's Raiment "Veils like Time" (Activation)	羽衣「羽衣は時の如く」（発動）	https://soku.cleista.cc/framedata/iku/sc208-angels-raiment-veils-like-time-activation
+14	-1	66	66	66	66	https://soku.cleista.cc/framedata/tenshi/66
+14	-1	44	44	44	44	https://soku.cleista.cc/framedata/tenshi/44
+14	-1	j.66	j.66	j.66	j.66	https://soku.cleista.cc/framedata/tenshi/j66
+14	-1	j.44	j.44	j.44	j.44	https://soku.cleista.cc/framedata/tenshi/j44
+14	-1	5A	5A	5A	5A	https://soku.cleista.cc/framedata/tenshi/5a
+14	-1	f.5A	f.5A	f.5A	f.5A	https://soku.cleista.cc/framedata/tenshi/f5a
+14	-1	6A	6A	6A	6A	https://soku.cleista.cc/framedata/tenshi/6a
+14	-1	2A	2A	2A	2A	https://soku.cleista.cc/framedata/tenshi/2a
+14	-1	3A	3A	3A	3A	https://soku.cleista.cc/framedata/tenshi/3a
+14	-1	66A	66A	66A	66A	https://soku.cleista.cc/framedata/tenshi/66a
+14	-1	j.5A	j.5A	j.5A	j.5A	https://soku.cleista.cc/framedata/tenshi/j5a
+14	-1	j.6A	j.6A	j.6A	j.6A	https://soku.cleista.cc/framedata/tenshi/j6a
+14	-1	j.2A	j.2A	j.2A	j.2A	https://soku.cleista.cc/framedata/tenshi/j2a
+14	-1	j.8A	j.8A	j.8A	j.8A	https://soku.cleista.cc/framedata/tenshi/j8a
+14	-1	5AA	5AA	5AA	5AA	https://soku.cleista.cc/framedata/tenshi/5aa
+14	-1	5AAA	5AAA	5AAA	5AAA	https://soku.cleista.cc/framedata/tenshi/5aaa
+14	-1	4A	4A	4A	4A	https://soku.cleista.cc/framedata/tenshi/4a
+14	-1	5B	5B	5B	5B	https://soku.cleista.cc/framedata/tenshi/5b
+14	-1	6B	6B	6B	6B	https://soku.cleista.cc/framedata/tenshi/6b
+14	-1	2B	2B	2B	2B	https://soku.cleista.cc/framedata/tenshi/2b
+14	-1	j.5B	j.5B	j.5B	j.5B	https://soku.cleista.cc/framedata/tenshi/j5b
+14	-1	j.6B	j.6B	j.6B	j.6B	https://soku.cleista.cc/framedata/tenshi/j6b
+14	-1	j.2B	j.2B	j.2B	j.2B	https://soku.cleista.cc/framedata/tenshi/j2b
+14	-1	66B	66B	66B	66B	https://soku.cleista.cc/framedata/tenshi/66b
+14	-1	5C	5C	5C	5C	https://soku.cleista.cc/framedata/tenshi/5c
+14	-1	6C	6C	6C	6C	https://soku.cleista.cc/framedata/tenshi/6c
+14	-1	2C	2C	2C	2C	https://soku.cleista.cc/framedata/tenshi/2c
+14	-1	j.5C	j.5C	j.5C	j.5C	https://soku.cleista.cc/framedata/tenshi/j5c
+14	-1	j.6C	j.6C	j.6C	j.6C	https://soku.cleista.cc/framedata/tenshi/j6c
+14	-1	j.2C	j.2C	j.2C	j.2C	https://soku.cleista.cc/framedata/tenshi/j2c
+14	-1	66C	66C	66C	66C	https://soku.cleista.cc/framedata/tenshi/66c
+14	100	214B	坤仪之剑	Sword of the Earth	坤儀の剣	https://soku.cleista.cc/framedata/tenshi/214b-sword-of-the-earth
+14	100	214C	坤仪之剑	Sword of the Earth	坤儀の剣	https://soku.cleista.cc/framedata/tenshi/214c-sword-of-the-earth
+14	100	j.214B	坤仪之剑	Sword of the Earth	坤儀の剣	https://soku.cleista.cc/framedata/tenshi/j214b-sword-of-the-earth
+14	100	j.214C	坤仪之剑	Sword of the Earth	坤儀の剣	https://soku.cleista.cc/framedata/tenshi/j214c-sword-of-the-earth
+14	104	214B	六震-相-	Six Earthquakes -Signs-	六震-相-	https://soku.cleista.cc/framedata/tenshi/214b-six-earthquakes-signs
+14	104	214C	六震-相-	Six Earthquakes -Signs-	六震-相-	https://soku.cleista.cc/framedata/tenshi/214c-six-earthquakes-signs
+14	108	214B	因果之剑	Sword of Fate	因果の剣	https://soku.cleista.cc/framedata/tenshi/214b-sword-of-fate
+14	108	214C	因果之剑	Sword of Fate	因果の剣	https://soku.cleista.cc/framedata/tenshi/214c-sword-of-fate
+14	101	22B	天罚的石柱	Pillars of Divine Punishment	天罰の石柱	https://soku.cleista.cc/framedata/tenshi/22b-pillars-of-divine-punishment
+14	101	22C	天罚的石柱	Pillars of Divine Punishment	天罰の石柱	https://soku.cleista.cc/framedata/tenshi/22c-pillars-of-divine-punishment
+14	101	j.22B	天罚的石柱	Pillars of Divine Punishment	天罰の石柱	https://soku.cleista.cc/framedata/tenshi/j22b-pillars-of-divine-punishment
+14	101	j.22C	天罚的石柱	Pillars of Divine Punishment	天罰の石柱	https://soku.cleista.cc/framedata/tenshi/j22c-pillars-of-divine-punishment
+14	105	22B	守护的要石	Guarding Keystones	守りの要	https://soku.cleista.cc/framedata/tenshi/22b-guarding-keystones
+14	105	22C	守护的要石	Guarding Keystones	守りの要	https://soku.cleista.cc/framedata/tenshi/22c-guarding-keystones
+14	105	j.22B	守护的要石	Guarding Keystones	守りの要	https://soku.cleista.cc/framedata/tenshi/j22b-guarding-keystones
+14	105	j.22C	守护的要石	Guarding Keystones	守りの要	https://soku.cleista.cc/framedata/tenshi/j22c-guarding-keystones
+14	109	22B	地精的起床	Awakening of the Earth Spirits	地精の起床	https://soku.cleista.cc/framedata/tenshi/22b-awakening-of-the-earth-spirits
+14	109	22C	地精的起床	Awakening of the Earth Spirits	地精の起床	https://soku.cleista.cc/framedata/tenshi/22c-awakening-of-the-earth-spirits
+14	102	236B	非想的威光	Beams of Non-Perception	非想の威光	https://soku.cleista.cc/framedata/tenshi/236b-beams-of-non-perception
+14	102	236C	非想的威光	Beams of Non-Perception	非想の威光	https://soku.cleista.cc/framedata/tenshi/236c-beams-of-non-perception
+14	102	j.236B	非想的威光	Beams of Non-Perception	非想の威光	https://soku.cleista.cc/framedata/tenshi/j236b-beams-of-non-perception
+14	102	j.236C	非想的威光	Beams of Non-Perception	非想の威光	https://soku.cleista.cc/framedata/tenshi/j236c-beams-of-non-perception
+14	106	236B	天地之压	Heaven and Earth Press	天地プレス	https://soku.cleista.cc/framedata/tenshi/236b-heaven-and-earth-press
+14	106	236C	天地之压	Heaven and Earth Press	天地プレス	https://soku.cleista.cc/framedata/tenshi/236c-heaven-and-earth-press
+14	106	j.236B	天地之压	Heaven and Earth Press	天地プレス	https://soku.cleista.cc/framedata/tenshi/j236b-heaven-and-earth-press
+14	106	j.236C	天地之压	Heaven and Earth Press	天地プレス	https://soku.cleista.cc/framedata/tenshi/j236c-heaven-and-earth-press
+14	110	236B	绯想的剑气	Scarlet Sword Temperament	緋想の剣気	https://soku.cleista.cc/framedata/tenshi/236b-scarlet-sword-temperament
+14	110	236C	绯想的剑气	Scarlet Sword Temperament	緋想の剣気	https://soku.cleista.cc/framedata/tenshi/236c-scarlet-sword-temperament
+14	103	623B	非想之剑	Sword of Non-Perception	非想の剣	https://soku.cleista.cc/framedata/tenshi/623b-sword-of-non-perception
+14	103	623C	非想之剑	Sword of Non-Perception	非想の剣	https://soku.cleista.cc/framedata/tenshi/623c-sword-of-non-perception
+14	107	623B	绯想之剑	Sword of Scarlet Perception	緋想の剣	https://soku.cleista.cc/framedata/tenshi/623b-sword-of-scarlet-perception
+14	107	623C	绯想之剑	Sword of Scarlet Perception	緋想の剣	https://soku.cleista.cc/framedata/tenshi/623c-sword-of-scarlet-perception
+14	111	623B	升天突	Sky Attack	昇天突	https://soku.cleista.cc/framedata/tenshi/623b-sky-attack
+14	111	623C	升天突	Sky Attack	昇天突	https://soku.cleista.cc/framedata/tenshi/623c-sky-attack
+14	111	j.623B	升天突	Sky Attack	昇天突	https://soku.cleista.cc/framedata/tenshi/j623b-sky-attack
+14	111	j.623C	升天突	Sky Attack	昇天突	https://soku.cleista.cc/framedata/tenshi/j623c-sky-attack
+14	200	sc200	地符「不让土壤之剑」	Earth Sign "Sword of Unletting Soil"	地符「不譲土壌の剣」	https://soku.cleista.cc/framedata/tenshi/sc200-earth-sign-sword-of-unletting-soil
+14	201	sc201	非想「非想非非想之剑」	Non-perception "Sword of Rapture"	非想「非想非非想の剣」	https://soku.cleista.cc/framedata/tenshi/sc201-non-perception-sword-of-rapture
+14	202	sc202	天符「天道是非之剑」	Heaven Sign "Sword of Divine Justice"	天符「天道是非の剣」	https://soku.cleista.cc/framedata/tenshi/sc202-heaven-sign-sword-of-divine-justice
+14	203	sc203	地震「先忧后乐之剑」	Earthquake "Sword of Worry and Joy"	地震「先憂後楽の剣」	https://soku.cleista.cc/framedata/tenshi/sc203-earthquake-sword-of-worry-and-joy
+14	204	sc204	气符「天启气象之剑」	Temperament "Meteorological Revelation"	気符「天啓気象の剣」	https://soku.cleista.cc/framedata/tenshi/sc204-temperament-meteorological-revelation
+14	205	sc205	要石「天地开辟之挤压」	Keystone "World Creation Press"	要石「天地開闢プレス」	https://soku.cleista.cc/framedata/tenshi/sc205-keystone-world-creation-press
+14	206	sc206	气符「无念无想的境界」	Temperament "State of Enlightenment"	気符「無念無想の境地」	https://soku.cleista.cc/framedata/tenshi/sc206-temperament-state-of-enlightenment
+14	207	sc207	「全人类的绯想天」	"Scarlet Weather Rapture"	「全人類の緋想天」	https://soku.cleista.cc/framedata/tenshi/sc207-scarlet-weather-rapture
+14	208	sc208	剑技「气焰万丈之剑」	Swordplay "Sword of Swagger"	剣技「気炎万丈の剣」	https://soku.cleista.cc/framedata/tenshi/sc208-swordplay-sword-of-swagger
+14	209	sc209	天气「绯想天促」	Weather "Scarlet Weather Pressure"	天気「緋想天促」	https://soku.cleista.cc/framedata/tenshi/sc209-weather-scarlet-weather-pressure
+14	207	j.sc207	「全人类的绯想天」	"Scarlet Weather Rapture"	「全人類の緋想天」	https://soku.cleista.cc/framedata/tenshi/sc207-scarlet-weather-rapture-657
+14	209	j.sc209	天气「绯想天促」	Weather "Scarlet Weather Pressure"	天気「緋想天促」	https://soku.cleista.cc/framedata/tenshi/sc209-weather-scarlet-weather-pressure-659
+15	-1	66	66	66	66	https://soku.cleista.cc/framedata/sanae/66
+15	-1	44	44	44	44	https://soku.cleista.cc/framedata/sanae/44
+15	-1	j.66	j.66	j.66	j.66	https://soku.cleista.cc/framedata/sanae/j66
+15	-1	j.44	j.44	j.44	j.44	https://soku.cleista.cc/framedata/sanae/j44
+15	-1	5A	5A	5A	5A	https://soku.cleista.cc/framedata/sanae/5a
+15	-1	f.5A	f.5A	f.5A	f.5A	https://soku.cleista.cc/framedata/sanae/f5a
+15	-1	6A	6A	6A	6A	https://soku.cleista.cc/framedata/sanae/6a
+15	-1	2A	2A	2A	2A	https://soku.cleista.cc/framedata/sanae/2a
+15	-1	3A	3A	3A	3A	https://soku.cleista.cc/framedata/sanae/3a
+15	-1	66A	66A	66A	66A	https://soku.cleista.cc/framedata/sanae/66a
+15	-1	j.5A	j.5A	j.5A	j.5A	https://soku.cleista.cc/framedata/sanae/j5a
+15	-1	j.6A	j.6A	j.6A	j.6A	https://soku.cleista.cc/framedata/sanae/j6a
+15	-1	j.2A	j.2A	j.2A	j.2A	https://soku.cleista.cc/framedata/sanae/j2a
+15	-1	j.8A	j.8A	j.8A	j.8A	https://soku.cleista.cc/framedata/sanae/j8a
+15	-1	5AA	5AA	5AA	5AA	https://soku.cleista.cc/framedata/sanae/5aa
+15	-1	5AAA	5AAA	5AAA	5AAA	https://soku.cleista.cc/framedata/sanae/5aaa
+15	-1	5AAAA	5AAAA	5AAAA	5AAAA	https://soku.cleista.cc/framedata/sanae/5aaaa
+15	-1	4A	4A	4A	4A	https://soku.cleista.cc/framedata/sanae/4a
+15	-1	5B	5B	5B	5B	https://soku.cleista.cc/framedata/sanae/5b
+15	-1	6B	6B	6B	6B	https://soku.cleista.cc/framedata/sanae/6b
+15	-1	2B	2B	2B	2B	https://soku.cleista.cc/framedata/sanae/2b
+15	-1	j.5B	j.5B	j.5B	j.5B	https://soku.cleista.cc/framedata/sanae/j5b
+15	-1	j.2B	j.2B	j.2B	j.2B	https://soku.cleista.cc/framedata/sanae/j2b
+15	-1	66B	66B	66B	66B	https://soku.cleista.cc/framedata/sanae/66b
+15	-1	5C	5C	5C	5C	https://soku.cleista.cc/framedata/sanae/5c
+15	-1	6C	6C	6C	6C	https://soku.cleista.cc/framedata/sanae/6c
+15	-1	2C	2C	2C	2C	https://soku.cleista.cc/framedata/sanae/2c
+15	-1	4C	4C	4C	4C	https://soku.cleista.cc/framedata/sanae/4c
+15	-1	j.5C	j.5C	j.5C	j.5C	https://soku.cleista.cc/framedata/sanae/j5c
+15	-1	j.6C	j.6C	j.6C	j.6C	https://soku.cleista.cc/framedata/sanae/j6c
+15	-1	j.2C	j.2C	j.2C	j.2C	https://soku.cleista.cc/framedata/sanae/j2c
+15	-1	j.4C	j.4C	j.4C	j.4C	https://soku.cleista.cc/framedata/sanae/j4c
+15	-1	66C	66C	66C	66C	https://soku.cleista.cc/framedata/sanae/66c
+15	100	236B	唤风	Wind-Call	風起こし	https://soku.cleista.cc/framedata/sanae/236b-wind-call
+15	100	236C	唤风	Wind-Call	風起こし	https://soku.cleista.cc/framedata/sanae/236c-wind-call
+15	104	236B	起浪	Wave-Call	波起こし	https://soku.cleista.cc/framedata/sanae/236b-wave-call
+15	104	236C	起浪	Wave-Call	波起こし	https://soku.cleista.cc/framedata/sanae/236c-wave-call
+15	108	236B	星落	Falling Stars	星落とし	https://soku.cleista.cc/framedata/sanae/236b-falling-stars
+15	108	236C	星落	Falling Stars	星落とし	https://soku.cleista.cc/framedata/sanae/236c-falling-stars
+15	108	j.236B	星落	Falling Stars	星落とし	https://soku.cleista.cc/framedata/sanae/j236b-falling-stars
+15	108	j.236C	星落	Falling Stars	星落とし	https://soku.cleista.cc/framedata/sanae/j236c-falling-stars
+15	101	22B	御神签炸弹	Omikuji Bomb	おみくじ爆弾	https://soku.cleista.cc/framedata/sanae/22b-omikuji-bomb
+15	101	22C	御神签炸弹	Omikuji Bomb	おみくじ爆弾	https://soku.cleista.cc/framedata/sanae/22c-omikuji-bomb
+15	105	22B	Sky Serpent（飞天之蛇）	Sky Serpent	スカイサーペント	https://soku.cleista.cc/framedata/sanae/22b-sky-serpent
+15	105	22C	Sky Serpent（飞天之蛇）	Sky Serpent	スカイサーペント	https://soku.cleista.cc/framedata/sanae/22c-sky-serpent
+15	105	j.22B	Sky Serpent（飞天之蛇）	Sky Serpent	スカイサーペント	https://soku.cleista.cc/framedata/sanae/j22b-sky-serpent
+15	105	j.22C	Sky Serpent（飞天之蛇）	Sky Serpent	スカイサーペント	https://soku.cleista.cc/framedata/sanae/j22c-sky-serpent
+15	109	22B	Cobalt Spread（钴蓝散射）	Cobalt Spread	コバルトスプレッド	https://soku.cleista.cc/framedata/sanae/22b-cobalt-spread
+15	109	22C	Cobalt Spread（钴蓝散射）	Cobalt Spread	コバルトスプレッド	https://soku.cleista.cc/framedata/sanae/22c-cobalt-spread
+15	102	623B	乾神招来　突	Sky-God Summon: Attack	乾神招来　突	https://soku.cleista.cc/framedata/sanae/623b-sky-god-summon-attack
+15	102	623C	乾神招来　突	Sky-God Summon: Attack	乾神招来　突	https://soku.cleista.cc/framedata/sanae/623c-sky-god-summon-attack
+15	102	j.623B	乾神招来　突	Sky-God Summon: Attack	乾神招来　突	https://soku.cleista.cc/framedata/sanae/j623b-sky-god-summon-attack
+15	102	j.623C	乾神招来　突	Sky-God Summon: Attack	乾神招来　突	https://soku.cleista.cc/framedata/sanae/j623c-sky-god-summon-attack
+15	106	623B	乾神招来　风	Sky-God Summon: Wind	乾神招来　風	https://soku.cleista.cc/framedata/sanae/623b-sky-god-summon-wind
+15	106	623C	乾神招来　风	Sky-God Summon: Wind	乾神招来　風	https://soku.cleista.cc/framedata/sanae/623c-sky-god-summon-wind
+15	106	j.623B	乾神招来　风	Sky-God Summon: Wind	乾神招来　風	https://soku.cleista.cc/framedata/sanae/j623b-sky-god-summon-wind
+15	106	j.623C	乾神招来　风	Sky-God Summon: Wind	乾神招来　風	https://soku.cleista.cc/framedata/sanae/j623c-sky-god-summon-wind
+15	110	623B	乾神招来　御柱	Sky-God Summon: Onbashira	乾神招来　御柱	https://soku.cleista.cc/framedata/sanae/623b-sky-god-summon-onbashira
+15	110	623C	乾神招来　御柱	Sky-God Summon: Onbashira	乾神招来　御柱	https://soku.cleista.cc/framedata/sanae/623c-sky-god-summon-onbashira
+15	110	j.623B	乾神招来　御柱	Sky-God Summon: Onbashira	乾神招来　御柱	https://soku.cleista.cc/framedata/sanae/j623b-sky-god-summon-onbashira
+15	110	j.623C	乾神招来　御柱	Sky-God Summon: Onbashira	乾神招来　御柱	https://soku.cleista.cc/framedata/sanae/j623c-sky-god-summon-onbashira
+15	103	214B	坤神招来　盾	Earth-God Summon: Shield	坤神招来　盾	https://soku.cleista.cc/framedata/sanae/214b-earth-god-summon-shield
+15	103	214C	坤神招来　盾	Earth-God Summon: Shield	坤神招来　盾	https://soku.cleista.cc/framedata/sanae/214c-earth-god-summon-shield
+15	103	j.214B	坤神招来　盾	Earth-God Summon: Shield	坤神招来　盾	https://soku.cleista.cc/framedata/sanae/j214b-earth-god-summon-shield
+15	103	j.214C	坤神招来　盾	Earth-God Summon: Shield	坤神招来　盾	https://soku.cleista.cc/framedata/sanae/j214c-earth-god-summon-shield
+15	107	214B	坤神招来　铁轮	Earth-God Summon: Iron Ring	坤神招来　鉄輪	https://soku.cleista.cc/framedata/sanae/214b-earth-god-summon-iron-ring
+15	107	214C	坤神招来　铁轮	Earth-God Summon: Iron Ring	坤神招来　鉄輪	https://soku.cleista.cc/framedata/sanae/214c-earth-god-summon-iron-ring
+15	111	214B	坤神招来　陷阱	Earth-God Summon: Trap	坤神招来　罠	https://soku.cleista.cc/framedata/sanae/214b-earth-god-summon-trap
+15	111	214C	坤神招来　陷阱	Earth-God Summon: Trap	坤神招来　罠	https://soku.cleista.cc/framedata/sanae/214c-earth-god-summon-trap
+15	200	sc200	祈愿「守护商业繁荣」	Prayer "Charm of Good Commerce"	祈願「商売繁盛守り」	https://soku.cleista.cc/framedata/sanae/sc200-prayer-charm-of-good-commerce
+15	201	sc201	秘术「Gray Thaumaturgy」（灰色奇术）	Esoterica "Grey Thaumaturgy"	秘術「グレイソーマタージ」	https://soku.cleista.cc/framedata/sanae/sc201-esoterica-grey-thaumaturgy
+15	202	sc202	秘术「遗忘之祭仪」	Esoterica "Forgotten Ritual"	秘術「忘却の祭儀」	https://soku.cleista.cc/framedata/sanae/sc202-esoterica-forgotten-ritual
+15	203	sc203	神签「暴乱神签连掷」	Omikuji "Random Omikuji Barrage"	神籤「乱れおみくじ連続引き」	https://soku.cleista.cc/framedata/sanae/sc203-omikuji-random-omikuji-barrage
+15	204	sc204	开海「海水分开之日」	Sea Opening "The Day the Sea Split"	開海「海が割れる日」	https://soku.cleista.cc/framedata/sanae/sc204-sea-opening-the-day-the-sea-split
+15	205	sc205	开海「摩西之奇迹」	Sea Opening "Moses' Miracle"	開海「モーゼの奇跡」	https://soku.cleista.cc/framedata/sanae/sc205-sea-opening-moses-miracle
+15	206	sc206	奇迹「白昼的客星」	Miracle "Mid-Day Supernova"	奇跡「白昼の客星」	https://soku.cleista.cc/framedata/sanae/sc206-miracle-mid-day-supernova
+15	207	sc207	奇迹「客星辉煌之夜」	Miracle "Night of the Supernova Storm"	奇跡「客星の明るすぎる夜」	https://soku.cleista.cc/framedata/sanae/sc207-miracle-night-of-the-supernova-storm
+15	210	sc210	秘法「九字切」	Esoterica "9 Character Pierce"	秘法「九字刺し」	https://soku.cleista.cc/framedata/sanae/sc210-esoterica-9-character-pierce
+15	201	j.sc201	秘术「Gray Thaumaturgy」（灰色奇术）	Esoterica "Grey Thaumaturgy"	秘術「グレイソーマタージ」	https://soku.cleista.cc/framedata/sanae/sc201-esoterica-grey-thaumaturgy-651
+16	-1	66	66	66	66	https://soku.cleista.cc/framedata/cirno/66
+16	-1	44	44	44	44	https://soku.cleista.cc/framedata/cirno/44
+16	-1	j.66	j.66	j.66	j.66	https://soku.cleista.cc/framedata/cirno/j66
+16	-1	j.44	j.44	j.44	j.44	https://soku.cleista.cc/framedata/cirno/j44
+16	-1	5A	5A	5A	5A	https://soku.cleista.cc/framedata/cirno/5a
+16	-1	f.5A	f.5A	f.5A	f.5A	https://soku.cleista.cc/framedata/cirno/f5a
+16	-1	6A	6A	6A	6A	https://soku.cleista.cc/framedata/cirno/6a
+16	-1	2A	2A	2A	2A	https://soku.cleista.cc/framedata/cirno/2a
+16	-1	3A	3A	3A	3A	https://soku.cleista.cc/framedata/cirno/3a
+16	-1	66A	66A	66A	66A	https://soku.cleista.cc/framedata/cirno/66a
+16	-1	j.5A	j.5A	j.5A	j.5A	https://soku.cleista.cc/framedata/cirno/j5a
+16	-1	j.6A	j.6A	j.6A	j.6A	https://soku.cleista.cc/framedata/cirno/j6a
+16	-1	j.2A	j.2A	j.2A	j.2A	https://soku.cleista.cc/framedata/cirno/j2a
+16	-1	j.8A	j.8A	j.8A	j.8A	https://soku.cleista.cc/framedata/cirno/j8a
+16	-1	5AA	5AA	5AA	5AA	https://soku.cleista.cc/framedata/cirno/5aa
+16	-1	5AAA	5AAA	5AAA	5AAA	https://soku.cleista.cc/framedata/cirno/5aaa
+16	-1	5AAAA	5AAAA	5AAAA	5AAAA	https://soku.cleista.cc/framedata/cirno/5aaaa
+16	-1	4A	4A	4A	4A	https://soku.cleista.cc/framedata/cirno/4a
+16	-1	5B	5B	5B	5B	https://soku.cleista.cc/framedata/cirno/5b
+16	-1	6B	6B	6B	6B	https://soku.cleista.cc/framedata/cirno/6b
+16	-1	2B	2B	2B	2B	https://soku.cleista.cc/framedata/cirno/2b
+16	-1	j.5B	j.5B	j.5B	j.5B	https://soku.cleista.cc/framedata/cirno/j5b
+16	-1	j.6B	j.6B	j.6B	j.6B	https://soku.cleista.cc/framedata/cirno/j6b
+16	-1	j.2B	j.2B	j.2B	j.2B	https://soku.cleista.cc/framedata/cirno/j2b
+16	-1	66B	66B	66B	66B	https://soku.cleista.cc/framedata/cirno/66b
+16	-1	5C	5C	5C	5C	https://soku.cleista.cc/framedata/cirno/5c
+16	-1	6C	6C	6C	6C	https://soku.cleista.cc/framedata/cirno/6c
+16	-1	2C	2C	2C	2C	https://soku.cleista.cc/framedata/cirno/2c
+16	-1	j.5C	j.5C	j.5C	j.5C	https://soku.cleista.cc/framedata/cirno/j5c
+16	-1	j.6C	j.6C	j.6C	j.6C	https://soku.cleista.cc/framedata/cirno/j6c
+16	-1	j.2C	j.2C	j.2C	j.2C	https://soku.cleista.cc/framedata/cirno/j2c
+16	-1	66C	66C	66C	66C	https://soku.cleista.cc/framedata/cirno/66c
+16	100	236B	Icicle Shot	Icicle Shot	アイシクルシュート	https://soku.cleista.cc/framedata/cirno/236b-icicle-shot
+16	100	236C	Icicle Shot	Icicle Shot	アイシクルシュート	https://soku.cleista.cc/framedata/cirno/236c-icicle-shot
+16	100	j.236B	Icicle Shot	Icicle Shot	アイシクルシュート	https://soku.cleista.cc/framedata/cirno/j236b-icicle-shot
+16	100	j.236C	Icicle Shot	Icicle Shot	アイシクルシュート	https://soku.cleista.cc/framedata/cirno/j236c-icicle-shot
+16	104	236B	Frost Pillars	Frost Pillars	フロストピラーズ	https://soku.cleista.cc/framedata/cirno/236b-frost-pillars
+16	104	236C	Frost Pillars	Frost Pillars	フロストピラーズ	https://soku.cleista.cc/framedata/cirno/236c-frost-pillars
+16	108	236B	冷冻光线	Freezing Light	冷凍光線	https://soku.cleista.cc/framedata/cirno/236b-freezing-light
+16	108	j.236B	冷冻光线	Freezing Light	冷凍光線	https://soku.cleista.cc/framedata/cirno/j236b-freezing-light
+16	101	214B	盛夏的雪人	Midsummer Snowman	真夏のスノーマン	https://soku.cleista.cc/framedata/cirno/214b-midsummer-snowman
+16	101	214C	盛夏的雪人	Midsummer Snowman	真夏のスノーマン	https://soku.cleista.cc/framedata/cirno/214c-midsummer-snowman
+16	105	214B	Ice Charge	Ice Charge	アイスチャージ	https://soku.cleista.cc/framedata/cirno/214b-ice-charge
+16	105	214C	Ice Charge	Ice Charge	アイスチャージ	https://soku.cleista.cc/framedata/cirno/214c-ice-charge
+16	105	j.214B	Ice Charge	Ice Charge	アイスチャージ	https://soku.cleista.cc/framedata/cirno/j214b-ice-charge
+16	105	j.214C	Ice Charge	Ice Charge	アイスチャージ	https://soku.cleista.cc/framedata/cirno/j214c-ice-charge
+16	109	214B	Ice Kick	Ice Kick	アイスキック	https://soku.cleista.cc/framedata/cirno/214b-ice-kick
+16	109	214C	Ice Kick	Ice Kick	アイスキック	https://soku.cleista.cc/framedata/cirno/214c-ice-kick
+16	109	j.214B	Ice Kick	Ice Kick	アイスキック	https://soku.cleista.cc/framedata/cirno/j214b-ice-kick
+16	109	j.214C	Ice Kick	Ice Kick	アイスキック	https://soku.cleista.cc/framedata/cirno/j214c-ice-kick
+16	102	22B	Little Iceberg	Little Iceberg	リトルアイスバーグ	https://soku.cleista.cc/framedata/cirno/22b-little-iceberg
+16	102	22C	Little Iceberg	Little Iceberg	リトルアイスバーグ	https://soku.cleista.cc/framedata/cirno/22c-little-iceberg
+16	106	22B	Icicle Bomb	Icicle Bomb	アイシクルボム	https://soku.cleista.cc/framedata/cirno/22b-icicle-bomb
+16	106	22C	Icicle Bomb	Icicle Bomb	アイシクルボム	https://soku.cleista.cc/framedata/cirno/22c-icicle-bomb
+16	106	j.22B	Icicle Bomb	Icicle Bomb	アイシクルボム	https://soku.cleista.cc/framedata/cirno/j22b-icicle-bomb
+16	106	j.22C	Icicle Bomb	Icicle Bomb	アイシクルボム	https://soku.cleista.cc/framedata/cirno/j22c-icicle-bomb
+16	110	22B	急冻冷冻法	Frozen Technique	フローズン冷凍法	https://soku.cleista.cc/framedata/cirno/22b-frozen-technique
+16	103	623B	Freeze Touch Me	Freeze Touch Me	フリーズタッチミー	https://soku.cleista.cc/framedata/cirno/623b-freeze-touch-me
+16	103	623C	Freeze Touch Me	Freeze Touch Me	フリーズタッチミー	https://soku.cleista.cc/framedata/cirno/623c-freeze-touch-me
+16	103	j.623B	Freeze Touch Me	Freeze Touch Me	フリーズタッチミー	https://soku.cleista.cc/framedata/cirno/j623b-freeze-touch-me
+16	103	j.623C	Freeze Touch Me	Freeze Touch Me	フリーズタッチミー	https://soku.cleista.cc/framedata/cirno/j623c-freeze-touch-me
+16	107	623B	Icicle Rise	Icicle Lance	アイシクルライズ	https://soku.cleista.cc/framedata/cirno/623b-icicle-lance
+16	107	623C	Icicle Rise	Icicle Lance	アイシクルライズ	https://soku.cleista.cc/framedata/cirno/623c-icicle-lance
+16	111	623B	Icicle Sword	Icicle Sword	アイシクルソード	https://soku.cleista.cc/framedata/cirno/623b-icicle-sword
+16	111	623C	Icicle Sword	Icicle Sword	アイシクルソード	https://soku.cleista.cc/framedata/cirno/623c-icicle-sword
+16	111	j.623B	Icicle Sword	Icicle Sword	アイシクルソード	https://soku.cleista.cc/framedata/cirno/j623b-icicle-sword
+16	111	j.623C	Icicle Sword	Icicle Sword	アイシクルソード	https://soku.cleista.cc/framedata/cirno/j623c-icicle-sword
+16	200	sc200	冰符「Icicle Machine Gun」（冰柱机枪）	Ice Sign "Icicle Machine Gun"	氷符「アイシクルマシンガン」	https://soku.cleista.cc/framedata/cirno/sc200-ice-sign-icicle-machine-gun
+16	201	sc201	霜符「Frost Columns」（冰霜方阵）	Frost Sign "Frost Columns"	霜符「フロストコラムス」	https://soku.cleista.cc/framedata/cirno/sc201-frost-sign-frost-columns
+16	202	sc202	冰块「Cold Sprinkler」（冷冻洒水器）	Ice Cubes "Cold Sprinkler"	氷塊「コールドスプリンクラー」	https://soku.cleista.cc/framedata/cirno/sc202-ice-cubes-cold-sprinkler
+16	203	sc203	冷体「Super Ice Kick」（超级冰踢）	Cold Body "Super Ice Kick"	冷体「スーパーアイスキック」	https://soku.cleista.cc/framedata/cirno/sc203-cold-body-super-ice-kick
+16	204	sc204	冻符「Perfect Freeze」（完美冻结）	Cold Sign "Perfect Freeze"	凍符「パーフェクトフリーズ」	https://soku.cleista.cc/framedata/cirno/sc204-cold-sign-perfect-freeze
+16	205	sc205	冰符「Fairy Spin」（妖精旋转）	Ice Sign "Fairy Spin"	氷符「フェアリースピン」	https://soku.cleista.cc/framedata/cirno/sc205-ice-sign-fairy-spin
+16	206	sc206	吹冰「Ice Tornado」（碎冰龙卷）	Blowing Ice "Ice Tornado"	吹氷「アイストルネード」	https://soku.cleista.cc/framedata/cirno/sc206-blowing-ice-ice-tornado
+16	207	sc207	冰符「Sword Freezer」（剑式制冰器）	Ice Sign "Sword Freezer"	氷符「ソードフリーザー」	https://soku.cleista.cc/framedata/cirno/sc207-ice-sign-sword-freezer
+16	208	sc208	冰块「Great Crusher」（巨冰破碎）	Ice Cubes "Great Crusher"	氷塊「グレートクラッシャー」	https://soku.cleista.cc/framedata/cirno/sc208-ice-cubes-great-crusher
+16	210	sc210	冻符「Freeze Atmosphere」（急冻大气）	Frozen Sign "Freeze Atmosphere"	凍符「フリーズアトモスフェア」	https://soku.cleista.cc/framedata/cirno/sc210-frozen-sign-freeze-atmosphere
+16	213	sc213	冷符「瞬间冷冻光线」	Cold Sign "Insta-Freeze Beam"	冷符「瞬間冷凍ビーム」	https://soku.cleista.cc/framedata/cirno/sc213-cold-sign-insta-freeze-beam
+16	200	j.sc200	冰符「Icicle Machine Gun」（冰柱机枪）	Ice Sign "Icicle Machine Gun"	氷符「アイシクルマシンガン」	https://soku.cleista.cc/framedata/cirno/sc200-ice-sign-icicle-machine-gun-650
+16	202	j.sc202	冰块「Cold Sprinkler」（冷冻洒水器）	Ice Cubes "Cold Sprinkler"	氷塊「コールドスプリンクラー」	https://soku.cleista.cc/framedata/cirno/sc202-ice-cubes-cold-sprinkler-652
+16	204	j.sc204	冻符「Perfect Freeze」（完美冻结）	Cold Sign "Perfect Freeze"	凍符「パーフェクトフリーズ」	https://soku.cleista.cc/framedata/cirno/sc204-cold-sign-perfect-freeze-654
+16	205	j.sc205	冰符「Fairy Spin」（妖精旋转）	Ice Sign "Fairy Spin"	氷符「フェアリースピン」	https://soku.cleista.cc/framedata/cirno/sc205-ice-sign-fairy-spin-655
+16	210	j.sc210	冻符「Freeze Atmosphere」（急冻大气）	Frozen Sign "Freeze Atmosphere"	凍符「フリーズアトモスフェア」	https://soku.cleista.cc/framedata/cirno/sc210-frozen-sign-freeze-atmosphere-660
+16	213	j.sc213	冷符「瞬间冷冻光线」	Cold Sign "Insta-Freeze Beam"	冷符「瞬間冷凍ビーム」	https://soku.cleista.cc/framedata/cirno/sc213-cold-sign-insta-freeze-beam-663
+17	-1	66	66	66	66	https://soku.cleista.cc/framedata/meiling/66
+17	-1	44	44	44	44	https://soku.cleista.cc/framedata/meiling/44
+17	-1	j.66	j.66	j.66	j.66	https://soku.cleista.cc/framedata/meiling/j66
+17	-1	j.44	j.44	j.44	j.44	https://soku.cleista.cc/framedata/meiling/j44
+17	-1	5A	5A	5A	5A	https://soku.cleista.cc/framedata/meiling/5a
+17	-1	f.5A	f.5A	f.5A	f.5A	https://soku.cleista.cc/framedata/meiling/f5a
+17	-1	6A	6A	6A	6A	https://soku.cleista.cc/framedata/meiling/6a
+17	-1	2A	2A	2A	2A	https://soku.cleista.cc/framedata/meiling/2a
+17	-1	3A	3A	3A	3A	https://soku.cleista.cc/framedata/meiling/3a
+17	-1	66A	66A	66A	66A	https://soku.cleista.cc/framedata/meiling/66a
+17	-1	j.5A	j.5A	j.5A	j.5A	https://soku.cleista.cc/framedata/meiling/j5a
+17	-1	j.6A	j.6A	j.6A	j.6A	https://soku.cleista.cc/framedata/meiling/j6a
+17	-1	j.2A	j.2A	j.2A	j.2A	https://soku.cleista.cc/framedata/meiling/j2a
+17	-1	j.8A	j.8A	j.8A	j.8A	https://soku.cleista.cc/framedata/meiling/j8a
+17	-1	5AA	5AA	5AA	5AA	https://soku.cleista.cc/framedata/meiling/5aa
+17	-1	5AAA	5AAA	5AAA	5AAA	https://soku.cleista.cc/framedata/meiling/5aaa
+17	-1	5AAAA	5AAAA	5AAAA	5AAAA	https://soku.cleista.cc/framedata/meiling/5aaaa
+17	-1	5AAAAA	5AAAAA	5AAAAA	5AAAAA	https://soku.cleista.cc/framedata/meiling/5aaaaa
+17	-1	5AAA3A	5AAA3A	5AAA3A	5AAA3A	https://soku.cleista.cc/framedata/meiling/5aaa3a
+17	-1	4A	4A	4A	4A	https://soku.cleista.cc/framedata/meiling/4a
+17	-1	5B	5B	5B	5B	https://soku.cleista.cc/framedata/meiling/5b
+17	-1	6B	6B	6B	6B	https://soku.cleista.cc/framedata/meiling/6b
+17	-1	2B	2B	2B	2B	https://soku.cleista.cc/framedata/meiling/2b
+17	-1	j.5B	j.5B	j.5B	j.5B	https://soku.cleista.cc/framedata/meiling/j5b
+17	-1	j.6B	j.6B	j.6B	j.6B	https://soku.cleista.cc/framedata/meiling/j6b
+17	-1	j.2B	j.2B	j.2B	j.2B	https://soku.cleista.cc/framedata/meiling/j2b
+17	-1	66B	66B	66B	66B	https://soku.cleista.cc/framedata/meiling/66b
+17	-1	5C	5C	5C	5C	https://soku.cleista.cc/framedata/meiling/5c
+17	-1	6C	6C	6C	6C	https://soku.cleista.cc/framedata/meiling/6c
+17	-1	2C	2C	2C	2C	https://soku.cleista.cc/framedata/meiling/2c
+17	-1	j.5C	j.5C	j.5C	j.5C	https://soku.cleista.cc/framedata/meiling/j5c
+17	-1	j.6C	j.6C	j.6C	j.6C	https://soku.cleista.cc/framedata/meiling/j6c
+17	-1	66C	66C	66C	66C	https://soku.cleista.cc/framedata/meiling/66c
+17	100	214B	螺光步	Spiral-Light Steps	螺光歩	https://soku.cleista.cc/framedata/meiling/214b-spiral-light-steps
+17	100	214C	螺光步	Spiral-Light Steps	螺光歩	https://soku.cleista.cc/framedata/meiling/214c-spiral-light-steps
+17	104	214B	烈虹拳	Searing Red Fist	烈虹拳	https://soku.cleista.cc/framedata/meiling/214b-searing-red-fist
+17	104	214C	烈虹拳	Searing Red Fist	烈虹拳	https://soku.cleista.cc/framedata/meiling/214c-searing-red-fist
+17	108	214B	降华蹴	Kick of Showering Brilliance	降華蹴	https://soku.cleista.cc/framedata/meiling/214b-kick-of-showering-brilliance
+17	108	214C	降华蹴	Kick of Showering Brilliance	降華蹴	https://soku.cleista.cc/framedata/meiling/214c-kick-of-showering-brilliance
+17	108	j.214B	降华蹴	Kick of Showering Brilliance	降華蹴	https://soku.cleista.cc/framedata/meiling/j214b-kick-of-showering-brilliance
+17	108	j.214C	降华蹴	Kick of Showering Brilliance	降華蹴	https://soku.cleista.cc/framedata/meiling/j214c-kick-of-showering-brilliance
+17	101	623B	红炮	Red Cannon	紅砲	https://soku.cleista.cc/framedata/meiling/623b-red-cannon
+17	101	623C	红炮	Red Cannon	紅砲	https://soku.cleista.cc/framedata/meiling/623c-red-cannon
+17	105	623B	红寸劲	Red Energy Release	紅寸剄	https://soku.cleista.cc/framedata/meiling/623b-red-energy-release
+17	105	623C	红寸劲	Red Energy Release	紅寸剄	https://soku.cleista.cc/framedata/meiling/623c-red-energy-release
+17	109	623B	虎劲	Tiger Chi Release	虎勁	https://soku.cleista.cc/framedata/meiling/623b-tiger-chi-release
+17	109	623C	虎劲	Tiger Chi Release	虎勁	https://soku.cleista.cc/framedata/meiling/623c-tiger-chi-release
+17	102	22B	黄震脚	Yellow Quake Kick	黄震脚	https://soku.cleista.cc/framedata/meiling/22b-yellow-quake-kick
+17	102	22C	黄震脚	Yellow Quake Kick	黄震脚	https://soku.cleista.cc/framedata/meiling/22c-yellow-quake-kick
+17	106	22B	地龙波	Earth Dragon Wave	地龍波	https://soku.cleista.cc/framedata/meiling/22b-earth-dragon-wave
+17	106	22C	地龙波	Earth Dragon Wave	地龍波	https://soku.cleista.cc/framedata/meiling/22c-earth-dragon-wave
+17	110	22B	天龙脚	Sky Dragon Kick	天龍脚	https://soku.cleista.cc/framedata/meiling/22b-sky-dragon-kick
+17	110	22C	天龙脚	Sky Dragon Kick	天龍脚	https://soku.cleista.cc/framedata/meiling/22c-sky-dragon-kick
+17	103	236B	芳波	Fragrant Wave	芳波	https://soku.cleista.cc/framedata/meiling/236b-fragrant-wave
+17	103	236C	芳波	Fragrant Wave	芳波	https://soku.cleista.cc/framedata/meiling/236c-fragrant-wave
+17	107	236B	水形太极拳	Water Taichi Fist	水形太極拳	https://soku.cleista.cc/framedata/meiling/236b-water-taichi-fist
+17	107	236C	水形太极拳	Water Taichi Fist	水形太極拳	https://soku.cleista.cc/framedata/meiling/236c-water-taichi-fist
+17	111	236B	彩雨	Colorful Rain	彩雨	https://soku.cleista.cc/framedata/meiling/236b-colorful-rain
+17	111	236C	彩雨	Colorful Rain	彩雨	https://soku.cleista.cc/framedata/meiling/236c-colorful-rain
+17	111	j.236B	彩雨	Colorful Rain	彩雨	https://soku.cleista.cc/framedata/meiling/j236b-colorful-rain
+17	111	j.236C	彩雨	Colorful Rain	彩雨	https://soku.cleista.cc/framedata/meiling/j236c-colorful-rain
+17	200	sc200	彩符「彩光风铃」	Color Sign "Colorful Windchime"	彩符「彩光風鈴」	https://soku.cleista.cc/framedata/meiling/sc200-color-sign-colorful-windchime
+17	201	sc201	极彩「彩光乱舞」	Ultimate Color "Mad Colorful Dance"	極彩「彩光乱舞」	https://soku.cleista.cc/framedata/meiling/sc201-ultimate-color-mad-colorful-dance
+17	202	sc202	气符「星脉弹」	Chi Sign "Star Bullets"	気符「星脈弾」	https://soku.cleista.cc/framedata/meiling/sc202-chi-sign-star-bullets
+17	203	sc203	星气「星脉地转弹」	Star Chi "Earth-moving Star Bullets"	星気「星脈地転弾」	https://soku.cleista.cc/framedata/meiling/sc203-star-chi-earth-moving-star-bullets
+17	204	sc204	击符「大鹏拳」	Attack Sign "Roc Fist"	撃符「大鵬拳」	https://soku.cleista.cc/framedata/meiling/sc204-attack-sign-roc-fist
+17	205	sc205	炽击「大鹏坠击拳」	Fiery Attack "Roc-Killing Fist"	熾撃「大鵬墜撃拳」	https://soku.cleista.cc/framedata/meiling/sc205-fiery-attack-roc-killing-fist
+17	206	sc206	虹符「烈虹真拳」	Rainbow Sign "Intense Rainbow Fist"	虹符「烈虹真拳」	https://soku.cleista.cc/framedata/meiling/sc206-rainbow-sign-intense-rainbow-fist
+17	207	sc207	气符「地龙天龙脚」	Chi Sign "Earth Dragon Sky Dragon Kick"	気符「地龍天龍脚」	https://soku.cleista.cc/framedata/meiling/sc207-chi-sign-earth-dragon-sky-dragon-kick
+17	208	sc208	彩华「虹色太极拳」	Colorful Brilliance "Rainbow Taichi"	彩華「虹色太極拳」	https://soku.cleista.cc/framedata/meiling/sc208-colorful-brilliance-rainbow-taichi
+17	209	sc209	华符「彩光莲华掌」	Brilliance "Rainbow Brilliance Palm"	華符「彩光蓮華掌」	https://soku.cleista.cc/framedata/meiling/sc209-brilliance-rainbow-brilliance-palm
+17	211	sc211	气符「猛虎内劲」	Chi Sign "Fierce Tiger Energy Release"	気符「猛虎内勁」	https://soku.cleista.cc/framedata/meiling/sc211-chi-sign-fierce-tiger-energy-release
+18	-1	66	66	66	66	https://soku.cleista.cc/framedata/utsuho/66
+18	-1	44	44	44	44	https://soku.cleista.cc/framedata/utsuho/44
+18	-1	j.66	j.66	j.66	j.66	https://soku.cleista.cc/framedata/utsuho/j66
+18	-1	j.44	j.44	j.44	j.44	https://soku.cleista.cc/framedata/utsuho/j44
+18	-1	5A	5A	5A	5A	https://soku.cleista.cc/framedata/utsuho/5a
+18	-1	f.5A	f.5A	f.5A	f.5A	https://soku.cleista.cc/framedata/utsuho/f5a
+18	-1	6A	6A	6A	6A	https://soku.cleista.cc/framedata/utsuho/6a
+18	-1	2A	2A	2A	2A	https://soku.cleista.cc/framedata/utsuho/2a
+18	-1	3A	3A	3A	3A	https://soku.cleista.cc/framedata/utsuho/3a
+18	-1	66A	66A	66A	66A	https://soku.cleista.cc/framedata/utsuho/66a
+18	-1	j.5A	j.5A	j.5A	j.5A	https://soku.cleista.cc/framedata/utsuho/j5a
+18	-1	j.6A	j.6A	j.6A	j.6A	https://soku.cleista.cc/framedata/utsuho/j6a
+18	-1	j.2A	j.2A	j.2A	j.2A	https://soku.cleista.cc/framedata/utsuho/j2a
+18	-1	j.8A	j.8A	j.8A	j.8A	https://soku.cleista.cc/framedata/utsuho/j8a
+18	-1	5AA	5AA	5AA	5AA	https://soku.cleista.cc/framedata/utsuho/5aa
+18	-1	5AAA	5AAA	5AAA	5AAA	https://soku.cleista.cc/framedata/utsuho/5aaa
+18	-1	5AAAA	5AAAA	5AAAA	5AAAA	https://soku.cleista.cc/framedata/utsuho/5aaaa
+18	-1	4A	4A	4A	4A	https://soku.cleista.cc/framedata/utsuho/4a
+18	-1	5B	5B	5B	5B	https://soku.cleista.cc/framedata/utsuho/5b
+18	-1	6B	6B	6B	6B	https://soku.cleista.cc/framedata/utsuho/6b
+18	-1	2B	2B	2B	2B	https://soku.cleista.cc/framedata/utsuho/2b
+18	-1	j.5B	j.5B	j.5B	j.5B	https://soku.cleista.cc/framedata/utsuho/j5b
+18	-1	j.6B	j.6B	j.6B	j.6B	https://soku.cleista.cc/framedata/utsuho/j6b
+18	-1	j.2B	j.2B	j.2B	j.2B	https://soku.cleista.cc/framedata/utsuho/j2b
+18	-1	66B	66B	66B	66B	https://soku.cleista.cc/framedata/utsuho/66b
+18	-1	5C	5C	5C	5C	https://soku.cleista.cc/framedata/utsuho/5c
+18	-1	6C	6C	6C	6C	https://soku.cleista.cc/framedata/utsuho/6c
+18	-1	2C	2C	2C	2C	https://soku.cleista.cc/framedata/utsuho/2c
+18	-1	j.5C	j.5C	j.5C	j.5C	https://soku.cleista.cc/framedata/utsuho/j5c
+18	-1	j.6C	j.6C	j.6C	j.6C	https://soku.cleista.cc/framedata/utsuho/j6c
+18	-1	j.2C	j.2C	j.2C	j.2C	https://soku.cleista.cc/framedata/utsuho/j2c
+18	-1	66C	66C	66C	66C	https://soku.cleista.cc/framedata/utsuho/66c
+18	100	623B	Flare Up	Flare Up	フレアアップ	https://soku.cleista.cc/framedata/utsuho/623b-flare-up
+18	100	623C	Flare Up	Flare Up	フレアアップ	https://soku.cleista.cc/framedata/utsuho/623c-flare-up
+18	104	623B	Rocket Dive	Rocket Dive	ロケットダイブ	https://soku.cleista.cc/framedata/utsuho/623b-rocket-dive
+18	104	623C	Rocket Dive	Rocket Dive	ロケットダイブ	https://soku.cleista.cc/framedata/utsuho/623c-rocket-dive
+18	108	623B	熔化转体踢	Melting Pummel Kick	メルティング浴びせ蹴り	https://soku.cleista.cc/framedata/utsuho/623b-melting-pummel-kick
+18	101	236B	Ground Melt	Ground Melt	グラウンドメルト	https://soku.cleista.cc/framedata/utsuho/236b-ground-melt
+18	101	236C	Ground Melt	Ground Melt	グラウンドメルト	https://soku.cleista.cc/framedata/utsuho/236c-ground-melt
+18	101	j.236B	Ground Melt	Ground Melt	グラウンドメルト	https://soku.cleista.cc/framedata/utsuho/j236b-ground-melt
+18	101	j.236C	Ground Melt	Ground Melt	グラウンドメルト	https://soku.cleista.cc/framedata/utsuho/j236c-ground-melt
+18	105	236B	Hell Geyser	Hell Geyser	ヘルゲイザー	https://soku.cleista.cc/framedata/utsuho/236b-hell-geyser
+18	105	236C	Hell Geyser	Hell Geyser	ヘルゲイザー	https://soku.cleista.cc/framedata/utsuho/236c-hell-geyser
+18	109	236B	Radiant Blade	Radiant Blade	レイディアントブレード	https://soku.cleista.cc/framedata/utsuho/236b-radiant-blade
+18	109	236C	Radiant Blade	Radiant Blade	レイディアントブレード	https://soku.cleista.cc/framedata/utsuho/236c-radiant-blade
+18	102	22B	Break Sun	Break Sun	ブレイクサン	https://soku.cleista.cc/framedata/utsuho/22b-break-sun
+18	102	22C	Break Sun	Break Sun	ブレイクサン	https://soku.cleista.cc/framedata/utsuho/22c-break-sun
+18	102	j.22B	Break Sun	Break Sun	ブレイクサン	https://soku.cleista.cc/framedata/utsuho/j22b-break-sun
+18	102	j.22C	Break Sun	Break Sun	ブレイクサン	https://soku.cleista.cc/framedata/utsuho/j22c-break-sun
+18	106	22B	Shooting Sun	Shooting Sun	シューティングサン	https://soku.cleista.cc/framedata/utsuho/22b-shooting-sun
+18	106	22C	Shooting Sun	Shooting Sun	シューティングサン	https://soku.cleista.cc/framedata/utsuho/22c-shooting-sun
+18	110	22B	地狱波动炮	Hell Wave Cannon	地獄波動砲	https://soku.cleista.cc/framedata/utsuho/22b-hell-wave-cannon
+18	110	22C	地狱波动炮	Hell Wave Cannon	地獄波動砲	https://soku.cleista.cc/framedata/utsuho/22c-hell-wave-cannon
+18	110	j.22B	地狱波动炮	Hell Wave Cannon	地獄波動砲	https://soku.cleista.cc/framedata/utsuho/j22b-hell-wave-cannon
+18	110	j.22C	地狱波动炮	Hell Wave Cannon	地獄波動砲	https://soku.cleista.cc/framedata/utsuho/j22c-hell-wave-cannon
+18	103	214B	Shooting Star	Shooting Star	シューティングスター	https://soku.cleista.cc/framedata/utsuho/214b-shooting-star
+18	103	214C	Shooting Star	Shooting Star	シューティングスター	https://soku.cleista.cc/framedata/utsuho/214c-shooting-star
+18	103	j.214B	Shooting Star	Shooting Star	シューティングスター	https://soku.cleista.cc/framedata/utsuho/j214b-shooting-star
+18	103	j.214C	Shooting Star	Shooting Star	シューティングスター	https://soku.cleista.cc/framedata/utsuho/j214c-shooting-star
+18	107	214B	复古原子核模型	Retro Atomic Model	レトロ原子核モデル	https://soku.cleista.cc/framedata/utsuho/214b-retro-atomic-model
+18	107	214C	复古原子核模型	Retro Atomic Model	レトロ原子核モデル	https://soku.cleista.cc/framedata/utsuho/214c-retro-atomic-model
+18	107	j.214B	复古原子核模型	Retro Atomic Model	レトロ原子核モデル	https://soku.cleista.cc/framedata/utsuho/j214b-retro-atomic-model
+18	107	j.214C	复古原子核模型	Retro Atomic Model	レトロ原子核モデル	https://soku.cleista.cc/framedata/utsuho/j214c-retro-atomic-model
+18	111	214B	核热的怨灵	Vengeful Nuclear Spirits	核熱の怨霊	https://soku.cleista.cc/framedata/utsuho/214b-vengeful-nuclear-spirits
+18	111	214C	核热的怨灵	Vengeful Nuclear Spirits	核熱の怨霊	https://soku.cleista.cc/framedata/utsuho/214c-vengeful-nuclear-spirits
+18	111	j.214B	核热的怨灵	Vengeful Nuclear Spirits	核熱の怨霊	https://soku.cleista.cc/framedata/utsuho/j214b-vengeful-nuclear-spirits
+18	111	j.214C	核热的怨灵	Vengeful Nuclear Spirits	核熱の怨霊	https://soku.cleista.cc/framedata/utsuho/j214c-vengeful-nuclear-spirits
+18	200	sc200	爆符「Mega-Flare」（百万耀斑）	Explosion Sign "Mega Flare"	爆符「メガフレア」	https://soku.cleista.cc/framedata/utsuho/sc200-explosion-sign-mega-flare
+18	201	sc201	爆符「Giga-Flare」（十亿耀斑）	Explosion Sign "Giga Flare"	爆符「ギガフレア」	https://soku.cleista.cc/framedata/utsuho/sc201-explosion-sign-giga-flare
+18	203	sc203	焰星「Fixed Star」（恒星）	Burning Star "Fixed Star"	焔星「フィクストスター」	https://soku.cleista.cc/framedata/utsuho/sc203-burning-star-fixed-star
+18	204	sc204	焰星「十凶星」	Burning Star "The Ten Suns"	焔星「十凶星」	https://soku.cleista.cc/framedata/utsuho/sc204-burning-star-the-ten-suns
+18	205	sc205	核符「Creeping Sun」（缓行的太阳）	Nuclear Sign "Creeping Sun"	核符「クリーピングサン」	https://soku.cleista.cc/framedata/utsuho/sc205-nuclear-sign-creeping-sun
+18	206	sc206	「地狱的人造太阳」	"Hell's Artificial Sun"	「地獄の人工太陽」	https://soku.cleista.cc/framedata/utsuho/sc206-hells-artificial-sun
+18	207	sc207	地热「核焰喷涌」	Geothermal "Nuclear Blaze Geyser"	地熱「核ブレイズゲイザー」	https://soku.cleista.cc/framedata/utsuho/sc207-geothermal-nuclear-blaze-geyser
+18	208	sc208	光热「High Tension Blade」（高压光刃）	Light Energy "High-Tension Blade"	光熱「ハイテンションブレード」	https://soku.cleista.cc/framedata/utsuho/sc208-light-energy-high-tension-blade
+18	209	sc209	鸦符「八咫乌俯冲」	Crow Sign "Yatagarasu Dive"	鴉符「八咫烏ダイブ」	https://soku.cleista.cc/framedata/utsuho/sc209-crow-sign-yatagarasu-dive
+18	210	sc210	核热「核反应失控疾冲」	Nuclear Heat "Uncontrollable Dive"	核熱「核反応制御不能ダイブ」	https://soku.cleista.cc/framedata/utsuho/sc210-nuclear-heat-uncontrollable-dive
+18	211	sc211	控制「Self Tokamak」（自动托卡马克装置）	Control "Self Tokamak"	制御「セルフトカマク」	https://soku.cleista.cc/framedata/utsuho/sc211-control-self-tokamak
+18	212	sc212	「Subterranean Sun」（地底太阳）	"Subterranean Sun"	「サブタレイニアンサン」	https://soku.cleista.cc/framedata/utsuho/sc212-subterranean-sun
+18	213	sc213	遮光「核热护罩」	Light Cover "Nuclear Visor"	遮光「核熱バイザー」	https://soku.cleista.cc/framedata/utsuho/sc213-light-cover-nuclear-visor
+18	214	sc214	「Abyss Nova」（深渊新星）	"Abyss Nova"	「アビスノヴァ」	https://soku.cleista.cc/framedata/utsuho/sc214-abyss-nova
+18	200	j.sc200	爆符「Mega-Flare」（百万耀斑）	Explosion Sign "Mega Flare"	爆符「メガフレア」	https://soku.cleista.cc/framedata/utsuho/sc200-explosion-sign-mega-flare-650
+18	203	j.sc203	焰星「Fixed Star」（恒星）	Burning Star "Fixed Star"	焔星「フィクストスター」	https://soku.cleista.cc/framedata/utsuho/sc203-burning-star-fixed-star-653
+18	205	j.sc205	核符「Creeping Sun」（缓行的太阳）	Nuclear Sign "Creeping Sun"	核符「クリーピングサン」	https://soku.cleista.cc/framedata/utsuho/sc205-nuclear-sign-creeping-sun-655
+18	209	j.sc209	鸦符「八咫乌俯冲」	Crow Sign "Yatagarasu Dive"	鴉符「八咫烏ダイブ」	https://soku.cleista.cc/framedata/utsuho/sc209-crow-sign-yatagarasu-dive-659
+18	212	j.sc212	「Subterranean Sun」（地底太阳）	"Subterranean Sun"	「サブタレイニアンサン」	https://soku.cleista.cc/framedata/utsuho/sc212-subterranean-sun-662
+18	214	sc214	「Abyss Nova」（深渊新星）（发动）	"Abyss Nova" (Activation)	「アビスノヴァ」（発動）	https://soku.cleista.cc/framedata/utsuho/sc214-abyss-nova-activation
+18	211	sc211	控制「Self Tokamak」（自动托卡马克装置）（光环冲刺）	Control "Self Tokamak" (Aura dash)	制御「セルフトカマク」（オーラダッシュ）	https://soku.cleista.cc/framedata/utsuho/sc211-control-self-tokamak-aura-dash
+19	-1	66	66	66	66	https://soku.cleista.cc/framedata/suwako/66
+19	-1	44	44	44	44	https://soku.cleista.cc/framedata/suwako/44
+19	-1	j.66	j.66	j.66	j.66	https://soku.cleista.cc/framedata/suwako/j66
+19	-1	j.44	j.44	j.44	j.44	https://soku.cleista.cc/framedata/suwako/j44
+19	-1	5A	5A	5A	5A	https://soku.cleista.cc/framedata/suwako/5a
+19	-1	f.5A	f.5A	f.5A	f.5A	https://soku.cleista.cc/framedata/suwako/f5a
+19	-1	6A	6A	6A	6A	https://soku.cleista.cc/framedata/suwako/6a
+19	-1	LA	LA	LA	LA	https://soku.cleista.cc/framedata/suwako/la
+19	-1	L3A	L3A	L3A	L3A	https://soku.cleista.cc/framedata/suwako/l3a
+19	-1	66A	66A	66A	66A	https://soku.cleista.cc/framedata/suwako/66a
+19	-1	j.5A	j.5A	j.5A	j.5A	https://soku.cleista.cc/framedata/suwako/j5a
+19	-1	j.6A	j.6A	j.6A	j.6A	https://soku.cleista.cc/framedata/suwako/j6a
+19	-1	j.2A	j.2A	j.2A	j.2A	https://soku.cleista.cc/framedata/suwako/j2a
+19	-1	j.8A	j.8A	j.8A	j.8A	https://soku.cleista.cc/framedata/suwako/j8a
+19	-1	5AA	5AA	5AA	5AA	https://soku.cleista.cc/framedata/suwako/5aa
+19	-1	5AAA	5AAA	5AAA	5AAA	https://soku.cleista.cc/framedata/suwako/5aaa
+19	-1	5AAAA	5AAAA	5AAAA	5AAAA	https://soku.cleista.cc/framedata/suwako/5aaaa
+19	-1	4A	4A	4A	4A	https://soku.cleista.cc/framedata/suwako/4a
+19	-1	3A	3A	3A	3A	https://soku.cleista.cc/framedata/suwako/3a
+19	-1	L6A	L6A	L6A	L6A	https://soku.cleista.cc/framedata/suwako/l6a
+19	-1	5B	5B	5B	5B	https://soku.cleista.cc/framedata/suwako/5b
+19	-1	6B	6B	6B	6B	https://soku.cleista.cc/framedata/suwako/6b
+19	-1	LB	LB	LB	LB	https://soku.cleista.cc/framedata/suwako/lb
+19	-1	L6B	L6B	L6B	L6B	https://soku.cleista.cc/framedata/suwako/l6b
+19	-1	j.5B	j.5B	j.5B	j.5B	https://soku.cleista.cc/framedata/suwako/j5b
+19	-1	j.6B	j.6B	j.6B	j.6B	https://soku.cleista.cc/framedata/suwako/j6b
+19	-1	j.2B	j.2B	j.2B	j.2B	https://soku.cleista.cc/framedata/suwako/j2b
+19	-1	66B	66B	66B	66B	https://soku.cleista.cc/framedata/suwako/66b
+19	-1	5C	5C	5C	5C	https://soku.cleista.cc/framedata/suwako/5c
+19	-1	6C	6C	6C	6C	https://soku.cleista.cc/framedata/suwako/6c
+19	-1	LC	LC	LC	LC	https://soku.cleista.cc/framedata/suwako/lc
+19	-1	j.5C	j.5C	j.5C	j.5C	https://soku.cleista.cc/framedata/suwako/j5c
+19	-1	j.6C	j.6C	j.6C	j.6C	https://soku.cleista.cc/framedata/suwako/j6c
+19	-1	j.2C	j.2C	j.2C	j.2C	https://soku.cleista.cc/framedata/suwako/j2c
+19	-1	66C	66C	66C	66C	https://soku.cleista.cc/framedata/suwako/66c
+19	100	214B	古老的间歇泉	Ancient Geyser	古の間欠泉	https://soku.cleista.cc/framedata/suwako/214b-ancient-geyser
+19	100	214C	古老的间歇泉	Ancient Geyser	古の間欠泉	https://soku.cleista.cc/framedata/suwako/214c-ancient-geyser
+19	100	j.214B	古老的间歇泉	Ancient Geyser	古の間欠泉	https://soku.cleista.cc/framedata/suwako/j214b-ancient-geyser
+19	100	j.214C	古老的间歇泉	Ancient Geyser	古の間欠泉	https://soku.cleista.cc/framedata/suwako/j214c-ancient-geyser
+19	104	214B	水蛙神	Frog God	水蛙神	https://soku.cleista.cc/framedata/suwako/214b-frog-god
+19	104	214C	水蛙神	Frog God	水蛙神	https://soku.cleista.cc/framedata/suwako/214c-frog-god
+19	104	214B	水蛙神	Frog God	水蛙神	https://soku.cleista.cc/framedata/suwako/214b-frog-god-507
+19	104	214C	水蛙神	Frog God	水蛙神	https://soku.cleista.cc/framedata/suwako/214c-frog-god-508
+19	108	214B	招雨的雨蛙	Rain-Calling Frog	雨を呼ぶ雨蛙	https://soku.cleista.cc/framedata/suwako/214b-rain-calling-frog
+19	108	214C	招雨的雨蛙	Rain-Calling Frog	雨を呼ぶ雨蛙	https://soku.cleista.cc/framedata/suwako/214c-rain-calling-frog
+19	108	214B	招雨的雨蛙	Rain-Calling Frog	雨を呼ぶ雨蛙	https://soku.cleista.cc/framedata/suwako/214b-rain-calling-frog-512
+19	108	214C	招雨的雨蛙	Rain-Calling Frog	雨を呼ぶ雨蛙	https://soku.cleista.cc/framedata/suwako/214c-rain-calling-frog-513
+19	101	623B	大蛤蟆神	Toad God	大蝦蟇神	https://soku.cleista.cc/framedata/suwako/623b-toad-god
+19	101	j.623B	大蛤蟆神	Toad God	大蝦蟇神	https://soku.cleista.cc/framedata/suwako/j623b-toad-god
+19	105	623B	古老铁轮	Ancient Metal Ring	古の鉄輪	https://soku.cleista.cc/framedata/suwako/623b-ancient-metal-ring
+19	105	623C	古老铁轮	Ancient Metal Ring	古の鉄輪	https://soku.cleista.cc/framedata/suwako/623c-ancient-metal-ring
+19	105	j.623B	古老铁轮	Ancient Metal Ring	古の鉄輪	https://soku.cleista.cc/framedata/suwako/j623b-ancient-metal-ring
+19	105	j.623C	古老铁轮	Ancient Metal Ring	古の鉄輪	https://soku.cleista.cc/framedata/suwako/j623c-ancient-metal-ring
+19	109	j.623B	手长足长先生	Ms Longlimbs	手長足長さん	https://soku.cleista.cc/framedata/suwako/j623b-ms-longlimbs
+19	109	j.623C	手长足长先生	Ms Longlimbs	手長足長さん	https://soku.cleista.cc/framedata/suwako/j623c-ms-longlimbs
+19	102	236B	大地之湖	Lake of Great Earth	大地の湖	https://soku.cleista.cc/framedata/suwako/236b-lake-of-great-earth
+19	102	236C	大地之湖	Lake of Great Earth	大地の湖	https://soku.cleista.cc/framedata/suwako/236c-lake-of-great-earth
+19	102	j.236B	大地之湖	Lake of Great Earth	大地の湖	https://soku.cleista.cc/framedata/suwako/j236b-lake-of-great-earth
+19	102	j.236C	大地之湖	Lake of Great Earth	大地の湖	https://soku.cleista.cc/framedata/suwako/j236c-lake-of-great-earth
+19	106	236B	古代翡翠	Ancient Jade	古代翡翠	https://soku.cleista.cc/framedata/suwako/236b-ancient-jade
+19	106	236C	古代翡翠	Ancient Jade	古代翡翠	https://soku.cleista.cc/framedata/suwako/236c-ancient-jade
+19	106	j.236B	古代翡翠	Ancient Jade	古代翡翠	https://soku.cleista.cc/framedata/suwako/j236b-ancient-jade
+19	106	j.236C	古代翡翠	Ancient Jade	古代翡翠	https://soku.cleista.cc/framedata/suwako/j236c-ancient-jade
+19	110	236B	蛙石神	Stone Frog God	蛙石神	https://soku.cleista.cc/framedata/suwako/236b-stone-frog-god
+19	110	236C	蛙石神	Stone Frog God	蛙石神	https://soku.cleista.cc/framedata/suwako/236c-stone-frog-god
+19	110	j.236B	蛙石神	Stone Frog God	蛙石神	https://soku.cleista.cc/framedata/suwako/j236b-stone-frog-god
+19	110	j.236C	蛙石神	Stone Frog God	蛙石神	https://soku.cleista.cc/framedata/suwako/j236c-stone-frog-god
+19	103	22B	土著神的作祟	Native Scourge	土着神の祟り	https://soku.cleista.cc/framedata/suwako/22b-native-scourge
+19	103	22C	土著神的作祟	Native Scourge	土着神の祟り	https://soku.cleista.cc/framedata/suwako/22c-native-scourge
+19	103	j.22B	土著神的作祟	Native Scourge	土着神の祟り	https://soku.cleista.cc/framedata/suwako/j22b-native-scourge
+19	103	j.22C	土著神的作祟	Native Scourge	土着神の祟り	https://soku.cleista.cc/framedata/suwako/j22c-native-scourge
+19	107	22B	诅咒的大地	Blighted Earth	祟られた大地	https://soku.cleista.cc/framedata/suwako/22b-blighted-earth
+19	107	22C	诅咒的大地	Blighted Earth	祟られた大地	https://soku.cleista.cc/framedata/suwako/22c-blighted-earth
+19	107	j.22B	诅咒的大地	Blighted Earth	祟られた大地	https://soku.cleista.cc/framedata/suwako/j22b-blighted-earth
+19	107	j.22C	诅咒的大地	Blighted Earth	祟られた大地	https://soku.cleista.cc/framedata/suwako/j22c-blighted-earth
+19	200	sc200	土著神「洩矢神」	Native God "Moriya God"	土着神「洩矢神」	https://soku.cleista.cc/framedata/suwako/sc200-native-god-moriya-god
+19	201	sc201	源符「诹访清水」	Spring Sign "Moriya Clear Water"	源符「諏訪清水」	https://soku.cleista.cc/framedata/suwako/sc201-spring-sign-moriya-clear-water
+19	202	sc202	开宴「二拜二拍一拜」	Party Start "2 bows, 2 Claps, 1 Bow"	開宴「二拝二拍一拝」	https://soku.cleista.cc/framedata/suwako/sc202-party-start-2-bows-2-claps-1-bow
+19	203	sc203	土著神「小小青蛙不输风雨」	Native God "Froggy Braves the Elements"	土着神「ケロちゃん風雨に負けず」	https://soku.cleista.cc/framedata/suwako/sc203-native-god-froggy-braves-the-elements
+19	204	sc204	神具「洩矢的铁轮」	Divine Instrument "Moriya's Metal Ring"	神具「洩矢の鉄の輪」	https://soku.cleista.cc/framedata/suwako/sc204-divine-instrument-moriyas-metal-ring
+19	205	sc205	源符「厌川的翡翠」	Spring Sign "Horrid River Jade"	源符「厭い川の翡翠」	https://soku.cleista.cc/framedata/suwako/sc205-spring-sign-horrid-river-jade
+19	206	sc206	蛙狩「蛙以口鸣，方致蛇祸」	Frog Hunt "Snake Hears And Eats Frog"	蛙狩「蛙は口ゆえ蛇に呑まるる」	https://soku.cleista.cc/framedata/suwako/sc206-frog-hunt-snake-hears-and-eats-frog
+19	208	sc208	祟神「赤口大人」	Scourge God "Mishaguchi-sama"	祟り神「赤口（ミシャグチ）さま」	https://soku.cleista.cc/framedata/suwako/sc208-scourge-god-mishaguchi-sama
+19	209	sc209	土著神「宝永四年的赤蛙」	Native God "Red Frog of Houei 4"	土着神「宝永四年の赤蛙」	https://soku.cleista.cc/framedata/suwako/sc209-native-god-red-frog-of-houei-4
+19	212	sc212	蛙休「总是能够冬眠」	Frog Nap "Can Always Hibernate"	蛙休「オールウェイズ冬眠できます」	https://soku.cleista.cc/framedata/suwako/sc212-frog-nap-can-always-hibernate
+19	201	j.sc201	源符「诹访清水」	Spring Sign "Moriya Clear Water"	源符「諏訪清水」	https://soku.cleista.cc/framedata/suwako/sc201-spring-sign-moriya-clear-water-651
+19	202	j.sc202	开宴「二拜二拍一拜」	Party Start "2 bows, 2 Claps, 1 Bow"	開宴「二拝二拍一拝」	https://soku.cleista.cc/framedata/suwako/sc202-party-start-2-bows-2-claps-1-bow-652
+19	203	j.sc203	土著神「小小青蛙不输风雨」	Native God "Froggy Braves the Elements"	土着神「ケロちゃん風雨に負けず」	https://soku.cleista.cc/framedata/suwako/sc203-native-god-froggy-braves-the-elements-653
+19	204	j.sc204	神具「洩矢的铁轮」	Divine Instrument "Moriya's Metal Ring"	神具「洩矢の鉄の輪」	https://soku.cleista.cc/framedata/suwako/sc204-divine-instrument-moriyas-metal-ring-654
+19	205	j.sc205	源符「厌川的翡翠」	Spring Sign "Horrid River Jade"	源符「厭い川の翡翠」	https://soku.cleista.cc/framedata/suwako/sc205-spring-sign-horrid-river-jade-655
+19	206	j.sc206	蛙狩「蛙以口鸣，方致蛇祸」	Frog Hunt "Snake Hears And Eats Frog"	蛙狩「蛙は口ゆえ蛇に呑まるる」	https://soku.cleista.cc/framedata/suwako/sc206-frog-hunt-snake-hears-and-eats-frog-656
+19	207	j.sc207	土著神「手长足长大人」	Native God "Master Longlimbs"	土着神「手長足長さま」	https://soku.cleista.cc/framedata/suwako/sc207-native-god-master-longlimbs
+19	209	j.sc209	土著神「宝永四年的赤蛙」	Native God "Red Frog of Houei 4"	土着神「宝永四年の赤蛙」	https://soku.cleista.cc/framedata/suwako/sc209-native-god-red-frog-of-houei-4-659

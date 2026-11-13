@@ -11,7 +11,7 @@ if [[ ! -d "$game" ]]; then
   printf 'Game folder not found: %s\nUsage: bash install-steamdeck.sh /path/to/th123\n' "$game" >&2
   exit 1
 fi
-required=(WhatHurtsMost.dll FrameData.txt MoveProfiles.txt WikiMaxProfiles.txt WhatHurtsMost.ini)
+required=(WhatHurtsMost.dll FrameData.txt MoveProfiles.txt WikiMaxProfiles.txt WhatHurtsMost.ini MoveNames.tsv)
 for name in "${required[@]}"; do
   [[ -s "$src/$name" ]] || { printf 'Missing test package file: %s\n' "$src/$name" >&2; exit 1; }
 done

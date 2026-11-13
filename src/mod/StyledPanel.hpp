@@ -17,10 +17,13 @@ struct PanelCard {
     std::string name;
     bool approximate = true;
 };
+struct PanelEffect { int character=-1,card=-1,copies=1; std::string label,value; };
 struct PanelView {
     int character = -1, opponentCharacter = -1, rods = 0, dolls = 0, weather = 0;
     double attack = 1., defense = 1.;
     double skillMultiplier = 1., spellMultiplier = 1.;
+    double hpFactor=1.;
+    std::vector<PanelEffect> effects;
     PanelCard strongest, record;
     std::vector<PanelCard> hand;
 };
@@ -71,8 +74,8 @@ inline HBITMAP panelBitmap(const std::wstring &path) {
 }
 inline HBITMAP panelIcon(const std::string &folder, int character, int card) {
     if (card < 0) return nullptr;
-    return panelBitmap(panelWide(folder + "icons/" + std::to_string(character) +
-                                 "-" + std::to_string(card) + ".png"));
+    return panelBitmap(panelWide(folder + "icons/" + (card>=1000?std::string("weather"):card<100?std::string("common"):std::to_string(character)) +
+                                 "-" + std::to_string(card>=1000?card-1000:card) + ".png"));
 }
 inline HBITMAP panelBackdrop(const std::string &folder) {
     return panelBitmap(panelWide(folder + "art/panel-bg.png"));
@@ -310,55 +313,39 @@ inline void paintStyledPanel(HWND window, const PanelView &v, const std::string 
     disk(9,9,4,gold); disk(987,9,4,gold);
     disk(9,278,4,gold); disk(987,278,4,gold);
 
-    // Left: card stacks with the exact "pile" presentation from Fig. 2.
+    // Totals come from effective game multipliers. Rows below explain them;
+    // their displayed factors are never multiplied into the result again.
     outlinedPanel(14,15,200,260,false);
-    write(L"伤害影响",30,18,166,30,19,cream);
-    rule(28,50,198,50,RGB(111,91,143));
-    stacked(v.character,18,30,65,v.rods,33,48,9,L"棒");
-    const double rodEffect=1.0+0.1*std::clamp(v.rods,0,4);
-    wchar_t multiplier[80]{};
-    swprintf_s(multiplier,L"×%.2f",rodEffect);
-    number(multiplier,91,61,112,49,34,DT_LEFT);
-    write(L"制御棒 ×"+std::to_wstring(v.rods),90,109,107,20,15,faded);
-    rule(28,135,198,135,RGB(99,79,126));
-    // Only observable and relevant effects are rendered; zero stacks are
-    // intentionally not expanded into pretend Buff/Debuff card icons.
-    int effectY=138;
-    auto effect = [&](int character,int card,int copies,const std::wstring &abbr,
-                      const std::wstring &label,const std::wstring &value) {
-        if(effectY>219)return;  // Four compact piles fit above the weather label.
-        stacked(character,card,30,effectY+1,copies,17,23,4,abbr);
-        write(label,65,effectY-1,134,14,11,cream);
-        write(value,65,effectY+11,134,16,14,bright);
-        effectY+=27;
-    };
-    if (v.dolls>0 || std::abs(v.defense-1.0)>0.008) {
-        swprintf_s(multiplier,L"敌受伤 ×%.2f",v.defense);
-        effect(v.opponentCharacter,6,v.dolls,L"偶",L"对方防御 / 人偶",multiplier);
+    write(L"伤害影响 · 总修正",28,18,175,25,18,cream);
+    wchar_t multiplier[96]{};
+    swprintf_s(multiplier,L"必杀 ×%.2f",v.attack*v.defense*v.skillMultiplier*v.hpFactor);
+    number(multiplier,28,43,171,35,24,DT_LEFT);
+    swprintf_s(multiplier,L"SC ×%.2f",v.attack*v.defense*v.spellMultiplier*v.hpFactor);
+    write(multiplier,30,80,170,20,16,bright);
+    rule(28,104,198,104,RGB(111,91,143));
+    const int count=static_cast<int>(v.effects.size());
+    const int pitch=count?std::min(48,146/count):48;
+    int effectY=111;
+    for(const auto &effect:v.effects) {
+        const int cardHeight=std::max(15,pitch-5),cardWidth=std::max(11,cardHeight*41/65);
+        stacked(effect.character,effect.card,29,effectY,effect.copies,cardWidth,cardHeight,
+                std::max(3,cardWidth/4),panelWide(effect.label).substr(0,1));
+        std::wstring label=panelWide(effect.label);
+        if(effect.copies>1)label+=L" ×"+std::to_wstring(effect.copies);
+        if(pitch>=24) {
+            write(label,83,effectY-2,116,pitch/2,13,cream);
+            write(panelWide(effect.value),83,effectY+pitch/2-2,116,pitch/2,17,bright);
+        } else {
+            if(effect.copies>1)write(L"×"+std::to_wstring(effect.copies),51,effectY,29,pitch,11,bright);
+            write(panelWide(effect.label),83,effectY,63,pitch,10,cream);
+            write(panelWide(effect.value),147,effectY,54,pitch,11,bright);
+        }
+        effectY+=pitch;
     }
-    // The raw attack multiplier already includes rods, so this row is merely
-    // a reading of game memory. We do not add rodEffect again to damage.
-    if (std::abs(v.attack-rodEffect)>0.008) {
-        swprintf_s(multiplier,L"实际 ×%.2f",v.attack);
-        effect(v.character,-1,1,L"攻",L"攻击有效总倍率",multiplier);
-    }
-    if (std::abs(v.skillMultiplier-1.0)>0.008) {
-        swprintf_s(multiplier,L"必杀 ×%.2f",v.skillMultiplier);
-        effect(v.character,-1,1,L"技",L"必杀技倍率",multiplier);
-    }
-    if (std::abs(v.spellMultiplier-1.0)>0.008) {
-        swprintf_s(multiplier,L"SC ×%.2f",v.spellMultiplier);
-        effect(v.character,-1,1,L"符",L"符卡倍率",multiplier);
-    }
-    static const wchar_t *weatherNames[]={
-        L"快晴",L"雾雨",L"阴天",L"苍天",L"冰雹",L"春霭",L"浓雾",
-        L"雪",L"太阳雨",L"疏雨",L"风雨",L"晴岚",L"川雾",
-        L"台风",L"凪",L"钻石尘",L"黄沙",L"烈日",L"梅雨",
-        L"极光",L"黄昏",L"无天气"
-    };
+    if(!count)write(L"当前无额外效果",29,124,171,30,15,faded);
+    static const wchar_t *weatherNames[]={L"快晴",L"雾雨",L"阴天",L"苍天",L"冰雹",L"春霭",L"浓雾",L"雪",L"太阳雨",L"疏雨",L"风雨",L"晴岚",L"川雾",L"台风",L"凪",L"钻石尘",L"黄沙",L"烈日",L"梅雨",L"极光",L"黄昏",L"无天气"};
     const std::wstring weather=v.weather>=0&&v.weather<22?weatherNames[v.weather]:L"未知";
-    // Always display current weather, even if too many effects occupy the left list.
-    write(L"天气 "+weather,30,251,168,17,13,RGB(198,181,219));
+    write(L"天气 "+weather,30,255,168,16,12,RGB(198,181,219));
 
     auto highlight = [&](int x,const std::wstring &title,const PanelCard &card,
                          const std::wstring &missing,bool focused) {

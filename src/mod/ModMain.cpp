@@ -7,6 +7,7 @@
 #include "RecordTracker.hpp"
 #include "FrameProbe.hpp"
 #include "StyledPanel.hpp"
+#include "DamageEffects.hpp"
 #include "PanelVisibility.hpp"
 #include "LocalPlayerSide.hpp"
 #include "ActionIdentity.hpp"
@@ -228,7 +229,10 @@ std::vector<HudRow> composeHUD(const SokuLib::BattleManager *mgr) {
     const int side = ownSide();
     if (side == whm::kNoLocalPlayer) return {};
     const auto *own=viewPlayer(mgr,side);const auto *enemy=viewPlayer(mgr,1-side);
-    PanelView view;view.character=static_cast<int>(own->characterIndex);
+    if(!own||!enemy)return {};
+    const int ownCharacter=static_cast<int>(own->characterIndex),enemyCharacter=static_cast<int>(enemy->characterIndex);
+    if(ownCharacter<0||ownCharacter>19||enemyCharacter<0||enemyCharacter>19)return {};
+    PanelView view;view.character=ownCharacter;
     view.attack=own->attackPower;view.defense=enemy->defensePower;
     view.opponentCharacter=static_cast<int>(enemy->characterIndex);
     const auto &ownCounters=side==0?mgr->leftCharacterManager:mgr->rightCharacterManager;
@@ -237,18 +241,27 @@ std::vector<HudRow> composeHUD(const SokuLib::BattleManager *mgr) {
     view.dolls=static_cast<int>(enemyCounters.sacrificialDolls); // Target's defense cards.
     view.skillMultiplier=own->specialDmgMultiplier;
     view.spellMultiplier=own->spellDmgMultiplier;
-    view.weather=static_cast<int>(SokuLib::activeWeather);
+    view.weather=static_cast<int>(ownCounters.effectiveWeather);
+    view.hpFactor=whm::gutsFactor(enemy->HP);
+    collectDamageEffects(view,&ownCounters,&enemyCounters);
     auto amount=[&](const StaticMove &m){
         double type=m.kind=="spell"?own->spellDmgMultiplier:m.kind=="skill"?own->specialDmgMultiplier:1.;
         double multiplier=view.attack*view.defense*type;
         if (!std::isfinite(multiplier)||multiplier<=0||multiplier>50)return 0;
         return static_cast<int>(m.damage*multiplier*whm::gutsFactor(enemy->HP));
     };
+    std::string bestNotation,bestName;
     for(const auto &m:g_staticMoves){
         if(m.character!=view.character||m.kind!="skill")continue; // A non-SC featured move must be a special skill.
         if(m.kind=="skill" && (m.card<100||m.card>=132||own->skilledSkillLevel[m.card-100]<0))continue;
         int damage=amount(m);
-        if(damage>view.strongest.damage)view.strongest={view.character,m.card,damage,m.name+" · "+m.notation,true};
+        if(damage>view.strongest.damage){
+            bestNotation=m.notation;bestName=m.name;
+            view.strongest={view.character,m.card,damage,m.name+" · "+m.notation,true};
+        } else if(damage==view.strongest.damage&&m.card==view.strongest.card&&m.name==bestName){
+            bestNotation=whm::mergeSkillButtons(bestNotation,m.notation);
+            view.strongest.name=bestName+" · "+bestNotation;
+        }
     }
     for(const auto &card:own->handInfo.hand){
         if(card.id<200||card.id>=220)continue;
@@ -433,12 +446,15 @@ int __fastcall onProcess(SokuLib::BattleManager *mgr) {
     // player as "self". Run the original engine update without any HUD work.
     if (side == whm::kNoLocalPlayer)
         return (mgr->*g_originalProcess)();
+    const bool inBattle=SokuLib::sceneId==SokuLib::SCENE_BATTLE || SokuLib::sceneId==SokuLib::SCENE_BATTLESV || SokuLib::sceneId==SokuLib::SCENE_BATTLECL;
+    if(!inBattle || &SokuLib::getBattleMgr()!=mgr){g_panelWanted.store(false);return (mgr->*g_originalProcess)();}
     const int before = side == 0 ? mgr->rightCharacterManager.objectBase.hp
                                  : mgr->leftCharacterManager.objectBase.hp;
     const int actionBefore = side == 0 ? mgr->leftCharacterManager.objectBase.action
                                        : mgr->rightCharacterManager.objectBase.action;
     const int result = (mgr->*g_originalProcess)();
-    if (ownSide() != side) {
+    if (ownSide() != side || &SokuLib::getBattleMgr()!=mgr ||
+        (SokuLib::sceneId!=SokuLib::SCENE_BATTLE && SokuLib::sceneId!=SokuLib::SCENE_BATTLESV && SokuLib::sceneId!=SokuLib::SCENE_BATTLECL)) {
         g_panelWanted.store(false);
         return result;
     }

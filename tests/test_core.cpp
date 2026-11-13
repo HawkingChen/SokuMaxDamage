@@ -12,6 +12,9 @@
 
 int main() {
     using namespace whm;
+    assert(mergeSkillButtons("623B","623C")=="623B/C");
+    assert(mergeSkillButtons("623B","j.623C")=="623B");
+    assert(mergeSkillButtons("236B","623C")=="236B");
     static_assert(skillCardForAction(18,505)==104);
     static_assert(skillCardForAction(18,520)==101);
     static_assert(skillCardForAction(4,580)==104);
