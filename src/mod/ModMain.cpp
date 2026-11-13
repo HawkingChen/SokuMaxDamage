@@ -239,10 +239,11 @@ MoveLabel labelForAction(const SokuLib::v2::Player &player, int action) {
         ? whm::skillCardForAction(character, action)
         : action >= 600 && action < 620 ? action - 400 : -1;
     const std::string raw = actionName(player, action);
-    const std::size_t cut = raw.rfind(" · ");
+    const std::string separator = " · "; // "·" is two UTF-8 bytes, not one
+    const std::size_t cut = raw.rfind(separator);
     std::string fallback = cut == std::string::npos ? raw : raw.substr(0, cut);
     std::string notation = cut == std::string::npos ? "" :
-        whm::normalizeNotation(raw.substr(cut + 3));
+        whm::normalizeNotation(raw.substr(cut + separator.size()));
     std::string lookup = notation;
     if (action >= 600 && action < 620) {
         lookup = "sc" + std::to_string(card); // spell row in MoveNames.tsv
@@ -354,9 +355,13 @@ std::vector<HudRow> composeHUD(const SokuLib::BattleManager *mgr) {
     const bool comboIdle=effectField<short>(&ownCounters,0x4b4)==0&&
                          effectField<short>(&enemyCounters,0x4b4)==0;
     const bool outOfHitstun=effectField<unsigned short>(&enemyCounters,0x4ba)==0;
-    if(comboIdle&&outOfHitstun) {
-        if(++g_firstHitIdleFrames>=3)g_firstHitConsumed.store(false);
-    } else g_firstHitIdleFrames=0;
+    // An ongoing combo (victim hitstun or either combo counter) keeps the
+    // bonus consumed, so later hits of a multi-hit move cannot re-enable it.
+    // It returns only after the combo has been over for several snapshots.
+    if(!comboIdle||!outOfHitstun) {
+        g_firstHitConsumed.store(true);
+        g_firstHitIdleFrames=0;
+    } else if(++g_firstHitIdleFrames>=3) g_firstHitConsumed.store(false);
     whm::FirstHitSignals signals;
     signals.localMultiplier=view.firstHitMultiplier;
     signals.sourceConfirmed=(ownCharacter==17&&view.firstHitMultiplier>1.)||
@@ -509,9 +514,12 @@ void refreshPanel() {
     size_t rowCount;
     { std::lock_guard<std::mutex> guard(g_panelMutex); rowCount = g_panelRows.size(); }
     if(folded) {
-        const int small=std::max(24,gameWidth*kPlusLogicalSize/kPanelVirtualWidth);
+        // "small" is a legacy Windows macro (small -> char); never use it as
+        // an identifier here. Keep the "+" inside the work area.
+        const int plusSize=std::max(24,gameWidth*kPlusLogicalSize/kPanelVirtualWidth);
+        const int plusY=std::min(frame.bottom+4,work.bottom-plusSize-2);
         SetWindowPos(g_panel, HWND_NOTOPMOST,
-            frame.right-small-6, frame.bottom+4, small, small,
+            frame.right-plusSize-6, plusY, plusSize, plusSize,
             SWP_NOACTIVATE | SWP_SHOWWINDOW);
     } else {
         SetWindowPos(g_panel, HWND_NOTOPMOST, frame.left, frame.bottom, gameWidth,

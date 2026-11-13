@@ -75,7 +75,7 @@ inline std::wstring panelPercent(double value) {
     return std::to_wstring(rounded) + L"%";
 }
 inline std::wstring panelCardLabel(const PanelCard &card, whm::HudLanguage lang,
-                                   const wchar_t *missing) {
+                                   const std::wstring &missing) {
     const std::string &localized = card.names[static_cast<int>(lang)];
     const std::string chosen = !localized.empty() ? localized : card.name;
     if (chosen.empty()) return missing;
