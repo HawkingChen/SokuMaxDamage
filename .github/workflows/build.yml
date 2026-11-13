@@ -43,15 +43,15 @@ jobs:
           }
           [IO.File]::WriteAllLines((Join-Path $root 'SHA256SUMS.txt'), $lines, [System.Text.UTF8Encoding]::new($false))
           New-Item -ItemType Directory -Force -Path 'dist' | Out-Null
-          Compress-Archive -Path (Join-Path $root '*') -DestinationPath 'dist/SokuMaxDamage-v0.3.0-test.1-win32.zip' -Force
+          Compress-Archive -Path (Join-Path $root '*') -DestinationPath 'dist/SokuMaxDamage-v0.3.0-test.2-win32.zip' -Force
           Get-ChildItem $root | Select-Object Name,Length | Format-Table
-          Get-Item 'dist/SokuMaxDamage-v0.3.0-test.1-win32.zip' | Select-Object Name,Length | Format-Table
+          Get-Item 'dist/SokuMaxDamage-v0.3.0-test.2-win32.zip' | Select-Object Name,Length | Format-Table
       - name: Upload test ZIP artifact
         if: github.event_name != 'pull_request'
         uses: actions/upload-artifact@v4
         with:
-          name: SokuMaxDamage-v0.3.0-test.1-win32
-          path: dist/SokuMaxDamage-v0.3.0-test.1-win32.zip
+          name: SokuMaxDamage-v0.3.0-test.2-win32
+          path: dist/SokuMaxDamage-v0.3.0-test.2-win32.zip
           if-no-files-found: error
           retention-days: 30
       - name: Publish one-off test prerelease
@@ -60,4 +60,4 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create 'v0.3.0-test.1' 'dist/SokuMaxDamage-v0.3.0-test.1-win32.zip' --repo '${{ github.repository }}' --target '${{ github.sha }}' --title 'SokuMaxDamage v0.3.0-test.1 (Windows x86 / Steam Deck)' --prerelease --notes 'Experimental test ZIP. Includes Win32 DLL, 1372 sourced frame-data records, config, Steam Deck backup/install script and SHA256 hashes. No PNG icons included: keep the preexisting icons folder. No online or Steam Deck gameplay verification on this build.'
+          gh release create 'v0.3.0-test.2' 'dist/SokuMaxDamage-v0.3.0-test.2-win32.zip' --repo '${{ github.repository }}' --target '${{ github.sha }}' --title 'SokuMaxDamage v0.3.0-test.2 (Windows x86 / Steam Deck)' --prerelease --notes 'Experimental test ZIP with corrected online local-player mapping (client=P1/left, server=P2/right), source data, backup-first Steam Deck installer, SHA256 checksums. No bundled card PNG images: keep preexisting icons. Windows x86 CI passed, online runtime still requires user validation.'
