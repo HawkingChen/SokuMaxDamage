@@ -352,6 +352,21 @@ inline void paintStyledPanel(HWND window, const PanelView &v, const std::string 
     auto highlight = [&](int x,const std::wstring &title,const PanelCard &card,
                          const std::wstring &missing,bool focused) {
         outlinedPanel(x,17,373,163,focused);
+        // Soft illustrated motifs INSIDE the content panels; always subdued
+        // behind readable text and existing character card artwork.
+        POINT hill1[]{{x+88,149},{x+139,126},{x+182,146},{x+246,119},
+                       {x+297,143},{x+367,128},{x+367,171},{x+88,171}};
+        shape(hill1,8,RGB(33,27,48));
+        POINT hill2[]{{x+87,157},{x+151,145},{x+208,164},{x+266,141},
+                       {x+356,159},{x+366,166},{x+366,173},{x+87,173}};
+        shape(hill2,8,RGB(38,27,48));
+        // Small floral-stars / light trails in the empty upper corner.
+        for(int p=0;p<7;++p) {
+            int px=x+115+(p*41)%230, py=42+(p*19)%33;
+            disk(px,py,p%3==0?4:2,focused?RGB(113,83,82):RGB(94,73,117));
+        }
+        fill(x+99,130,254,17,RGB(49,30,43));
+        rule(x+111,148,x+351,148,focused?RGB(159,91,49):RGB(118,77,112));
         ribbon(x+18,8,337,title,focused);
         const std::wstring display=card.name.empty()?missing:panelWide(card.name);
         std::wstring fallback = card.card<0 ? L"技" : L"SC";
@@ -373,7 +388,7 @@ inline void paintStyledPanel(HWND window, const PanelView &v, const std::string 
         write(focused?L"THEORETICAL MAX · ESTIMATE":L"MATCH BEST · HIT",
               x+109,151,240,17,11,RGB(187,162,147),DT_CENTER,L"Segoe UI");
     };
-    highlight(224,L"当前最高伤害 · 非 SC",v.strongest,L"暂无可靠伤害资料",true);
+    highlight(224,L"当前最痛必杀技",v.strongest,L"暂无可靠必杀技资料",true);
     highlight(608,L"本局最高实际伤害",v.record,L"尚未记录命中",false);
 
     // A single fixed strip. The array's order is the live game hand order;
