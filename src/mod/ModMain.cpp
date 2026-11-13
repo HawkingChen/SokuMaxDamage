@@ -437,6 +437,12 @@ bool systemCursorVisible() {
     CURSORINFO info{}; info.cbSize = sizeof(info);
     return GetCursorInfo(&info) && (info.flags & CURSOR_SHOWING) != 0;
 }
+// IDC_ARROW expands to MAKEINTRESOURCEA/MAKEINTRESOURCEW depending on the
+// UNICODE macro, while this module always calls the *W window APIs. Use the
+// fixed system resource id (32512 = IDC_ARROW) so either flavour type-checks.
+inline HCURSOR arrowCursor() {
+    return LoadCursorW(nullptr, MAKEINTRESOURCEW(32512));
+}
 // The game (or Proton) may hide the system cursor and clip it to the game
 // rectangle. A companion window BELOW the game then gets no mouse messages
 // at all. Restore both, throttled to once per second and only when needed.
@@ -470,7 +476,7 @@ LRESULT CALLBACK panelProc(HWND hwnd, UINT msg, WPARAM w, LPARAM l) {
     if (msg == WM_SETCURSOR) {
         // The old window class had NO cursor; when the game hides the system
         // cursor, nothing was drawn over the panel. Always show an arrow.
-        SetCursor(LoadCursorW(nullptr, IDC_ARROW));
+        SetCursor(arrowCursor());
         return TRUE;
     }
     if (msg == WM_PAINT) {
@@ -550,7 +556,7 @@ void refreshPanel() {
     if (!game || !IsWindow(game)) return;
     if (!g_panel) {
         WNDCLASSW cls{}; cls.lpfnWndProc = panelProc; cls.hInstance = g_module;
-        cls.hCursor = LoadCursorW(nullptr, IDC_ARROW);
+        cls.hCursor = arrowCursor();
         cls.lpszClassName = L"SokuMaxDamagePanel";
         RegisterClassW(&cls);
         g_panel = CreateWindowExW(WS_EX_TOOLWINDOW | WS_EX_NOACTIVATE,
