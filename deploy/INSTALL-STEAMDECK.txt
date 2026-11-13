@@ -41,7 +41,7 @@ SokuMaxDamage v0.4.0 — 安装说明（Steam Deck / Proton）
 回滚：脚本会打印备份目录。退出游戏后把备份内容复制回
  /run/media/deck/share/fxtz/th123/modules/WhatHurtsMost/
 例如：
- cp -a /home/deck/Backups/SokuMaxDamage/<时间戳>/. \
+ cp -a ~/Backups/SokuMaxDamage/<时间戳>/. \
        /run/media/deck/share/fxtz/th123/modules/WhatHurtsMost/
 
 注意：
