@@ -9,6 +9,7 @@
 #include "StyledPanel.hpp"
 #include "PanelVisibility.hpp"
 #include "LocalPlayerSide.hpp"
+#include "ActionIdentity.hpp"
 
 #include <windows.h>
 #include <algorithm>
@@ -123,8 +124,13 @@ std::string shortenCp932(const std::string &src, int maxCells = 21) {
     return out;
 }
 
+struct StaticMove { int character,card,damage; std::string kind,name,notation; };
+std::vector<StaticMove> g_staticMoves;
+
 std::string cardName(const SokuLib::v2::Player &player, unsigned short cardId) {
-    if (cardId < 100) return "CARD#" + std::to_string(cardId);
+    for(const auto &m:g_staticMoves)
+        if(m.character==static_cast<int>(player.characterIndex)&&m.card==cardId)return m.name;
+    if (cardId < 100) return "卡牌 " + std::to_string(cardId);
     auto *info = const_cast<SokuLib::v2::Player &>(player).deckInfo.cardLookup(cardId);
     if (!info) return "CARD#" + std::to_string(cardId);
     const auto raw = static_cast<const char *>(info->name);
@@ -143,12 +149,24 @@ std::string actionName(const SokuLib::v2::Player &player, int action) {
     };
     if (action >= 300 && action < 310) return normals[action - 300];
     if (action >= 500 && action < 600) {
-        const int slot = (action - 500) / 20;
-        const int variant = ((action - 500) % 20) / 5;
-        if (slot < 4 && variant < 3) {
-            const int card = 100 + slot * 4 + variant;
-            return cardName(player, static_cast<unsigned short>(card));
+        int card=whm::skillCardForAction(static_cast<int>(player.characterIndex),action);
+        bool air=(action-500)%5>=2;char button=(action-500)%5%2?'C':'B';
+        for(const auto &m:g_staticMoves) {
+            if(m.character!=static_cast<int>(player.characterIndex)||m.card!=card||m.notation.empty())continue;
+            bool entryAir=m.notation.rfind("j.",0)==0;
+            if(entryAir==air&&m.notation.back()==button)return m.name+" · "+m.notation;
         }
+        if(card>=0)return cardName(player,static_cast<unsigned short>(card));
+    }
+    switch(action) {
+        case 311:return "f2A";case 320:return "5AA";case 321:return "5AAA";
+        case 322:return "5AAAA";case 323:return "5AAAAA";case 324:return "5AAA3A";
+        case 325:return "j5AA";case 330:return "4A";case 331:return "3A";case 332:return "6A";
+        case 400:return "5B";case 401:return "6B";case 402:return "2B";case 403:return "3B";
+        case 404:return "j5B";case 405:return "j6B";case 406:return "j2B";case 407:return "4B";
+        case 408:return "66B";case 409:return "j4B";case 410:return "5C";case 411:return "6C";
+        case 412:return "2C";case 413:return "4C";case 414:return "j5C";case 415:return "j6C";
+        case 416:return "j2C";case 417:return "j1C";case 418:return "66C";
     }
     if (action >= 600 && action < 620)
         return cardName(player, static_cast<unsigned short>(action - 400));
@@ -206,8 +224,6 @@ PanelView g_panelView;
 // The legacy manager exposes the verified original 1.10a layout.
 static_assert(offsetof(SokuLib::CharacterManager, sacrificialDolls)==0x840);
 static_assert(offsetof(SokuLib::CharacterManager, controlRod)==0x844);
-struct StaticMove { int character,card,damage; std::string kind,name,notation; };
-std::vector<StaticMove> g_staticMoves;
 std::vector<HudRow> composeHUD(const SokuLib::BattleManager *mgr) {
     const int side = ownSide();
     if (side == whm::kNoLocalPlayer) return {};
@@ -242,8 +258,8 @@ std::vector<HudRow> composeHUD(const SokuLib::BattleManager *mgr) {
     }
     const auto &best=g_record.best();
     if(best.attributed&&best.damage>0){
-        int card=best.actionId>=600&&best.actionId<620?best.actionId-400:-1;
-        view.record={view.character,card,best.damage,card>=0?cardName(*own,card):actionName(*own,best.actionId),false};
+        int card=whm::cardForAction(view.character,best.actionId);
+        view.record={view.character,card,best.damage,actionName(*own,best.actionId),false};
     }
     {std::lock_guard<std::mutex> guard(g_panelMutex);g_panelView=std::move(view);}
     return {{"什么最痛",-1}};

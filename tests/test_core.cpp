@@ -1,4 +1,5 @@
 #include "DamageEngine.hpp"
+#include "ActionIdentity.hpp"
 #include "MoveCatalog.hpp"
 #include "WikiMax.hpp"
 #include "RecordTracker.hpp"
@@ -11,6 +12,13 @@
 
 int main() {
     using namespace whm;
+    static_assert(skillCardForAction(18,505)==104);
+    static_assert(skillCardForAction(18,520)==101);
+    static_assert(skillCardForAction(4,580)==104);
+    static_assert(skillCardForAction(0,580)==-1);
+    static_assert(skillCardForAction(18,504)==-1);
+    static_assert(cardForAction(18,600)==200);
+
     // Regression: networking roles are the OPPOSITE of the old implementation.
     // SokuMods DiscordIntegration uses VSCLIENT (4) as local left and
     // VSSERVER (5) as local right. A wrong side leaks opponent's hand/skills.
