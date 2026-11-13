@@ -6,13 +6,14 @@ An experimental, local-only damage HUD mod for **Touhou Hisoutensoku (TH12.3) v1
 
 ## Current functionality in source
 
-- A Chinese companion panel below the game window, with a dark background, gold card frames, damage figures and card artwork.
-- Separate areas for live attack/defense state, a candidate highest-damage non-spell move, the provisional match damage record, and up to five spells in hand order.
+- A **read-only** Chinese companion panel below the game window, with layered gold/purple frames, illuminated damage numbers, a built-in illustrated night-scene backdrop and actual card artwork where available.
+- Stacked control-rod icons (10% attack per rod), compact defense/type/weather effects, the strongest **special move** (not ordinary normals), the provisional match damage record, and up to five SC cards in **exact live hand order**.
+- The SC strip uses one fixed position for both host and client. No card selection or interaction is added to the game window.
 - A dedicated window thread and copied display snapshots; the panel hides outside supported battle scenes.
 - `config/FrameData.txt` contains 1,372 sourced static reference records across 20 characters from [Cleista frame data](https://soku.cleista.cc/framedata). Each record retains its source URL. The old animation scan is no longer used to rank moves in the panel.
 - Runtime attack/defense/type multipliers scale the static reference figures. Estimated numbers use an approximation marker.
 
-**Limitations:** Reference summaries do not provide verified per-level maximum coverage for every skill. Missing totals remain unknown. Weather and character effects still require game verification. The provisional HP-difference tracker does not reliably attribute delayed projectiles or every multi-stage move. Normal attacks without artwork use a fallback. Independent Buff/Debuff icons are not complete. PNG card artwork is loaded from local `icons/<character>-<card>.png` files; downloaded artwork is not committed to this repository.
+**Limitations:** Reference summaries do not provide verified per-level maximum coverage for every skill. Missing totals remain unknown. Weather and character effects still require game verification. The provisional HP-difference tracker does not reliably attribute delayed projectiles or every multi-stage move. Normal attacks without artwork use a fallback. Independent character-specific Buff/Debuff icons are not complete. The modifiers panel uses verified card counts plus live game attack/defense/type multipliers without reapplying them to the calculation. PNG card artwork is loaded from local `icons/<character>-<card>.png` files; downloaded artwork is not committed to this repository. An optional `art/panel-bg.png` adds a custom backdrop; without it the panel draws its own night-shrine scene. Missing card images have drawn fallback icons.
 
 **Validation:** The new panel has passed Windows x86 compilation/linking, module loading and an independent Windows rendering/PNG-loading check. A rendering preview uses test fixtures, not live battle results. The latest game deployment still needs battle and mode-transition validation; these checks do not establish online compatibility.
 
