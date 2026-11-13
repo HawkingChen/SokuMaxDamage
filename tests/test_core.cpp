@@ -6,6 +6,7 @@
 #include "LocalPlayerSide.hpp"
 #include "HudPalette.hpp"
 #include "HudText.hpp"
+#include <cfenv>
 #include "FirstHit.hpp"
 #include "HitAttribution.hpp"
 #include <cassert>
@@ -74,7 +75,23 @@ static void testProjectileRecords() {
     assert(unknown.best().damage==500&&!unknown.best().attributed);
 }
 
+static void testHudRoundingModes() {
+    const int original=std::fegetround();
+    for(int mode:{FE_TONEAREST,FE_UPWARD,FE_DOWNWARD,FE_TOWARDZERO}) {
+        assert(std::fesetround(mode)==0);
+        assert(whm::hudFactor(1.1,2)=="1.10");
+        assert(whm::hudFactor(1.2,2)=="1.20");
+        assert(whm::hudFactor(1.3,2)=="1.30");
+        assert(whm::hudFactor(1.4,2)=="1.40");
+        assert(whm::hudFactor(1.25,2)=="1.25");
+        assert(whm::gutsLabel(.7)=="×0.70");
+        assert(std::fegetround()==mode); // HUD never changes game FP control
+    }
+    assert(std::fesetround(original)==0);
+}
+
 int main() {
+    testHudRoundingModes();
     testProjectileRecords();
     using namespace whm;
     assert(mergeSkillButtons("623B","623C")=="623B/C");

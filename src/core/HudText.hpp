@@ -3,6 +3,7 @@
 // Move/card names are NOT keyed by their localized text: they are matched by
 // character, card id and notation through config/MoveNames.tsv.
 #include <cmath>
+#include <charconv>
 #include <cstddef>
 #include <cstdio>
 #include <cstring>
@@ -56,14 +57,18 @@ inline const char *hudText(HudTextKey key, HudLanguage lang) {
     }
 }
 
-// ONE formatter for every visible factor. The big percentage, the grey guts
-// number and the explanatory effect rows must never disagree by a rounding
-// step: iostream and snprintf can round a value such as 0.705 differently.
+// One locale- and floating-environment-independent formatter. The game's
+// thread may use directed rounding: printf then renders 1.1 as 1.11 while
+// the UI thread renders 1.10. to_chars specifies nearest decimal rounding
+// without changing the game's x87/SSE state.
 inline std::string hudFactor(double value, int decimals) {
     if (!(value == value) || value < -1e9 || value > 1e9) value = 0.;
     char buffer[64]{};
-    std::snprintf(buffer, sizeof(buffer), "%.*f", decimals, value);
-    return std::string(buffer);
+    if (decimals < 0) decimals = 0;
+    if (decimals > 12) decimals = 12;
+    const auto result = std::to_chars(buffer, buffer + sizeof(buffer), value,
+                                      std::chars_format::fixed, decimals);
+    return result.ec == std::errc{} ? std::string(buffer, result.ptr) : "0";
 }
 
 // One shared, already-formatted guts label. The grey factor next to the big

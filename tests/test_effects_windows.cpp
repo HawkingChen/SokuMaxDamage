@@ -2,6 +2,7 @@
 #include <array>
 #include <cassert>
 #include <iostream>
+#include <cfenv>
 // The 2x2 language/collapse pad belongs at the bottom-right of the hand
 // strip, clear of every SC card and its damage caption.
 static_assert(kHudButtons[0].x >= 900 && kHudButtons[3].x >= 900);
@@ -36,5 +37,20 @@ int main(){
  PanelView other;other.character=0;other.opponentCharacter=17;
  collectDamageEffects(other,own.data(),enemy.data());assert(!other.forcedFirstHitArmed);
  PanelView invalid;invalid.character=-1;collectDamageEffects(invalid,own.data(),enemy.data());assert(invalid.effects.empty());
+ // Run the actual effect collector under every thread rounding mode, not
+ // only a standalone formatter. Four rods must always label themselves 1.40.
+ const int originalRounding=std::fegetround();
+ for(int mode:{FE_TONEAREST,FE_UPWARD,FE_DOWNWARD,FE_TOWARDZERO}) {
+  assert(std::fesetround(mode)==0);
+  for(int rods=1;rods<=4;++rods) {
+   own={};enemy={};PanelView rodsView;rodsView.character=0;rodsView.opponentCharacter=1;
+   rodsView.rods=rods;rodsView.attack=1.+.1*rods;
+   collectDamageEffects(rodsView,own.data(),enemy.data());
+   assert(rodsView.effects.size()==1);
+   assert(rodsView.effects[0].value=="×1."+std::to_string(rods)+"0");
+   assert(std::fegetround()==mode);
+  }
+ }
+ assert(std::fesetround(originalRounding)==0);
  std::cout<<"Effect snapshots, stack counts, attribution and no-double-counting passed\n";
 }
