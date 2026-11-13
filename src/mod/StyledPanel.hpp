@@ -80,11 +80,9 @@ inline std::wstring panelCardLabel(const PanelCard &card, whm::HudLanguage lang,
     const std::string &localized = card.names[static_cast<int>(lang)];
     const std::string chosen = !localized.empty() ? localized : card.name;
     if (chosen.empty()) return missing;
-    std::wstring out = panelWide(chosen);
-    // Normals such as 6A use the notation as their name: do not print "6A · 6A".
-    if (!card.notation.empty() && chosen != card.notation)
-        out += L" · " + panelWide(card.notation);
-    return out;
+    // Normals store their command as the "name" in the source spelling (j.2A).
+    // cardDisplayName prints one ALL-CAPS command instead of "j.2A · J2A".
+    return panelWide(whm::cardDisplayName(chosen, card.notation));
 }
 
 // Convert existing local card PNGs (icons/<character>-<card>.png) with the

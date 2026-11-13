@@ -84,6 +84,30 @@ inline std::string normalizeNotation(const std::string &s) {
     return out;
 }
 
+inline char asciiUpper(char c) {
+    return (c >= 'a' && c <= 'z') ? static_cast<char>(c - 'a' + 'A') : c;
+}
+// A normal's "name" is often its own command still in the source spelling
+// (FrameData.txt / MoveNames.tsv use j.2A), while PanelCard::notation is
+// already normalized (J2A). Only UTF-8 high bytes outside a-z are left alone.
+inline bool sameNotation(const std::string &a, const std::string &b) {
+    const std::string na = normalizeNotation(a), nb = normalizeNotation(b);
+    if (na.size() != nb.size()) return false;
+    for (std::size_t i = 0; i < na.size(); ++i)
+        if (asciiUpper(na[i]) != asciiUpper(nb[i])) return false;
+    return true;
+}
+// One card caption: when the localized name IS the command, print the
+// ALL-CAPS normalized command exactly once; otherwise name + command.
+inline std::string cardDisplayName(const std::string &name,
+                                   const std::string &notation) {
+    const std::string command = normalizeNotation(notation);
+    const std::string caption = normalizeNotation(name);
+    if (command.empty()) return caption;
+    if (sameNotation(name, command)) return command;
+    return caption + " · " + command;
+}
+
 // Weather text is shown only when it can actually affect damage, and never
 // when the effective weather is sealed. An unexplained effective multiplier
 // still counts, so independent buffs are not silently dropped.

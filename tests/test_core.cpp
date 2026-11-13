@@ -161,6 +161,24 @@ int main() {
     assert(hudFactor(1., 1) == "1.0");
     assert(hudFactor(0.7, 2) == "0.70");
 
+    // Regression: normal attacks keep the source spelling (j.2A) as their
+    // "name" while notation is normalized (J2A). The caption must show one
+    // ALL-CAPS command, never "j.2A · J2A" / "j6A · J6A".
+    assert(sameNotation("j.2A", "J2A"));
+    assert(sameNotation("j6A", "J6A"));
+    assert(!sameNotation("Hakurei Amulet", "236B"));
+    assert(!sameNotation("6A", "6B"));
+    assert(cardDisplayName("j.2A", "J2A") == "J2A");
+    assert(cardDisplayName("j.6A", "J6A") == "J6A");
+    assert(cardDisplayName("j2A", "J2A") == "J2A");
+    assert(cardDisplayName("J2A", "J2A") == "J2A");
+    assert(cardDisplayName("6A", "6A") == "6A");
+    assert(cardDisplayName("j.2A", "") == "J2A");
+    assert(cardDisplayName("Hakurei Amulet", "236B") ==
+           std::string("Hakurei Amulet · 236B"));
+    assert(cardDisplayName("博丽护符", "236B") ==
+           std::string("博丽护符 · 236B"));
+
     // --- Weather text only when effective weather can influence damage.
     assert(weatherLabelVisible(4, false, 1.25, 1.));
     assert(weatherLabelVisible(1, false, 1., 1.25));
