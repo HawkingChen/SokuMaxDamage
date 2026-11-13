@@ -16,7 +16,7 @@ struct PanelCard {
     bool approximate = true;
 };
 struct PanelView {
-    int character = -1, rods = 0, dolls = 0, weather = 0;
+    int character = -1, opponentCharacter = -1, rods = 0, dolls = 0, weather = 0;
     double attack = 1., defense = 1.;
     double skillMultiplier = 1., spellMultiplier = 1.;
     PanelCard strongest, record;
@@ -323,7 +323,7 @@ inline void paintStyledPanel(HWND window, const PanelView &v, const std::string 
     };
     if (v.dolls>0 || std::abs(v.defense-1.0)>0.008) {
         swprintf_s(multiplier,L"敌受伤 ×%.2f",v.defense);
-        effect(v.character,6,v.dolls,L"偶",L"对方防御 / 人偶",multiplier);
+        effect(v.opponentCharacter,6,v.dolls,L"偶",L"对方防御 / 人偶",multiplier);
     }
     // The raw attack multiplier already includes rods, so this row is merely
     // a reading of game memory. We do not add rodEffect again to damage.
@@ -353,9 +353,15 @@ inline void paintStyledPanel(HWND window, const PanelView &v, const std::string 
                          const std::wstring &missing,bool focused) {
         outlinedPanel(x,17,373,163,focused);
         ribbon(x+18,8,337,title,focused);
-        art(card.character,card.card,x+17,59,67,94,
-            card.card<0?L"技":L"SC");
         const std::wstring display=card.name.empty()?missing:panelWide(card.name);
+        std::wstring fallback = card.card<0 ? L"技" : L"SC";
+        if(card.card<0 && !card.name.empty()) {
+            const size_t cut=display.rfind(L" · ");
+            const std::wstring notation=cut!=std::wstring::npos?
+                display.substr(cut+3):display;
+            if(notation.size()<=8 && !notation.empty()) fallback=notation;
+        }
+        art(card.character,card.card,x+17,59,67,94,fallback);
         write(display,x+103,56,250,37,20,cream);
         if(card.damage>0) {
             const std::wstring value=(card.approximate?L"≈":L"")+
