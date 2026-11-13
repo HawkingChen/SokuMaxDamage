@@ -33,6 +33,8 @@ CMake fetches pinned upstream [SokuLib](https://github.com/SokuDev/SokuLib) and 
 
 ## Test ZIP: v0.3.0-test.1
 
+> **Netplay note:** This previously published ZIP was built **before** the client/server self-player mapping fix. The latest `main` branch includes the fix and regression tests; the ZIP does not. Do not use that old ZIP to judge whether the online self-player selection is corrected.
+
 **[Download the Windows x86 Steam Deck test ZIP](https://github.com/HawkingChen/SokuMaxDamage/releases/download/v0.3.0-test.1/SokuMaxDamage-v0.3.0-test.1-win32.zip)** (prerelease, not yet gameplay verified).
 
 The ZIP contains `WhatHurtsMost.dll`, `FrameData.txt`, `MoveProfiles.txt`, `WikiMaxProfiles.txt`, `WhatHurtsMost.ini`, `SHA256SUMS.txt`, `INSTALL-STEAMDECK.txt`, and a backup-first `install-steamdeck.sh`.
