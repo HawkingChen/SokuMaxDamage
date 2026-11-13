@@ -312,14 +312,14 @@ inline void paintStyledPanel(HWND window, const PanelView &v, const std::string 
     rule(28,135,198,135,RGB(99,79,126));
     // Only observable and relevant effects are rendered; zero stacks are
     // intentionally not expanded into pretend Buff/Debuff card icons.
-    int effectY=143;
+    int effectY=138;
     auto effect = [&](int character,int card,int copies,const std::wstring &abbr,
                       const std::wstring &label,const std::wstring &value) {
-        if(effectY>212)return;  // Leave the last row for the weather label.
-        stacked(character,card,30,effectY+2,copies,19,27,5,abbr);
-        write(label,68,effectY-1,130,16,12,cream);
-        write(value,68,effectY+13,130,18,16,bright);
-        effectY+=34;
+        if(effectY>219)return;  // Four compact piles fit above the weather label.
+        stacked(character,card,30,effectY+1,copies,17,23,4,abbr);
+        write(label,65,effectY-1,134,14,11,cream);
+        write(value,65,effectY+11,134,16,14,bright);
+        effectY+=27;
     };
     if (v.dolls>0 || std::abs(v.defense-1.0)>0.008) {
         swprintf_s(multiplier,L"敌受伤 ×%.2f",v.defense);
@@ -329,7 +329,7 @@ inline void paintStyledPanel(HWND window, const PanelView &v, const std::string 
     // a reading of game memory. We do not add rodEffect again to damage.
     if (std::abs(v.attack-rodEffect)>0.008) {
         swprintf_s(multiplier,L"实际 ×%.2f",v.attack);
-        effect(v.character,-1,1,L"攻",L"其他攻击效果",multiplier);
+        effect(v.character,-1,1,L"攻",L"攻击有效总倍率",multiplier);
     }
     if (std::abs(v.skillMultiplier-1.0)>0.008) {
         swprintf_s(multiplier,L"必杀 ×%.2f",v.skillMultiplier);
