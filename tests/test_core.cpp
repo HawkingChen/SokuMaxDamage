@@ -7,6 +7,7 @@
 #include "HudPalette.hpp"
 #include "HudText.hpp"
 #include "FirstHit.hpp"
+#include "HitAttribution.hpp"
 #include <cassert>
 #include <cmath>
 #include <cstdio>
@@ -14,7 +15,67 @@
 #include <sstream>
 #include <vector>
 
+static void testProjectileRecords() {
+    using namespace whm;
+    HitAttribution attribution;
+    ActorContact cast;cast.action=561;cast.animationFrame=10;
+    ActorContact idle;
+    ProjectileContact bullet{1,0,10,0,1,0,true,true};
+    const auto launched=attribution.observe(cast,cast,{}, {bullet});
+    assert(launched.valid()&&launched.action==561);
+    attribution.observe(cast,idle,{bullet},{bullet});
+    auto hitBullet=bullet;hitBullet.collision=1;hitBullet.limit=0;
+    const auto landed=attribution.observe(idle,idle,{bullet},{hitBullet});
+    assert(landed==launched); // delayed 236C hit retains the casting action
+
+    RecordTracker records;
+    records.observeDamage(500,landed.action,10,landed.instance);
+    // An idle body and long spacing must not split one cast's full damage.
+    records.observeDamage(366,landed.action,40,landed.instance);
+    records.observeDamage(336,landed.action,70,landed.instance);
+    records.observeDamage(310,landed.action,100,landed.instance);
+    records.observeDamage(285,landed.action,130,landed.instance);
+    assert(records.best().damage==1797&&records.best().actionId==561);
+    attribution.observe(idle,idle,{hitBullet},{});
+    bullet.generation=11;
+    const auto second=attribution.observe(cast,cast,{}, {bullet});
+    assert(second.instance!=launched.instance);
+    records.observeDamage(500,second.action,160,second.instance);
+    assert(records.best().damage==1797); // same command twice is not one move
+
+    ActorContact held=cast;held.sequence=1;held.animationFrame=40;
+    attribution.observe(cast,held,{bullet},{bullet});
+    ActorContact recast=cast;recast.sequence=0;recast.animationFrame=0;
+    ProjectileContact recastBullet{3,0,15,0,1,0,true,true};
+    attribution.observe(held,recast,{bullet},{bullet});
+    attribution.observe(recast,recast,{bullet},{bullet,recastBullet});
+    ActorContact rain;rain.action=571;
+    ProjectileContact rainBullet{2,0,12,0,1,0,true,true};
+    const auto rainCast=attribution.observe(rain,rain,{bullet},{bullet,rainBullet});
+    auto rainHit=rainBullet;rainHit.collision=1;rainHit.limit=0;
+    auto bothHit=bullet;bothHit.collision=1;bothHit.limit=0;
+    const auto ambiguous=attribution.observe(rain,rain,{bullet,rainBullet},{bothHit,rainHit});
+    assert(!ambiguous.valid()); // cannot steal an older bullet for the new cast
+    records.observeDamage(242,571,180,100);
+    records.observeDamage(233,571,181,100);
+    records.observeDamage(2300,571,220,100);
+    assert(records.best().damage==2775&&records.best().actionId==571);
+
+    HitAttribution foreign;
+    bullet.owned=false;bothHit.owned=false;
+    assert(!foreign.observe(cast,cast,{bullet},{bothHit}).valid());
+    assert(observedDamage(10000,10000,{18,4416,true},{18,4416,true})==0);
+    assert(observedDamage(10000,10000,{18,4416,true},{1,242,false})==242);
+    assert(observedDamage(9758,9525,{1,242,false},{2,475,false})==233);
+    assert(observedDamage(10000,9900,{0,0,true},{0,0,true})==100); // chip
+    assert(observedDamage(20,0,{0,0,true},{1,500,false})==20); // HP clamp
+    RecordTracker unknown;
+    unknown.observeDamage(500,-1,1,0);
+    assert(unknown.best().damage==500&&!unknown.best().attributed);
+}
+
 int main() {
+    testProjectileRecords();
     using namespace whm;
     assert(mergeSkillButtons("623B","623C")=="623B/C");
     assert(mergeSkillButtons("623B","j.623C")=="623B");
@@ -147,8 +208,8 @@ int main() {
     assert(normalizeNotation("J2A") == "J2A"); // idempotent
     assert(normalizeNotation("623B/C") == "623B/C");
     assert(normalizeNotation("Hakurei Amulet") == "Hakurei Amulet");
-    assert(std::string(localizeEffectLabel("自身制御棒", HudLanguage::English)) ==
-           "OWN CONTROL RODS");
+    assert(std::string(localizeEffectLabel("制御棒", HudLanguage::English)) ==
+           "CONTROL RODS");
     assert(localizeEffectLabel("根性补正", HudLanguage::Japanese) ==
            std::string("根性補正"));
     assert(localizeEffectValue("×1.20 另计", HudLanguage::Japanese) == "×1.20 別途");
@@ -227,6 +288,20 @@ int main() {
     tigerIdle.comboIdle = true;
     tigerIdle.sourceConfirmed = false;
     assert(!evaluateFirstHit(tigerIdle).applies);
+    assert(canStartCombo(0,0)); // stale combo/untech counters do not gate idle
+    assert(!canStartCombo(50,0));
+    assert(!canStartCombo(98,0));
+    assert(!canStartCombo(0,1));
+    FirstHitSignals tiger=ready;tiger.attackConfirmed=false;
+    tiger.forcedFirstHitArmed=true;
+    for(int level=1;level<=4;++level) {
+        tiger.localMultiplier=1.+.1*(level-1);
+        const auto result=evaluateFirstHit(tiger);
+        assert(result.applies);
+        assert(std::abs(result.multiplier-(4./3.)*(1.+.1*(level-1)))<1e-9);
+    }
+    tiger.localMultiplier=2.;
+    assert(std::abs(evaluateFirstHit(tiger).multiplier-8./3.)<1e-9);
     FirstHitSignals duplicate = ready; duplicate.attackPowerAlreadyIncludes = true;
     assert(!evaluateFirstHit(duplicate).applies);
     assert(std::abs(commonPercent(0., 1., {}) - 100.) < 1e-9);

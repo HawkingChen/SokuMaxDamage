@@ -414,11 +414,11 @@ inline void paintStyledPanel(HWND window, const PanelView &v, const std::string 
               28,94,174,16,11,RGB(238,177,104));
     }
     const int typeY = v.firstHitActive ? 114 : 100;
-    write(localized(whm::HudTextKey::SpecialType)+L"×"+
-              panelWide(panelFactor(v.skillMultiplier,1)),
+    write(localized(whm::HudTextKey::SpecialType)+L": ×"+
+              panelWide(panelFactor(v.skillMultiplier,2)),
           28,typeY,96,20,13,cream);
-    write(localized(whm::HudTextKey::SpellType)+L" ×"+
-              panelWide(panelFactor(v.spellMultiplier,1)),
+    write(localized(whm::HudTextKey::SpellType)+L": ×"+
+              panelWide(panelFactor(v.spellMultiplier,2)),
           124,typeY,84,20,13,cream);
     const int dividerY = typeY + 24;
     rule(28,dividerY,198,dividerY,RGB(111,91,143));
@@ -475,7 +475,7 @@ inline void paintStyledPanel(HWND window, const PanelView &v, const std::string 
                             lang==whm::HudLanguage::Japanese?17:19;
         ribbon(x+18,8,337,localized(titleKey),focused,titleSize);
         const std::wstring display=panelCardLabel(card,lang,localized(missingKey));
-        std::wstring fallback = card.card<0 ? L"技" : L"SC";
+        std::wstring fallback = card.card<0 ? L"技" : localized(whm::HudTextKey::SpellType);
         if(card.card<0 && !card.notation.empty()) fallback=panelWide(card.notation);
         else if(card.card<0 && !card.name.empty()) {
             const size_t cut=display.rfind(L" · ");
@@ -512,7 +512,7 @@ inline void paintStyledPanel(HWND window, const PanelView &v, const std::string 
         for(size_t i=0;i<shown;++i) {
             const PanelCard &card=v.hand[i];
             const int x=380+static_cast<int>(i)*100;
-            art(card.character,card.card,x,208,32,45,L"SC");
+            art(card.character,card.card,x,208,32,45,localized(whm::HudTextKey::SpellType));
             const std::wstring amount=card.damage>0?
                 ((card.approximate?L"≈":L"")+std::to_wstring(card.damage)):L"—";
             write(amount,x-21,255,80,20,20,bright,DT_CENTER,L"Georgia",true);

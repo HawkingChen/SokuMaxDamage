@@ -5,17 +5,22 @@
 // Nothing here predicts an uninput future move or touches battle state.
 namespace whm {
 
+// Original combo reset tests the victim's hit reaction and reset delay.
+// Combo count and untech can retain their previous values while standing idle.
+constexpr bool canStartCombo(int targetAction, unsigned resetDelay) {
+    return !(targetAction >= 50 && targetAction < 150) && resetDelay == 0;
+}
+
+
 struct FirstHitSignals {
     // GameObjectBase::counterHitDmgMultiplier (+0x198), not +0x530 attackPower.
     double localMultiplier = 1.;
     // A known source is active: Meiling skill, Sandstorm CH or a forced CH.
     // Merely having learned a skill, or a stale field value, is not enough.
     bool sourceConfirmed = false;
-    // BOTH players' comboCount (+0x4B4) are zero. SokuLib does not settle
-    // whether that counter belongs to attacker or victim, so requiring both
-    // avoids silently reading the wrong owner.
+    // The target can start a fresh combo; NOT the displayed combo counters.
     bool comboIdle = false;
-    // Victim untech (+0x4BA) is zero: no ongoing hitstun / combo to extend.
+    // Victim is outside a hit reaction/reset delay, not untech == 0.
     bool targetOutOfHitstun = false;
     // Own attack boxes exist. Projectile hitboxes live on child objects, so
     // they are intentionally excluded instead of being misattributed.
@@ -37,8 +42,12 @@ struct FirstHitDecision {
 };
 
 constexpr FirstHitDecision evaluateFirstHit(const FirstHitSignals &s) {
-    const double m = s.localMultiplier;
-    if (!(m > 1.008) || !(m < 10.)) return {};
+    const double local = s.localMultiplier;
+    if (!(local >= 1.) || !(local < 10.)) return {};
+    // Tiger Chi Lv1 has a local multiplier of 1, but guarantees the ordinary
+    // 4/3 counter-hit bonus. Higher levels multiply that CH damage again.
+    const double m = s.forcedFirstHitArmed ? local * (4. / 3.) : local;
+    if (!(m > 1.008)) return {};
     if (!s.sourceConfirmed || !s.comboIdle || !s.targetOutOfHitstun ||
         (!s.attackConfirmed && !s.forcedFirstHitArmed) || s.firstHitConsumed ||
         s.attackPowerAlreadyIncludes || !s.moveCategorySupported) return {};

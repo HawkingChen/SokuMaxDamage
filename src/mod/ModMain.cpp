@@ -14,6 +14,7 @@
 #include "HudText.hpp"
 #include "HudPalette.hpp"
 #include "FirstHit.hpp"
+#include "HitSnapshots.hpp"
 #include "GameAssets.hpp"
 
 #include <windows.h>
@@ -51,6 +52,7 @@ SokuLib::DrawUtils::RectangleShape g_background;
 whm::MoveCatalog g_catalog;
 whm::WikiMaxCatalog g_wikiMax;
 whm::RecordTracker g_record;
+whm::HitAttribution g_hitAttribution;
 bool g_allowUnverifiedProbes = true;
 std::vector<whm::Move> g_probeCache;
 int g_probeCharacter = -1;
@@ -65,8 +67,6 @@ int g_h = 230;
 // must not silently unfold the panel or reset the chosen language.
 std::atomic<int> g_language{0};            // index of whm::HudLanguage
 std::atomic<bool> g_collapsed{false};
-std::atomic<bool> g_firstHitConsumed{false};
-unsigned g_firstHitIdleFrames = 0;         // game thread only, debounce
 struct MoveNameEntry { std::array<std::string, 3> names; };
 std::map<std::string, MoveNameEntry> g_moveNames;
 
@@ -356,31 +356,20 @@ std::vector<HudRow> composeHUD(const SokuLib::BattleManager *mgr) {
     view.weatherVisible=whm::weatherLabelVisible(view.weather,view.weatherSealed,
                                                  view.skillMultiplier,view.spellMultiplier);
 
-    // First-hit-only bonus. SokuLib documents comboCount at +0x4B4 and untech
-    // at +0x4BA but not whose counter owns a combo, so BOTH players must be
-    // idle. Meiling's active forced-first-hit buff is visible even while idle;
-    // other conditional CH sources still require a live own attack box.
-    // Frame counting is mere debounce, never the qualification.
-    const bool comboIdle=effectField<short>(&ownCounters,0x4b4)==0&&
-                         effectField<short>(&enemyCounters,0x4b4)==0;
-    const bool outOfHitstun=effectField<unsigned short>(&enemyCounters,0x4ba)==0;
-    // An ongoing combo (victim hitstun or either combo counter) keeps the
-    // bonus consumed, so later hits of a multi-hit move cannot re-enable it.
-    // It returns only after the combo has been over for several snapshots.
-    if(!comboIdle||!outOfHitstun) {
-        g_firstHitConsumed.store(true);
-        g_firstHitIdleFrames=0;
-    } else if(++g_firstHitIdleFrames>=3) g_firstHitConsumed.store(false);
+    // Displayed combo/untech values persist after a combo. Mirror the
+    // engine's fresh-combo check instead of waiting for those values to zero.
+    const bool freshCombo=whm::canStartCombo(enemy->frameState.actionId,
+        effectField<unsigned short>(&enemyCounters,0x4c0));
     whm::FirstHitSignals signals;
     signals.localMultiplier=view.firstHitMultiplier;
-    signals.sourceConfirmed=(view.forcedFirstHitArmed&&view.firstHitMultiplier>1.)||
+    signals.sourceConfirmed=view.forcedFirstHitArmed||
                             (view.weather==16&&view.firstHitMultiplier>1.)||
                             effectField<short>(&ownCounters,0x1a2)>0;
-    signals.comboIdle=comboIdle;
-    signals.targetOutOfHitstun=outOfHitstun;
+    signals.comboIdle=freshCombo;
+    signals.targetOutOfHitstun=freshCombo;
     signals.attackConfirmed=own->boxData.hitBoxCount>0;
     signals.forcedFirstHitArmed=view.forcedFirstHitArmed;
-    signals.firstHitConsumed=g_firstHitConsumed.load();
+    signals.firstHitConsumed=false; // live buff/target state is authoritative
     signals.attackPowerAlreadyIncludes=false; // still needs 1.10a verification
     const whm::FirstHitDecision hit=whm::evaluateFirstHit(signals);
     view.basePercent=whm::commonPercent(view.attack,view.defense,{});
@@ -432,6 +421,10 @@ std::vector<HudRow> composeHUD(const SokuLib::BattleManager *mgr) {
                                label.notation,label.notation,label.fallback,false);
         rec.names=label.names;
         view.record=rec;
+    } else if(best.damage>0) {
+        view.record.damage=best.damage;
+        view.record.approximate=false;
+        view.record.names={"未识别招式","不明な技","UNKNOWN MOVE"};
     }
     {std::lock_guard<std::mutex> guard(g_panelMutex);g_panelView=std::move(view);}
     return {{"什么最痛",-1}};
@@ -738,18 +731,17 @@ int __fastcall onProcess(SokuLib::BattleManager *mgr) {
             g_panelView = PanelView{};
         }
         g_record.reset();
+        g_hitAttribution.reset();
         g_displayText.clear();
         g_rows.clear();
         g_lastRefresh = 0;
         g_probeCache.clear();
         // Battle state is reset, but language/fold preferences are user state.
-        g_firstHitConsumed.store(false);
-        g_firstHitIdleFrames = 0;
         g_probeCharacter = -1;
         g_probeDataSource = nullptr;
     }
     // Keep the best hit across round transitions; only re-create the HUD.
-    if (mgr->frameCount < g_lastFrame) g_lastRefresh = 0;
+    if (mgr->frameCount < g_lastFrame) { g_lastRefresh = 0; g_hitAttribution.reset(); }
     g_lastFrame = mgr->frameCount;
     // Spectator/replay and unsupported sessions MUST NOT read or show either
     // player as "self". Run the original engine update without any HUD work.
@@ -759,8 +751,11 @@ int __fastcall onProcess(SokuLib::BattleManager *mgr) {
     if(!inBattle || &SokuLib::getBattleMgr()!=mgr){g_panelWanted.store(false);return (mgr->*g_originalProcess)();}
     const int before = side == 0 ? mgr->rightCharacterManager.objectBase.hp
                                  : mgr->leftCharacterManager.objectBase.hp;
-    const int actionBefore = side == 0 ? mgr->leftCharacterManager.objectBase.action
-                                       : mgr->rightCharacterManager.objectBase.action;
+    const auto *ownBefore=viewPlayer(mgr,side);
+    const auto *targetBefore=viewPlayer(mgr,1-side);
+    const auto actorBefore=whm::actorContact(*ownBefore);
+    const auto objectsBefore=whm::projectileContacts(*ownBefore);
+    const auto comboBefore=whm::comboReading(*ownBefore,*targetBefore);
     const int result = (mgr->*g_originalProcess)();
     if (ownSide() != side || &SokuLib::getBattleMgr()!=mgr ||
         (SokuLib::sceneId!=SokuLib::SCENE_BATTLE && SokuLib::sceneId!=SokuLib::SCENE_BATTLESV && SokuLib::sceneId!=SokuLib::SCENE_BATTLECL)) {
@@ -769,17 +764,13 @@ int __fastcall onProcess(SokuLib::BattleManager *mgr) {
     }
     const int after = side == 0 ? mgr->rightCharacterManager.objectBase.hp
                                 : mgr->leftCharacterManager.objectBase.hp;
-    const int actionAfter = side == 0 ? mgr->leftCharacterManager.objectBase.action
-                                      : mgr->rightCharacterManager.objectBase.action;
-    const int candidateAction = (actionBefore >= 300 && actionBefore < 690) ? actionBefore : actionAfter;
-    // Do not attribute a projectile hit to a character currently just moving.
-    // The direct-hitbox check deliberately trades coverage for fewer false records.
-    const auto *attacker = viewPlayer(mgr, side);
-    const int conservativeAction = attacker->boxData.hitBoxCount > 0 ? candidateAction : -1;
-    g_record.observe(before, after, conservativeAction, mgr->frameCount);
-    // Only a confirmed direct hit consumes this combo's first-hit qualifier.
-    // Unattributed projectile damage or blocked pokes do not count here.
-    if(after<before&&conservativeAction>=0)g_firstHitConsumed.store(true);
+    const auto *attacker=viewPlayer(mgr,side);
+    const auto *target=viewPlayer(mgr,1-side);
+    const auto source=g_hitAttribution.observe(actorBefore,whm::actorContact(*attacker),
+        objectsBefore,whm::projectileContacts(*attacker));
+    const int dealt=whm::observedDamage(before,after,comboBefore,
+        whm::comboReading(*attacker,*target));
+    g_record.observeDamage(dealt,source.action,mgr->frameCount,source.instance);
     if (mgr->frameCount - g_lastRefresh >= 12 || g_lastRefresh == 0) {
         g_lastRefresh = mgr->frameCount;
         updateRows(composeHUD(mgr));
@@ -790,6 +781,7 @@ int __fastcall onProcess(SokuLib::BattleManager *mgr) {
 void __fastcall onExit(SokuLib::BattleManager *mgr) {
     g_panelWanted.store(false);
     g_record.reset();
+    g_hitAttribution.reset();
     g_probeCache.clear();
     g_probeCharacter = -1;
     g_probeDataSource = nullptr;
@@ -801,8 +793,6 @@ void __fastcall onExit(SokuLib::BattleManager *mgr) {
     }
     g_lastFrame = 0;
     g_lastRefresh = 0;
-    g_firstHitConsumed.store(false);
-    g_firstHitIdleFrames = 0;
     g_displayText.clear();
     g_rows.clear();
     (mgr->*g_originalExit)();

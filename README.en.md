@@ -48,7 +48,7 @@ Use windowed mode and leave room below the game. The panel appears in supported 
 ## Limitations
 
 - `≈` means an estimate, not a full simulation. Move level, hit count, positioning and some special states affect the result. A first-hit bonus is not applied to an entire multi-hit move estimate.
-- Attribution of delayed projectiles and multi-hit damage can be inaccurate. Some move data is incomplete.
+- Records track projectile casting sources and sum hits from the same cast. Overlapping sources and unusual mechanics may still be unidentified. Some move data is incomplete.
 - Online host/client, spectating, replays and mod combinations have not all been validated in-game. This mod does not modify game damage or network packets.
 - Automatic image extraction requires a new build containing this feature; older release ZIPs do not gain it automatically.
 

@@ -1,9 +1,24 @@
 #include "RecordTracker.hpp"
 #include <algorithm>
 namespace whm {
-void RecordTracker::reset() { best_ = {}; active_ = {}; lastFrame_ = 0; lastHitFrame_ = 0; unattributedDamage_ = 0; }
+void RecordTracker::reset() { casts_.clear(); best_ = {}; active_ = {}; lastFrame_ = 0; lastHitFrame_ = 0; unattributedDamage_ = 0; }
 void RecordTracker::commit() { if (active_.damage > best_.damage) best_ = active_; active_ = {}; }
 void RecordTracker::finish() { commit(); }
+void RecordTracker::observeDamage(int damage,int action,unsigned frame,std::uint64_t instance) {
+    if(frame<lastFrame_)casts_.clear(); // new round, preserve match best
+    lastFrame_=frame;
+    if(damage<=0)return;
+    if(action<300||action>=690||!instance) {
+        unattributedDamage_+=damage;
+        if(damage>best_.damage)best_={damage,-1,false,false};
+        return;
+    }
+    auto &record=casts_[instance];
+    if(record.damage && record.actionId!=action)return; // invalid source reuse
+    record.actionId=action;record.attributed=true;record.isSpell=action>=600;
+    record.damage+=damage;
+    if(record.damage>best_.damage)best_=record;
+}
 void RecordTracker::observe(int beforeHP, int afterHP, int action, unsigned frame) {
     // Frame counter may restart on the next ROUND. Preserve the match record.
     if (frame < lastFrame_) commit();
