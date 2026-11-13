@@ -1,0 +1,35 @@
+SokuMaxDamageHUD
+https://github.com/HawkingChen/SokuMaxDamageHUD
+
+简体中文
+1. 退出游戏。将本文件所在的 SokuMaxDamageHUD 文件夹放进游戏的 modules 目录。
+2. 在 SokuLauncher 的模组页启用 SokuMaxDamageHUD，再启动游戏。
+需要非想天则 v1.10a 和可正常使用的 MOD 加载器。
+首次启动自动从本机游戏提取卡图，不需要另下素材或运行脚本。
+升级时先禁用旧版本并将旧目录移出 modules，避免重复加载。
+CN / JP / EN 切换语言；↑ 收起，＋ 展开。
+所有估算仅供参考；本 MOD 不修改战斗数值、网络封包或 RNG。
+
+English
+1. Close the game. Put this SokuMaxDamageHUD folder in the game's modules folder.
+2. Enable SokuMaxDamageHUD in SokuLauncher, then start the game.
+Requires Hisoutensoku v1.10a and a working mod loader.
+Artwork is extracted from your local game on first launch; no extra download or script.
+Disable older copies and move their folders out of modules before upgrading.
+CN / JP / EN changes language; ↑ collapses and + expands the panel.
+Damage values are estimates. The mod does not change battle stats, packets or RNG.
+
+日本語
+1. ゲームを終了し、この SokuMaxDamageHUD フォルダーをゲームの modules に入れます。
+2. SokuLauncher で SokuMaxDamageHUD を有効化してゲームを起動します。
+非想天則 v1.10a と動作する MOD ローダーが必要です。
+画像は初回起動時にローカルのゲームから抽出します。追加の素材やスクリプトは不要です。
+更新時は旧版を無効化し、旧フォルダーを modules の外へ移動してください。
+CN / JP / EN で言語切替、↑ で折りたたみ、＋ で展開します。
+ダメージは推定値です。戦闘の数値・通信パケット・乱数は変更しません。
+
+Direct SWRSToys: add under [Module] in your active SWRSToys.ini:
+SokuMaxDamageHUD=modules/SokuMaxDamageHUD/SokuMaxDamageHUD.dll
+
+Full instructions / 详细说明 / 詳細:
+https://github.com/HawkingChen/SokuMaxDamageHUD
