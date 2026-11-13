@@ -302,7 +302,13 @@ inline void paintStyledPanel(HWND window, const PanelView &v, const std::string 
                      RGB(27+stripe*3, 20+stripe*2, 54+stripe*4));
             disk(x+w/3, y+h/4, std::max(5,w/3), RGB(91, 57, 144));
             disk(x+w/2, y+h/3, std::max(4,w/6), RGB(187, 128, 227));
-            write(fallback, x+2, y+h/2, w-4, h/3, std::min(w/2,19),
+            // A two-character Chinese label is wider than the old "SC".
+            // Keep missing-art labels legible without replacing them by "...".
+            int units=0;
+            for(wchar_t c:fallback)units+=c<128?6:10;
+            const int labelSize=std::min(w/2,std::clamp(
+                (w-6)*10/std::max(10,units),8,19));
+            write(fallback, x+2, y+h/2, w-4, h/3, labelSize,
                   bright, DT_CENTER);
         }
         rule(x+1, y+2, x+w-2, y+2, RGB(245, 211, 144));
