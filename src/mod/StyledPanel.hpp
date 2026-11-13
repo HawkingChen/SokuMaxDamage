@@ -1,5 +1,5 @@
 #pragma once
-// SokuMaxDamage HUD artwork, v3 ("damage influence / total correction" sketch).
+// SokuMaxDamageHUD HUD artwork, v3 ("damage influence / total correction" sketch).
 // Read-only companion window. Rendering deliberately stays on the existing
 // dedicated UI thread; never access live game objects from WM_PAINT.
 #include <windows.h>

@@ -1,4 +1,4 @@
-// WhatHurtsMost: local-only HUD prototype for Touhou Hisoutensoku 1.10a.
+// SokuMaxDamageHUD: local-only HUD prototype for Touhou Hisoutensoku 1.10a.
 // No network packets, game damage, RNG or inputs are modified.
 #include <SokuLib.hpp>
 #include "DamageEngine.hpp"
@@ -87,7 +87,7 @@ std::string dllFolder() {
 }
 
 void saveHudPreferences() {
-    const auto ini=moduleFolder()/L"WhatHurtsMost.ini";
+    const auto ini=moduleFolder()/L"SokuMaxDamageHUD.ini";
     static const wchar_t *const codes[] = {L"CN", L"JP", L"EN"};
     WritePrivateProfileStringW(L"HUD", L"Language",
         codes[std::clamp(g_language.load(), 0, 2)], ini.c_str());
@@ -567,10 +567,10 @@ void refreshPanel() {
     if (!g_panel) {
         WNDCLASSW cls{}; cls.lpfnWndProc = panelProc; cls.hInstance = g_module;
         cls.hCursor = arrowCursor();
-        cls.lpszClassName = L"SokuMaxDamagePanel";
+        cls.lpszClassName = L"SokuMaxDamageHUDPanel";
         RegisterClassW(&cls);
         g_panel = CreateWindowExW(WS_EX_TOOLWINDOW | WS_EX_NOACTIVATE,
-            cls.lpszClassName, L"SokuMaxDamage · 什么最痛", WS_POPUP, 0, 0, 1, 1,
+            cls.lpszClassName, L"SokuMaxDamageHUD · 什么最痛", WS_POPUP, 0, 0, 1, 1,
             game, nullptr, g_module, nullptr);
     }
     if (!g_panel) return;
@@ -644,7 +644,7 @@ DWORD WINAPI panelThread(void *) {
                 << " preserved=" << result.preserved << " failed=" << result.failed << "\n";
         }
     } catch(const std::exception &) {
-        OutputDebugStringA("SokuMaxDamage: icon extraction failed; using fallback icons.\n");
+        OutputDebugStringA("SokuMaxDamageHUD: icon extraction failed; using fallback icons.\n");
     }
     SetTimer(nullptr, 0, 100, nullptr);
     MSG msg;
@@ -817,7 +817,7 @@ void __fastcall onRender(SokuLib::BattleManager *mgr) {
 
 void loadSettings() {
     const auto folder=moduleFolder();
-    const auto ini=folder/L"WhatHurtsMost.ini";
+    const auto ini=folder/L"SokuMaxDamageHUD.ini";
     g_allowUnverifiedProbes = GetPrivateProfileIntW(L"Damage", L"EnableExperimentalFrameProbe", 1, ini.c_str()) != 0;
     g_x = GetPrivateProfileIntW(L"HUD", L"X", g_x, ini.c_str());
     g_y = GetPrivateProfileIntW(L"HUD", L"Y", g_y, ini.c_str());

@@ -1,4 +1,4 @@
-# SokuMaxDamage · 什么最痛
+# SokuMaxDamageHUD · 什么最痛
 
 [简体中文](README.md) · [English](README.en.md) · **日本語**
 
@@ -12,11 +12,11 @@
 
 MOD を読み込める環境（SokuLauncher / SokuModLoader / SWRSToys）と、非想天則 v1.10a が必要です。
 
-1. ゲームを終了し、[Releases](https://github.com/HawkingChen/SokuMaxDamage/releases/latest) から `SokuMaxDamage-vバージョン番号-win32.zip` をダウンロードします。Source code ではありません。
-2. ZIP 内の **`WhatHurtsMost` フォルダー**を、ゲームの **`modules`** フォルダーに展開します。
-3. **SokuLauncher の MOD 一覧で SokuMaxDamage を有効化**して、ゲームを起動します。
+1. ゲームを終了し、[Releases](https://github.com/HawkingChen/SokuMaxDamageHUD/releases/latest) から `SokuMaxDamageHUD-vバージョン番号-win32.zip` をダウンロードします。Source code ではありません。
+2. ZIP 内の **`SokuMaxDamageHUD` フォルダー**を、ゲームの **`modules`** フォルダーに展開します。
+3. **SokuLauncher の MOD 一覧で SokuMaxDamageHUD を有効化**して、ゲームを起動します。
 
-DLL の配置先は `ゲームフォルダー/modules/WhatHurtsMost/WhatHurtsMost.dll` です。`WhatHurtsMost` は既存環境との互換性のために残している内部名で、別の MOD ではありません。
+DLL の配置先は `ゲームフォルダー/modules/SokuMaxDamageHUD/SokuMaxDamageHUD.dll` です。
 
 <details>
 <summary>SWRSToys を直接使用する場合</summary>
@@ -24,7 +24,7 @@ DLL の配置先は `ゲームフォルダー/modules/WhatHurtsMost/WhatHurtsMos
 使用中の `SWRSToys.ini` の `[Module]` セクションに追加します。
 
 ```ini
-SokuMaxDamage=modules/WhatHurtsMost/WhatHurtsMost.dll
+SokuMaxDamageHUD=modules/SokuMaxDamageHUD/SokuMaxDamageHUD.dll
 ```
 
 同じ DLL を別名の項目で重複して読み込まないでください。
@@ -33,7 +33,7 @@ SokuMaxDamage=modules/WhatHurtsMost/WhatHurtsMost.dll
 
 **カード画像の別途ダウンロードは不要です。** 初回起動時に、お使いのゲームの `th123a.dat` / `th123b.dat` / `th123c.dat` からカードと天候の画像を読み出し、MOD の `icons` フォルダーに保存します。元のアーカイブや既存画像は変更しません。ネット接続、Python、追加スクリプトも不要です。画像が出ない場合は、ゲームのデータファイル、MOD フォルダーへの書き込み権限、`IconExtraction.log` を確認してください。抽出に失敗しても文字の代替表示は利用できます。
 
-更新時は旧フォルダーをバックアップし、ゲームを終了してから新版のファイルを上書きしてください。削除する場合は、ランチャーで無効化してから `WhatHurtsMost` フォルダーを削除します。
+更新時は旧フォルダーをバックアップし、ゲームを終了してから新版のファイルを上書きしてください。削除する場合は、ランチャーで無効化してから `SokuMaxDamageHUD` フォルダーを削除します。
 
 ## 使い方
 
@@ -54,7 +54,7 @@ SokuMaxDamage=modules/WhatHurtsMost/WhatHurtsMost.dll
 
 ## 不具合報告・クレジット
 
-[Issues](https://github.com/HawkingChen/SokuMaxDamage/issues) に、MOD のバージョン、モード、キャラクター、技、スクリーンショットまたは再現手順を添えて報告してください。
+[Issues](https://github.com/HawkingChen/SokuMaxDamageHUD/issues) に、MOD のバージョン、モード、キャラクター、技、スクリーンショットまたは再現手順を添えて報告してください。
 
 ダメージ参考資料には [Cleista Framedata](https://soku.cleista.cc/framedata) などを使用しています。日本語のスキル・スペルカード名は、原版 v1.10a のカード名と照合しています。画像は各自のゲームから生成し、リポジトリや配布 ZIP には同梱しません。ゲーム素材の権利は各権利者に帰属します。
 

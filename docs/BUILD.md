@@ -1,4 +1,4 @@
-# Building SokuMaxDamage
+# Building SokuMaxDamageHUD
 
 Windows builds require Visual Studio 2022's C++ desktop workload, CMake 3.20+, Git and the **Win32 / x86** target. Dependencies are pinned in CMake.
 
@@ -6,10 +6,10 @@ Windows builds require Visual Studio 2022's C++ desktop workload, CMake 3.20+, G
 cmake -S . -B build -A Win32 -DWHM_BUILD_TESTS=ON
 cmake --build build --config Release --parallel
 ctest --test-dir build -C Release --output-on-failure
-cmake --install build --config Release --prefix staging/WhatHurtsMost
+cmake --install build --config Release --prefix staging/SokuMaxDamageHUD
 ```
 
-The install folder contains the DLL, configuration, move data, launcher metadata and three READMEs. ZIP the `WhatHurtsMost` folder itself so players can extract it into `modules`. Game artwork is not included. Do not run the game, extract assets or add an `icons` folder in the release staging directory.
+The install folder contains the DLL, configuration, move data, launcher metadata and three READMEs. ZIP the `SokuMaxDamageHUD` folder itself so players can extract it into `modules`. Game artwork is not included. Do not run the game, extract assets or add an `icons` folder in the release staging directory.
 
 The [Windows workflow](../.github/workflows/build.yml) builds, tests and packages the module. It uploads a CI artifact; it does not publish a GitHub Release automatically. Package versions come from [VERSION](../VERSION).
 

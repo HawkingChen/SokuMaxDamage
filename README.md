@@ -1,4 +1,4 @@
-# SokuMaxDamage · 什么最痛
+# SokuMaxDamageHUD · 什么最痛
 
 **简体中文** · [English](README.en.md) · [日本語](README.ja.md)
 
@@ -12,11 +12,11 @@
 
 需要已能加载 MOD 的非想天则 v1.10a（SokuLauncher / SokuModLoader / SWRSToys）。
 
-1. 退出游戏，从 [Releases](https://github.com/HawkingChen/SokuMaxDamage/releases/latest) 下载 `SokuMaxDamage-v版本号-win32.zip`，不要下载 Source code。
-2. 将 ZIP 中的 **`WhatHurtsMost` 文件夹**解压到游戏的 **`modules`** 目录。
-3. 在 **SokuLauncher 的模组页面启用 SokuMaxDamage**，然后启动游戏。
+1. 退出游戏，从 [Releases](https://github.com/HawkingChen/SokuMaxDamageHUD/releases/latest) 下载 `SokuMaxDamageHUD-v版本号-win32.zip`，不要下载 Source code。
+2. 将 ZIP 中的 **`SokuMaxDamageHUD` 文件夹**解压到游戏的 **`modules`** 目录。
+3. 在 **SokuLauncher 的模组页面启用 SokuMaxDamageHUD**，然后启动游戏。
 
-安装后的文件位置应为 `游戏目录/modules/WhatHurtsMost/WhatHurtsMost.dll`。`WhatHurtsMost` 是保留兼容性的内部文件名，与 SokuMaxDamage 是同一个 MOD。
+安装后的文件位置应为 `游戏目录/modules/SokuMaxDamageHUD/SokuMaxDamageHUD.dll`。
 
 <details>
 <summary>直接使用 SWRSToys</summary>
@@ -24,7 +24,7 @@
 在实际使用的 `SWRSToys.ini` 的 `[Module]` 段加入：
 
 ```ini
-SokuMaxDamage=modules/WhatHurtsMost/WhatHurtsMost.dll
+SokuMaxDamageHUD=modules/SokuMaxDamageHUD/SokuMaxDamageHUD.dll
 ```
 
 只启用一次，避免用不同条目重复加载同一个 DLL。
@@ -33,7 +33,7 @@ SokuMaxDamage=modules/WhatHurtsMost/WhatHurtsMost.dll
 
 **卡图不需要另行下载。** 首次启动会自动从本机游戏的 `th123a.dat` / `th123b.dat` / `th123c.dat` 提取卡牌与天气图片到 MOD 的 `icons` 目录；不修改游戏资源、不联网，也不覆盖已有图片。无需 Python 或额外脚本。若没有图标，检查游戏资源是否完整、MOD 目录是否可写，以及该目录下的 `IconExtraction.log`；提取失败时仍会显示文字占位图。
 
-更新前建议备份原文件夹，退出游戏后覆盖新版文件。卸载时在启动器中禁用，再删除 `WhatHurtsMost` 文件夹即可。
+更新前建议备份原文件夹，退出游戏后覆盖新版文件。卸载时在启动器中禁用，再删除 `SokuMaxDamageHUD` 文件夹即可。
 
 ## 使用
 
@@ -54,7 +54,7 @@ SokuMaxDamage=modules/WhatHurtsMost/WhatHurtsMost.dll
 
 ## 反馈与资料
 
-遇到问题请在 [Issues](https://github.com/HawkingChen/SokuMaxDamage/issues) 提供 MOD 版本、游戏模式、角色、招式及截图或复现步骤。
+遇到问题请在 [Issues](https://github.com/HawkingChen/SokuMaxDamageHUD/issues) 提供 MOD 版本、游戏模式、角色、招式及截图或复现步骤。
 
 伤害参考数据来自 [Cleista Framedata](https://soku.cleista.cc/framedata) 等公开资料；日语技能及符卡名已与原版 v1.10a 卡名表核对。卡面由玩家本地游戏生成，不随仓库和 ZIP 分发；游戏资源权利属于原权利人。
 

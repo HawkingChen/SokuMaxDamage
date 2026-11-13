@@ -1,4 +1,4 @@
-# SokuMaxDamage · 什么最痛
+# SokuMaxDamageHUD · 什么最痛
 
 [简体中文](README.md) · **English** · [日本語](README.ja.md)
 
@@ -12,11 +12,11 @@ A damage reference HUD for **Touhou Hisoutensoku v1.10a**. A companion panel bel
 
 Requires Hisoutensoku v1.10a with a working mod loader: SokuLauncher, SokuModLoader or SWRSToys.
 
-1. Close the game. Download `SokuMaxDamage-vVERSION-win32.zip` from [Releases](https://github.com/HawkingChen/SokuMaxDamage/releases/latest), rather than Source code.
-2. Extract the **`WhatHurtsMost` folder** from the ZIP into the game's **`modules`** folder.
-3. Enable **SokuMaxDamage** on SokuLauncher's mods page and start the game.
+1. Close the game. Download `SokuMaxDamageHUD-vVERSION-win32.zip` from [Releases](https://github.com/HawkingChen/SokuMaxDamageHUD/releases/latest), rather than Source code.
+2. Extract the **`SokuMaxDamageHUD` folder** from the ZIP into the game's **`modules`** folder.
+3. Enable **SokuMaxDamageHUD** on SokuLauncher's mods page and start the game.
 
-The DLL should be at `GAME/modules/WhatHurtsMost/WhatHurtsMost.dll`. `WhatHurtsMost` is the internal name retained for compatibility; it is the same mod.
+The DLL should be at `GAME/modules/SokuMaxDamageHUD/SokuMaxDamageHUD.dll`.
 
 <details>
 <summary>Using SWRSToys directly</summary>
@@ -24,7 +24,7 @@ The DLL should be at `GAME/modules/WhatHurtsMost/WhatHurtsMost.dll`. `WhatHurtsM
 Add this line under `[Module]` in the `SWRSToys.ini` used by your installation:
 
 ```ini
-SokuMaxDamage=modules/WhatHurtsMost/WhatHurtsMost.dll
+SokuMaxDamageHUD=modules/SokuMaxDamageHUD/SokuMaxDamageHUD.dll
 ```
 
 Enable the DLL only once; avoid duplicate entries under different names.
@@ -33,7 +33,7 @@ Enable the DLL only once; avoid duplicate entries under different names.
 
 **No separate artwork download is needed.** On the first launch, the mod extracts card and weather images from your local `th123a.dat` / `th123b.dat` / `th123c.dat` into its `icons` folder. It leaves the archives and existing images untouched, works offline, and needs no Python or extra script. If artwork is missing, check your game archives, write access to the mod folder, and `IconExtraction.log`. Text placeholders remain available if extraction fails.
 
-To update, back up the old folder, close the game, and replace the files with the new version. To uninstall, disable the mod in your launcher, then delete its `WhatHurtsMost` folder.
+To update, back up the old folder, close the game, and replace the files with the new version. To uninstall, disable the mod in your launcher, then delete its `SokuMaxDamageHUD` folder.
 
 ## Use
 
@@ -54,7 +54,7 @@ Use windowed mode and leave room below the game. The panel appears in supported 
 
 ## Feedback and credits
 
-Report problems in [Issues](https://github.com/HawkingChen/SokuMaxDamage/issues), including the mod version, game mode, characters, move and a screenshot or reproduction steps.
+Report problems in [Issues](https://github.com/HawkingChen/SokuMaxDamageHUD/issues), including the mod version, game mode, characters, move and a screenshot or reproduction steps.
 
 Damage references include [Cleista Framedata](https://soku.cleista.cc/framedata). Japanese skill and spell names have been checked against the original v1.10a card tables. Artwork is generated from the player's own game and is not distributed in this repository or release ZIP; game assets belong to their respective rights holders.
 
