@@ -6,13 +6,15 @@ An experimental, local-only damage HUD mod for **Touhou Hisoutensoku (TH12.3) v1
 
 ## Current functionality in source
 
-- Local HUD showing a candidate highest-damage non-spell action, current hand spells and a provisional match damage record.
-- Uses sourced Wiki **whole-move maximum damage** values where available, combined with live game attack/defense multipliers. Does not model real hit positions.
-- Reads game-maintained attack, defense and special/spell multipliers; does not multiply rods, dolls and elixir counters again.
-- Attempts to reuse in-game card artwork; has an experimental direct-frame estimate fallback.
-- All calculations and rendering are intended to be local-only.
+- A Chinese companion panel below the game window, with a dark background, gold card frames, damage figures and card artwork.
+- Separate areas for live attack/defense state, a candidate highest-damage non-spell move, the provisional match damage record, and up to five spells in hand order.
+- A dedicated window thread and copied display snapshots; the panel hides outside supported battle scenes.
+- `config/FrameData.txt` contains 1,372 sourced static reference records across 20 characters from [Cleista frame data](https://soku.cleista.cc/framedata). Each record retains its source URL. The old animation scan is no longer used to rank moves in the panel.
+- Runtime attack/defense/type multipliers scale the static reference figures. Estimated numbers use an approximation marker.
 
-**Important limitations:** The Wiki maximum table currently contains **only one sourced Tenshi spell example**. The direct-frame fallback is *not* a true full-hit maximum and misses projectiles and scripted hits. Delayed/projectile damage may not be attributed correctly. Weather, character-specific effects, icon rendering and online compatibility have **not been tested against the game**. The HUD may show `--` for unknown values and `~` for approximations.
+**Limitations:** Reference summaries do not provide verified per-level maximum coverage for every skill. Missing totals remain unknown. Weather and character effects still require game verification. The provisional HP-difference tracker does not reliably attribute delayed projectiles or every multi-stage move. Normal attacks without artwork use a fallback. Independent Buff/Debuff icons are not complete. PNG card artwork is loaded from local `icons/<character>-<card>.png` files; downloaded artwork is not committed to this repository.
+
+**Validation:** The new panel has passed Windows x86 compilation/linking, module loading and an independent Windows rendering/PNG-loading check. A rendering preview uses test fixtures, not live battle results. The latest game deployment still needs battle and mode-transition validation; these checks do not establish online compatibility.
 
 ## Build
 
@@ -29,7 +31,7 @@ CMake fetches pinned upstream [SokuLib](https://github.com/SokuDev/SokuLib) and 
 
 ## Installation (unverified)
 
-When a Windows DLL build passes, copy `WhatHurtsMost.dll`, `MoveProfiles.txt`, `WikiMaxProfiles.txt` and `WhatHurtsMost.ini` into `modules/WhatHurtsMost/` under the game folder, then add to the `[Module]` section of `SWRSToys.ini`:
+When a Windows DLL build passes, copy `WhatHurtsMost.dll`, `FrameData.txt`, `MoveProfiles.txt`, `WikiMaxProfiles.txt`, `WhatHurtsMost.ini` and the local `icons/` directory into `modules/WhatHurtsMost/` under the game folder, then add to the `[Module]` section of `SWRSToys.ini`:
 
 ```ini
 WhatHurtsMost=modules/WhatHurtsMost/WhatHurtsMost.dll

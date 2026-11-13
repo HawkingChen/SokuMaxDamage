@@ -6,11 +6,15 @@
 #include "WikiMax.hpp"
 #include "RecordTracker.hpp"
 #include "FrameProbe.hpp"
+#include "StyledPanel.hpp"
 
 #include <windows.h>
 #include <algorithm>
 #include <array>
+#include <atomic>
+#include <mutex>
 #include <cstdio>
+#include <cmath>
 #include <cstring>
 #include <fstream>
 #include <sstream>
@@ -120,7 +124,12 @@ std::string cardName(const SokuLib::v2::Player &player, unsigned short cardId) {
     if (!info) return "CARD#" + std::to_string(cardId);
     const auto raw = static_cast<const char *>(info->name);
     if (!raw || !raw[0]) return "CARD#" + std::to_string(cardId);
-    return shortenCp932(raw);
+    std::string name = shortenCp932(raw);
+    int n = MultiByteToWideChar(932, 0, name.c_str(), -1, nullptr, 0);
+    std::wstring wide(n, L'\0'); MultiByteToWideChar(932, 0, name.c_str(), -1, wide.data(), n);
+    int bytes = WideCharToMultiByte(CP_UTF8, 0, wide.c_str(), -1, nullptr, 0, nullptr, nullptr);
+    std::string utf8(bytes, '\0'); WideCharToMultiByte(CP_UTF8, 0, wide.c_str(), -1, utf8.data(), bytes, nullptr, nullptr);
+    if (!utf8.empty()) utf8.pop_back(); return utf8;
 }
 
 std::string actionName(const SokuLib::v2::Player &player, int action) {
@@ -186,109 +195,106 @@ const whm::Move *findProbe(whm::MoveKind kind, int id) {
     return nullptr;
 }
 
+std::mutex g_panelMutex;
+PanelView g_panelView;
+struct StaticMove { int character,card,damage; std::string kind,name,notation; };
+std::vector<StaticMove> g_staticMoves;
 std::vector<HudRow> composeHUD(const SokuLib::BattleManager *mgr) {
-    std::vector<HudRow> rows;
-    if (!isOwnBattleMode()) return rows;
-    const int side = ownSide();
-    const auto *own = viewPlayer(mgr, side);
-    const auto *enemy = viewPlayer(mgr, 1 - side);
-    if (!own || !enemy) return rows;
-    const auto ours = state(*own);
-    const auto theirs = state(*enemy);
-    buildProbeCache(*own);
-
-    rows.push_back({"WHAT HURTS MOST? [TEST]", -1});
-    // These are direct game-maintained effective multipliers. Card stacks are
-    // intentionally NOT reapplied: control rods, dolls, and elixir can already
-    // be folded into the values at runtime.
-    char buffText[100];
-    std::snprintf(buffText, sizeof(buffText), "ATK %.2f  OPP DEF %.2f", ours.attack, theirs.defense);
-    rows.push_back({buffText, -1});
-
-    const whm::WikiMax *wikiBest = nullptr;
-    int wikiBestDamage = 0;
-    for (auto kind : {whm::MoveKind::Normal, whm::MoveKind::Skill}) {
-        for (const auto *entry : g_wikiMax.forCharacter(ours.character, kind)) {
-            if (entry->level != -1) continue; // upgrade-specific mapping still needs verification
-            if (kind == whm::MoveKind::Skill && !skillOwned(*own, entry->id)) continue;
-            const int dmg = whm::rescaleWikiMax(*entry, ours, theirs);
-            if (dmg > wikiBestDamage) { wikiBestDamage = dmg; wikiBest = entry; }
-        }
+    const auto *own=viewPlayer(mgr,ownSide());const auto *enemy=viewPlayer(mgr,1-ownSide());
+    PanelView view;view.character=static_cast<int>(own->characterIndex);
+    view.attack=own->attackPower;view.defense=enemy->defensePower;
+    view.rods=static_cast<int>(own->controlRod);view.dolls=static_cast<int>(own->sacrificialDolls);
+    view.weather=static_cast<int>(SokuLib::activeWeather);
+    auto amount=[&](const StaticMove &m){
+        double type=m.kind=="spell"?own->spellDmgMultiplier:m.kind=="skill"?own->specialDmgMultiplier:1.;
+        double multiplier=view.attack*view.defense*type;
+        if (!std::isfinite(multiplier)||multiplier<=0||multiplier>50)return 0;
+        return static_cast<int>(m.damage*multiplier*whm::gutsFactor(enemy->HP));
+    };
+    for(const auto &m:g_staticMoves){
+        if(m.character!=view.character||m.kind=="spell")continue;
+        if(m.kind=="skill" && (m.card<100||m.card>=132||own->skilledSkillLevel[m.card-100]<0))continue;
+        int damage=amount(m);
+        if(damage>view.strongest.damage)view.strongest={view.character,m.card,damage,m.name+" · "+m.notation,true};
     }
-    const whm::Move *bestMove = nullptr;
-    whm::Estimate bestEstimate;
-    const whm::Move *roughBest = nullptr;
-    whm::Estimate roughEstimate;
-    for (auto kind : {whm::MoveKind::Normal, whm::MoveKind::Skill}) {
-        for (const auto *move : g_catalog.forCharacter(ours.character, kind)) {
-            if (move->level != -1) continue;
-            if (kind == whm::MoveKind::Skill && !skillOwned(*own, move->id)) continue;
-            const auto result = whm::estimate(*move, ours, theirs);
-            if (result.valid && result.complete &&
-                (!bestMove || result.damage > bestEstimate.damage)) {
-                bestMove = move;
-                bestEstimate = result;
-            }
-        }
+    for(const auto &card:own->handInfo.hand){
+        if(card.id<200||card.id>=220)continue;
+        PanelCard shown{view.character,card.id,0,cardName(*own,card.id),true};
+        for(const auto &m:g_staticMoves)if(m.character==view.character&&m.kind=="spell"&&m.card==card.id)shown.damage=std::max(shown.damage,amount(m));
+        view.hand.push_back(shown);if(view.hand.size()==5)break;
     }
-    for (const auto &probe : g_probeCache) {
-        if (probe.kind == whm::MoveKind::Spell) continue;
-        if (probe.kind == whm::MoveKind::Skill && !skillOwned(*own, probe.id)) continue;
-        const auto r = whm::estimate(probe, ours, theirs);
-        if (r.valid && (!roughBest || roughEstimate.damage < r.damage)) {
-            roughBest = &probe;
-            roughEstimate = r;
-        }
+    const auto &best=g_record.best();
+    if(best.attributed&&best.damage>0){
+        int card=best.actionId>=600&&best.actionId<620?best.actionId-400:-1;
+        view.record={view.character,card,best.damage,card>=0?cardName(*own,card):"动作 "+std::to_string(best.actionId),false};
     }
-    const auto *shownNonSc = bestMove ? bestMove : roughBest;
-    const auto shownNonScEstimate = bestMove ? bestEstimate : roughEstimate;
-    if (wikiBest && (!shownNonSc || wikiBestDamage >= shownNonScEstimate.damage)) {
-        const int skillId = wikiBest->kind == whm::MoveKind::Skill ?
-            100 + ((wikiBest->id - 500) / 20) * 4 +
-            ((wikiBest->id - 500) % 20) / 5 : -1;
-        rows.push_back({"NON-SC (wiki): " + actionName(*own, wikiBest->id) +
-            " ~" + std::to_string(wikiBestDamage), skillId});
-    } else if (shownNonSc) {
-        const int skillId = shownNonSc->kind == whm::MoveKind::Skill ?
-            100 + ((shownNonSc->id - 500) / 20) * 4 +
-            ((shownNonSc->id - 500) % 20) / 5 : -1;
-        rows.push_back({"NON-SC (known): " + actionName(*own, shownNonSc->id) + " " +
-            (shownNonScEstimate.complete ? "" : "~") +
-            std::to_string(shownNonScEstimate.damage), skillId});
-    } else rows.push_back({"NON-SC: --", -1});
+    {std::lock_guard<std::mutex> guard(g_panelMutex);g_panelView=std::move(view);}
+    return {{"什么最痛",-1}};
+}
 
-    rows.push_back({"HAND SPELLS (wiki max target):", -1});
-    int shown = 0;
-    for (const auto &card : own->handInfo.hand) {
-        if (card.id < 200 || card.id >= 220) continue;
-        if (++shown > 5) break;
-        const auto *published = g_wikiMax.find(ours.character, whm::MoveKind::Spell, card.id, -1);
-        if (published) {
-            const int number = whm::rescaleWikiMax(*published, ours, theirs);
-            rows.push_back({shortenCp932(cardName(*own, card.id), 18) +
-                " ~" + std::to_string(number) + " [wiki]", card.id});
-            continue;
-        }
-        const auto *move = g_catalog.find(ours.character, whm::MoveKind::Spell, card.id, -1);
-        if (!move) move = findProbe(whm::MoveKind::Spell, card.id);
-        const auto r = move ? whm::estimate(*move, ours, theirs) : whm::Estimate{};
-        const std::string suffix = r.valid ?
-            (r.complete ? std::to_string(r.damage) : "~" + std::to_string(r.damage)) : "--";
-        rows.push_back({shortenCp932(cardName(*own, card.id), 18) + " " + suffix, card.id});
+// The panel is owned by the game window, but never takes keyboard focus.
+HWND g_panel = nullptr;
+std::atomic<bool> g_panelWanted{false};
+std::vector<HudRow> g_panelRows;
+LRESULT CALLBACK panelProc(HWND hwnd, UINT msg, WPARAM w, LPARAM l) {
+    if (msg == WM_MOUSEACTIVATE) return MA_NOACTIVATE;
+    if (msg == WM_PAINT) {
+        PanelView view;
+        { std::lock_guard<std::mutex> guard(g_panelMutex); view=g_panelView; }
+        paintStyledPanel(hwnd,view,dllFolder()); return 0;
     }
-    if (!shown) rows.push_back({"(no spell in hand)", -1});
+    return DefWindowProcW(hwnd, msg, w, l);
+}
+void refreshPanel() {
+    HWND game = SokuLib::window;
+    if (!game || !IsWindow(game)) return;
+    if (!g_panel) {
+        WNDCLASSW cls{}; cls.lpfnWndProc = panelProc; cls.hInstance = g_module;
+        cls.lpszClassName = L"SokuMaxDamagePanel";
+        RegisterClassW(&cls);
+        g_panel = CreateWindowExW(WS_EX_TOOLWINDOW | WS_EX_NOACTIVATE,
+            cls.lpszClassName, L"SokuMaxDamage", WS_POPUP, 0, 0, 1, 1,
+            game, nullptr, g_module, nullptr);
+    }
+    if (!g_panel) return;
+    const bool battleScene = SokuLib::sceneId == SokuLib::SCENE_BATTLE ||
+        SokuLib::sceneId == SokuLib::SCENE_BATTLESV || SokuLib::sceneId == SokuLib::SCENE_BATTLECL;
+    if (IsIconic(game) || !battleScene || !g_panelWanted.load()) { ShowWindow(g_panel, SW_HIDE); return; }
+    RECT frame; GetWindowRect(game, &frame);
+    RECT work; SystemParametersInfoW(SPI_GETWORKAREA,0,&work,0);
+    const int gameWidth=frame.right-frame.left, gameHeight=frame.bottom-frame.top;
+    const int panelHeight=std::max(180,gameWidth*290/1000);
+    if(gameHeight+panelHeight>work.bottom-work.top) {
+        const double scale=double(work.bottom-work.top-16)/(gameHeight+panelHeight);
+        int newWidth=static_cast<int>(gameWidth*scale),newHeight=static_cast<int>(gameHeight*scale);
+        SetWindowPos(game,nullptr,std::max<LONG>(work.left,frame.left),work.top,newWidth,newHeight,
+            SWP_NOACTIVATE|SWP_NOZORDER|SWP_ASYNCWINDOWPOS);
+        return;
+    }
+    if(frame.bottom+panelHeight>work.bottom) {
+        SetWindowPos(game,nullptr,frame.left,work.bottom-panelHeight-gameHeight,0,0,
+            SWP_NOSIZE|SWP_NOACTIVATE|SWP_NOZORDER|SWP_ASYNCWINDOWPOS);
+        return;
+    }
+    size_t rowCount;
+    { std::lock_guard<std::mutex> guard(g_panelMutex); rowCount = g_panelRows.size(); }
+    SetWindowPos(g_panel, nullptr, frame.left, frame.bottom, frame.right-frame.left,
+        std::max<LONG>(180, (frame.right-frame.left)*290/1000),
+        SWP_NOACTIVATE | SWP_NOZORDER | SWP_SHOWWINDOW);
+    InvalidateRect(g_panel, nullptr, FALSE);
+    // The game render thread does not pump a standard Win32 message loop.
+    // Deliver WM_PAINT synchronously instead of leaving it queued forever.
+    UpdateWindow(g_panel);
+}
 
-    const auto &record = g_record.best();
-    if (record.damage > 0 && record.attributed) {
-        const int iconId = record.actionId >= 600 && record.actionId < 620 ?
-            record.actionId - 400 : -1;
-        rows.push_back({"MATCH BEST: " + actionName(*own, record.actionId) +
-            " " + std::to_string(record.damage), iconId});
-    } else rows.push_back({"MATCH BEST: --", -1});
-    if (g_record.unattributedDamage() > 0)
-        rows.push_back({"Projectile hits: unassigned", -1});
-    rows.push_back({"~ incomplete; no gameplay changes", -1});
-    return rows;
+DWORD WINAPI panelThread(void *) {
+    SetTimer(nullptr, 0, 100, nullptr);
+    MSG msg;
+    while (GetMessageW(&msg, nullptr, 0, 0) > 0) {
+        if (msg.message == WM_TIMER) refreshPanel();
+        TranslateMessage(&msg); DispatchMessageW(&msg);
+    }
+    return 0;
 }
 
 void loadFont() {
@@ -317,6 +323,7 @@ void updateRows(std::vector<HudRow> rows) {
     if (key == g_displayText) return;
     g_displayText = std::move(key);
     g_rows = std::move(rows);
+    { std::lock_guard<std::mutex> guard(g_panelMutex); g_panelRows = g_rows; }
     if (!g_fontReady) return;
     const size_t count = std::min(g_rows.size(), kMaxHudRows);
     for (size_t i = 0; i < count; ++i) {
@@ -393,13 +400,13 @@ int __fastcall onProcess(SokuLib::BattleManager *mgr) {
     g_record.observe(before, after, conservativeAction, mgr->frameCount);
     if (mgr->frameCount - g_lastRefresh >= 12 || g_lastRefresh == 0) {
         g_lastRefresh = mgr->frameCount;
-        loadFont();
         updateRows(composeHUD(mgr));
     }
     return result;
 }
 
 void __fastcall onExit(SokuLib::BattleManager *mgr) {
+    g_panelWanted.store(false);
     g_record.reset();
     g_probeCache.clear();
     g_probeCharacter = -1;
@@ -414,17 +421,9 @@ void __fastcall onExit(SokuLib::BattleManager *mgr) {
 
 void __fastcall onRender(SokuLib::BattleManager *mgr) {
     (mgr->*g_originalRender)();
-    if (!g_fontReady || !isOwnBattleMode() || g_displayText.empty()) return;
-    g_background.draw();
-    const size_t count = std::min(g_rows.size(), kMaxHudRows);
-    const auto *player = viewPlayer(mgr, ownSide());
-    for (size_t i = 0; i < count; ++i) {
-        const int y = g_y + 6 + static_cast<int>(i) * kHudRowHeight;
-        if (y + kHudRowHeight >= g_y + g_h) break;
-        g_lineSprites[i].draw();
-        if (player && g_rows[i].iconCardId >= 0)
-            drawCardIcon(*player, g_rows[i].iconCardId, y);
-    }
+    const bool battleScene = SokuLib::sceneId == SokuLib::SCENE_BATTLE ||
+        SokuLib::sceneId == SokuLib::SCENE_BATTLESV || SokuLib::sceneId == SokuLib::SCENE_BATTLECL;
+    g_panelWanted.store(battleScene && isOwnBattleMode() && !g_displayText.empty());
 }
 
 void loadSettings() {
@@ -434,6 +433,15 @@ void loadSettings() {
     g_y = GetPrivateProfileIntA("HUD", "Y", g_y, ini.c_str());
     g_w = std::max(170, std::min(400, static_cast<int>(GetPrivateProfileIntA("HUD", "Width", g_w, ini.c_str()))));
     g_h = std::max(170, std::min(430, static_cast<int>(GetPrivateProfileIntA("HUD", "Height", g_h, ini.c_str()))));
+    std::ifstream data(dllFolder()+"FrameData.txt");
+    std::string line;
+    while(std::getline(data,line)) {
+        if(line.empty()||line[0]=='#')continue;
+        std::vector<std::string> cells;std::istringstream stream(line);std::string cell;
+        while(std::getline(stream,cell,'|'))cells.push_back(cell);
+        if(cells.size()!=7)continue;
+        try { g_staticMoves.push_back({std::stoi(cells[0]),std::stoi(cells[2]),std::stoi(cells[3]),cells[1],cells[4],cells[5]}); } catch(...) {}
+    }
     std::ifstream in(dllFolder() + "MoveProfiles.txt");
     if (in) g_catalog.read(in);
     std::ifstream wiki(dllFolder() + "WikiMaxProfiles.txt");
@@ -458,6 +466,8 @@ extern "C" __declspec(dllexport) bool Initialize(HMODULE self, HMODULE) {
     DWORD ignore = 0;
     VirtualProtect(reinterpret_cast<void *>(RDATA_SECTION_OFFSET), RDATA_SECTION_SIZE, old, &ignore);
     FlushInstructionCache(GetCurrentProcess(), nullptr, 0);
+    HANDLE thread = CreateThread(nullptr, 0, panelThread, nullptr, 0, nullptr);
+    if (thread) CloseHandle(thread);
     g_hooksInstalled = true;
     return true;
 }

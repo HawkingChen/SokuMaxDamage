@@ -1,0 +1,1373 @@
+# character|kind|card|damage|name|notation|source
+0|normal|-1|200|5A|5A|https://soku.cleista.cc/framedata/reimu/5a
+0|normal|-1|500|f.5A|f.5A|https://soku.cleista.cc/framedata/reimu/f5a
+0|normal|-1|750|6A|6A|https://soku.cleista.cc/framedata/reimu/6a
+0|normal|-1|550|2A|2A|https://soku.cleista.cc/framedata/reimu/2a
+0|normal|-1|900|3A|3A|https://soku.cleista.cc/framedata/reimu/3a
+0|normal|-1|600|66A|66A|https://soku.cleista.cc/framedata/reimu/66a
+0|normal|-1|450|j.5A|j.5A|https://soku.cleista.cc/framedata/reimu/j5a
+0|normal|-1|800|j.6A|j.6A|https://soku.cleista.cc/framedata/reimu/j6a
+0|normal|-1|900|j.2A|j.2A|https://soku.cleista.cc/framedata/reimu/j2a
+0|normal|-1|800|j.8A|j.8A|https://soku.cleista.cc/framedata/reimu/j8a
+0|normal|-1|200|5AA|5AA|https://soku.cleista.cc/framedata/reimu/5aa
+0|normal|-1|450|5AAA|5AAA|https://soku.cleista.cc/framedata/reimu/5aaa
+0|normal|-1|800|5AAAA|5AAAA|https://soku.cleista.cc/framedata/reimu/5aaaa
+0|normal|-1|200|4A|4A|https://soku.cleista.cc/framedata/reimu/4a
+0|normal|-1|466|5B|5B|https://soku.cleista.cc/framedata/reimu/5b
+0|normal|-1|466|6B|6B|https://soku.cleista.cc/framedata/reimu/6b
+0|normal|-1|600|2B|2B|https://soku.cleista.cc/framedata/reimu/2b
+0|normal|-1|466|j.5B|j.5B|https://soku.cleista.cc/framedata/reimu/j5b
+0|normal|-1|466|j.2B|j.2B|https://soku.cleista.cc/framedata/reimu/j2b
+0|normal|-1|800|66B|66B|https://soku.cleista.cc/framedata/reimu/66b
+0|normal|-1|778|5C|5C|https://soku.cleista.cc/framedata/reimu/5c
+0|normal|-1|755|2C|2C|https://soku.cleista.cc/framedata/reimu/2c
+0|normal|-1|778|j.5C|j.5C|https://soku.cleista.cc/framedata/reimu/j5c
+0|normal|-1|778|j.2C|j.2C|https://soku.cleista.cc/framedata/reimu/j2c
+0|normal|-1|900|66C|66C|https://soku.cleista.cc/framedata/reimu/66c
+0|skill|100|737|博丽护符|236B|https://soku.cleista.cc/framedata/reimu/236b-hakurei-amulet
+0|skill|100|737|博丽护符|236C|https://soku.cleista.cc/framedata/reimu/236c-hakurei-amulet
+0|skill|100|388|博丽护符|j.236B|https://soku.cleista.cc/framedata/reimu/j236b-hakurei-amulet
+0|skill|100|388|博丽护符|j.236C|https://soku.cleista.cc/framedata/reimu/j236c-hakurei-amulet
+0|skill|104|1201|妖怪破坏者|236B|https://soku.cleista.cc/framedata/reimu/236b-youkai-buster
+0|skill|104|1201|妖怪破坏者|236C|https://soku.cleista.cc/framedata/reimu/236c-youkai-buster
+0|skill|104|1201|妖怪破坏者|j.236B|https://soku.cleista.cc/framedata/reimu/j236b-youkai-buster
+0|skill|104|466|妖怪破坏者|j.236C|https://soku.cleista.cc/framedata/reimu/j236c-youkai-buster
+0|skill|108|640|扩散灵符|236B|https://soku.cleista.cc/framedata/reimu/236b-spread-amulet
+0|skill|108|931|扩散灵符|236C|https://soku.cleista.cc/framedata/reimu/236c-spread-amulet
+0|skill|108|330|扩散灵符|j.236B|https://soku.cleista.cc/framedata/reimu/j236b-spread-amulet
+0|skill|108|483|扩散灵符|j.236C|https://soku.cleista.cc/framedata/reimu/j236c-spread-amulet
+0|skill|101|521|警醒阵|214B|https://soku.cleista.cc/framedata/reimu/214b-cautionary-border
+0|skill|101|521|警醒阵|214C|https://soku.cleista.cc/framedata/reimu/214c-cautionary-border
+0|skill|101|521|警醒阵|j.214B|https://soku.cleista.cc/framedata/reimu/j214b-cautionary-border
+0|skill|105|1100|系缚阵|214C|https://soku.cleista.cc/framedata/reimu/214c-binding-border
+0|skill|105|1100|系缚阵|j.214C|https://soku.cleista.cc/framedata/reimu/j214c-binding-border
+0|skill|109|1557|常置阵|214B|https://soku.cleista.cc/framedata/reimu/214b-permanent-border
+0|skill|109|1557|常置阵|214C|https://soku.cleista.cc/framedata/reimu/214c-permanent-border
+0|skill|102|1100|亚空穴|421B|https://soku.cleista.cc/framedata/reimu/421b-dimensional-rift
+0|skill|102|1176|亚空穴|421C|https://soku.cleista.cc/framedata/reimu/421c-dimensional-rift
+0|skill|106|723|封魔亚空穴|421B|https://soku.cleista.cc/framedata/reimu/421b-demon-sealing-dimensional-rift
+0|skill|106|561|封魔亚空穴|421C|https://soku.cleista.cc/framedata/reimu/421c-demon-sealing-dimensional-rift
+0|skill|103|1200|升天脚|623B|https://soku.cleista.cc/framedata/reimu/623b-ascension-kick
+0|skill|103|1300|升天脚|623C|https://soku.cleista.cc/framedata/reimu/623c-ascension-kick
+0|skill|107|495|抄地升天脚|623B|https://soku.cleista.cc/framedata/reimu/623b-sliding-ascension-kick
+0|skill|107|660|抄地升天脚|623C|https://soku.cleista.cc/framedata/reimu/623c-sliding-ascension-kick
+0|skill|111|1032|祈雨之仪|623B|https://soku.cleista.cc/framedata/reimu/623b-rain-dance
+0|skill|111|1032|祈雨之仪|623C|https://soku.cleista.cc/framedata/reimu/623c-rain-dance
+0|skill|111|578|祈雨之仪|j.623B|https://soku.cleista.cc/framedata/reimu/j623b-rain-dance
+0|skill|111|1032|祈雨之仪|j.623C|https://soku.cleista.cc/framedata/reimu/j623c-rain-dance
+0|spell|200|2251|灵符「梦想妙珠」|sc200|https://soku.cleista.cc/framedata/reimu/sc200-spirit-sign-fantasy-orb
+0|spell|201|3098|神灵「梦想封印」|sc201|https://soku.cleista.cc/framedata/reimu/sc201-divine-spirit-fantasy-seal
+0|spell|204|1471|梦符「封魔阵」|sc204|https://soku.cleista.cc/framedata/reimu/sc204-dream-sign-demon-binding-array
+0|spell|206|3414|神技「八方鬼缚阵」|sc206|https://soku.cleista.cc/framedata/reimu/sc206-divine-arts-demon-binding-circle
+0|spell|207|4474|结界「扩散结界」|sc207|https://soku.cleista.cc/framedata/reimu/sc207-boundary-expanding-boundary
+0|spell|208|1706|珠符「明珠暗投」|sc208|https://soku.cleista.cc/framedata/reimu/sc208-jewel-sign-concealed-orbs-of-light
+0|spell|209|2048|宝符「阴阳宝玉」|sc209|https://soku.cleista.cc/framedata/reimu/sc209-treasure-sign-ying-yang-orb
+0|spell|210|2889|宝具「阴阳鬼神玉」|sc210|https://soku.cleista.cc/framedata/reimu/sc210-holy-relic-ying-yang-sanctifier-orb
+0|spell|214|2693|神技「天霸风神脚」|sc214|https://soku.cleista.cc/framedata/reimu/sc214-divine-arts-wind-god-kick
+0|spell|200|2243|灵符「梦想妙珠」|j.sc200|https://soku.cleista.cc/framedata/reimu/sc200-spirit-sign-fantasy-orb-650
+0|spell|201|3767|神灵「梦想封印」|j.sc201|https://soku.cleista.cc/framedata/reimu/sc201-divine-spirit-fantasy-seal-651
+0|spell|207|3956|结界「扩散结界」|j.sc207|https://soku.cleista.cc/framedata/reimu/sc207-boundary-expanding-boundary-657
+0|spell|208|1225|珠符「明珠暗投」|j.sc208|https://soku.cleista.cc/framedata/reimu/sc208-jewel-sign-concealed-orbs-of-light-658
+1|normal|-1|200|5A|5A|https://soku.cleista.cc/framedata/marisa/5a
+1|normal|-1|450|f.5A|f.5A|https://soku.cleista.cc/framedata/marisa/f5a
+1|normal|-1|900|6A|6A|https://soku.cleista.cc/framedata/marisa/6a
+1|normal|-1|450|2A|2A|https://soku.cleista.cc/framedata/marisa/2a
+1|normal|-1|900|3A|3A|https://soku.cleista.cc/framedata/marisa/3a
+1|normal|-1|550|66A|66A|https://soku.cleista.cc/framedata/marisa/66a
+1|normal|-1|450|j.5A|j.5A|https://soku.cleista.cc/framedata/marisa/j5a
+1|normal|-1|850|j.6A|j.6A|https://soku.cleista.cc/framedata/marisa/j6a
+1|normal|-1|900|j.2A|j.2A|https://soku.cleista.cc/framedata/marisa/j2a
+1|normal|-1|858|j.8A|j.8A|https://soku.cleista.cc/framedata/marisa/j8a
+1|normal|-1|200|5AA|5AA|https://soku.cleista.cc/framedata/marisa/5aa
+1|normal|-1|550|5AAA|5AAA|https://soku.cleista.cc/framedata/marisa/5aaa
+1|normal|-1|900|5AAAA|5AAAA|https://soku.cleista.cc/framedata/marisa/5aaaa
+1|normal|-1|200|4A|4A|https://soku.cleista.cc/framedata/marisa/4a
+1|normal|-1|968|5B|5B|https://soku.cleista.cc/framedata/marisa/5b
+1|normal|-1|968|6B|6B|https://soku.cleista.cc/framedata/marisa/6b
+1|normal|-1|448|2B|2B|https://soku.cleista.cc/framedata/marisa/2b
+1|normal|-1|968|j.5B|j.5B|https://soku.cleista.cc/framedata/marisa/j5b
+1|normal|-1|968|j.2B|j.2B|https://soku.cleista.cc/framedata/marisa/j2b
+1|normal|-1|650|66B|66B|https://soku.cleista.cc/framedata/marisa/66b
+1|normal|-1|933|5C|5C|https://soku.cleista.cc/framedata/marisa/5c
+1|normal|-1|1108|6C|6C|https://soku.cleista.cc/framedata/marisa/6c
+1|normal|-1|500|2C|2C|https://soku.cleista.cc/framedata/marisa/2c
+1|normal|-1|933|j.5C|j.5C|https://soku.cleista.cc/framedata/marisa/j5c
+1|normal|-1|381|j.6C|j.6C|https://soku.cleista.cc/framedata/marisa/j6c
+1|normal|-1|933|j.2C|j.2C|https://soku.cleista.cc/framedata/marisa/j2c
+1|normal|-1|1100|66C|66C|https://soku.cleista.cc/framedata/marisa/66c
+1|skill|100|1350|Witch Ley Line|214B|https://soku.cleista.cc/framedata/marisa/214b-witch-leyline
+1|skill|104|1210|Radial Strike|214B|https://soku.cleista.cc/framedata/marisa/214b-radial-strike
+1|skill|104|1210|Radial Strike|214C|https://soku.cleista.cc/framedata/marisa/214c-radial-strike
+1|skill|108|1538|Up Sweep|214B|https://soku.cleista.cc/framedata/marisa/214b-up-sweeper
+1|skill|108|1538|Up Sweep|214C|https://soku.cleista.cc/framedata/marisa/214c-up-sweeper
+1|skill|108|1905|Up Sweep|j.214B|https://soku.cleista.cc/framedata/marisa/j214b-up-sweeper
+1|skill|108|1905|Up Sweep|j.214C|https://soku.cleista.cc/framedata/marisa/j214c-up-sweeper
+1|skill|101|1200|Miasma Sweep|623B|https://soku.cleista.cc/framedata/marisa/623b-miasma-sweep
+1|skill|101|1250|Miasma Sweep|623C|https://soku.cleista.cc/framedata/marisa/623c-miasma-sweep
+1|skill|105|1351|Bosky Sweeper|623B|https://soku.cleista.cc/framedata/marisa/623b-bosky-sweeper
+1|skill|105|1614|Bosky Sweeper|623C|https://soku.cleista.cc/framedata/marisa/623c-bosky-sweeper
+1|skill|109|985|Stellar Missile|623B|https://soku.cleista.cc/framedata/marisa/623b-stellar-missile
+1|skill|109|985|Stellar Missile|623C|https://soku.cleista.cc/framedata/marisa/623c-stellar-missile
+1|skill|102|1000|Ground Stardust|22B|https://soku.cleista.cc/framedata/marisa/22b-grand-stardust
+1|skill|102|1000|Ground Stardust|22C|https://soku.cleista.cc/framedata/marisa/22c-grand-stardust
+1|skill|102|1000|Ground Stardust|j.22B|https://soku.cleista.cc/framedata/marisa/j22b-grand-stardust
+1|skill|102|1000|Ground Stardust|j.22C|https://soku.cleista.cc/framedata/marisa/j22c-grand-stardust
+1|skill|106|1146|Devildom Torch|22B|https://soku.cleista.cc/framedata/marisa/22b-devildom-torch
+1|skill|106|660|Devildom Torch|22C|https://soku.cleista.cc/framedata/marisa/22c-devildom-torch
+1|skill|110|1650|魔法废物再利用炸弹|22B|https://soku.cleista.cc/framedata/marisa/22b-magical-reusable-bomb
+1|skill|103|1393|Meteonic Debris|236B|https://soku.cleista.cc/framedata/marisa/236b-meteonic-debris
+1|skill|103|1382|Meteonic Debris|236C|https://soku.cleista.cc/framedata/marisa/236c-meteonic-debris
+1|skill|103|1365|Meteonic Debris|j.236B|https://soku.cleista.cc/framedata/marisa/j236b-meteonic-debris
+1|skill|103|1365|Meteonic Debris|j.236C|https://soku.cleista.cc/framedata/marisa/j236c-meteonic-debris
+1|skill|107|1454|Narrow Spark|236B|https://soku.cleista.cc/framedata/marisa/236b-narrow-spark
+1|skill|107|1454|Narrow Spark|236C|https://soku.cleista.cc/framedata/marisa/236c-narrow-spark
+1|skill|107|1454|Narrow Spark|j.236B|https://soku.cleista.cc/framedata/marisa/j236b-narrow-spark
+1|skill|107|1454|Narrow Spark|j.236C|https://soku.cleista.cc/framedata/marisa/j236c-narrow-spark
+1|skill|111|1387|Green Spread|236B|https://soku.cleista.cc/framedata/marisa/236b-green-spread
+1|skill|111|165|Green Spread|236C|https://soku.cleista.cc/framedata/marisa/236c-green-spread
+1|skill|111|1117|Green Spread|j.236B|https://soku.cleista.cc/framedata/marisa/j236b-green-spread
+1|skill|111|955|Green Spread|j.236C|https://soku.cleista.cc/framedata/marisa/j236c-green-spread
+1|spell|200|3595|恋符「Master Spark」（极限火花）|sc200|https://soku.cleista.cc/framedata/marisa/sc200-love-sign-master-spark
+1|spell|202|6181|魔炮「Final Spark」（究极火花）|sc202|https://soku.cleista.cc/framedata/marisa/sc202-magicannon-final-spark
+1|spell|203|5550|星符「Dragon Meteor」（龙流星）|sc203|https://soku.cleista.cc/framedata/marisa/sc203-star-sign-dragon-meteor
+1|spell|204|4272|恋符「Non-Directional Laser」（非定向激光）|sc204|https://soku.cleista.cc/framedata/marisa/sc204-love-sign-non-directional-laser
+1|spell|205|2379|魔符「Stardust Reverie」（星尘幻想）|sc205|https://soku.cleista.cc/framedata/marisa/sc205-magic-sign-stardust-reverie
+1|spell|206|2924|星符「Escape Velocity」（逃逸速度）|sc206|https://soku.cleista.cc/framedata/marisa/sc206-star-sign-escape-velocity
+1|spell|207|5000|彗星「Blazing Star」（闪亮之星）|sc207|https://soku.cleista.cc/framedata/marisa/sc207-comet-blazing-star
+1|spell|208|1890|星符「Meteonic Shower」（流星雨）|sc208|https://soku.cleista.cc/framedata/marisa/sc208-star-sign-meteonic-shower
+1|spell|209|3008|星符「Gravity Beat」（重力一击）|sc209|https://soku.cleista.cc/framedata/marisa/sc209-star-sign-gravity-beat
+1|spell|211|2062|光符「Luminous Strike」（闪光冲击）|sc211|https://soku.cleista.cc/framedata/marisa/sc211-light-sign-luminous-strike
+1|spell|212|3260|光符「Earth Light Ray」（地球光）|sc212|https://soku.cleista.cc/framedata/marisa/sc212-light-sign-earthlight-ray
+1|spell|214|4000|魔废「Deep Ecological Bomb」（深层生态炸弹）|sc214|https://soku.cleista.cc/framedata/marisa/sc214-magical-research-deep-ecological-bomb
+1|normal|-1|1043|2B (sc215)|2B (sc215)|https://soku.cleista.cc/framedata/marisa/2b-sc215
+1|normal|-1|2144|2C (sc215)|2C (sc215)|https://soku.cleista.cc/framedata/marisa/2c-sc215
+1|spell|219|6787|邪恋「容易结果的Master Spark」（容易结果的极限火花）|sc219|https://soku.cleista.cc/framedata/marisa/sc219-perversion-sure-fire-master-spark
+1|spell|208|1788|星符「Meteonic Shower」（流星雨）|j.sc208|https://soku.cleista.cc/framedata/marisa/sc208-star-sign-meteonic-shower-658
+2|normal|-1|200|5A|5A|https://soku.cleista.cc/framedata/sakuya/5a
+2|normal|-1|450|f.5A|f.5A|https://soku.cleista.cc/framedata/sakuya/f5a
+2|normal|-1|800|6A|6A|https://soku.cleista.cc/framedata/sakuya/6a
+2|normal|-1|450|2A|2A|https://soku.cleista.cc/framedata/sakuya/2a
+2|normal|-1|755|3A|3A|https://soku.cleista.cc/framedata/sakuya/3a
+2|normal|-1|500|66A|66A|https://soku.cleista.cc/framedata/sakuya/66a
+2|normal|-1|450|j.5A|j.5A|https://soku.cleista.cc/framedata/sakuya/j5a
+2|normal|-1|850|j.6A|j.6A|https://soku.cleista.cc/framedata/sakuya/j6a
+2|normal|-1|900|j.2A|j.2A|https://soku.cleista.cc/framedata/sakuya/j2a
+2|normal|-1|850|j.8A|j.8A|https://soku.cleista.cc/framedata/sakuya/j8a
+2|normal|-1|200|5AA|5AA|https://soku.cleista.cc/framedata/sakuya/5aa
+2|normal|-1|450|5AAA|5AAA|https://soku.cleista.cc/framedata/sakuya/5aaa
+2|normal|-1|800|5AAAA|5AAAA|https://soku.cleista.cc/framedata/sakuya/5aaaa
+2|normal|-1|200|4A|4A|https://soku.cleista.cc/framedata/sakuya/4a
+2|normal|-1|1053|5B|5B|https://soku.cleista.cc/framedata/sakuya/5b
+2|normal|-1|1053|6B|6B|https://soku.cleista.cc/framedata/sakuya/6b
+2|normal|-1|1053|2B|2B|https://soku.cleista.cc/framedata/sakuya/2b
+2|normal|-1|1052|j.5B|j.5B|https://soku.cleista.cc/framedata/sakuya/j5b
+2|normal|-1|1053|j.2B|j.2B|https://soku.cleista.cc/framedata/sakuya/j2b
+2|normal|-1|839|66B|66B|https://soku.cleista.cc/framedata/sakuya/66b
+2|normal|-1|1118|5C|5C|https://soku.cleista.cc/framedata/sakuya/5c
+2|normal|-1|917|6C|6C|https://soku.cleista.cc/framedata/sakuya/6c
+2|normal|-1|917|2C|2C|https://soku.cleista.cc/framedata/sakuya/2c
+2|normal|-1|1118|j.5C|j.5C|https://soku.cleista.cc/framedata/sakuya/j5c
+2|normal|-1|917|j.6C|j.6C|https://soku.cleista.cc/framedata/sakuya/j6c
+2|normal|-1|911|j.2C|j.2C|https://soku.cleista.cc/framedata/sakuya/j2c
+2|normal|-1|950|66C|66C|https://soku.cleista.cc/framedata/sakuya/66c
+2|skill|100|1214|Close-up Magic|623B|https://soku.cleista.cc/framedata/sakuya/623b-close-up-magic
+2|skill|100|965|Close-up Magic|623C|https://soku.cleista.cc/framedata/sakuya/623c-close-up-magic
+2|skill|100|1214|Close-up Magic|j.623B|https://soku.cleista.cc/framedata/sakuya/j623b-close-up-magic
+2|skill|100|1214|Close-up Magic|j.623C|https://soku.cleista.cc/framedata/sakuya/j623c-close-up-magic
+2|skill|104|831|Propelling Silver|623B|https://soku.cleista.cc/framedata/sakuya/623b-propelling-silver
+2|skill|104|831|Propelling Silver|623C|https://soku.cleista.cc/framedata/sakuya/623c-propelling-silver
+2|skill|101|1201|Bounce No-Bounce|214B|https://soku.cleista.cc/framedata/sakuya/214b-bounce-no-bounce
+2|skill|101|578|Bounce No-Bounce|214C|https://soku.cleista.cc/framedata/sakuya/214c-bounce-no-bounce
+2|skill|105|814|Square Ricochet（空间跳弹）|214B|https://soku.cleista.cc/framedata/sakuya/214b-square-ricochet
+2|skill|105|814|Square Ricochet（空间跳弹）|214C|https://soku.cleista.cc/framedata/sakuya/214c-square-ricochet
+2|skill|109|1218|Misdirection|214B|https://soku.cleista.cc/framedata/sakuya/214b-misdirection
+2|skill|109|220|Misdirection|214C|https://soku.cleista.cc/framedata/sakuya/214c-misdirection
+2|skill|102|1516|Magic Stars Sword|236B|https://soku.cleista.cc/framedata/sakuya/236b-magic-star-sword
+2|skill|102|1516|Magic Stars Sword|236C|https://soku.cleista.cc/framedata/sakuya/236c-magic-star-sword
+2|skill|102|717|Magic Stars Sword|j.236B|https://soku.cleista.cc/framedata/sakuya/j236b-magic-star-sword
+2|skill|102|719|Magic Stars Sword|j.236C|https://soku.cleista.cc/framedata/sakuya/j236c-magic-star-sword
+2|skill|106|637|离剑之见|236B|https://soku.cleista.cc/framedata/sakuya/236b-sense-of-thrown-edge
+2|skill|106|638|离剑之见|236C|https://soku.cleista.cc/framedata/sakuya/236c-sense-of-thrown-edge
+2|skill|106|165|离剑之见|j.236B|https://soku.cleista.cc/framedata/sakuya/j236b-sense-of-thrown-edge
+2|skill|106|291|离剑之见|j.236C|https://soku.cleista.cc/framedata/sakuya/j236c-sense-of-thrown-edge
+2|skill|110|785|Parallel Brane|236B|https://soku.cleista.cc/framedata/sakuya/236b-parallel-brane
+2|skill|110|220|Parallel Brane|236C|https://soku.cleista.cc/framedata/sakuya/236c-parallel-brane
+2|skill|110|220|Parallel Brane|j.236B|https://soku.cleista.cc/framedata/sakuya/j236b-parallel-brane
+2|skill|110|423|Parallel Brane|j.236C|https://soku.cleista.cc/framedata/sakuya/j236c-parallel-brane
+2|skill|111|1318|Time Paradox|22B|https://soku.cleista.cc/framedata/sakuya/22b-time-paradox
+2|skill|111|1324|Time Paradox|22C|https://soku.cleista.cc/framedata/sakuya/22c-time-paradox
+2|spell|200|2510|幻符「杀人玩偶」|sc200|https://soku.cleista.cc/framedata/sakuya/sc200-illusion-sign-killing-doll
+2|spell|202|2664|伤符「Inscribe Red Soul」（铭刻于红魂）|sc202|https://soku.cleista.cc/framedata/sakuya/sc202-wound-sign-inscribed-red-soul
+2|spell|203|4319|幻葬「夜雾幻影杀人鬼」|sc203|https://soku.cleista.cc/framedata/sakuya/sc203-buriallusion-phantasmic-killer
+2|spell|205|4064|伤魂「Soul Sculpture」（灵魂雕塑）|sc205|https://soku.cleista.cc/framedata/sakuya/sc205-scarred-soul-soul-sculpture
+2|spell|206|3078|银符「Silver Bound」（银之跳跃）|sc206|https://soku.cleista.cc/framedata/sakuya/sc206-silver-sign-silver-bound
+2|spell|207|3171|奇术「Eternal Meek」（永恒的温柔）|sc207|https://soku.cleista.cc/framedata/sakuya/sc207-conjuring-eternal-meek
+2|spell|208|2268|速符「Luminous Ricochet」（闪光跳弹）|sc208|https://soku.cleista.cc/framedata/sakuya/sc208-speed-sign-luminous-ricochet
+2|spell|210|4074|光速「C. Ricochet」（光速跳弹）|sc210|https://soku.cleista.cc/framedata/sakuya/sc210-lightspeed-c-ricochet
+2|spell|211|2816|时符「Imaginary Vertical Time」（假想时轴）|sc211|https://soku.cleista.cc/framedata/sakuya/sc211-time-sign-imaginary-vertical-time
+2|spell|212|400|时计「Luna Dial」（月晷）|sc212|https://soku.cleista.cc/framedata/sakuya/sc212-watch-luna-dial
+2|spell|203|5181|幻葬「夜雾幻影杀人鬼」|j.sc203|https://soku.cleista.cc/framedata/sakuya/sc203-buriallusion-phantasmic-killer-653
+2|spell|206|2564|银符「Silver Bound」（银之跳跃）|j.sc206|https://soku.cleista.cc/framedata/sakuya/sc206-silver-sign-silver-bound-656
+3|normal|-1|200|5A|5A|https://soku.cleista.cc/framedata/alice/5a
+3|normal|-1|844|f.5A|f.5A|https://soku.cleista.cc/framedata/alice/f5a
+3|normal|-1|850|6A|6A|https://soku.cleista.cc/framedata/alice/6a
+3|normal|-1|450|2A|2A|https://soku.cleista.cc/framedata/alice/2a
+3|normal|-1|925|3A|3A|https://soku.cleista.cc/framedata/alice/3a
+3|normal|-1|800|66A|66A|https://soku.cleista.cc/framedata/alice/66a
+3|normal|-1|500|j.5A|j.5A|https://soku.cleista.cc/framedata/alice/j5a
+3|normal|-1|850|j.6A|j.6A|https://soku.cleista.cc/framedata/alice/j6a
+3|normal|-1|300|j.2A|j.2A|https://soku.cleista.cc/framedata/alice/j2a
+3|normal|-1|1094|j.8A|j.8A|https://soku.cleista.cc/framedata/alice/j8a
+3|normal|-1|200|5AA|5AA|https://soku.cleista.cc/framedata/alice/5aa
+3|normal|-1|500|5AAA|5AAA|https://soku.cleista.cc/framedata/alice/5aaa
+3|normal|-1|1000|5AAAA|5AAAA|https://soku.cleista.cc/framedata/alice/5aaaa
+3|normal|-1|200|4A|4A|https://soku.cleista.cc/framedata/alice/4a
+3|normal|-1|737|5B|5B|https://soku.cleista.cc/framedata/alice/5b
+3|normal|-1|737|6B|6B|https://soku.cleista.cc/framedata/alice/6b
+3|normal|-1|947|2B|2B|https://soku.cleista.cc/framedata/alice/2b
+3|normal|-1|476|j.5B|j.5B|https://soku.cleista.cc/framedata/alice/j5b
+3|normal|-1|197|j.6B|j.6B|https://soku.cleista.cc/framedata/alice/j6b
+3|normal|-1|476|j.2B|j.2B|https://soku.cleista.cc/framedata/alice/j2b
+3|normal|-1|844|66B|66B|https://soku.cleista.cc/framedata/alice/66b
+3|normal|-1|824|5C|5C|https://soku.cleista.cc/framedata/alice/5c
+3|normal|-1|946|6C|6C|https://soku.cleista.cc/framedata/alice/6c
+3|normal|-1|698|2C|2C|https://soku.cleista.cc/framedata/alice/2c
+3|normal|-1|1062|j.5C|j.5C|https://soku.cleista.cc/framedata/alice/j5c
+3|normal|-1|1062|j.6C|j.6C|https://soku.cleista.cc/framedata/alice/j6c
+3|normal|-1|1062|j.2C|j.2C|https://soku.cleista.cc/framedata/alice/j2c
+3|normal|-1|1382|66C|66C|https://soku.cleista.cc/framedata/alice/66c
+3|normal|-1|945|4C|4C|https://soku.cleista.cc/framedata/alice/4c
+3|skill|100|916|人偶操创|236B|https://soku.cleista.cc/framedata/alice/236b-doll-placement
+3|skill|100|916|人偶操创|236C|https://soku.cleista.cc/framedata/alice/236c-doll-placement
+3|skill|104|770|人偶归巢|236B|https://soku.cleista.cc/framedata/alice/236b-returning-dolls
+3|skill|104|770|人偶归巢|236C|https://soku.cleista.cc/framedata/alice/236c-returning-dolls
+3|skill|104|770|人偶归巢|j.236B|https://soku.cleista.cc/framedata/alice/j236b-returning-dolls
+3|skill|104|770|人偶归巢|j.236C|https://soku.cleista.cc/framedata/alice/j236c-returning-dolls
+3|skill|108|1238|人偶伏兵|236B|https://soku.cleista.cc/framedata/alice/236b-doll-ambush
+3|skill|108|1238|人偶伏兵|236C|https://soku.cleista.cc/framedata/alice/236c-doll-ambush
+3|skill|108|352|人偶伏兵|j.236B|https://soku.cleista.cc/framedata/alice/j236b-doll-ambush
+3|skill|108|352|人偶伏兵|j.236C|https://soku.cleista.cc/framedata/alice/j236c-doll-ambush
+3|skill|101|1169|人偶无操|623B|https://soku.cleista.cc/framedata/alice/623b-volatile-doll
+3|skill|101|854|人偶无操|623C|https://soku.cleista.cc/framedata/alice/623c-volatile-doll
+3|skill|101|1173|人偶无操|j.623B|https://soku.cleista.cc/framedata/alice/j623b-volatile-doll
+3|skill|101|500|人偶无操|j.623C|https://soku.cleista.cc/framedata/alice/j623c-volatile-doll
+3|skill|105|550|人偶火葬|623B|https://soku.cleista.cc/framedata/alice/623b-doll-cremation
+3|skill|105|948|人偶火葬|623C|https://soku.cleista.cc/framedata/alice/623c-doll-cremation
+3|skill|109|1375|大江户炸药机关人偶|623B|https://soku.cleista.cc/framedata/alice/623b-edo-high-explosive-pawn
+3|skill|109|1375|大江户炸药机关人偶|623C|https://soku.cleista.cc/framedata/alice/623c-edo-high-explosive-pawn
+3|skill|102|862|人偶置操|214B|https://soku.cleista.cc/framedata/alice/214b-doll-arrangement
+3|skill|102|1491|人偶置操|214C|https://soku.cleista.cc/framedata/alice/214c-doll-arrangement
+3|skill|102|500|人偶置操|j.214B|https://soku.cleista.cc/framedata/alice/j214b-doll-arrangement
+3|skill|102|500|人偶置操|j.214C|https://soku.cleista.cc/framedata/alice/j214c-doll-arrangement
+3|skill|106|1248|人偶千枪|214B|https://soku.cleista.cc/framedata/alice/214b-thousand-spear-dolls
+3|skill|106|1463|人偶千枪|214C|https://soku.cleista.cc/framedata/alice/214c-thousand-spear-dolls
+3|skill|106|1248|人偶千枪|j.214B|https://soku.cleista.cc/framedata/alice/j214b-thousand-spear-dolls
+3|skill|106|1668|人偶千枪|j.214C|https://soku.cleista.cc/framedata/alice/j214c-thousand-spear-dolls
+3|skill|110|573|人偶弓兵|214B|https://soku.cleista.cc/framedata/alice/214b-doll-archers
+3|skill|110|330|人偶弓兵|214C|https://soku.cleista.cc/framedata/alice/214c-doll-archers
+3|spell|200|2250|魔符「Artful Sacrifice」（狡猾的献祭）|sc200|https://soku.cleista.cc/framedata/alice/sc200-magic-sign-artful-sacrifice
+3|spell|201|525|战符「Little Legion」（小小军势）|sc201|https://soku.cleista.cc/framedata/alice/sc201-war-sign-little-legion
+3|spell|202|2489|咒符「上海人偶」|sc202|https://soku.cleista.cc/framedata/alice/sc202-curse-sign-shanghai-doll
+3|spell|203|3250|魔操「Return Inanimateness」（回归虚无）|sc203|https://soku.cleista.cc/framedata/alice/sc203-demonic-control-return-inanimate
+3|spell|204|2312|战操「Doll's War」（玩偶战争）|sc204|https://soku.cleista.cc/framedata/alice/sc204-war-command-dolls-of-war
+3|spell|205|4155|诅咒「蓬莱人偶」|sc205|https://soku.cleista.cc/framedata/alice/sc205-curse-sign-hourai-doll
+3|spell|206|3313|侦符「Seeker Dolls」（探索人偶）|sc206|https://soku.cleista.cc/framedata/alice/sc206-spy-sign-seeker-dolls
+3|spell|207|3863|红符「荷兰人偶」|sc207|https://soku.cleista.cc/framedata/alice/sc207-crimson-sign-holland-doll
+3|spell|208|1288|人偶「未来文乐」|sc208|https://soku.cleista.cc/framedata/alice/sc208-doll-futuristic-puppet
+3|spell|210|3251|枪符「萌萌大千枪」|sc210|https://soku.cleista.cc/framedata/alice/sc210-lance-sign-cute-phalanx
+3|spell|211|5713|人偶「Lemmings' Parade」（旅鼠的盛装游行）|sc211|https://soku.cleista.cc/framedata/alice/sc211-dolls-lemmings-parade
+3|spell|202|1211|咒符「上海人偶」|j.sc202|https://soku.cleista.cc/framedata/alice/sc202-curse-sign-shanghai-doll-652
+3|spell|207|4261|红符「荷兰人偶」|j.sc207|https://soku.cleista.cc/framedata/alice/sc207-crimson-sign-holland-doll-657
+3|spell|210|1222|枪符「萌萌大千枪」|j.sc210|https://soku.cleista.cc/framedata/alice/sc210-lance-sign-cute-phalanx-660
+4|normal|-1|350|5A|5A|https://soku.cleista.cc/framedata/patchouli/5a
+4|normal|-1|650|f.5A|f.5A|https://soku.cleista.cc/framedata/patchouli/f5a
+4|normal|-1|600|6A|6A|https://soku.cleista.cc/framedata/patchouli/6a
+4|normal|-1|300|2A|2A|https://soku.cleista.cc/framedata/patchouli/2a
+4|normal|-1|600|3A|3A|https://soku.cleista.cc/framedata/patchouli/3a
+4|normal|-1|500|66A|66A|https://soku.cleista.cc/framedata/patchouli/66a
+4|normal|-1|560|j.5A|j.5A|https://soku.cleista.cc/framedata/patchouli/j5a
+4|normal|-1|912|j.6A|j.6A|https://soku.cleista.cc/framedata/patchouli/j6a
+4|normal|-1|750|j.2A|j.2A|https://soku.cleista.cc/framedata/patchouli/j2a
+4|normal|-1|300|j.8A|j.8A|https://soku.cleista.cc/framedata/patchouli/j8a
+4|normal|-1|987|5AA|5AA|https://soku.cleista.cc/framedata/patchouli/5aa
+4|normal|-1|900|5AAA|5AAA|https://soku.cleista.cc/framedata/patchouli/5aaa
+4|normal|-1|350|4A|4A|https://soku.cleista.cc/framedata/patchouli/4a
+4|normal|-1|822|5B|5B|https://soku.cleista.cc/framedata/patchouli/5b
+4|normal|-1|822|6B|6B|https://soku.cleista.cc/framedata/patchouli/6b
+4|normal|-1|822|2B|2B|https://soku.cleista.cc/framedata/patchouli/2b
+4|normal|-1|822|j.5B|j.5B|https://soku.cleista.cc/framedata/patchouli/j5b
+4|normal|-1|822|j.2B|j.2B|https://soku.cleista.cc/framedata/patchouli/j2b
+4|normal|-1|1005|4B|4B|https://soku.cleista.cc/framedata/patchouli/4b
+4|normal|-1|973|66B|66B|https://soku.cleista.cc/framedata/patchouli/66b
+4|normal|-1|1005|j.4B|j.4B|https://soku.cleista.cc/framedata/patchouli/j4b
+4|normal|-1|1614|5C|5C|https://soku.cleista.cc/framedata/patchouli/5c
+4|normal|-1|1114|6C|6C|https://soku.cleista.cc/framedata/patchouli/6c
+4|normal|-1|982|2C|2C|https://soku.cleista.cc/framedata/patchouli/2c
+4|normal|-1|1614|j.5C|j.5C|https://soku.cleista.cc/framedata/patchouli/j5c
+4|normal|-1|1114|j.6C|j.6C|https://soku.cleista.cc/framedata/patchouli/j6c
+4|normal|-1|1250|j.2C|j.2C|https://soku.cleista.cc/framedata/patchouli/j2c
+4|normal|-1|850|66C|66C|https://soku.cleista.cc/framedata/patchouli/66c
+4|skill|100|1200|Summer Red|236B|https://soku.cleista.cc/framedata/patchouli/236b-summer-red
+4|skill|100|1200|Summer Red|236C|https://soku.cleista.cc/framedata/patchouli/236c-summer-red
+4|skill|100|1200|Summer Red|j.236B|https://soku.cleista.cc/framedata/patchouli/j236b-summer-red
+4|skill|100|1200|Summer Red|j.236C|https://soku.cleista.cc/framedata/patchouli/j236c-summer-red
+4|skill|105|842|Summer Flame|236B|https://soku.cleista.cc/framedata/patchouli/236b-summer-flame
+4|skill|105|842|Summer Flame|236C|https://soku.cleista.cc/framedata/patchouli/236c-summer-flame
+4|skill|105|842|Summer Flame|j.236B|https://soku.cleista.cc/framedata/patchouli/j236b-summer-flame
+4|skill|105|842|Summer Flame|j.236C|https://soku.cleista.cc/framedata/patchouli/j236c-summer-flame
+4|skill|110|948|Wipe Moisture|236B|https://soku.cleista.cc/framedata/patchouli/236b-wipe-moisture
+4|skill|110|1309|Wipe Moisture|236C|https://soku.cleista.cc/framedata/patchouli/236c-wipe-moisture
+4|skill|101|1191|Winter Element|22B|https://soku.cleista.cc/framedata/patchouli/22b-winter-element
+4|skill|101|1191|Winter Element|22C|https://soku.cleista.cc/framedata/patchouli/22c-winter-element
+4|skill|107|1320|Flash Of Spring|623B|https://soku.cleista.cc/framedata/patchouli/623b-flash-of-spring
+4|skill|107|1320|Flash Of Spring|623C|https://soku.cleista.cc/framedata/patchouli/623c-flash-of-spring
+4|skill|107|1320|Flash Of Spring|j.623B|https://soku.cleista.cc/framedata/patchouli/j623b-flash-of-spring
+4|skill|107|1320|Flash Of Spring|j.623C|https://soku.cleista.cc/framedata/patchouli/j623c-flash-of-spring
+4|skill|112|1073|Static Green|623B|https://soku.cleista.cc/framedata/patchouli/623b-static-green
+4|skill|112|573|Static Green|623C|https://soku.cleista.cc/framedata/patchouli/623c-static-green
+4|skill|103|973|Autumn Edge|214B|https://soku.cleista.cc/framedata/patchouli/214b-autumn-edge
+4|skill|103|1222|Autumn Edge|214C|https://soku.cleista.cc/framedata/patchouli/214c-autumn-edge
+4|skill|108|610|Autumn Blades|214B|https://soku.cleista.cc/framedata/patchouli/214b-autumn-blade
+4|skill|108|1094|Autumn Blades|214C|https://soku.cleista.cc/framedata/patchouli/214c-autumn-blade
+4|skill|108|610|Autumn Blades|j.214B|https://soku.cleista.cc/framedata/patchouli/j214b-autumn-blade
+4|skill|108|610|Autumn Blades|j.214C|https://soku.cleista.cc/framedata/patchouli/j214c-autumn-blade
+4|skill|113|1153|Fall Slasher|214B|https://soku.cleista.cc/framedata/patchouli/214b-fall-slasher
+4|skill|113|904|Fall Slasher|214C|https://soku.cleista.cc/framedata/patchouli/214c-fall-slasher
+4|skill|104|1073|Doyou Spear|421B|https://soku.cleista.cc/framedata/patchouli/421b-dew-spear
+4|skill|104|776|Doyou Spear|421C|https://soku.cleista.cc/framedata/patchouli/421c-dew-spear
+4|skill|109|1320|Emerald City|421B|https://soku.cleista.cc/framedata/patchouli/421b-emerald-city
+4|spell|200|2800|火金符「St. Elmo Pillar」（圣爱尔摩火柱）|sc200|https://soku.cleista.cc/framedata/patchouli/sc200-fire-metal-sign-st-elmos-pillar
+4|spell|201|2381|土水符「Noachian Deluge」（诺亚的大洪水）|sc201|https://soku.cleista.cc/framedata/patchouli/sc201-earth-water-sign-noachian-deluge
+4|spell|202|1476|金木符「Elemental Harvester」（元素收获者）|sc202|https://soku.cleista.cc/framedata/patchouli/sc202-metal-wood-sign-elemental-harvester
+4|spell|203|4983|日符「Royal Flare」（皇家烈焰）|sc203|https://soku.cleista.cc/framedata/patchouli/sc203-sun-sign-royal-flare
+4|spell|204|3602|月符「Silent Selene」（沉静的月神）|sc204|https://soku.cleista.cc/framedata/patchouli/sc204-moon-sign-silent-selene
+4|spell|207|5762|月木符「Satellite Himawari」（卫星向日葵）|sc207|https://soku.cleista.cc/framedata/patchouli/sc207-moon-wood-sign-satellite-sunflower
+4|spell|211|3389|火水符「Phlogistic Pillar」（燃素之柱）|sc211|https://soku.cleista.cc/framedata/patchouli/sc211-fire-water-sign-phlogistic-pillar
+4|spell|212|3940|土金符「Emerald Megalopolis」（祖母绿都市）|sc212|https://soku.cleista.cc/framedata/patchouli/sc212-earth-metal-sign-emerald-megalopolis
+4|spell|213|3058|日月符「Royal Diamond Ring」（皇家钻戒）|sc213|https://soku.cleista.cc/framedata/patchouli/sc213-sun-moon-sign-royal-diamond-ring
+4|spell|201|1774|土水符「Noachian Deluge」（诺亚的大洪水）|j.sc201|https://soku.cleista.cc/framedata/patchouli/sc201-earth-water-sign-noachian-deluge-651
+4|spell|211|3336|火水符「Phlogistic Pillar」（燃素之柱）|j.sc211|https://soku.cleista.cc/framedata/patchouli/sc211-fire-water-sign-phlogistic-pillar-661
+5|normal|-1|200|5A|5A|https://soku.cleista.cc/framedata/youmu/5a
+5|normal|-1|450|f.5A|f.5A|https://soku.cleista.cc/framedata/youmu/f5a
+5|normal|-1|850|6A|6A|https://soku.cleista.cc/framedata/youmu/6a
+5|normal|-1|200|2A|2A|https://soku.cleista.cc/framedata/youmu/2a
+5|normal|-1|850|3A|3A|https://soku.cleista.cc/framedata/youmu/3a
+5|normal|-1|550|66A|66A|https://soku.cleista.cc/framedata/youmu/66a
+5|normal|-1|800|66A6A|66A6A|https://soku.cleista.cc/framedata/youmu/66a6a
+5|normal|-1|500|j.5A|j.5A|https://soku.cleista.cc/framedata/youmu/j5a
+5|normal|-1|850|j.6A|j.6A|https://soku.cleista.cc/framedata/youmu/j6a
+5|normal|-1|1000|j.8A|j.8A|https://soku.cleista.cc/framedata/youmu/j8a
+5|normal|-1|400|f.2A|f.2A|https://soku.cleista.cc/framedata/youmu/f2a
+5|normal|-1|200|5AA|5AA|https://soku.cleista.cc/framedata/youmu/5aa
+5|normal|-1|500|5AAA|5AAA|https://soku.cleista.cc/framedata/youmu/5aaa
+5|normal|-1|700|5AAAA|5AAAA|https://soku.cleista.cc/framedata/youmu/5aaaa
+5|normal|-1|1000|5AAAAA|5AAAAA|https://soku.cleista.cc/framedata/youmu/5aaaaa
+5|normal|-1|200|4A|4A|https://soku.cleista.cc/framedata/youmu/4a
+5|normal|-1|572|5B|5B|https://soku.cleista.cc/framedata/youmu/5b
+5|normal|-1|745|6B|6B|https://soku.cleista.cc/framedata/youmu/6b
+5|normal|-1|572|2B|2B|https://soku.cleista.cc/framedata/youmu/2b
+5|normal|-1|745|j.5B|j.5B|https://soku.cleista.cc/framedata/youmu/j5b
+5|normal|-1|745|j.2B|j.2B|https://soku.cleista.cc/framedata/youmu/j2b
+5|normal|-1|800|66B|66B|https://soku.cleista.cc/framedata/youmu/66b
+5|normal|-1|631|5C|5C|https://soku.cleista.cc/framedata/youmu/5c
+5|normal|-1|700|6C|6C|https://soku.cleista.cc/framedata/youmu/6c
+5|normal|-1|631|2C|2C|https://soku.cleista.cc/framedata/youmu/2c
+5|normal|-1|388|j.5C|j.5C|https://soku.cleista.cc/framedata/youmu/j5c
+5|normal|-1|700|j.6C|j.6C|https://soku.cleista.cc/framedata/youmu/j6c
+5|normal|-1|199|j.2C|j.2C|https://soku.cleista.cc/framedata/youmu/j2c
+5|normal|-1|900|66C|66C|https://soku.cleista.cc/framedata/youmu/66c
+5|skill|104|880|结跏跗斩|236B|https://soku.cleista.cc/framedata/youmu/236b-lotus-stance-cut
+5|skill|104|880|结跏跗斩|236C|https://soku.cleista.cc/framedata/youmu/236c-lotus-stance-cut
+5|skill|108|692|燐气斩|236B|https://soku.cleista.cc/framedata/youmu/236b-phosphoric-slash
+5|skill|108|1214|燐气斩|236C|https://soku.cleista.cc/framedata/youmu/236c-phosphoric-slash
+5|skill|101|1000|弦月斩|623B|https://soku.cleista.cc/framedata/youmu/623b-crescent-moon-slash
+5|skill|101|1376|弦月斩|623C|https://soku.cleista.cc/framedata/youmu/623c-crescent-moon-slash
+5|skill|-1|1650|623B[hold]|623B[hold]|https://soku.cleista.cc/framedata/youmu/623b-hold
+5|skill|109|1760|炯眼剑|623B|https://soku.cleista.cc/framedata/youmu/623b-insightful-sword
+5|skill|109|1760|炯眼剑|623C|https://soku.cleista.cc/framedata/youmu/623c-insightful-sword
+5|skill|102|400|生死流转斩|214B|https://soku.cleista.cc/framedata/youmu/214b-slash-of-life-and-death
+5|skill|-1|600|214B214B|214B214B|https://soku.cleista.cc/framedata/youmu/214b214b
+5|skill|-1|1000|214B214B214B|214B214B214B|https://soku.cleista.cc/framedata/youmu/214b214b214b
+5|skill|-1|1899|214B214C|214B214C|https://soku.cleista.cc/framedata/youmu/214b214c
+5|skill|102|400|生死流转斩|214C|https://soku.cleista.cc/framedata/youmu/214c-slash-of-life-and-death
+5|skill|106|1430|心抄斩|214B|https://soku.cleista.cc/framedata/youmu/214b-heart-carving-cut
+5|skill|106|1430|心抄斩|214C|https://soku.cleista.cc/framedata/youmu/214c-heart-carving-cut
+5|skill|110|1375|头上花剪斩|214B|https://soku.cleista.cc/framedata/youmu/214b-slashing-a-flower-upon-ones-head
+5|skill|110|1375|头上花剪斩|214C|https://soku.cleista.cc/framedata/youmu/214c-slashing-a-flower-upon-ones-head
+5|skill|103|1000|凭依之缚|22B|https://soku.cleista.cc/framedata/youmu/22b-mediums-bind
+5|skill|103|1000|凭依之缚|22C|https://soku.cleista.cc/framedata/youmu/22c-mediums-bind
+5|skill|107|1287|恶魂|22B|https://soku.cleista.cc/framedata/youmu/22b-wicked-soul
+5|skill|107|1287|恶魂|22C|https://soku.cleista.cc/framedata/youmu/22c-wicked-soul
+5|skill|111|789|奇妙半身|22B|https://soku.cleista.cc/framedata/youmu/22b-strange-half-body
+5|skill|111|789|奇妙半身|22C|https://soku.cleista.cc/framedata/youmu/22c-strange-half-body
+5|skill|111|789|奇妙半身|j.22B|https://soku.cleista.cc/framedata/youmu/j22b-strange-half-body
+5|skill|111|570|奇妙半身|j.22C|https://soku.cleista.cc/framedata/youmu/j22c-strange-half-body
+5|spell|200|2000|人符「现世斩」|sc200|https://soku.cleista.cc/framedata/youmu/sc200-human-sign-slash-of-present
+5|spell|201|3455|断命剑「冥想斩」|sc201|https://soku.cleista.cc/framedata/youmu/sc201-life-ending-sword-meditation
+5|spell|203|4903|人鬼「未来永劫斩」|sc203|https://soku.cleista.cc/framedata/youmu/sc203-obsessor-slash-of-eternity
+5|spell|204|4666|断迷剑「迷津慈航斩」|sc204|https://soku.cleista.cc/framedata/youmu/sc204-enlightened-sword-rise-from-delusion
+5|spell|206|5033|剑伎「樱花闪闪」|sc206|https://soku.cleista.cc/framedata/youmu/sc206-sword-skill-thousand-cherry-blossoms
+5|spell|207|3914|断灵剑「成佛得脱斩」|sc207|https://soku.cleista.cc/framedata/youmu/sc207-soul-cutting-ascension-to-nirvana
+5|spell|208|6318|空观剑「六根清净斩」|sc208|https://soku.cleista.cc/framedata/youmu/sc208-empty-perception-6-root-cleansing
+5|spell|212|2944|转生剑「圆心流转斩」|sc212|https://soku.cleista.cc/framedata/youmu/sc212-reincarnation-sword-sword-of-cycles
+6|normal|-1|200|5A|5A|https://soku.cleista.cc/framedata/remilia/5a
+6|normal|-1|425|f.5A|f.5A|https://soku.cleista.cc/framedata/remilia/f5a
+6|normal|-1|850|6A|6A|https://soku.cleista.cc/framedata/remilia/6a
+6|normal|-1|700|2A|2A|https://soku.cleista.cc/framedata/remilia/2a
+6|normal|-1|900|3A|3A|https://soku.cleista.cc/framedata/remilia/3a
+6|normal|-1|450|j.5A|j.5A|https://soku.cleista.cc/framedata/remilia/j5a
+6|normal|-1|750|j.6A|j.6A|https://soku.cleista.cc/framedata/remilia/j6a
+6|normal|-1|800|j.2A|j.2A|https://soku.cleista.cc/framedata/remilia/j2a
+6|normal|-1|850|j.8A|j.8A|https://soku.cleista.cc/framedata/remilia/j8a
+6|normal|-1|200|5AA|5AA|https://soku.cleista.cc/framedata/remilia/5aa
+6|normal|-1|1204|5AAA|5AAA|https://soku.cleista.cc/framedata/remilia/5aaa
+6|normal|-1|850|5AAAA|5AAAA|https://soku.cleista.cc/framedata/remilia/5aaaa
+6|normal|-1|450|j.5AA|j.5AA|https://soku.cleista.cc/framedata/remilia/j5aa
+6|normal|-1|200|4A|4A|https://soku.cleista.cc/framedata/remilia/4a
+6|normal|-1|502|5B|5B|https://soku.cleista.cc/framedata/remilia/5b
+6|normal|-1|502|6B|6B|https://soku.cleista.cc/framedata/remilia/6b
+6|normal|-1|626|2B|2B|https://soku.cleista.cc/framedata/remilia/2b
+6|normal|-1|502|j.5B|j.5B|https://soku.cleista.cc/framedata/remilia/j5b
+6|normal|-1|502|j.2B|j.2B|https://soku.cleista.cc/framedata/remilia/j2b
+6|normal|-1|850|5C|5C|https://soku.cleista.cc/framedata/remilia/5c
+6|normal|-1|850|2C|2C|https://soku.cleista.cc/framedata/remilia/2c
+6|normal|-1|850|j.5C|j.5C|https://soku.cleista.cc/framedata/remilia/j5c
+6|normal|-1|850|j.2C|j.2C|https://soku.cleista.cc/framedata/remilia/j2c
+6|skill|100|1100|Demon Lord Walk|236B|https://soku.cleista.cc/framedata/remilia/236b-demon-lord-walk
+6|skill|100|1299|Demon Lord Walk|236C|https://soku.cleista.cc/framedata/remilia/236c-demon-lord-walk
+6|skill|104|440|Vampire Claw|236B|https://soku.cleista.cc/framedata/remilia/236b-vampire-claw
+6|skill|-1|550|236B236B|236B236B|https://soku.cleista.cc/framedata/remilia/236b236b
+6|skill|-1|880|236B236B236B|236B236B236B|https://soku.cleista.cc/framedata/remilia/236b236b236b
+6|skill|-1|715|236B236B236C|236B236B236C|https://soku.cleista.cc/framedata/remilia/236b236b236c
+6|skill|104|440|Vampire Claw|236C|https://soku.cleista.cc/framedata/remilia/236c-vampire-claw
+6|skill|108|1644|Trickster Devil|236B|https://soku.cleista.cc/framedata/remilia/236b-trickster-devil
+6|skill|108|1644|Trickster Devil|236C|https://soku.cleista.cc/framedata/remilia/236c-trickster-devil
+6|skill|101|896|Servant Flyer（飞行仆从）|214B|https://soku.cleista.cc/framedata/remilia/214b-servant-flier
+6|skill|101|352|Servant Flyer（飞行仆从）|214C|https://soku.cleista.cc/framedata/remilia/214c-servant-flier
+6|skill|105|844|Chain Gang|214B|https://soku.cleista.cc/framedata/remilia/214b-chain-gang
+6|skill|105|220|Chain Gang|214C|https://soku.cleista.cc/framedata/remilia/214c-chain-gang
+6|skill|105|648|Chain Gang|j.214B|https://soku.cleista.cc/framedata/remilia/j214b-chain-gang
+6|skill|105|220|Chain Gang|j.214C|https://soku.cleista.cc/framedata/remilia/j214c-chain-gang
+6|skill|109|954|Demon's Dinner Fork|214B|https://soku.cleista.cc/framedata/remilia/214b-demons-dinner-fork
+6|skill|109|954|Demon's Dinner Fork|214C|https://soku.cleista.cc/framedata/remilia/214c-demons-dinner-fork
+6|skill|102|1231|Demon Lord Cradle|623B|https://soku.cleista.cc/framedata/remilia/623b-demon-lord-cradle
+6|skill|102|1534|Demon Lord Cradle|623C|https://soku.cleista.cc/framedata/remilia/623c-demon-lord-cradle
+6|skill|106|1190|Rocket Kick-up|623B|https://soku.cleista.cc/framedata/remilia/623b-rocket-kick-upper
+6|skill|106|857|Rocket Kick-up|623C|https://soku.cleista.cc/framedata/remilia/623c-rocket-kick-upper
+6|skill|110|1117|Vampire Kiss|623B|https://soku.cleista.cc/framedata/remilia/623b-vampire-kiss
+6|skill|110|1317|Vampire Kiss|623C|https://soku.cleista.cc/framedata/remilia/623c-vampire-kiss
+6|skill|103|1400|Demon Lord Arrow|22B|https://soku.cleista.cc/framedata/remilia/22b-demon-lord-arrow
+6|skill|103|1400|Demon Lord Arrow|22C|https://soku.cleista.cc/framedata/remilia/22c-demon-lord-arrow
+6|skill|107|1855|Ceiling Fear|22B|https://soku.cleista.cc/framedata/remilia/22b-ceiling-fear
+6|skill|107|1855|Ceiling Fear|22C|https://soku.cleista.cc/framedata/remilia/22c-ceiling-fear
+6|skill|111|677|Stigmanizer|22B|https://soku.cleista.cc/framedata/remilia/22b-stigmanizer
+6|skill|111|677|Stigmanizer|22C|https://soku.cleista.cc/framedata/remilia/22c-stigmanizer
+6|spell|200|2720|红符「红色不夜城」|sc200|https://soku.cleista.cc/framedata/remilia/sc200-scarlet-sign-red-the-nightless-castle
+6|spell|201|2500|必杀「Heart Break」（碎心）|sc201|https://soku.cleista.cc/framedata/remilia/sc201-critical-heart-break
+6|spell|202|1752|夜符「Demon King Cradle」（恶魔之王的摇篮）|sc202|https://soku.cleista.cc/framedata/remilia/sc202-midnight-sign-demon-king-cradle
+6|spell|203|4506|红魔「Scarlet Devil」（绯红恶魔）|sc203|https://soku.cleista.cc/framedata/remilia/sc203-scarlet-devil-scarlet-devil
+6|spell|204|3949|神枪「Spear the Gungnir」（冈格尼尔之枪）|sc204|https://soku.cleista.cc/framedata/remilia/sc204-divine-spear-spear-the-gungnir
+6|spell|205|4651|夜王「Dracula Cradle」（德古拉的摇篮）|sc205|https://soku.cleista.cc/framedata/remilia/sc205-midnight-king-dracula-cradle
+6|spell|206|3500|夜符「Bad Lady Scramble」（恶女置乱）|sc206|https://soku.cleista.cc/framedata/remilia/sc206-midnight-sign-bad-lady-scramble
+6|spell|207|3026|命运「Miserable Fate」（悲惨的命运）|sc207|https://soku.cleista.cc/framedata/remilia/sc207-destiny-miserable-fate
+6|spell|209|4250|恶魔「Remilia Stretch」（蕾米莉亚伸展）|sc209|https://soku.cleista.cc/framedata/remilia/sc209-demon-remilia-stretch
+7|normal|-1|650|5A|5A|https://soku.cleista.cc/framedata/yuyuko/5a
+7|normal|-1|750|f.5A|f.5A|https://soku.cleista.cc/framedata/yuyuko/f5a
+7|normal|-1|950|6A|6A|https://soku.cleista.cc/framedata/yuyuko/6a
+7|normal|-1|450|2A|2A|https://soku.cleista.cc/framedata/yuyuko/2a
+7|normal|-1|1100|3A|3A|https://soku.cleista.cc/framedata/yuyuko/3a
+7|normal|-1|450|66A|66A|https://soku.cleista.cc/framedata/yuyuko/66a
+7|normal|-1|650|j.5A|j.5A|https://soku.cleista.cc/framedata/yuyuko/j5a
+7|normal|-1|1100|j.6A|j.6A|https://soku.cleista.cc/framedata/yuyuko/j6a
+7|normal|-1|1297|j.2A|j.2A|https://soku.cleista.cc/framedata/yuyuko/j2a
+7|normal|-1|1100|j.8A|j.8A|https://soku.cleista.cc/framedata/yuyuko/j8a
+7|normal|-1|350|5AA|5AA|https://soku.cleista.cc/framedata/yuyuko/5aa
+7|normal|-1|1100|5AAA|5AAA|https://soku.cleista.cc/framedata/yuyuko/5aaa
+7|normal|-1|650|4A|4A|https://soku.cleista.cc/framedata/yuyuko/4a
+7|normal|-1|1199|5B|5B|https://soku.cleista.cc/framedata/yuyuko/5b
+7|normal|-1|550|2B|2B|https://soku.cleista.cc/framedata/yuyuko/2b
+7|normal|-1|466|j.5B|j.5B|https://soku.cleista.cc/framedata/yuyuko/j5b
+7|normal|-1|550|j.2B|j.2B|https://soku.cleista.cc/framedata/yuyuko/j2b
+7|normal|-1|950|66B|66B|https://soku.cleista.cc/framedata/yuyuko/66b
+7|normal|-1|1357|5C|5C|https://soku.cleista.cc/framedata/yuyuko/5c
+7|normal|-1|717|6C|6C|https://soku.cleista.cc/framedata/yuyuko/6c
+7|normal|-1|1165|2C|2C|https://soku.cleista.cc/framedata/yuyuko/2c
+7|normal|-1|889|j.5C|j.5C|https://soku.cleista.cc/framedata/yuyuko/j5c
+7|normal|-1|813|j.6C|j.6C|https://soku.cleista.cc/framedata/yuyuko/j6c
+7|normal|-1|1239|j.2C|j.2C|https://soku.cleista.cc/framedata/yuyuko/j2c
+7|normal|-1|1100|66C|66C|https://soku.cleista.cc/framedata/yuyuko/66c
+7|skill|100|1016|幽蝴蝶|214B|https://soku.cleista.cc/framedata/yuyuko/214b-ghostly-butterfly
+7|skill|100|1016|幽蝴蝶|214C|https://soku.cleista.cc/framedata/yuyuko/214c-ghostly-butterfly
+7|skill|100|1005|幽蝴蝶|j.214B|https://soku.cleista.cc/framedata/yuyuko/j214b-ghostly-butterfly
+7|skill|100|1005|幽蝴蝶|j.214C|https://soku.cleista.cc/framedata/yuyuko/j214c-ghostly-butterfly
+7|skill|104|1766|好死之灵|214B|https://soku.cleista.cc/framedata/yuyuko/214b-spirits-that-died-well
+7|skill|104|1768|好死之灵|214C|https://soku.cleista.cc/framedata/yuyuko/214c-spirits-that-died-well
+7|skill|104|1768|好死之灵|j.214B|https://soku.cleista.cc/framedata/yuyuko/j214b-spirits-that-died-well
+7|skill|104|1756|好死之灵|j.214C|https://soku.cleista.cc/framedata/yuyuko/j214c-spirits-that-died-well
+7|skill|108|2110|Sphere Bloom|214B|https://soku.cleista.cc/framedata/yuyuko/214b-sphere-bloom
+7|skill|108|1061|Sphere Bloom|214C|https://soku.cleista.cc/framedata/yuyuko/214c-sphere-bloom
+7|skill|108|1061|Sphere Bloom|j.214B|https://soku.cleista.cc/framedata/yuyuko/j214b-sphere-bloom
+7|skill|108|1061|Sphere Bloom|j.214C|https://soku.cleista.cc/framedata/yuyuko/j214c-sphere-bloom
+7|skill|101|1773|未生之光|236B|https://soku.cleista.cc/framedata/yuyuko/236b-light-of-the-undead
+7|skill|101|1773|未生之光|236C|https://soku.cleista.cc/framedata/yuyuko/236c-light-of-the-undead
+7|skill|101|1773|未生之光|j.236B|https://soku.cleista.cc/framedata/yuyuko/j236b-light-of-the-undead
+7|skill|101|442|未生之光|j.236C|https://soku.cleista.cc/framedata/yuyuko/j236c-light-of-the-undead
+7|skill|105|1031|凤蝶纹之枪|236B|https://soku.cleista.cc/framedata/yuyuko/236b-lance-of-the-swallowtail-crest
+7|skill|109|664|死还的大地|236B|https://soku.cleista.cc/framedata/yuyuko/236b-land-of-death
+7|skill|109|837|死还的大地|236C|https://soku.cleista.cc/framedata/yuyuko/236c-land-of-death
+7|skill|102|854|悉皆彷徨|421B|https://soku.cleista.cc/framedata/yuyuko/421b-eternal-wandering
+7|skill|102|673|悉皆彷徨|421C|https://soku.cleista.cc/framedata/yuyuko/421c-eternal-wandering
+7|skill|102|938|悉皆彷徨|j.421B|https://soku.cleista.cc/framedata/yuyuko/j421b-eternal-wandering
+7|skill|102|291|悉皆彷徨|j.421C|https://soku.cleista.cc/framedata/yuyuko/j421c-eternal-wandering
+7|skill|106|1408|诱灵的甘蜜|421B|https://soku.cleista.cc/framedata/yuyuko/421b-spirit-luring-nectar
+7|skill|106|1408|诱灵的甘蜜|421C|https://soku.cleista.cc/framedata/yuyuko/421c-spirit-luring-nectar
+7|skill|110|1197|故人的遗物|421B|https://soku.cleista.cc/framedata/yuyuko/421b-gifts-to-the-deceased
+7|skill|110|1197|故人的遗物|421C|https://soku.cleista.cc/framedata/yuyuko/421c-gifts-to-the-deceased
+7|skill|103|1000|蝴蝶梦之舞|623B|https://soku.cleista.cc/framedata/yuyuko/623b-dance-of-the-butterfly-dream
+7|skill|103|1100|蝴蝶梦之舞|623C|https://soku.cleista.cc/framedata/yuyuko/623c-dance-of-the-butterfly-dream
+7|skill|107|1540|逆转屏风|623B|https://soku.cleista.cc/framedata/yuyuko/623b-reverse-screens
+7|skill|107|1540|逆转屏风|623C|https://soku.cleista.cc/framedata/yuyuko/623c-reverse-screens
+7|skill|111|1100|Sense of Elegance|623B|https://soku.cleista.cc/framedata/yuyuko/623b-sense-of-elegance
+7|skill|111|1210|Sense of Elegance|623C|https://soku.cleista.cc/framedata/yuyuko/623c-sense-of-elegance
+7|spell|200|2907|死符「Ghastly Dream」（惊梦）|sc200|https://soku.cleista.cc/framedata/yuyuko/sc200-death-sign-ghastly-dream
+7|spell|201|1407|冥符「黄泉平坂行路」|sc201|https://soku.cleista.cc/framedata/yuyuko/sc201-nether-sign-passage-to-the-underworld
+7|spell|202|1700|灵符「无寿之梦」|sc202|https://soku.cleista.cc/framedata/yuyuko/sc202-ghost-sign-ageless-dream
+7|spell|203|3393|死蝶「华胥的永眠」|sc203|https://soku.cleista.cc/framedata/yuyuko/sc203-deadly-butterfly-endless-nap
+7|spell|204|4516|再迷「幻想乡的黄泉归」|sc204|https://soku.cleista.cc/framedata/yuyuko/sc204-lost-again-gensokyos-hell
+7|spell|205|4440|寿命「通向无寿国的期票」|sc205|https://soku.cleista.cc/framedata/yuyuko/sc205-life-limit-ticket-to-the-netherworld
+7|spell|206|1877|灵蝶「蝶之羽风暂留此世」|sc206|https://soku.cleista.cc/framedata/yuyuko/sc206-psyche-as-the-butterfly-flies
+7|spell|207|3746|蝶符「凤蝶纹的死枪」|sc207|https://soku.cleista.cc/framedata/yuyuko/sc207-butterfly-sign-death-lance
+7|spell|208|3141|幽雅「通向黄泉的诱蛾灯」|sc208|https://soku.cleista.cc/framedata/yuyuko/sc208-elegance-invitation-to-the-afterlife
+7|spell|209|5745|樱符「Sense of Cherry Blossom」（樱之意志）|sc209|https://soku.cleista.cc/framedata/yuyuko/sc209-cherry-sign-sense-of-cherry-blossom
+7|spell|219|2517|「反魂蝶」|sc219|https://soku.cleista.cc/framedata/yuyuko/sc219-resurrection-butterflies
+7|spell|201|1172|冥符「黄泉平坂行路」|j.sc201|https://soku.cleista.cc/framedata/yuyuko/sc201-nether-sign-passage-to-the-underworld-651
+7|spell|206|1748|灵蝶「蝶之羽风暂留此世」|j.sc206|https://soku.cleista.cc/framedata/yuyuko/sc206-psyche-as-the-butterfly-flies-656
+7|spell|207|3591|蝶符「凤蝶纹的死枪」|j.sc207|https://soku.cleista.cc/framedata/yuyuko/sc207-butterfly-sign-death-lance-657
+8|normal|-1|200|5A|5A|https://soku.cleista.cc/framedata/yukari/5a
+8|normal|-1|550|f.5A|f.5A|https://soku.cleista.cc/framedata/yukari/f5a
+8|normal|-1|800|6A|6A|https://soku.cleista.cc/framedata/yukari/6a
+8|normal|-1|200|2A|2A|https://soku.cleista.cc/framedata/yukari/2a
+8|normal|-1|850|3A|3A|https://soku.cleista.cc/framedata/yukari/3a
+8|normal|-1|600|66A|66A|https://soku.cleista.cc/framedata/yukari/66a
+8|normal|-1|450|j.5A|j.5A|https://soku.cleista.cc/framedata/yukari/j5a
+8|normal|-1|800|j.6A|j.6A|https://soku.cleista.cc/framedata/yukari/j6a
+8|normal|-1|700|j.2A|j.2A|https://soku.cleista.cc/framedata/yukari/j2a
+8|normal|-1|850|j.8A|j.8A|https://soku.cleista.cc/framedata/yukari/j8a
+8|normal|-1|200|5AA|5AA|https://soku.cleista.cc/framedata/yukari/5aa
+8|normal|-1|450|5AAA|5AAA|https://soku.cleista.cc/framedata/yukari/5aaa
+8|normal|-1|800|5AAAA|5AAAA|https://soku.cleista.cc/framedata/yukari/5aaaa
+8|normal|-1|200|4A|4A|https://soku.cleista.cc/framedata/yukari/4a
+8|normal|-1|1122|5B|5B|https://soku.cleista.cc/framedata/yukari/5b
+8|normal|-1|1121|2B|2B|https://soku.cleista.cc/framedata/yukari/2b
+8|normal|-1|1122|j.5B|j.5B|https://soku.cleista.cc/framedata/yukari/j5b
+8|normal|-1|1121|j.2B|j.2B|https://soku.cleista.cc/framedata/yukari/j2b
+8|normal|-1|550|66B|66B|https://soku.cleista.cc/framedata/yukari/66b
+8|normal|-1|1257|5C|5C|https://soku.cleista.cc/framedata/yukari/5c
+8|normal|-1|576|6C|6C|https://soku.cleista.cc/framedata/yukari/6c
+8|normal|-1|822|2C|2C|https://soku.cleista.cc/framedata/yukari/2c
+8|normal|-1|1051|j.5C|j.5C|https://soku.cleista.cc/framedata/yukari/j5c
+8|normal|-1|573|j.6C|j.6C|https://soku.cleista.cc/framedata/yukari/j6c
+8|normal|-1|1257|j.2C|j.2C|https://soku.cleista.cc/framedata/yukari/j2c
+8|normal|-1|950|66C|66C|https://soku.cleista.cc/framedata/yukari/66c
+8|skill|100|1200|后悔打开的玉匣|236B|https://soku.cleista.cc/framedata/yukari/236b-open-lamented-box-of-urashima
+8|skill|100|1200|后悔打开的玉匣|236C|https://soku.cleista.cc/framedata/yukari/236c-open-lamented-box-of-urashima
+8|skill|100|1200|后悔打开的玉匣|j.236B|https://soku.cleista.cc/framedata/yukari/j236b-open-lamented-box-of-urashima
+8|skill|100|1200|后悔打开的玉匣|j.236C|https://soku.cleista.cc/framedata/yukari/j236c-open-lamented-box-of-urashima
+8|skill|104|2030|人间到处有青山|236B|https://soku.cleista.cc/framedata/yukari/236b-bound-to-the-grave
+8|skill|104|440|人间到处有青山|236C|https://soku.cleista.cc/framedata/yukari/236c-bound-to-the-grave
+8|skill|108|1309|魅惑的诱饵|236B|https://soku.cleista.cc/framedata/yukari/236b-bewitching-bait
+8|skill|108|550|魅惑的诱饵|236C|https://soku.cleista.cc/framedata/yukari/236c-bewitching-bait
+8|skill|108|1309|魅惑的诱饵|j.236B|https://soku.cleista.cc/framedata/yukari/j236b-bewitching-bait
+8|skill|108|948|魅惑的诱饵|j.236C|https://soku.cleista.cc/framedata/yukari/j236c-bewitching-bait
+8|skill|101|1344|潜藏于禅寺的妖蝶|623B|https://soku.cleista.cc/framedata/yukari/623b-ghostly-butterfly-hidden-in-zen-temple
+8|skill|101|1084|潜藏于禅寺的妖蝶|623C|https://soku.cleista.cc/framedata/yukari/623c-ghostly-butterfly-hidden-in-zen-temple
+8|skill|105|1050|幻想卍伞|623B|https://soku.cleista.cc/framedata/yukari/623b-illusion-manji-parasol
+8|skill|105|1050|幻想卍伞|623C|https://soku.cleista.cc/framedata/yukari/623c-illusion-manji-parasol
+8|skill|105|1050|幻想卍伞|j.623B|https://soku.cleista.cc/framedata/yukari/j623b-illusion-manji-parasol
+8|skill|105|1050|幻想卍伞|j.623C|https://soku.cleista.cc/framedata/yukari/j623c-illusion-manji-parasol
+8|skill|109|1375|知能与脚的界线|623B|https://soku.cleista.cc/framedata/yukari/623b-border-between-brains-and-feet
+8|skill|109|1650|知能与脚的界线|623C|https://soku.cleista.cc/framedata/yukari/623c-border-between-brains-and-feet
+8|skill|103|1300|幻想狂想穴|421B|https://soku.cleista.cc/framedata/yukari/421b-illusional-rift
+8|skill|103|1300|幻想狂想穴|421C|https://soku.cleista.cc/framedata/yukari/421c-illusional-rift
+8|skill|103|1300|幻想狂想穴|j.421B|https://soku.cleista.cc/framedata/yukari/j421b-illusional-rift
+8|skill|103|1300|幻想狂想穴|j.421C|https://soku.cleista.cc/framedata/yukari/j421c-illusional-rift
+8|skill|107|1614|肉体分解机|421B|https://soku.cleista.cc/framedata/yukari/421b-flesh-dismantler
+8|skill|107|1535|肉体分解机|421C|https://soku.cleista.cc/framedata/yukari/421c-flesh-dismantler
+8|spell|200|2794|境符「四重结界」|sc200|https://soku.cleista.cc/framedata/yukari/sc200-border-sign-quadruple-barrier
+8|spell|201|2063|式神「八云蓝」|sc201|https://soku.cleista.cc/framedata/yukari/sc201-shikigami-ran-yakumo
+8|spell|202|2609|境符「二次元与三次元的界线」|sc202|https://soku.cleista.cc/framedata/yukari/sc202-boundary-border-between-2d-and-3d
+8|spell|203|4126|结界「充满魅力的四重结界」|sc203|https://soku.cleista.cc/framedata/yukari/sc203-boundary-charming-quadruple-barrier
+8|spell|204|1580|式神「橙」|sc204|https://soku.cleista.cc/framedata/yukari/sc204-shikigami-chen
+8|spell|205|3902|结界「客观结界」|sc205|https://soku.cleista.cc/framedata/yukari/sc205-boundary-objective-border
+8|spell|206|3949|幻巢「飞光虫之巢」|sc206|https://soku.cleista.cc/framedata/yukari/sc206-fantasy-nest-nest-of-fireflies
+8|spell|207|2555|空饵「具有中毒性的诱饵」|sc207|https://soku.cleista.cc/framedata/yukari/sc207-aerial-bait-laced-with-venom
+8|spell|215|5107|废线「废弃车站下车之旅」|sc215|https://soku.cleista.cc/framedata/yukari/sc215-obsolete-line-trip-to-the-old-station
+8|spell|206|2767|幻巢「飞光虫之巢」|j.sc206|https://soku.cleista.cc/framedata/yukari/sc206-fantasy-nest-nest-of-fireflies-656
+8|spell|207|2958|空饵「具有中毒性的诱饵」|j.sc207|https://soku.cleista.cc/framedata/yukari/sc207-aerial-bait-laced-with-venom-657
+9|normal|-1|500|5A|5A|https://soku.cleista.cc/framedata/suika/5a
+9|normal|-1|1000|f.5A|f.5A|https://soku.cleista.cc/framedata/suika/f5a
+9|normal|-1|1000|6A|6A|https://soku.cleista.cc/framedata/suika/6a
+9|normal|-1|550|2A|2A|https://soku.cleista.cc/framedata/suika/2a
+9|normal|-1|900|3A|3A|https://soku.cleista.cc/framedata/suika/3a
+9|normal|-1|1071|66A|66A|https://soku.cleista.cc/framedata/suika/66a
+9|normal|-1|600|j.5A|j.5A|https://soku.cleista.cc/framedata/suika/j5a
+9|normal|-1|1200|j.6A|j.6A|https://soku.cleista.cc/framedata/suika/j6a
+9|normal|-1|400|j.2A|j.2A|https://soku.cleista.cc/framedata/suika/j2a
+9|normal|-1|817|j.8A|j.8A|https://soku.cleista.cc/framedata/suika/j8a
+9|normal|-1|600|5AA|5AA|https://soku.cleista.cc/framedata/suika/5aa
+9|normal|-1|850|5AAA|5AAA|https://soku.cleista.cc/framedata/suika/5aaa
+9|normal|-1|1200|5AAAA|5AAAA|https://soku.cleista.cc/framedata/suika/5aaaa
+9|normal|-1|500|4A|4A|https://soku.cleista.cc/framedata/suika/4a
+9|normal|-1|400|5B|5B|https://soku.cleista.cc/framedata/suika/5b
+9|normal|-1|832|6B|6B|https://soku.cleista.cc/framedata/suika/6b
+9|normal|-1|1000|2B|2B|https://soku.cleista.cc/framedata/suika/2b
+9|normal|-1|400|j.5B|j.5B|https://soku.cleista.cc/framedata/suika/j5b
+9|normal|-1|832|j.6B|j.6B|https://soku.cleista.cc/framedata/suika/j6b
+9|normal|-1|832|j.2B|j.2B|https://soku.cleista.cc/framedata/suika/j2b
+9|normal|-1|1191|66B|66B|https://soku.cleista.cc/framedata/suika/66b
+9|normal|-1|2280|5C|5C|https://soku.cleista.cc/framedata/suika/5c
+9|normal|-1|578|6C|6C|https://soku.cleista.cc/framedata/suika/6c
+9|normal|-1|578|2C|2C|https://soku.cleista.cc/framedata/suika/2c
+9|normal|-1|1107|j.5C|j.5C|https://soku.cleista.cc/framedata/suika/j5c
+9|normal|-1|439|j.6C|j.6C|https://soku.cleista.cc/framedata/suika/j6c
+9|normal|-1|900|66C|66C|https://soku.cleista.cc/framedata/suika/66c
+9|skill|100|1549|妖鬼-密-|236B|https://soku.cleista.cc/framedata/suika/236b-spectre-dense
+9|skill|100|1499|妖鬼-密-|236C|https://soku.cleista.cc/framedata/suika/236c-spectre-dense
+9|skill|104|880|元鬼玉|236B|https://soku.cleista.cc/framedata/suika/236b-oni-spirit-bomb
+9|skill|104|880|元鬼玉|236C|https://soku.cleista.cc/framedata/suika/236c-oni-spirit-bomb
+9|skill|104|880|元鬼玉|j.236B|https://soku.cleista.cc/framedata/suika/j236b-oni-spirit-bomb
+9|skill|104|880|元鬼玉|j.236C|https://soku.cleista.cc/framedata/suika/j236c-oni-spirit-bomb
+9|skill|108|1485|踏鞴|236B|https://soku.cleista.cc/framedata/suika/236b-foot-bellows
+9|skill|108|1485|踏鞴|236C|https://soku.cleista.cc/framedata/suika/236c-foot-bellows
+9|skill|108|1485|踏鞴|j.236B|https://soku.cleista.cc/framedata/suika/j236b-foot-bellows
+9|skill|108|1485|踏鞴|j.236C|https://soku.cleista.cc/framedata/suika/j236c-foot-bellows
+9|skill|101|1483|地灵-密-|623B|https://soku.cleista.cc/framedata/suika/623b-gnome-dense
+9|skill|101|1483|地灵-密-|623C|https://soku.cleista.cc/framedata/suika/623c-gnome-dense
+9|skill|101|1483|地灵-密-|j.623B|https://soku.cleista.cc/framedata/suika/j623b-gnome-dense
+9|skill|101|1483|地灵-密-|j.623C|https://soku.cleista.cc/framedata/suika/j623c-gnome-dense
+9|skill|105|1719|地灵-疏-|623B|https://soku.cleista.cc/framedata/suika/623b-gnome-thin
+9|skill|105|2035|地灵-疏-|623C|https://soku.cleista.cc/framedata/suika/623c-gnome-thin
+9|skill|109|880|火鬼|623B|https://soku.cleista.cc/framedata/suika/623b-fire-oni
+9|skill|109|880|火鬼|623C|https://soku.cleista.cc/framedata/suika/623c-fire-oni
+9|skill|102|1024|妖鬼-疏-|214B|https://soku.cleista.cc/framedata/suika/214b-spectre-thin
+9|skill|102|1032|妖鬼-疏-|214C|https://soku.cleista.cc/framedata/suika/214c-spectre-thin
+9|skill|102|220|妖鬼-疏-|j.214B|https://soku.cleista.cc/framedata/suika/j214b-spectre-thin
+9|skill|102|616|妖鬼-疏-|j.214C|https://soku.cleista.cc/framedata/suika/j214c-spectre-thin
+9|skill|110|759|鬼神磷火术|214B|https://soku.cleista.cc/framedata/suika/214b-ignis-fatuus
+9|skill|110|1315|鬼神磷火术|214C|https://soku.cleista.cc/framedata/suika/214c-ignis-fatuus
+9|skill|107|493|疏鬼|22B|https://soku.cleista.cc/framedata/suika/22b-thin-oni
+9|skill|107|378|疏鬼|22C|https://soku.cleista.cc/framedata/suika/22c-thin-oni
+9|skill|111|1633|攫鬼|22B|https://soku.cleista.cc/framedata/suika/22b-kidnapping-oni
+9|skill|111|1633|攫鬼|22C|https://soku.cleista.cc/framedata/suika/22c-kidnapping-oni
+9|spell|200|2000|萃符「户隐山之投」|sc200|https://soku.cleista.cc/framedata/suika/sc200-gather-sign-throwing-mt-togakushi
+9|spell|202|3000|鬼符「Missing Power」（遗失的力量）|sc202|https://soku.cleista.cc/framedata/suika/sc202-oni-sign-missing-power
+9|spell|203|5000|萃鬼「天手力男之投」|sc203|https://soku.cleista.cc/framedata/suika/sc203-gathering-oni-throwing-atlas
+9|spell|205|1500|鬼神「Missing Purple Power」（遗失的高贵之力）|sc205|https://soku.cleista.cc/framedata/suika/sc205-great-oni-missing-purple-power
+9|spell|206|1029|雾符「云集雾散」|sc206|https://soku.cleista.cc/framedata/suika/sc206-mist-sign-gathering-and-dissipating
+9|spell|207|4371|鬼火「超高密度磷祸术」|sc207|https://soku.cleista.cc/framedata/suika/sc207-will-o-wisp-superdense-conflagration
+9|spell|208|6515|鬼符「大江山悉皆杀」|sc208|https://soku.cleista.cc/framedata/suika/sc208-oni-sign-massacre-on-mtooe
+9|spell|212|3263|四天王奥义「三步坏废」|sc212|https://soku.cleista.cc/framedata/suika/sc212-secret-of-kings-3-step-destruction
+9|spell|200|2000|萃符「户隐山之投」|j.sc200|https://soku.cleista.cc/framedata/suika/sc200-gather-sign-throwing-mt-togakushi-650
+10|normal|-1|200|5A|5A|https://soku.cleista.cc/framedata/reisen/5a
+10|normal|-1|450|f.5A|f.5A|https://soku.cleista.cc/framedata/reisen/f5a
+10|normal|-1|800|6A|6A|https://soku.cleista.cc/framedata/reisen/6a
+10|normal|-1|200|2A|2A|https://soku.cleista.cc/framedata/reisen/2a
+10|normal|-1|600|3A|3A|https://soku.cleista.cc/framedata/reisen/3a
+10|normal|-1|600|66A|66A|https://soku.cleista.cc/framedata/reisen/66a
+10|normal|-1|400|j.5A|j.5A|https://soku.cleista.cc/framedata/reisen/j5a
+10|normal|-1|750|j.6A|j.6A|https://soku.cleista.cc/framedata/reisen/j6a
+10|normal|-1|700|j.2A|j.2A|https://soku.cleista.cc/framedata/reisen/j2a
+10|normal|-1|800|j.8A|j.8A|https://soku.cleista.cc/framedata/reisen/j8a
+10|normal|-1|200|5AA|5AA|https://soku.cleista.cc/framedata/reisen/5aa
+10|normal|-1|450|5AAA|5AAA|https://soku.cleista.cc/framedata/reisen/5aaa
+10|normal|-1|800|5AAAA|5AAAA|https://soku.cleista.cc/framedata/reisen/5aaaa
+10|normal|-1|200|4A|4A|https://soku.cleista.cc/framedata/reisen/4a
+10|normal|-1|693|5B|5B|https://soku.cleista.cc/framedata/reisen/5b
+10|normal|-1|693|6B|6B|https://soku.cleista.cc/framedata/reisen/6b
+10|normal|-1|693|2B|2B|https://soku.cleista.cc/framedata/reisen/2b
+10|normal|-1|693|j.5B|j.5B|https://soku.cleista.cc/framedata/reisen/j5b
+10|normal|-1|693|j.2B|j.2B|https://soku.cleista.cc/framedata/reisen/j2b
+10|normal|-1|800|66B|66B|https://soku.cleista.cc/framedata/reisen/66b
+10|normal|-1|860|5C|5C|https://soku.cleista.cc/framedata/reisen/5c
+10|normal|-1|860|6C|6C|https://soku.cleista.cc/framedata/reisen/6c
+10|normal|-1|800|2C|2C|https://soku.cleista.cc/framedata/reisen/2c
+10|normal|-1|860|j.5C|j.5C|https://soku.cleista.cc/framedata/reisen/j5c
+10|normal|-1|860|j.6C|j.6C|https://soku.cleista.cc/framedata/reisen/j6c
+10|normal|-1|860|j.2C|j.2C|https://soku.cleista.cc/framedata/reisen/j2c
+10|normal|-1|850|66C|66C|https://soku.cleista.cc/framedata/reisen/66c
+10|skill|100|1532|Mind Explosion（心灵爆炸）|236B|https://soku.cleista.cc/framedata/reisen/236b-mind-explosion
+10|skill|100|1532|Mind Explosion（心灵爆炸）|236C|https://soku.cleista.cc/framedata/reisen/236c-mind-explosion
+10|skill|104|1107|Mind Bending|236B|https://soku.cleista.cc/framedata/reisen/236b-mind-bending
+10|skill|104|1107|Mind Bending|236C|https://soku.cleista.cc/framedata/reisen/236c-mind-bending
+10|skill|104|440|Mind Bending|j.236B|https://soku.cleista.cc/framedata/reisen/j236b-mind-bending
+10|skill|104|1114|Mind Bending|j.236C|https://soku.cleista.cc/framedata/reisen/j236c-mind-bending
+10|skill|108|959|Mind Dropping|236B|https://soku.cleista.cc/framedata/reisen/236b-mind-dropping
+10|skill|108|959|Mind Dropping|236C|https://soku.cleista.cc/framedata/reisen/236c-mind-dropping
+10|skill|101|1211|Illusionary Blast|214B|https://soku.cleista.cc/framedata/reisen/214b-illusionary-blast
+10|skill|101|1211|Illusionary Blast|214C|https://soku.cleista.cc/framedata/reisen/214c-illusionary-blast
+10|skill|105|1195|Eyesight Cleaning|214B|https://soku.cleista.cc/framedata/reisen/214b-eyesight-cleaning
+10|skill|105|1195|Eyesight Cleaning|214C|https://soku.cleista.cc/framedata/reisen/214c-eyesight-cleaning
+10|skill|109|1100|Ripple Vision|214B|https://soku.cleista.cc/framedata/reisen/214b-ripple-vision
+10|skill|109|1100|Ripple Vision|214C|https://soku.cleista.cc/framedata/reisen/214c-ripple-vision
+10|skill|109|1100|Ripple Vision|j.214B|https://soku.cleista.cc/framedata/reisen/j214b-ripple-vision
+10|skill|109|1100|Ripple Vision|j.214C|https://soku.cleista.cc/framedata/reisen/j214c-ripple-vision
+10|skill|110|976|Under Sense Break|623B|https://soku.cleista.cc/framedata/reisen/623b-undersense-break
+10|skill|110|1266|Under Sense Break|623C|https://soku.cleista.cc/framedata/reisen/623c-undersense-break
+10|skill|103|889|Disbelief Aspect|22B|https://soku.cleista.cc/framedata/reisen/22b-disbelief-aspect
+10|skill|103|889|Disbelief Aspect|22C|https://soku.cleista.cc/framedata/reisen/22c-disbelief-aspect
+10|skill|107|1067|Disorder Eye（混乱之眼）|22B|https://soku.cleista.cc/framedata/reisen/22b-disorder-eye
+10|skill|107|1067|Disorder Eye（混乱之眼）|22C|https://soku.cleista.cc/framedata/reisen/22c-disorder-eye
+10|skill|107|1067|Disorder Eye（混乱之眼）|j.22B|https://soku.cleista.cc/framedata/reisen/j22b-disorder-eye
+10|skill|107|1067|Disorder Eye（混乱之眼）|j.22C|https://soku.cleista.cc/framedata/reisen/j22c-disorder-eye
+10|spell|200|1450|惑视「离圆花冠(Corolla Vision)」（花冠幻视）|sc200|https://soku.cleista.cc/framedata/reisen/sc200-charming-look-corolla-vision
+10|spell|202|3333|幻爆「近眼花火(Mind Star Mine)」（心灵烟花）|sc202|https://soku.cleista.cc/framedata/reisen/sc202-illusion-bomb-mind-starmine
+10|spell|203|2923|幻惑「花冠视线(Crown Vision)」（王冠幻视）|sc203|https://soku.cleista.cc/framedata/reisen/sc203-fascination-crown-vision
+10|spell|204|4229|赤眼「望见圆月(Lunatic Blast)」（疯狂爆破）|sc204|https://soku.cleista.cc/framedata/reisen/sc204-red-eyes-lunatic-blast
+10|spell|205|4787|「幻胧月睨(Lunatic Red Eyes)」（疯狂红眼）|sc205|https://soku.cleista.cc/framedata/reisen/sc205-lunatic-red-eyes
+10|spell|206|600|弱心「丧心丧意(Demotivation)」（丧失动力）|sc206|https://soku.cleista.cc/framedata/reisen/sc206-weak-heart-demotivation
+10|spell|207|1079|丧心「丧心疮痍(Discarder)」（弃卡者）|sc207|https://soku.cleista.cc/framedata/reisen/sc207-desolation-discarder
+10|spell|208|608|毒烟幕「瓦斯织物之玉」|sc208|https://soku.cleista.cc/framedata/reisen/sc208-poison-smokescreen-gas-woven-orb
+10|spell|210|2011|短视「超短脑波(X Wave)」（X射线）|sc210|https://soku.cleista.cc/framedata/reisen/sc210-shortsight-x-wave
+10|spell|200|1169|惑视「离圆花冠(Corolla Vision)」（花冠幻视）|j.sc200|https://soku.cleista.cc/framedata/reisen/sc200-charming-look-corolla-vision-650
+10|spell|202|3333|幻爆「近眼花火(Mind Star Mine)」（心灵烟花）|j.sc202|https://soku.cleista.cc/framedata/reisen/sc202-illusion-bomb-mind-starmine-652
+10|spell|205|4787|「幻胧月睨(Lunatic Red Eyes)」（疯狂红眼）|j.sc205|https://soku.cleista.cc/framedata/reisen/sc205-lunatic-red-eyes-655
+10|spell|209|5625|生药「国士无双之药」（发动）|sc209|https://soku.cleista.cc/framedata/reisen/sc209-life-elixir-grand-patriots-elixir-activation
+11|normal|-1|200|5A|5A|https://soku.cleista.cc/framedata/aya/5a
+11|normal|-1|400|f.5A|f.5A|https://soku.cleista.cc/framedata/aya/f5a
+11|normal|-1|650|6A|6A|https://soku.cleista.cc/framedata/aya/6a
+11|normal|-1|200|2A|2A|https://soku.cleista.cc/framedata/aya/2a
+11|normal|-1|650|3A|3A|https://soku.cleista.cc/framedata/aya/3a
+11|normal|-1|400|66A|66A|https://soku.cleista.cc/framedata/aya/66a
+11|normal|-1|350|j.5A|j.5A|https://soku.cleista.cc/framedata/aya/j5a
+11|normal|-1|600|j.6A|j.6A|https://soku.cleista.cc/framedata/aya/j6a
+11|normal|-1|800|j.2A|j.2A|https://soku.cleista.cc/framedata/aya/j2a
+11|normal|-1|650|j.8A|j.8A|https://soku.cleista.cc/framedata/aya/j8a
+11|normal|-1|200|5AA|5AA|https://soku.cleista.cc/framedata/aya/5aa
+11|normal|-1|400|5AAA|5AAA|https://soku.cleista.cc/framedata/aya/5aaa
+11|normal|-1|650|5AAAA|5AAAA|https://soku.cleista.cc/framedata/aya/5aaaa
+11|normal|-1|200|4A|4A|https://soku.cleista.cc/framedata/aya/4a
+11|normal|-1|300|5B|5B|https://soku.cleista.cc/framedata/aya/5b
+11|normal|-1|300|6B|6B|https://soku.cleista.cc/framedata/aya/6b
+11|normal|-1|350|2B|2B|https://soku.cleista.cc/framedata/aya/2b
+11|normal|-1|300|j.5B|j.5B|https://soku.cleista.cc/framedata/aya/j5b
+11|normal|-1|300|j.2B|j.2B|https://soku.cleista.cc/framedata/aya/j2b
+11|normal|-1|650|66B|66B|https://soku.cleista.cc/framedata/aya/66b
+11|normal|-1|600|5C|5C|https://soku.cleista.cc/framedata/aya/5c
+11|normal|-1|650|6C|6C|https://soku.cleista.cc/framedata/aya/6c
+11|normal|-1|600|2C|2C|https://soku.cleista.cc/framedata/aya/2c
+11|normal|-1|600|j.5C|j.5C|https://soku.cleista.cc/framedata/aya/j5c
+11|normal|-1|650|j.6C|j.6C|https://soku.cleista.cc/framedata/aya/j6c
+11|normal|-1|600|j.2C|j.2C|https://soku.cleista.cc/framedata/aya/j2c
+11|normal|-1|700|66C|66C|https://soku.cleista.cc/framedata/aya/66c
+11|skill|100|900|疾风扇|236B|https://soku.cleista.cc/framedata/aya/236b-gust-fan
+11|skill|100|900|疾风扇|j.236B|https://soku.cleista.cc/framedata/aya/j236b-gust-fan
+11|skill|104|759|烈风扇|236B|https://soku.cleista.cc/framedata/aya/236b-gale-fan
+11|skill|104|763|烈风扇|236C|https://soku.cleista.cc/framedata/aya/236c-gale-fan
+11|skill|104|759|烈风扇|j.236B|https://soku.cleista.cc/framedata/aya/j236b-gale-fan
+11|skill|104|763|烈风扇|j.236C|https://soku.cleista.cc/framedata/aya/j236c-gale-fan
+11|skill|108|1195|枫扇风|236B|https://soku.cleista.cc/framedata/aya/236b-wind-from-the-maple-fan
+11|skill|108|797|枫扇风|236C|https://soku.cleista.cc/framedata/aya/236c-wind-from-the-maple-fan
+11|skill|101|1000|疾走风靡|214B|https://soku.cleista.cc/framedata/aya/214b-domination-dash
+11|skill|101|1000|疾走风靡|214C|https://soku.cleista.cc/framedata/aya/214c-domination-dash
+11|skill|101|1000|疾走风靡|j.214B|https://soku.cleista.cc/framedata/aya/j214b-domination-dash
+11|skill|101|1000|疾走风靡|j.214C|https://soku.cleista.cc/framedata/aya/j214c-domination-dash
+11|skill|105|715|疾走优美|214B|https://soku.cleista.cc/framedata/aya/214b-graceful-dash
+11|skill|-1|715|214B~A|214B~A|https://soku.cleista.cc/framedata/aya/214b-a
+11|skill|105|715|疾走优美|214C|https://soku.cleista.cc/framedata/aya/214c-graceful-dash
+11|skill|105|715|疾走优美|j.214B|https://soku.cleista.cc/framedata/aya/j214b-graceful-dash
+11|skill|105|715|疾走优美|j.214C|https://soku.cleista.cc/framedata/aya/j214c-graceful-dash
+11|skill|109|1210|天狗倒树|214B|https://soku.cleista.cc/framedata/aya/214b-tengu-felling
+11|skill|109|1210|天狗倒树|214C|https://soku.cleista.cc/framedata/aya/214c-tengu-felling
+11|skill|109|1210|天狗倒树|j.214B|https://soku.cleista.cc/framedata/aya/j214b-tengu-felling
+11|skill|109|1210|天狗倒树|j.214C|https://soku.cleista.cc/framedata/aya/j214c-tengu-felling
+11|skill|106|1281|天狗下爆流|j.22B|https://soku.cleista.cc/framedata/aya/j22b-tengus-downburst
+11|skill|106|715|天狗下爆流|j.22C|https://soku.cleista.cc/framedata/aya/j22c-tengus-downburst
+11|skill|110|880|天狗的太鼓|22B|https://soku.cleista.cc/framedata/aya/22b-tengu-drum
+11|skill|-1|1593|22B~B|22B~B|https://soku.cleista.cc/framedata/aya/22b-b
+11|skill|-1|880|22B~A|22B~A|https://soku.cleista.cc/framedata/aya/22b-a
+11|skill|-1|1725|22B~C|22B~C|https://soku.cleista.cc/framedata/aya/22b-c
+11|skill|110|880|天狗的太鼓|22C|https://soku.cleista.cc/framedata/aya/22c-tengu-drum
+11|skill|110|880|天狗的太鼓|j.22B|https://soku.cleista.cc/framedata/aya/j22b-tengu-drum
+11|skill|110|880|天狗的太鼓|j.22C|https://soku.cleista.cc/framedata/aya/j22c-tengu-drum
+11|skill|103|911|暗夜之砾|421B|https://soku.cleista.cc/framedata/aya/421b-pelting-in-the-night
+11|skill|103|1069|暗夜之砾|421C|https://soku.cleista.cc/framedata/aya/421c-pelting-in-the-night
+11|skill|103|220|暗夜之砾|j.421B|https://soku.cleista.cc/framedata/aya/j421b-pelting-in-the-night
+11|skill|103|220|暗夜之砾|j.421C|https://soku.cleista.cc/framedata/aya/j421c-pelting-in-the-night
+11|skill|107|264|镰风面纱|421B|https://soku.cleista.cc/framedata/aya/421b-wind-sickle-veiling
+11|skill|107|264|镰风面纱|j.421B|https://soku.cleista.cc/framedata/aya/j421b-wind-sickle-veiling
+11|spell|200|2359|旋符「红叶扇风」|sc200|https://soku.cleista.cc/framedata/aya/sc200-whirl-sign-maple-leaf-fan
+11|spell|201|4126|龙卷「天孙降临的道标」|sc201|https://soku.cleista.cc/framedata/aya/sc201-tornado-indication-to-the-divine
+11|spell|202|3334|逆风「人间禁制之道」|sc202|https://soku.cleista.cc/framedata/aya/sc202-headwind-route-forbidden-to-man
+11|spell|203|2301|突符「天狗巨暴流」|sc203|https://soku.cleista.cc/framedata/aya/sc203-thrust-sign-tengus-macroburst
+11|spell|205|1573|风符「天狗道的开风」|sc205|https://soku.cleista.cc/framedata/aya/sc205-wind-sign-wind-of-the-tengu-path
+11|spell|206|3168|「幻想风靡」|sc206|https://soku.cleista.cc/framedata/aya/sc206-illusionary-dominance
+11|spell|208|4157|鸦符「暗夜昼魇」|sc208|https://soku.cleista.cc/framedata/aya/sc208-crow-sign-dark-daymare
+11|spell|211|790|魔兽「镰鼬面纱」|sc211|https://soku.cleista.cc/framedata/aya/sc211-demonic-beast-sickle-weasel-veiling
+11|spell|212|2400|突风「猿田彦的先导」|sc212|https://soku.cleista.cc/framedata/aya/sc212-squall-sarutahikos-guidance
+11|spell|208|4070|鸦符「暗夜昼魇」|j.sc208|https://soku.cleista.cc/framedata/aya/sc208-crow-sign-dark-daymare-658
+11|spell|211|729|魔兽「镰鼬面纱」|j.sc211|https://soku.cleista.cc/framedata/aya/sc211-demonic-beast-sickle-weasel-veiling-661
+11|spell|212|2400|突风「猿田彦的先导」|j.sc212|https://soku.cleista.cc/framedata/aya/sc212-squall-sarutahikos-guidance-662
+12|normal|-1|350|5A|5A|https://soku.cleista.cc/framedata/komachi/5a
+12|normal|-1|850|f.5A|f.5A|https://soku.cleista.cc/framedata/komachi/f5a
+12|normal|-1|900|6A|6A|https://soku.cleista.cc/framedata/komachi/6a
+12|normal|-1|250|2A|2A|https://soku.cleista.cc/framedata/komachi/2a
+12|normal|-1|900|3A|3A|https://soku.cleista.cc/framedata/komachi/3a
+12|normal|-1|600|66A|66A|https://soku.cleista.cc/framedata/komachi/66a
+12|normal|-1|450|j.5A|j.5A|https://soku.cleista.cc/framedata/komachi/j5a
+12|normal|-1|850|j.6A|j.6A|https://soku.cleista.cc/framedata/komachi/j6a
+12|normal|-1|900|j.2A|j.2A|https://soku.cleista.cc/framedata/komachi/j2a
+12|normal|-1|900|j.8A|j.8A|https://soku.cleista.cc/framedata/komachi/j8a
+12|normal|-1|600|5AA|5AA|https://soku.cleista.cc/framedata/komachi/5aa
+12|normal|-1|800|5AAA|5AAA|https://soku.cleista.cc/framedata/komachi/5aaa
+12|normal|-1|900|5AAAA|5AAAA|https://soku.cleista.cc/framedata/komachi/5aaaa
+12|normal|-1|350|4A|4A|https://soku.cleista.cc/framedata/komachi/4a
+12|normal|-1|824|5B|5B|https://soku.cleista.cc/framedata/komachi/5b
+12|normal|-1|824|6B|6B|https://soku.cleista.cc/framedata/komachi/6b
+12|normal|-1|1062|2B|2B|https://soku.cleista.cc/framedata/komachi/2b
+12|normal|-1|150|j.5B|j.5B|https://soku.cleista.cc/framedata/komachi/j5b
+12|normal|-1|568|j.6B|j.6B|https://soku.cleista.cc/framedata/komachi/j6b
+12|normal|-1|824|j.2B|j.2B|https://soku.cleista.cc/framedata/komachi/j2b
+12|normal|-1|800|66B|66B|https://soku.cleista.cc/framedata/komachi/66b
+12|normal|-1|700|5C|5C|https://soku.cleista.cc/framedata/komachi/5c
+12|normal|-1|868|6C|6C|https://soku.cleista.cc/framedata/komachi/6c
+12|normal|-1|700|j.5C|j.5C|https://soku.cleista.cc/framedata/komachi/j5c
+12|normal|-1|500|j.6C|j.6C|https://soku.cleista.cc/framedata/komachi/j6c
+12|normal|-1|862|j.2C|j.2C|https://soku.cleista.cc/framedata/komachi/j2c
+12|normal|-1|1200|66C|66C|https://soku.cleista.cc/framedata/komachi/66c
+12|skill|100|800|无惑而生的人灵|236B|https://soku.cleista.cc/framedata/komachi/236b-spirits-of-the-firm
+12|skill|100|800|无惑而生的人灵|236C|https://soku.cleista.cc/framedata/komachi/236c-spirits-of-the-firm
+12|skill|104|1100|死神的大镰|236B|https://soku.cleista.cc/framedata/komachi/236b-scythe-of-the-reaper
+12|skill|104|1100|死神的大镰|236C|https://soku.cleista.cc/framedata/komachi/236c-scythe-of-the-reaper
+12|skill|104|1100|死神的大镰|j.236B|https://soku.cleista.cc/framedata/komachi/j236b-scythe-of-the-reaper
+12|skill|104|1100|死神的大镰|j.236C|https://soku.cleista.cc/framedata/komachi/j236c-scythe-of-the-reaper
+12|skill|108|1100|偶然路过的人灵|236B|https://soku.cleista.cc/framedata/komachi/236b-a-human-spirit-passing-by
+12|skill|108|1100|偶然路过的人灵|236C|https://soku.cleista.cc/framedata/komachi/236c-a-human-spirit-passing-by
+12|skill|101|350|无法超度的地缚灵|623B|https://soku.cleista.cc/framedata/komachi/623b-bound-spirits-of-the-earth
+12|skill|105|861|死出之风|623B|https://soku.cleista.cc/framedata/komachi/623b-wind-on-the-last-journey
+12|skill|105|1789|死出之风|623C|https://soku.cleista.cc/framedata/komachi/623c-wind-on-the-last-journey
+12|skill|109|1368|三途之舟|623B|https://soku.cleista.cc/framedata/komachi/623b-boat-on-the-sanzu
+12|skill|-1|1100|623B~A|623B~A|https://soku.cleista.cc/framedata/komachi/623b-a
+12|skill|109|1368|三途之舟|623C|https://soku.cleista.cc/framedata/komachi/623c-boat-on-the-sanzu
+12|skill|-1|1100|623C~A|623C~A|https://soku.cleista.cc/framedata/komachi/623c-a
+12|skill|106|660|无间之道|22B|https://soku.cleista.cc/framedata/komachi/22b-the-endless-way
+12|skill|106|660|无间之道|22C|https://soku.cleista.cc/framedata/komachi/22c-the-endless-way
+12|skill|110|1540|催命体验版|22B|https://soku.cleista.cc/framedata/komachi/22b-taste-of-death
+12|skill|110|1540|催命体验版|22C|https://soku.cleista.cc/framedata/komachi/22c-taste-of-death
+12|skill|103|1484|懒惰而生的浮游灵|214B|https://soku.cleista.cc/framedata/komachi/214b-floating-spirits-of-the-indolent-dead
+12|skill|103|1484|懒惰而生的浮游灵|214C|https://soku.cleista.cc/framedata/komachi/214c-floating-spirits-of-the-indolent-dead
+12|skill|111|880|离魂之镰|214B|https://soku.cleista.cc/framedata/komachi/214b-scythe-of-exorcism
+12|skill|111|660|离魂之镰|214C|https://soku.cleista.cc/framedata/komachi/214c-scythe-of-exorcism
+12|spell|200|2347|舟符「宛若河流般」|sc200|https://soku.cleista.cc/framedata/komachi/sc200-nautical-sign-flow-of-the-river
+12|spell|201|5000|薄命「余命无几许」|sc201|https://soku.cleista.cc/framedata/komachi/sc201-poor-fate-short-life-expectancy
+12|spell|202|1764|灵符「到处都是的浮游灵」|sc202|https://soku.cleista.cc/framedata/komachi/sc202-spirit-sign-abundant-floating-spirits
+12|spell|203|4607|死歌「八重雾中渡」|sc203|https://soku.cleista.cc/framedata/komachi/sc203-death-song-ferriage-in-the-deep-fog
+12|spell|206|4000|死符「区别死者的镰刀」|sc206|https://soku.cleista.cc/framedata/komachi/sc206-death-sign-scythe-of-final-judgement
+12|spell|207|3129|魂符「生魂流离的镰刀」|sc207|https://soku.cleista.cc/framedata/komachi/sc207-soul-sign-scythe-of-wandering-spirits
+12|spell|211|1400|地狱「无间之狭间」|sc211|https://soku.cleista.cc/framedata/komachi/sc211-hell-narrow-confines-of-avici
+13|normal|-1|380|5A|5A|https://soku.cleista.cc/framedata/iku/5a
+13|normal|-1|650|f.5A|f.5A|https://soku.cleista.cc/framedata/iku/f5a
+13|normal|-1|700|6A|6A|https://soku.cleista.cc/framedata/iku/6a
+13|normal|-1|450|2A|2A|https://soku.cleista.cc/framedata/iku/2a
+13|normal|-1|700|3A|3A|https://soku.cleista.cc/framedata/iku/3a
+13|normal|-1|650|66A|66A|https://soku.cleista.cc/framedata/iku/66a
+13|normal|-1|450|j.5A|j.5A|https://soku.cleista.cc/framedata/iku/j5a
+13|normal|-1|800|j.6A|j.6A|https://soku.cleista.cc/framedata/iku/j6a
+13|normal|-1|850|j.2A|j.2A|https://soku.cleista.cc/framedata/iku/j2a
+13|normal|-1|939|j.8A|j.8A|https://soku.cleista.cc/framedata/iku/j8a
+13|normal|-1|550|5AA|5AA|https://soku.cleista.cc/framedata/iku/5aa
+13|normal|-1|700|5AAA|5AAA|https://soku.cleista.cc/framedata/iku/5aaa
+13|normal|-1|900|5AAAA|5AAAA|https://soku.cleista.cc/framedata/iku/5aaaa
+13|normal|-1|380|4A|4A|https://soku.cleista.cc/framedata/iku/4a
+13|normal|-1|1303|5B|5B|https://soku.cleista.cc/framedata/iku/5b
+13|normal|-1|1303|6B|6B|https://soku.cleista.cc/framedata/iku/6b
+13|normal|-1|838|2B|2B|https://soku.cleista.cc/framedata/iku/2b
+13|normal|-1|833|j.5B|j.5B|https://soku.cleista.cc/framedata/iku/j5b
+13|normal|-1|833|j.2B|j.2B|https://soku.cleista.cc/framedata/iku/j2b
+13|normal|-1|800|66B|66B|https://soku.cleista.cc/framedata/iku/66b
+13|normal|-1|576|5C|5C|https://soku.cleista.cc/framedata/iku/5c
+13|normal|-1|923|6C|6C|https://soku.cleista.cc/framedata/iku/6c
+13|normal|-1|738|2C|2C|https://soku.cleista.cc/framedata/iku/2c
+13|normal|-1|300|j.5C|j.5C|https://soku.cleista.cc/framedata/iku/j5c
+13|normal|-1|923|j.6C|j.6C|https://soku.cleista.cc/framedata/iku/j6c
+13|normal|-1|772|j.2C|j.2C|https://soku.cleista.cc/framedata/iku/j2c
+13|normal|-1|700|j.1C|j.1C|https://soku.cleista.cc/framedata/iku/j1c
+13|normal|-1|650|66C|66C|https://soku.cleista.cc/framedata/iku/66c
+13|skill|100|1344|龙鱼的一击|236B|https://soku.cleista.cc/framedata/iku/236b-dragon-fishs-strike
+13|skill|100|1419|龙鱼的一击|236C|https://soku.cleista.cc/framedata/iku/236c-dragon-fishs-strike
+13|skill|104|1315|龙神的一击|236B|https://soku.cleista.cc/framedata/iku/236b-dragon-gods-strike
+13|skill|104|1050|龙神的一击|236C|https://soku.cleista.cc/framedata/iku/236c-dragon-gods-strike
+13|skill|101|1100|羽衣若水|623B|https://soku.cleista.cc/framedata/iku/623b-veils-like-water
+13|skill|101|1100|羽衣若水|623C|https://soku.cleista.cc/framedata/iku/623c-veils-like-water
+13|skill|109|1564|天女的一击|623B|https://soku.cleista.cc/framedata/iku/623b-the-smite-of-the-goddess
+13|skill|109|1338|天女的一击|623C|https://soku.cleista.cc/framedata/iku/623c-the-smite-of-the-goddess
+13|skill|102|1350|龙鱼之怒|22B|https://soku.cleista.cc/framedata/iku/22b-dragon-fishs-wrath
+13|skill|106|1650|龙神之怒|22B|https://soku.cleista.cc/framedata/iku/22b-dragon-gods-wrath
+13|skill|106|1650|龙神之怒|22C|https://soku.cleista.cc/framedata/iku/22c-dragon-gods-wrath
+13|skill|110|759|龙神之须|22B|https://soku.cleista.cc/framedata/iku/22b-whiskers-of-the-dragon-god
+13|skill|110|1050|龙神之须|22C|https://soku.cleista.cc/framedata/iku/22c-whiskers-of-the-dragon-god
+13|skill|103|800|静电诱导弹|214B|https://soku.cleista.cc/framedata/iku/214b-electrostatic-guided-missile
+13|skill|103|800|静电诱导弹|214C|https://soku.cleista.cc/framedata/iku/214c-electrostatic-guided-missile
+13|skill|103|800|静电诱导弹|j.214B|https://soku.cleista.cc/framedata/iku/j214b-electrostatic-guided-missile
+13|skill|103|800|静电诱导弹|j.214C|https://soku.cleista.cc/framedata/iku/j214c-electrostatic-guided-missile
+13|skill|107|573|龙神的电光|214B|https://soku.cleista.cc/framedata/iku/214b-dragon-gods-lightning-flash
+13|skill|107|573|龙神的电光|214C|https://soku.cleista.cc/framedata/iku/214c-dragon-gods-lightning-flash
+13|skill|107|573|龙神的电光|j.214B|https://soku.cleista.cc/framedata/iku/j214b-dragon-gods-lightning-flash
+13|skill|107|573|龙神的电光|j.214C|https://soku.cleista.cc/framedata/iku/j214c-dragon-gods-lightning-flash
+13|skill|111|766|龙之眼|214B|https://soku.cleista.cc/framedata/iku/214b-dragons-eye
+13|skill|111|766|龙之眼|214C|https://soku.cleista.cc/framedata/iku/214c-dragons-eye
+13|skill|111|766|龙之眼|j.214B|https://soku.cleista.cc/framedata/iku/j214b-dragons-eye
+13|skill|111|766|龙之眼|j.214C|https://soku.cleista.cc/framedata/iku/j214c-dragons-eye
+13|spell|200|1205|电符「雷鼓弹」|sc200|https://soku.cleista.cc/framedata/iku/sc200-electric-sign-thunder-drum-shot
+13|spell|201|3090|鱼符「龙鱼电钻」|sc201|https://soku.cleista.cc/framedata/iku/sc201-fish-sign-dragonfish-drill
+13|spell|202|2984|雷符「电气的龙宫」|sc202|https://soku.cleista.cc/framedata/iku/sc202-lightning-sign-elekiter-dragon-palace
+13|spell|206|1580|雷鱼「雷云鱼游泳弹」|sc206|https://soku.cleista.cc/framedata/iku/sc206-lightning-fish-swimming-thunder-shot
+13|spell|209|3088|棘符「雷云棘鱼」|sc209|https://soku.cleista.cc/framedata/iku/sc209-thorn-sign-thundercloud-stickleback
+13|spell|210|7953|龙鱼「龙宫使者的游泳弹」|sc210|https://soku.cleista.cc/framedata/iku/sc210-dragonfish-swimming-oarfish-shot
+13|spell|211|4036|珠符「五爪龙之珠」|sc211|https://soku.cleista.cc/framedata/iku/sc211-orb-sign-orb-of-the-five-clawed-dragon
+13|spell|200|1087|电符「雷鼓弹」|j.sc200|https://soku.cleista.cc/framedata/iku/sc200-electric-sign-thunder-drum-shot-650
+13|spell|210|4226|龙鱼「龙宫使者的游泳弹」|j.sc210|https://soku.cleista.cc/framedata/iku/sc210-dragonfish-swimming-oarfish-shot-660
+13|spell|211|3653|珠符「五爪龙之珠」|j.sc211|https://soku.cleista.cc/framedata/iku/sc211-orb-sign-orb-of-the-five-clawed-dragon-661
+13|spell|208|500|羽衣「羽衣若时」（发动）|sc208|https://soku.cleista.cc/framedata/iku/sc208-angels-raiment-veils-like-time-activation
+14|normal|-1|400|5A|5A|https://soku.cleista.cc/framedata/tenshi/5a
+14|normal|-1|600|f.5A|f.5A|https://soku.cleista.cc/framedata/tenshi/f5a
+14|normal|-1|650|6A|6A|https://soku.cleista.cc/framedata/tenshi/6a
+14|normal|-1|420|2A|2A|https://soku.cleista.cc/framedata/tenshi/2a
+14|normal|-1|700|3A|3A|https://soku.cleista.cc/framedata/tenshi/3a
+14|normal|-1|550|66A|66A|https://soku.cleista.cc/framedata/tenshi/66a
+14|normal|-1|450|j.5A|j.5A|https://soku.cleista.cc/framedata/tenshi/j5a
+14|normal|-1|750|j.6A|j.6A|https://soku.cleista.cc/framedata/tenshi/j6a
+14|normal|-1|850|j.2A|j.2A|https://soku.cleista.cc/framedata/tenshi/j2a
+14|normal|-1|850|j.8A|j.8A|https://soku.cleista.cc/framedata/tenshi/j8a
+14|normal|-1|500|5AA|5AA|https://soku.cleista.cc/framedata/tenshi/5aa
+14|normal|-1|800|5AAA|5AAA|https://soku.cleista.cc/framedata/tenshi/5aaa
+14|normal|-1|400|4A|4A|https://soku.cleista.cc/framedata/tenshi/4a
+14|normal|-1|450|5B|5B|https://soku.cleista.cc/framedata/tenshi/5b
+14|normal|-1|824|6B|6B|https://soku.cleista.cc/framedata/tenshi/6b
+14|normal|-1|824|2B|2B|https://soku.cleista.cc/framedata/tenshi/2b
+14|normal|-1|450|j.5B|j.5B|https://soku.cleista.cc/framedata/tenshi/j5b
+14|normal|-1|824|j.6B|j.6B|https://soku.cleista.cc/framedata/tenshi/j6b
+14|normal|-1|824|j.2B|j.2B|https://soku.cleista.cc/framedata/tenshi/j2b
+14|normal|-1|616|66B|66B|https://soku.cleista.cc/framedata/tenshi/66b
+14|normal|-1|1747|5C|5C|https://soku.cleista.cc/framedata/tenshi/5c
+14|normal|-1|1747|6C|6C|https://soku.cleista.cc/framedata/tenshi/6c
+14|normal|-1|937|2C|2C|https://soku.cleista.cc/framedata/tenshi/2c
+14|normal|-1|200|j.5C|j.5C|https://soku.cleista.cc/framedata/tenshi/j5c
+14|normal|-1|200|j.6C|j.6C|https://soku.cleista.cc/framedata/tenshi/j6c
+14|normal|-1|579|j.2C|j.2C|https://soku.cleista.cc/framedata/tenshi/j2c
+14|normal|-1|800|66C|66C|https://soku.cleista.cc/framedata/tenshi/66c
+14|skill|100|1362|坤仪之剑|214B|https://soku.cleista.cc/framedata/tenshi/214b-sword-of-the-earth
+14|skill|100|1362|坤仪之剑|214C|https://soku.cleista.cc/framedata/tenshi/214c-sword-of-the-earth
+14|skill|100|880|坤仪之剑|j.214B|https://soku.cleista.cc/framedata/tenshi/j214b-sword-of-the-earth
+14|skill|100|1496|坤仪之剑|j.214C|https://soku.cleista.cc/framedata/tenshi/j214c-sword-of-the-earth
+14|skill|104|1320|六震-相-|214B|https://soku.cleista.cc/framedata/tenshi/214b-six-earthquakes-signs
+14|skill|104|1320|六震-相-|214C|https://soku.cleista.cc/framedata/tenshi/214c-six-earthquakes-signs
+14|skill|108|1257|因果之剑|214B|https://soku.cleista.cc/framedata/tenshi/214b-sword-of-fate
+14|skill|108|1257|因果之剑|214C|https://soku.cleista.cc/framedata/tenshi/214c-sword-of-fate
+14|skill|101|1000|天罚的石柱|22B|https://soku.cleista.cc/framedata/tenshi/22b-pillars-of-divine-punishment
+14|skill|101|800|天罚的石柱|22C|https://soku.cleista.cc/framedata/tenshi/22c-pillars-of-divine-punishment
+14|skill|101|1100|天罚的石柱|j.22B|https://soku.cleista.cc/framedata/tenshi/j22b-pillars-of-divine-punishment
+14|skill|101|880|天罚的石柱|j.22C|https://soku.cleista.cc/framedata/tenshi/j22c-pillars-of-divine-punishment
+14|skill|109|1306|地精的起床|22B|https://soku.cleista.cc/framedata/tenshi/22b-awakening-of-the-earth-spirits
+14|skill|109|660|地精的起床|22C|https://soku.cleista.cc/framedata/tenshi/22c-awakening-of-the-earth-spirits
+14|skill|102|1136|非想的威光|236B|https://soku.cleista.cc/framedata/tenshi/236b-beams-of-non-perception
+14|skill|102|1136|非想的威光|236C|https://soku.cleista.cc/framedata/tenshi/236c-beams-of-non-perception
+14|skill|102|793|非想的威光|j.236B|https://soku.cleista.cc/framedata/tenshi/j236b-beams-of-non-perception
+14|skill|102|574|非想的威光|j.236C|https://soku.cleista.cc/framedata/tenshi/j236c-beams-of-non-perception
+14|skill|106|1557|天地之压|236B|https://soku.cleista.cc/framedata/tenshi/236b-heaven-and-earth-press
+14|skill|106|1557|天地之压|236C|https://soku.cleista.cc/framedata/tenshi/236c-heaven-and-earth-press
+14|skill|106|275|天地之压|j.236B|https://soku.cleista.cc/framedata/tenshi/j236b-heaven-and-earth-press
+14|skill|106|275|天地之压|j.236C|https://soku.cleista.cc/framedata/tenshi/j236c-heaven-and-earth-press
+14|skill|110|1327|绯想的剑气|236B|https://soku.cleista.cc/framedata/tenshi/236b-scarlet-sword-temperament
+14|skill|110|1120|绯想的剑气|236C|https://soku.cleista.cc/framedata/tenshi/236c-scarlet-sword-temperament
+14|skill|103|1100|非想之剑|623B|https://soku.cleista.cc/framedata/tenshi/623b-sword-of-non-perception
+14|skill|103|1200|非想之剑|623C|https://soku.cleista.cc/framedata/tenshi/623c-sword-of-non-perception
+14|skill|107|848|绯想之剑|623B|https://soku.cleista.cc/framedata/tenshi/623b-sword-of-scarlet-perception
+14|skill|107|1302|绯想之剑|623C|https://soku.cleista.cc/framedata/tenshi/623c-sword-of-scarlet-perception
+14|skill|111|1100|升天突|623B|https://soku.cleista.cc/framedata/tenshi/623b-sky-attack
+14|skill|111|1100|升天突|623C|https://soku.cleista.cc/framedata/tenshi/623c-sky-attack
+14|skill|111|1100|升天突|j.623B|https://soku.cleista.cc/framedata/tenshi/j623b-sky-attack
+14|skill|111|1100|升天突|j.623C|https://soku.cleista.cc/framedata/tenshi/j623c-sky-attack
+14|spell|200|2363|地符「不让土壤之剑」|sc200|https://soku.cleista.cc/framedata/tenshi/sc200-earth-sign-sword-of-unletting-soil
+14|spell|201|1568|非想「非想非非想之剑」|sc201|https://soku.cleista.cc/framedata/tenshi/sc201-non-perception-sword-of-rapture
+14|spell|202|2500|天符「天道是非之剑」|sc202|https://soku.cleista.cc/framedata/tenshi/sc202-heaven-sign-sword-of-divine-justice
+14|spell|203|4093|地震「先忧后乐之剑」|sc203|https://soku.cleista.cc/framedata/tenshi/sc203-earthquake-sword-of-worry-and-joy
+14|spell|204|2228|气符「天启气象之剑」|sc204|https://soku.cleista.cc/framedata/tenshi/sc204-temperament-meteorological-revelation
+14|spell|205|4901|要石「天地开辟之挤压」|sc205|https://soku.cleista.cc/framedata/tenshi/sc205-keystone-world-creation-press
+14|spell|207|5851|「全人类的绯想天」|sc207|https://soku.cleista.cc/framedata/tenshi/sc207-scarlet-weather-rapture
+14|spell|208|3076|剑技「气焰万丈之剑」|sc208|https://soku.cleista.cc/framedata/tenshi/sc208-swordplay-sword-of-swagger
+14|spell|209|2496|天气「绯想天促」|sc209|https://soku.cleista.cc/framedata/tenshi/sc209-weather-scarlet-weather-pressure
+14|spell|207|5851|「全人类的绯想天」|j.sc207|https://soku.cleista.cc/framedata/tenshi/sc207-scarlet-weather-rapture-657
+14|spell|209|2329|天气「绯想天促」|j.sc209|https://soku.cleista.cc/framedata/tenshi/sc209-weather-scarlet-weather-pressure-659
+15|normal|-1|200|5A|5A|https://soku.cleista.cc/framedata/sanae/5a
+15|normal|-1|500|f.5A|f.5A|https://soku.cleista.cc/framedata/sanae/f5a
+15|normal|-1|650|6A|6A|https://soku.cleista.cc/framedata/sanae/6a
+15|normal|-1|450|2A|2A|https://soku.cleista.cc/framedata/sanae/2a
+15|normal|-1|650|3A|3A|https://soku.cleista.cc/framedata/sanae/3a
+15|normal|-1|400|66A|66A|https://soku.cleista.cc/framedata/sanae/66a
+15|normal|-1|450|j.5A|j.5A|https://soku.cleista.cc/framedata/sanae/j5a
+15|normal|-1|850|j.6A|j.6A|https://soku.cleista.cc/framedata/sanae/j6a
+15|normal|-1|600|j.2A|j.2A|https://soku.cleista.cc/framedata/sanae/j2a
+15|normal|-1|800|j.8A|j.8A|https://soku.cleista.cc/framedata/sanae/j8a
+15|normal|-1|200|5AA|5AA|https://soku.cleista.cc/framedata/sanae/5aa
+15|normal|-1|500|5AAA|5AAA|https://soku.cleista.cc/framedata/sanae/5aaa
+15|normal|-1|800|5AAAA|5AAAA|https://soku.cleista.cc/framedata/sanae/5aaaa
+15|normal|-1|200|4A|4A|https://soku.cleista.cc/framedata/sanae/4a
+15|normal|-1|652|5B|5B|https://soku.cleista.cc/framedata/sanae/5b
+15|normal|-1|385|6B|6B|https://soku.cleista.cc/framedata/sanae/6b
+15|normal|-1|386|2B|2B|https://soku.cleista.cc/framedata/sanae/2b
+15|normal|-1|476|j.5B|j.5B|https://soku.cleista.cc/framedata/sanae/j5b
+15|normal|-1|385|j.2B|j.2B|https://soku.cleista.cc/framedata/sanae/j2b
+15|normal|-1|750|66B|66B|https://soku.cleista.cc/framedata/sanae/66b
+15|normal|-1|773|5C|5C|https://soku.cleista.cc/framedata/sanae/5c
+15|normal|-1|800|6C|6C|https://soku.cleista.cc/framedata/sanae/6c
+15|normal|-1|1116|2C|2C|https://soku.cleista.cc/framedata/sanae/2c
+15|normal|-1|959|4C|4C|https://soku.cleista.cc/framedata/sanae/4c
+15|normal|-1|773|j.5C|j.5C|https://soku.cleista.cc/framedata/sanae/j5c
+15|normal|-1|800|j.6C|j.6C|https://soku.cleista.cc/framedata/sanae/j6c
+15|normal|-1|1116|j.2C|j.2C|https://soku.cleista.cc/framedata/sanae/j2c
+15|normal|-1|959|j.4C|j.4C|https://soku.cleista.cc/framedata/sanae/j4c
+15|normal|-1|1073|66C|66C|https://soku.cleista.cc/framedata/sanae/66c
+15|skill|104|440|起浪|236B|https://soku.cleista.cc/framedata/sanae/236b-wave-call
+15|skill|104|1069|起浪|236C|https://soku.cleista.cc/framedata/sanae/236c-wave-call
+15|skill|108|778|星落|236B|https://soku.cleista.cc/framedata/sanae/236b-falling-stars
+15|skill|108|534|星落|236C|https://soku.cleista.cc/framedata/sanae/236c-falling-stars
+15|skill|108|778|星落|j.236B|https://soku.cleista.cc/framedata/sanae/j236b-falling-stars
+15|skill|108|780|星落|j.236C|https://soku.cleista.cc/framedata/sanae/j236c-falling-stars
+15|skill|101|889|御神签炸弹|22B|https://soku.cleista.cc/framedata/sanae/22b-omikuji-bomb
+15|skill|101|400|御神签炸弹|22C|https://soku.cleista.cc/framedata/sanae/22c-omikuji-bomb
+15|skill|105|1007|Sky Serpent（飞天之蛇）|22B|https://soku.cleista.cc/framedata/sanae/22b-sky-serpent
+15|skill|105|1007|Sky Serpent（飞天之蛇）|22C|https://soku.cleista.cc/framedata/sanae/22c-sky-serpent
+15|skill|105|573|Sky Serpent（飞天之蛇）|j.22B|https://soku.cleista.cc/framedata/sanae/j22b-sky-serpent
+15|skill|105|573|Sky Serpent（飞天之蛇）|j.22C|https://soku.cleista.cc/framedata/sanae/j22c-sky-serpent
+15|skill|109|1299|Cobalt Spread（钴蓝散射）|22B|https://soku.cleista.cc/framedata/sanae/22b-cobalt-spread
+15|skill|109|1292|Cobalt Spread（钴蓝散射）|22C|https://soku.cleista.cc/framedata/sanae/22c-cobalt-spread
+15|skill|102|1200|乾神招来　突|623B|https://soku.cleista.cc/framedata/sanae/623b-sky-god-summon-attack
+15|skill|102|1500|乾神招来　突|623C|https://soku.cleista.cc/framedata/sanae/623c-sky-god-summon-attack
+15|skill|102|1200|乾神招来　突|j.623B|https://soku.cleista.cc/framedata/sanae/j623b-sky-god-summon-attack
+15|skill|102|1500|乾神招来　突|j.623C|https://soku.cleista.cc/framedata/sanae/j623c-sky-god-summon-attack
+15|skill|106|819|乾神招来　风|623B|https://soku.cleista.cc/framedata/sanae/623b-sky-god-summon-wind
+15|skill|106|819|乾神招来　风|623C|https://soku.cleista.cc/framedata/sanae/623c-sky-god-summon-wind
+15|skill|106|819|乾神招来　风|j.623B|https://soku.cleista.cc/framedata/sanae/j623b-sky-god-summon-wind
+15|skill|106|819|乾神招来　风|j.623C|https://soku.cleista.cc/framedata/sanae/j623c-sky-god-summon-wind
+15|skill|110|1100|乾神招来　御柱|623B|https://soku.cleista.cc/framedata/sanae/623b-sky-god-summon-onbashira
+15|skill|110|1100|乾神招来　御柱|623C|https://soku.cleista.cc/framedata/sanae/623c-sky-god-summon-onbashira
+15|skill|110|1100|乾神招来　御柱|j.623B|https://soku.cleista.cc/framedata/sanae/j623b-sky-god-summon-onbashira
+15|skill|110|1100|乾神招来　御柱|j.623C|https://soku.cleista.cc/framedata/sanae/j623c-sky-god-summon-onbashira
+15|skill|107|1174|坤神招来　铁轮|214B|https://soku.cleista.cc/framedata/sanae/214b-earth-god-summon-iron-ring
+15|skill|107|1174|坤神招来　铁轮|214C|https://soku.cleista.cc/framedata/sanae/214c-earth-god-summon-iron-ring
+15|skill|111|1060|坤神招来　陷阱|214B|https://soku.cleista.cc/framedata/sanae/214b-earth-god-summon-trap
+15|skill|111|1060|坤神招来　陷阱|214C|https://soku.cleista.cc/framedata/sanae/214c-earth-god-summon-trap
+15|spell|200|2582|祈愿「守护商业繁荣」|sc200|https://soku.cleista.cc/framedata/sanae/sc200-prayer-charm-of-good-commerce
+15|spell|201|2783|秘术「Gray Thaumaturgy」（灰色奇术）|sc201|https://soku.cleista.cc/framedata/sanae/sc201-esoterica-grey-thaumaturgy
+15|spell|202|3747|秘术「遗忘之祭仪」|sc202|https://soku.cleista.cc/framedata/sanae/sc202-esoterica-forgotten-ritual
+15|spell|203|2412|神签「暴乱神签连掷」|sc203|https://soku.cleista.cc/framedata/sanae/sc203-omikuji-random-omikuji-barrage
+15|spell|204|3165|开海「海水分开之日」|sc204|https://soku.cleista.cc/framedata/sanae/sc204-sea-opening-the-day-the-sea-split
+15|spell|205|5500|开海「摩西之奇迹」|sc205|https://soku.cleista.cc/framedata/sanae/sc205-sea-opening-moses-miracle
+15|spell|206|2589|奇迹「白昼的客星」|sc206|https://soku.cleista.cc/framedata/sanae/sc206-miracle-mid-day-supernova
+15|spell|207|4703|奇迹「客星辉煌之夜」|sc207|https://soku.cleista.cc/framedata/sanae/sc207-miracle-night-of-the-supernova-storm
+15|spell|210|5515|秘法「九字切」|sc210|https://soku.cleista.cc/framedata/sanae/sc210-esoterica-9-character-pierce
+15|spell|201|3486|秘术「Gray Thaumaturgy」（灰色奇术）|j.sc201|https://soku.cleista.cc/framedata/sanae/sc201-esoterica-grey-thaumaturgy-651
+16|normal|-1|200|5A|5A|https://soku.cleista.cc/framedata/cirno/5a
+16|normal|-1|715|f.5A|f.5A|https://soku.cleista.cc/framedata/cirno/f5a
+16|normal|-1|600|6A|6A|https://soku.cleista.cc/framedata/cirno/6a
+16|normal|-1|200|2A|2A|https://soku.cleista.cc/framedata/cirno/2a
+16|normal|-1|600|3A|3A|https://soku.cleista.cc/framedata/cirno/3a
+16|normal|-1|350|66A|66A|https://soku.cleista.cc/framedata/cirno/66a
+16|normal|-1|450|j.5A|j.5A|https://soku.cleista.cc/framedata/cirno/j5a
+16|normal|-1|600|j.6A|j.6A|https://soku.cleista.cc/framedata/cirno/j6a
+16|normal|-1|773|j.2A|j.2A|https://soku.cleista.cc/framedata/cirno/j2a
+16|normal|-1|850|j.8A|j.8A|https://soku.cleista.cc/framedata/cirno/j8a
+16|normal|-1|200|5AA|5AA|https://soku.cleista.cc/framedata/cirno/5aa
+16|normal|-1|1072|5AAA|5AAA|https://soku.cleista.cc/framedata/cirno/5aaa
+16|normal|-1|750|5AAAA|5AAAA|https://soku.cleista.cc/framedata/cirno/5aaaa
+16|normal|-1|200|4A|4A|https://soku.cleista.cc/framedata/cirno/4a
+16|normal|-1|564|5B|5B|https://soku.cleista.cc/framedata/cirno/5b
+16|normal|-1|697|6B|6B|https://soku.cleista.cc/framedata/cirno/6b
+16|normal|-1|691|2B|2B|https://soku.cleista.cc/framedata/cirno/2b
+16|normal|-1|564|j.5B|j.5B|https://soku.cleista.cc/framedata/cirno/j5b
+16|normal|-1|697|j.6B|j.6B|https://soku.cleista.cc/framedata/cirno/j6b
+16|normal|-1|691|j.2B|j.2B|https://soku.cleista.cc/framedata/cirno/j2b
+16|normal|-1|987|66B|66B|https://soku.cleista.cc/framedata/cirno/66b
+16|normal|-1|1089|5C|5C|https://soku.cleista.cc/framedata/cirno/5c
+16|normal|-1|440|6C|6C|https://soku.cleista.cc/framedata/cirno/6c
+16|normal|-1|750|2C|2C|https://soku.cleista.cc/framedata/cirno/2c
+16|normal|-1|1315|j.5C|j.5C|https://soku.cleista.cc/framedata/cirno/j5c
+16|normal|-1|250|j.6C|j.6C|https://soku.cleista.cc/framedata/cirno/j6c
+16|normal|-1|750|j.2C|j.2C|https://soku.cleista.cc/framedata/cirno/j2c
+16|normal|-1|750|66C|66C|https://soku.cleista.cc/framedata/cirno/66c
+16|skill|100|497|Icicle Shot|236B|https://soku.cleista.cc/framedata/cirno/236b-icicle-shot
+16|skill|100|497|Icicle Shot|236C|https://soku.cleista.cc/framedata/cirno/236c-icicle-shot
+16|skill|100|497|Icicle Shot|j.236B|https://soku.cleista.cc/framedata/cirno/j236b-icicle-shot
+16|skill|100|497|Icicle Shot|j.236C|https://soku.cleista.cc/framedata/cirno/j236c-icicle-shot
+16|skill|104|880|Frost Pillars|236B|https://soku.cleista.cc/framedata/cirno/236b-frost-pillars
+16|skill|104|880|Frost Pillars|236C|https://soku.cleista.cc/framedata/cirno/236c-frost-pillars
+16|skill|108|1041|冷冻光线|236B|https://soku.cleista.cc/framedata/cirno/236b-freezing-light
+16|skill|108|752|冷冻光线|j.236B|https://soku.cleista.cc/framedata/cirno/j236b-freezing-light
+16|skill|101|1238|盛夏的雪人|214B|https://soku.cleista.cc/framedata/cirno/214b-midsummer-snowman
+16|skill|101|1238|盛夏的雪人|214C|https://soku.cleista.cc/framedata/cirno/214c-midsummer-snowman
+16|skill|105|880|Ice Charge|214B|https://soku.cleista.cc/framedata/cirno/214b-ice-charge
+16|skill|105|880|Ice Charge|214C|https://soku.cleista.cc/framedata/cirno/214c-ice-charge
+16|skill|105|800|Ice Charge|j.214B|https://soku.cleista.cc/framedata/cirno/j214b-ice-charge
+16|skill|105|800|Ice Charge|j.214C|https://soku.cleista.cc/framedata/cirno/j214c-ice-charge
+16|skill|109|1004|Ice Kick|214B|https://soku.cleista.cc/framedata/cirno/214b-ice-kick
+16|skill|109|1004|Ice Kick|214C|https://soku.cleista.cc/framedata/cirno/214c-ice-kick
+16|skill|109|797|Ice Kick|j.214B|https://soku.cleista.cc/framedata/cirno/j214b-ice-kick
+16|skill|109|1004|Ice Kick|j.214C|https://soku.cleista.cc/framedata/cirno/j214c-ice-kick
+16|skill|102|800|Little Iceberg|22B|https://soku.cleista.cc/framedata/cirno/22b-little-iceberg
+16|skill|102|800|Little Iceberg|22C|https://soku.cleista.cc/framedata/cirno/22c-little-iceberg
+16|skill|106|1742|Icicle Bomb|22B|https://soku.cleista.cc/framedata/cirno/22b-icicle-bomb
+16|skill|106|997|Icicle Bomb|22C|https://soku.cleista.cc/framedata/cirno/22c-icicle-bomb
+16|skill|106|548|Icicle Bomb|j.22C|https://soku.cleista.cc/framedata/cirno/j22c-icicle-bomb
+16|skill|110|1214|急冻冷冻法|22B|https://soku.cleista.cc/framedata/cirno/22b-frozen-technique
+16|skill|103|1032|Freeze Touch Me|623B|https://soku.cleista.cc/framedata/cirno/623b-freeze-touch-me
+16|skill|103|1032|Freeze Touch Me|623C|https://soku.cleista.cc/framedata/cirno/623c-freeze-touch-me
+16|skill|103|1032|Freeze Touch Me|j.623B|https://soku.cleista.cc/framedata/cirno/j623b-freeze-touch-me
+16|skill|103|1032|Freeze Touch Me|j.623C|https://soku.cleista.cc/framedata/cirno/j623c-freeze-touch-me
+16|skill|107|742|Icicle Rise|623B|https://soku.cleista.cc/framedata/cirno/623b-icicle-lance
+16|skill|107|742|Icicle Rise|623C|https://soku.cleista.cc/framedata/cirno/623c-icicle-lance
+16|skill|111|1342|Icicle Sword|623B|https://soku.cleista.cc/framedata/cirno/623b-icicle-sword
+16|skill|111|850|Icicle Sword|623C|https://soku.cleista.cc/framedata/cirno/623c-icicle-sword
+16|skill|111|912|Icicle Sword|j.623B|https://soku.cleista.cc/framedata/cirno/j623b-icicle-sword
+16|skill|111|1017|Icicle Sword|j.623C|https://soku.cleista.cc/framedata/cirno/j623c-icicle-sword
+16|spell|200|2191|冰符「Icicle Machine Gun」（冰柱机枪）|sc200|https://soku.cleista.cc/framedata/cirno/sc200-ice-sign-icicle-machine-gun
+16|spell|201|2850|霜符「Frost Columns」（冰霜方阵）|sc201|https://soku.cleista.cc/framedata/cirno/sc201-frost-sign-frost-columns
+16|spell|202|2791|冰块「Cold Sprinkler」（冷冻洒水器）|sc202|https://soku.cleista.cc/framedata/cirno/sc202-ice-cubes-cold-sprinkler
+16|spell|203|2703|冷体「Super Ice Kick」（超级冰踢）|sc203|https://soku.cleista.cc/framedata/cirno/sc203-cold-body-super-ice-kick
+16|spell|204|5526|冻符「Perfect Freeze」（完美冻结）|sc204|https://soku.cleista.cc/framedata/cirno/sc204-cold-sign-perfect-freeze
+16|spell|205|2284|冰符「Fairy Spin」（妖精旋转）|sc205|https://soku.cleista.cc/framedata/cirno/sc205-ice-sign-fairy-spin
+16|spell|206|3584|吹冰「Ice Tornado」（碎冰龙卷）|sc206|https://soku.cleista.cc/framedata/cirno/sc206-blowing-ice-ice-tornado
+16|spell|207|2829|冰符「Sword Freezer」（剑式制冰器）|sc207|https://soku.cleista.cc/framedata/cirno/sc207-ice-sign-sword-freezer
+16|spell|208|4500|冰块「Great Crusher」（巨冰破碎）|sc208|https://soku.cleista.cc/framedata/cirno/sc208-ice-cubes-great-crusher
+16|spell|210|2240|冻符「Freeze Atmosphere」（急冻大气）|sc210|https://soku.cleista.cc/framedata/cirno/sc210-frozen-sign-freeze-atmosphere
+16|spell|213|2935|冷符「瞬间冷冻光线」|sc213|https://soku.cleista.cc/framedata/cirno/sc213-cold-sign-insta-freeze-beam
+16|spell|200|636|冰符「Icicle Machine Gun」（冰柱机枪）|j.sc200|https://soku.cleista.cc/framedata/cirno/sc200-ice-sign-icicle-machine-gun-650
+16|spell|202|719|冰块「Cold Sprinkler」（冷冻洒水器）|j.sc202|https://soku.cleista.cc/framedata/cirno/sc202-ice-cubes-cold-sprinkler-652
+16|spell|204|3704|冻符「Perfect Freeze」（完美冻结）|j.sc204|https://soku.cleista.cc/framedata/cirno/sc204-cold-sign-perfect-freeze-654
+16|spell|205|1940|冰符「Fairy Spin」（妖精旋转）|j.sc205|https://soku.cleista.cc/framedata/cirno/sc205-ice-sign-fairy-spin-655
+16|spell|210|3413|冻符「Freeze Atmosphere」（急冻大气）|j.sc210|https://soku.cleista.cc/framedata/cirno/sc210-frozen-sign-freeze-atmosphere-660
+16|spell|213|2971|冷符「瞬间冷冻光线」|j.sc213|https://soku.cleista.cc/framedata/cirno/sc213-cold-sign-insta-freeze-beam-663
+17|normal|-1|200|5A|5A|https://soku.cleista.cc/framedata/meiling/5a
+17|normal|-1|600|f.5A|f.5A|https://soku.cleista.cc/framedata/meiling/f5a
+17|normal|-1|800|6A|6A|https://soku.cleista.cc/framedata/meiling/6a
+17|normal|-1|200|2A|2A|https://soku.cleista.cc/framedata/meiling/2a
+17|normal|-1|750|3A|3A|https://soku.cleista.cc/framedata/meiling/3a
+17|normal|-1|450|66A|66A|https://soku.cleista.cc/framedata/meiling/66a
+17|normal|-1|450|j.5A|j.5A|https://soku.cleista.cc/framedata/meiling/j5a
+17|normal|-1|900|j.6A|j.6A|https://soku.cleista.cc/framedata/meiling/j6a
+17|normal|-1|1000|j.2A|j.2A|https://soku.cleista.cc/framedata/meiling/j2a
+17|normal|-1|1000|j.8A|j.8A|https://soku.cleista.cc/framedata/meiling/j8a
+17|normal|-1|200|5AA|5AA|https://soku.cleista.cc/framedata/meiling/5aa
+17|normal|-1|450|5AAA|5AAA|https://soku.cleista.cc/framedata/meiling/5aaa
+17|normal|-1|650|5AAAA|5AAAA|https://soku.cleista.cc/framedata/meiling/5aaaa
+17|normal|-1|800|5AAAAA|5AAAAA|https://soku.cleista.cc/framedata/meiling/5aaaaa
+17|normal|-1|750|5AAA3A|5AAA3A|https://soku.cleista.cc/framedata/meiling/5aaa3a
+17|normal|-1|200|4A|4A|https://soku.cleista.cc/framedata/meiling/4a
+17|normal|-1|500|5B|5B|https://soku.cleista.cc/framedata/meiling/5b
+17|normal|-1|679|6B|6B|https://soku.cleista.cc/framedata/meiling/6b
+17|normal|-1|650|2B|2B|https://soku.cleista.cc/framedata/meiling/2b
+17|normal|-1|500|j.5B|j.5B|https://soku.cleista.cc/framedata/meiling/j5b
+17|normal|-1|580|j.6B|j.6B|https://soku.cleista.cc/framedata/meiling/j6b
+17|normal|-1|678|j.2B|j.2B|https://soku.cleista.cc/framedata/meiling/j2b
+17|normal|-1|800|66B|66B|https://soku.cleista.cc/framedata/meiling/66b
+17|normal|-1|616|5C|5C|https://soku.cleista.cc/framedata/meiling/5c
+17|normal|-1|738|6C|6C|https://soku.cleista.cc/framedata/meiling/6c
+17|normal|-1|438|2C|2C|https://soku.cleista.cc/framedata/meiling/2c
+17|normal|-1|616|j.5C|j.5C|https://soku.cleista.cc/framedata/meiling/j5c
+17|normal|-1|738|j.6C|j.6C|https://soku.cleista.cc/framedata/meiling/j6c
+17|normal|-1|850|66C|66C|https://soku.cleista.cc/framedata/meiling/66c
+17|skill|100|1200|螺光步|214B|https://soku.cleista.cc/framedata/meiling/214b-spiral-light-steps
+17|skill|100|1250|螺光步|214C|https://soku.cleista.cc/framedata/meiling/214c-spiral-light-steps
+17|skill|104|1379|烈虹拳|214B|https://soku.cleista.cc/framedata/meiling/214b-searing-red-fist
+17|skill|104|1571|烈虹拳|214C|https://soku.cleista.cc/framedata/meiling/214c-searing-red-fist
+17|skill|108|1320|降华蹴|214B|https://soku.cleista.cc/framedata/meiling/214b-kick-of-showering-brilliance
+17|skill|108|1320|降华蹴|214C|https://soku.cleista.cc/framedata/meiling/214c-kick-of-showering-brilliance
+17|skill|108|1200|降华蹴|j.214B|https://soku.cleista.cc/framedata/meiling/j214b-kick-of-showering-brilliance
+17|skill|108|1200|降华蹴|j.214C|https://soku.cleista.cc/framedata/meiling/j214c-kick-of-showering-brilliance
+17|skill|101|1200|红炮|623B|https://soku.cleista.cc/framedata/meiling/623b-red-cannon
+17|skill|101|1200|红炮|623C|https://soku.cleista.cc/framedata/meiling/623c-red-cannon
+17|skill|105|1430|红寸劲|623B|https://soku.cleista.cc/framedata/meiling/623b-red-energy-release
+17|skill|105|1430|红寸劲|623C|https://soku.cleista.cc/framedata/meiling/623c-red-energy-release
+17|skill|102|900|黄震脚|22B|https://soku.cleista.cc/framedata/meiling/22b-yellow-quake-kick
+17|skill|102|900|黄震脚|22C|https://soku.cleista.cc/framedata/meiling/22c-yellow-quake-kick
+17|skill|106|880|地龙波|22B|https://soku.cleista.cc/framedata/meiling/22b-earth-dragon-wave
+17|skill|106|880|地龙波|22C|https://soku.cleista.cc/framedata/meiling/22c-earth-dragon-wave
+17|skill|110|1100|天龙脚|22B|https://soku.cleista.cc/framedata/meiling/22b-sky-dragon-kick
+17|skill|110|1320|天龙脚|22C|https://soku.cleista.cc/framedata/meiling/22c-sky-dragon-kick
+17|skill|103|1202|芳波|236B|https://soku.cleista.cc/framedata/meiling/236b-fragrant-wave
+17|skill|103|1797|芳波|236C|https://soku.cleista.cc/framedata/meiling/236c-fragrant-wave
+17|skill|107|1069|水形太极拳|236B|https://soku.cleista.cc/framedata/meiling/236b-water-taichi-fist
+17|skill|107|1069|水形太极拳|236C|https://soku.cleista.cc/framedata/meiling/236c-water-taichi-fist
+17|skill|111|1549|彩雨|236B|https://soku.cleista.cc/framedata/meiling/236b-colorful-rain
+17|skill|111|1871|彩雨|236C|https://soku.cleista.cc/framedata/meiling/236c-colorful-rain
+17|skill|111|1549|彩雨|j.236B|https://soku.cleista.cc/framedata/meiling/j236b-colorful-rain
+17|skill|111|2316|彩雨|j.236C|https://soku.cleista.cc/framedata/meiling/j236c-colorful-rain
+17|spell|200|2367|彩符「彩光风铃」|sc200|https://soku.cleista.cc/framedata/meiling/sc200-color-sign-colorful-windchime
+17|spell|201|3773|极彩「彩光乱舞」|sc201|https://soku.cleista.cc/framedata/meiling/sc201-ultimate-color-mad-colorful-dance
+17|spell|202|2198|气符「星脉弹」|sc202|https://soku.cleista.cc/framedata/meiling/sc202-chi-sign-star-bullets
+17|spell|203|3620|星气「星脉地转弹」|sc203|https://soku.cleista.cc/framedata/meiling/sc203-star-chi-earth-moving-star-bullets
+17|spell|204|1750|击符「大鹏拳」|sc204|https://soku.cleista.cc/framedata/meiling/sc204-attack-sign-roc-fist
+17|spell|205|5226|炽击「大鹏坠击拳」|sc205|https://soku.cleista.cc/framedata/meiling/sc205-fiery-attack-roc-killing-fist
+17|spell|206|2027|虹符「烈虹真拳」|sc206|https://soku.cleista.cc/framedata/meiling/sc206-rainbow-sign-intense-rainbow-fist
+17|spell|207|3107|气符「地龙天龙脚」|sc207|https://soku.cleista.cc/framedata/meiling/sc207-chi-sign-earth-dragon-sky-dragon-kick
+17|spell|208|991|彩华「虹色太极拳」|sc208|https://soku.cleista.cc/framedata/meiling/sc208-colorful-brilliance-rainbow-taichi
+17|spell|209|4541|华符「彩光莲华掌」|sc209|https://soku.cleista.cc/framedata/meiling/sc209-brilliance-rainbow-brilliance-palm
+18|normal|-1|750|5A|5A|https://soku.cleista.cc/framedata/utsuho/5a
+18|normal|-1|1000|f.5A|f.5A|https://soku.cleista.cc/framedata/utsuho/f5a
+18|normal|-1|1000|6A|6A|https://soku.cleista.cc/framedata/utsuho/6a
+18|normal|-1|550|2A|2A|https://soku.cleista.cc/framedata/utsuho/2a
+18|normal|-1|1100|3A|3A|https://soku.cleista.cc/framedata/utsuho/3a
+18|normal|-1|850|66A|66A|https://soku.cleista.cc/framedata/utsuho/66a
+18|normal|-1|650|j.5A|j.5A|https://soku.cleista.cc/framedata/utsuho/j5a
+18|normal|-1|1100|j.6A|j.6A|https://soku.cleista.cc/framedata/utsuho/j6a
+18|normal|-1|1200|j.2A|j.2A|https://soku.cleista.cc/framedata/utsuho/j2a
+18|normal|-1|1150|j.8A|j.8A|https://soku.cleista.cc/framedata/utsuho/j8a
+18|normal|-1|650|5AA|5AA|https://soku.cleista.cc/framedata/utsuho/5aa
+18|normal|-1|800|5AAA|5AAA|https://soku.cleista.cc/framedata/utsuho/5aaa
+18|normal|-1|1100|5AAAA|5AAAA|https://soku.cleista.cc/framedata/utsuho/5aaaa
+18|normal|-1|750|4A|4A|https://soku.cleista.cc/framedata/utsuho/4a
+18|normal|-1|858|5B|5B|https://soku.cleista.cc/framedata/utsuho/5b
+18|normal|-1|558|6B|6B|https://soku.cleista.cc/framedata/utsuho/6b
+18|normal|-1|713|2B|2B|https://soku.cleista.cc/framedata/utsuho/2b
+18|normal|-1|200|j.5B|j.5B|https://soku.cleista.cc/framedata/utsuho/j5b
+18|normal|-1|581|j.6B|j.6B|https://soku.cleista.cc/framedata/utsuho/j6b
+18|normal|-1|858|j.2B|j.2B|https://soku.cleista.cc/framedata/utsuho/j2b
+18|normal|-1|1100|66B|66B|https://soku.cleista.cc/framedata/utsuho/66b
+18|normal|-1|1444|5C|5C|https://soku.cleista.cc/framedata/utsuho/5c
+18|normal|-1|1342|6C|6C|https://soku.cleista.cc/framedata/utsuho/6c
+18|normal|-1|1342|2C|2C|https://soku.cleista.cc/framedata/utsuho/2c
+18|normal|-1|1656|j.5C|j.5C|https://soku.cleista.cc/framedata/utsuho/j5c
+18|normal|-1|1342|j.6C|j.6C|https://soku.cleista.cc/framedata/utsuho/j6c
+18|normal|-1|1342|j.2C|j.2C|https://soku.cleista.cc/framedata/utsuho/j2c
+18|normal|-1|1510|66C|66C|https://soku.cleista.cc/framedata/utsuho/66c
+18|skill|100|1206|Flare Up|623B|https://soku.cleista.cc/framedata/utsuho/623b-flare-up
+18|skill|100|1734|Flare Up|623C|https://soku.cleista.cc/framedata/utsuho/623c-flare-up
+18|skill|104|1650|Rocket Dive|623B|https://soku.cleista.cc/framedata/utsuho/623b-rocket-dive
+18|skill|104|1650|Rocket Dive|623C|https://soku.cleista.cc/framedata/utsuho/623c-rocket-dive
+18|skill|108|1968|熔化转体踢|623B|https://soku.cleista.cc/framedata/utsuho/623b-melting-pummel-kick
+18|skill|101|1248|Ground Melt|236B|https://soku.cleista.cc/framedata/utsuho/236b-ground-melt
+18|skill|101|1248|Ground Melt|236C|https://soku.cleista.cc/framedata/utsuho/236c-ground-melt
+18|skill|101|982|Ground Melt|j.236B|https://soku.cleista.cc/framedata/utsuho/j236b-ground-melt
+18|skill|101|982|Ground Melt|j.236C|https://soku.cleista.cc/framedata/utsuho/j236c-ground-melt
+18|skill|105|1100|Hell Geyser|236B|https://soku.cleista.cc/framedata/utsuho/236b-hell-geyser
+18|skill|105|1100|Hell Geyser|236C|https://soku.cleista.cc/framedata/utsuho/236c-hell-geyser
+18|skill|109|1226|Radiant Blade|236B|https://soku.cleista.cc/framedata/utsuho/236b-radiant-blade
+18|skill|109|1226|Radiant Blade|236C|https://soku.cleista.cc/framedata/utsuho/236c-radiant-blade
+18|skill|102|554|Break Sun|22B|https://soku.cleista.cc/framedata/utsuho/22b-break-sun
+18|skill|102|554|Break Sun|22C|https://soku.cleista.cc/framedata/utsuho/22c-break-sun
+18|skill|102|200|Break Sun|j.22B|https://soku.cleista.cc/framedata/utsuho/j22b-break-sun
+18|skill|102|200|Break Sun|j.22C|https://soku.cleista.cc/framedata/utsuho/j22c-break-sun
+18|skill|106|1650|Shooting Sun|22B|https://soku.cleista.cc/framedata/utsuho/22b-shooting-sun
+18|skill|106|1650|Shooting Sun|22C|https://soku.cleista.cc/framedata/utsuho/22c-shooting-sun
+18|skill|110|1982|地狱波动炮|22B|https://soku.cleista.cc/framedata/utsuho/22b-hell-wave-cannon
+18|skill|110|1591|地狱波动炮|22C|https://soku.cleista.cc/framedata/utsuho/22c-hell-wave-cannon
+18|skill|110|660|地狱波动炮|j.22B|https://soku.cleista.cc/framedata/utsuho/j22b-hell-wave-cannon
+18|skill|110|1136|地狱波动炮|j.22C|https://soku.cleista.cc/framedata/utsuho/j22c-hell-wave-cannon
+18|skill|103|858|Shooting Star|214B|https://soku.cleista.cc/framedata/utsuho/214b-shooting-star
+18|skill|103|384|Shooting Star|214C|https://soku.cleista.cc/framedata/utsuho/214c-shooting-star
+18|skill|103|712|Shooting Star|j.214B|https://soku.cleista.cc/framedata/utsuho/j214b-shooting-star
+18|skill|103|200|Shooting Star|j.214C|https://soku.cleista.cc/framedata/utsuho/j214c-shooting-star
+18|skill|107|660|复古原子核模型|214B|https://soku.cleista.cc/framedata/utsuho/214b-retro-atomic-model
+18|skill|107|1125|复古原子核模型|214C|https://soku.cleista.cc/framedata/utsuho/214c-retro-atomic-model
+18|skill|107|660|复古原子核模型|j.214B|https://soku.cleista.cc/framedata/utsuho/j214b-retro-atomic-model
+18|skill|107|1125|复古原子核模型|j.214C|https://soku.cleista.cc/framedata/utsuho/j214c-retro-atomic-model
+18|spell|200|3036|爆符「Mega-Flare」（百万耀斑）|sc200|https://soku.cleista.cc/framedata/utsuho/sc200-explosion-sign-mega-flare
+18|spell|201|5747|爆符「Giga-Flare」（十亿耀斑）|sc201|https://soku.cleista.cc/framedata/utsuho/sc201-explosion-sign-giga-flare
+18|spell|203|1093|焰星「Fixed Star」（恒星）|sc203|https://soku.cleista.cc/framedata/utsuho/sc203-burning-star-fixed-star
+18|spell|204|4953|焰星「十凶星」|sc204|https://soku.cleista.cc/framedata/utsuho/sc204-burning-star-the-ten-suns
+18|spell|205|2052|核符「Creeping Sun」（缓行的太阳）|sc205|https://soku.cleista.cc/framedata/utsuho/sc205-nuclear-sign-creeping-sun
+18|spell|206|4465|「地狱的人造太阳」|sc206|https://soku.cleista.cc/framedata/utsuho/sc206-hells-artificial-sun
+18|spell|207|5161|地热「核焰喷涌」|sc207|https://soku.cleista.cc/framedata/utsuho/sc207-geothermal-nuclear-blaze-geyser
+18|spell|208|3197|光热「High Tension Blade」（高压光刃）|sc208|https://soku.cleista.cc/framedata/utsuho/sc208-light-energy-high-tension-blade
+18|spell|209|3778|鸦符「八咫乌俯冲」|sc209|https://soku.cleista.cc/framedata/utsuho/sc209-crow-sign-yatagarasu-dive
+18|spell|210|4289|核热「核反应失控疾冲」|sc210|https://soku.cleista.cc/framedata/utsuho/sc210-nuclear-heat-uncontrollable-dive
+18|spell|212|4685|「Subterranean Sun」（地底太阳）|sc212|https://soku.cleista.cc/framedata/utsuho/sc212-subterranean-sun
+18|spell|213|1077|遮光「核热护罩」|sc213|https://soku.cleista.cc/framedata/utsuho/sc213-light-cover-nuclear-visor
+18|spell|200|3036|爆符「Mega-Flare」（百万耀斑）|j.sc200|https://soku.cleista.cc/framedata/utsuho/sc200-explosion-sign-mega-flare-650
+18|spell|203|1093|焰星「Fixed Star」（恒星）|j.sc203|https://soku.cleista.cc/framedata/utsuho/sc203-burning-star-fixed-star-653
+18|spell|205|2052|核符「Creeping Sun」（缓行的太阳）|j.sc205|https://soku.cleista.cc/framedata/utsuho/sc205-nuclear-sign-creeping-sun-655
+18|spell|209|3742|鸦符「八咫乌俯冲」|j.sc209|https://soku.cleista.cc/framedata/utsuho/sc209-crow-sign-yatagarasu-dive-659
+18|spell|212|4685|「Subterranean Sun」（地底太阳）|j.sc212|https://soku.cleista.cc/framedata/utsuho/sc212-subterranean-sun-662
+18|spell|214|5547|「Abyss Nova」（深渊新星）（发动）|sc214|https://soku.cleista.cc/framedata/utsuho/sc214-abyss-nova-activation
+18|spell|211|745|控制「Self Tokamak」（自动托卡马克装置）（光环冲刺）|sc211|https://soku.cleista.cc/framedata/utsuho/sc211-control-self-tokamak-aura-dash
+19|normal|-1|200|5A|5A|https://soku.cleista.cc/framedata/suwako/5a
+19|normal|-1|750|f.5A|f.5A|https://soku.cleista.cc/framedata/suwako/f5a
+19|normal|-1|800|6A|6A|https://soku.cleista.cc/framedata/suwako/6a
+19|normal|-1|1000|LA|LA|https://soku.cleista.cc/framedata/suwako/la
+19|normal|-1|1100|L3A|L3A|https://soku.cleista.cc/framedata/suwako/l3a
+19|normal|-1|390|j.5A|j.5A|https://soku.cleista.cc/framedata/suwako/j5a
+19|normal|-1|1058|j.6A|j.6A|https://soku.cleista.cc/framedata/suwako/j6a
+19|normal|-1|1000|j.2A|j.2A|https://soku.cleista.cc/framedata/suwako/j2a
+19|normal|-1|1578|j.8A|j.8A|https://soku.cleista.cc/framedata/suwako/j8a
+19|normal|-1|300|5AA|5AA|https://soku.cleista.cc/framedata/suwako/5aa
+19|normal|-1|1176|5AAA|5AAA|https://soku.cleista.cc/framedata/suwako/5aaa
+19|normal|-1|2095|5AAAA|5AAAA|https://soku.cleista.cc/framedata/suwako/5aaaa
+19|normal|-1|200|4A|4A|https://soku.cleista.cc/framedata/suwako/4a
+19|normal|-1|800|3A|3A|https://soku.cleista.cc/framedata/suwako/3a
+19|normal|-1|1100|L6A|L6A|https://soku.cleista.cc/framedata/suwako/l6a
+19|normal|-1|931|5B|5B|https://soku.cleista.cc/framedata/suwako/5b
+19|normal|-1|931|6B|6B|https://soku.cleista.cc/framedata/suwako/6b
+19|normal|-1|1137|LB|LB|https://soku.cleista.cc/framedata/suwako/lb
+19|normal|-1|931|L6B|L6B|https://soku.cleista.cc/framedata/suwako/l6b
+19|normal|-1|931|j.5B|j.5B|https://soku.cleista.cc/framedata/suwako/j5b
+19|normal|-1|931|j.6B|j.6B|https://soku.cleista.cc/framedata/suwako/j6b
+19|normal|-1|931|j.2B|j.2B|https://soku.cleista.cc/framedata/suwako/j2b
+19|normal|-1|800|66B|66B|https://soku.cleista.cc/framedata/suwako/66b
+19|normal|-1|1000|5C|5C|https://soku.cleista.cc/framedata/suwako/5c
+19|normal|-1|1200|6C|6C|https://soku.cleista.cc/framedata/suwako/6c
+19|normal|-1|578|LC|LC|https://soku.cleista.cc/framedata/suwako/lc
+19|normal|-1|577|j.5C|j.5C|https://soku.cleista.cc/framedata/suwako/j5c
+19|normal|-1|901|j.6C|j.6C|https://soku.cleista.cc/framedata/suwako/j6c
+19|normal|-1|973|j.2C|j.2C|https://soku.cleista.cc/framedata/suwako/j2c
+19|skill|100|917|古老的间歇泉|214B|https://soku.cleista.cc/framedata/suwako/214b-ancient-geyser
+19|skill|100|1046|古老的间歇泉|214C|https://soku.cleista.cc/framedata/suwako/214c-ancient-geyser
+19|skill|100|783|古老的间歇泉|j.214B|https://soku.cleista.cc/framedata/suwako/j214b-ancient-geyser
+19|skill|100|1171|古老的间歇泉|j.214C|https://soku.cleista.cc/framedata/suwako/j214c-ancient-geyser
+19|skill|104|1375|水蛙神|214B|https://soku.cleista.cc/framedata/suwako/214b-frog-god
+19|skill|104|1375|水蛙神|214C|https://soku.cleista.cc/framedata/suwako/214c-frog-god
+19|skill|104|1375|水蛙神|214B|https://soku.cleista.cc/framedata/suwako/214b-frog-god-507
+19|skill|104|1375|水蛙神|214C|https://soku.cleista.cc/framedata/suwako/214c-frog-god-508
+19|skill|108|441|招雨的雨蛙|214B|https://soku.cleista.cc/framedata/suwako/214b-rain-calling-frog
+19|skill|108|441|招雨的雨蛙|214C|https://soku.cleista.cc/framedata/suwako/214c-rain-calling-frog
+19|skill|108|441|招雨的雨蛙|214B|https://soku.cleista.cc/framedata/suwako/214b-rain-calling-frog-512
+19|skill|108|441|招雨的雨蛙|214C|https://soku.cleista.cc/framedata/suwako/214c-rain-calling-frog-513
+19|skill|101|1248|大蛤蟆神|623B|https://soku.cleista.cc/framedata/suwako/623b-toad-god
+19|skill|101|1248|大蛤蟆神|j.623B|https://soku.cleista.cc/framedata/suwako/j623b-toad-god
+19|skill|105|1330|古老铁轮|623B|https://soku.cleista.cc/framedata/suwako/623b-ancient-metal-ring
+19|skill|105|1613|古老铁轮|623C|https://soku.cleista.cc/framedata/suwako/623c-ancient-metal-ring
+19|skill|105|1330|古老铁轮|j.623B|https://soku.cleista.cc/framedata/suwako/j623b-ancient-metal-ring
+19|skill|105|1613|古老铁轮|j.623C|https://soku.cleista.cc/framedata/suwako/j623c-ancient-metal-ring
+19|skill|109|658|手长足长先生|j.623B|https://soku.cleista.cc/framedata/suwako/j623b-ms-longlimbs
+19|skill|109|622|手长足长先生|j.623C|https://soku.cleista.cc/framedata/suwako/j623c-ms-longlimbs
+19|skill|102|1308|大地之湖|236B|https://soku.cleista.cc/framedata/suwako/236b-lake-of-great-earth
+19|skill|102|1308|大地之湖|236C|https://soku.cleista.cc/framedata/suwako/236c-lake-of-great-earth
+19|skill|102|400|大地之湖|j.236B|https://soku.cleista.cc/framedata/suwako/j236b-lake-of-great-earth
+19|skill|102|400|大地之湖|j.236C|https://soku.cleista.cc/framedata/suwako/j236c-lake-of-great-earth
+19|skill|106|795|古代翡翠|236B|https://soku.cleista.cc/framedata/suwako/236b-ancient-jade
+19|skill|106|426|古代翡翠|236C|https://soku.cleista.cc/framedata/suwako/236c-ancient-jade
+19|skill|106|425|古代翡翠|j.236B|https://soku.cleista.cc/framedata/suwako/j236b-ancient-jade
+19|skill|106|220|古代翡翠|j.236C|https://soku.cleista.cc/framedata/suwako/j236c-ancient-jade
+19|skill|110|1079|蛙石神|236B|https://soku.cleista.cc/framedata/suwako/236b-stone-frog-god
+19|skill|110|1079|蛙石神|236C|https://soku.cleista.cc/framedata/suwako/236c-stone-frog-god
+19|skill|110|1079|蛙石神|j.236B|https://soku.cleista.cc/framedata/suwako/j236b-stone-frog-god
+19|skill|110|1079|蛙石神|j.236C|https://soku.cleista.cc/framedata/suwako/j236c-stone-frog-god
+19|skill|103|656|土著神的作祟|22B|https://soku.cleista.cc/framedata/suwako/22b-native-scourge
+19|skill|103|656|土著神的作祟|22C|https://soku.cleista.cc/framedata/suwako/22c-native-scourge
+19|skill|103|643|土著神的作祟|j.22B|https://soku.cleista.cc/framedata/suwako/j22b-native-scourge
+19|skill|103|643|土著神的作祟|j.22C|https://soku.cleista.cc/framedata/suwako/j22c-native-scourge
+19|spell|200|2723|土著神「洩矢神」|sc200|https://soku.cleista.cc/framedata/suwako/sc200-native-god-moriya-god
+19|spell|201|2106|源符「诹访清水」|sc201|https://soku.cleista.cc/framedata/suwako/sc201-spring-sign-moriya-clear-water
+19|spell|202|2976|开宴「二拜二拍一拜」|sc202|https://soku.cleista.cc/framedata/suwako/sc202-party-start-2-bows-2-claps-1-bow
+19|spell|203|1549|土著神「小小青蛙不输风雨」|sc203|https://soku.cleista.cc/framedata/suwako/sc203-native-god-froggy-braves-the-elements
+19|spell|204|2138|神具「洩矢的铁轮」|sc204|https://soku.cleista.cc/framedata/suwako/sc204-divine-instrument-moriyas-metal-ring
+19|spell|205|4394|源符「厌川的翡翠」|sc205|https://soku.cleista.cc/framedata/suwako/sc205-spring-sign-horrid-river-jade
+19|spell|206|4189|蛙狩「蛙以口鸣，方致蛇祸」|sc206|https://soku.cleista.cc/framedata/suwako/sc206-frog-hunt-snake-hears-and-eats-frog
+19|spell|208|5984|祟神「赤口大人」|sc208|https://soku.cleista.cc/framedata/suwako/sc208-scourge-god-mishaguchi-sama
+19|spell|209|3671|土著神「宝永四年的赤蛙」|sc209|https://soku.cleista.cc/framedata/suwako/sc209-native-god-red-frog-of-houei-4
+19|spell|201|2053|源符「诹访清水」|j.sc201|https://soku.cleista.cc/framedata/suwako/sc201-spring-sign-moriya-clear-water-651
+19|spell|202|2976|开宴「二拜二拍一拜」|j.sc202|https://soku.cleista.cc/framedata/suwako/sc202-party-start-2-bows-2-claps-1-bow-652
+19|spell|203|1531|土著神「小小青蛙不输风雨」|j.sc203|https://soku.cleista.cc/framedata/suwako/sc203-native-god-froggy-braves-the-elements-653
+19|spell|204|1459|神具「洩矢的铁轮」|j.sc204|https://soku.cleista.cc/framedata/suwako/sc204-divine-instrument-moriyas-metal-ring-654
+19|spell|205|4394|源符「厌川的翡翠」|j.sc205|https://soku.cleista.cc/framedata/suwako/sc205-spring-sign-horrid-river-jade-655
+19|spell|206|4189|蛙狩「蛙以口鸣，方致蛇祸」|j.sc206|https://soku.cleista.cc/framedata/suwako/sc206-frog-hunt-snake-hears-and-eats-frog-656
+19|spell|207|2647|土著神「手长足长大人」|j.sc207|https://soku.cleista.cc/framedata/suwako/sc207-native-god-master-longlimbs
+19|spell|209|3991|土著神「宝永四年的赤蛙」|j.sc209|https://soku.cleista.cc/framedata/suwako/sc209-native-god-red-frog-of-houei-4-659
