@@ -31,11 +31,11 @@ cmake --install build --config Release --prefix staging
 
 CMake fetches pinned upstream [SokuLib](https://github.com/SokuDev/SokuLib) and [ModTemplate](https://github.com/SokuDev/ModTemplate) sources. Windows x86 compilation and linking, as well as portable core tests, **passed GitHub Actions on 2026-11-13** ([CI run](https://github.com/HawkingChen/SokuMaxDamage/actions/runs/43396029191)). The latest [v0.3.0-test.1 CI run](https://github.com/HawkingChen/SokuMaxDamage/actions/runs/43433396053) successfully compiled and packaged a Windows x86 DLL, ran core tests, checked the PE32 machine type and published a **test pre-release ZIP**. **Runtime compatibility, accurate damage values and real online play remain unverified.**
 
-## Test ZIP: v0.3.0-test.1
+## Current test ZIP: v0.3.0-test.2
 
-> **Netplay note:** This previously published ZIP was built **before** the client/server self-player mapping fix. The latest `main` branch includes the fix and regression tests; the ZIP does not. Do not use that old ZIP to judge whether the online self-player selection is corrected.
+**Netplay local-side fix included:** VSCLIENT uses own P1/left, VSSERVER own P2/right, with stale panel snapshots cleared on side changes. Online matches themselves still require Steam Deck host/client validation. The previous v0.3.0-test.1 ZIP predates this fix.
 
-**[Download the Windows x86 Steam Deck test ZIP](https://github.com/HawkingChen/SokuMaxDamage/releases/download/v0.3.0-test.1/SokuMaxDamage-v0.3.0-test.1-win32.zip)** (prerelease, not yet gameplay verified).
+**[Download the Windows x86 Steam Deck test ZIP](https://github.com/HawkingChen/SokuMaxDamage/releases/download/v0.3.0-test.2/SokuMaxDamage-v0.3.0-test.2-win32.zip)** (prerelease, not yet gameplay verified).
 
 The ZIP contains `WhatHurtsMost.dll`, `FrameData.txt`, `MoveProfiles.txt`, `WikiMaxProfiles.txt`, `WhatHurtsMost.ini`, `SHA256SUMS.txt`, `INSTALL-STEAMDECK.txt`, and a backup-first `install-steamdeck.sh`.
 
