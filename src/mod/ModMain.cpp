@@ -7,6 +7,7 @@
 #include "RecordTracker.hpp"
 #include "FrameProbe.hpp"
 #include "StyledPanel.hpp"
+#include "LocalPlayerSide.hpp"
 
 #include <windows.h>
 #include <algorithm>
@@ -26,6 +27,7 @@ HMODULE g_module = nullptr;
 bool g_hooksInstalled = false;
 bool g_fontReady = false;
 SokuLib::BattleManager *g_lastManager = nullptr;
+int g_lastLocalSide = whm::kNoLocalPlayer;
 unsigned g_lastFrame = 0;
 unsigned g_lastRefresh = 0;
 std::string g_displayText;
@@ -62,22 +64,23 @@ std::string dllFolder() {
     return last == std::string::npos ? ".\\" : full.substr(0, last + 1);
 }
 
-bool isOwnBattleMode() {
-    switch (SokuLib::mainMode) {
-        case SokuLib::BATTLE_MODE_PRACTICE:
-        case SokuLib::BATTLE_MODE_VSCOM:
-        case SokuLib::BATTLE_MODE_VSPLAYER:
-        case SokuLib::BATTLE_MODE_VSCLIENT:
-        case SokuLib::BATTLE_MODE_VSSERVER:
-            return true;
-        default: return false;
-    }
-}
+// Check that the SokuLib runtime enum values match the portable mapping.
+static_assert(SokuLib::BATTLE_MODE_VSCOM == 2 &&
+              SokuLib::BATTLE_MODE_VSPLAYER == 3 &&
+              SokuLib::BATTLE_MODE_VSCLIENT == 4 &&
+              SokuLib::BATTLE_MODE_VSSERVER == 5 &&
+              SokuLib::BATTLE_MODE_VSWATCH == 6 &&
+              SokuLib::BATTLE_MODE_PRACTICE == 8 &&
+              SokuLib::BATTLE_SUBMODE_REPLAY == 2);
 
 int ownSide() {
-    // In standard online 1v1 the host is left and the client is right.
-    // Not sufficient for spectator / custom team mods (excluded above).
-    return SokuLib::mainMode == SokuLib::BATTLE_MODE_VSCLIENT ? 1 : 0;
+    return whm::localPlayerSide(
+        static_cast<int>(SokuLib::mainMode),
+        static_cast<int>(SokuLib::subMode));
+}
+
+bool isOwnBattleMode() {
+    return ownSide() != whm::kNoLocalPlayer;
 }
 
 const SokuLib::v2::Player *viewPlayer(const SokuLib::BattleManager *manager, int side) {
@@ -200,7 +203,9 @@ PanelView g_panelView;
 struct StaticMove { int character,card,damage; std::string kind,name,notation; };
 std::vector<StaticMove> g_staticMoves;
 std::vector<HudRow> composeHUD(const SokuLib::BattleManager *mgr) {
-    const auto *own=viewPlayer(mgr,ownSide());const auto *enemy=viewPlayer(mgr,1-ownSide());
+    const int side = ownSide();
+    if (side == whm::kNoLocalPlayer) return {};
+    const auto *own=viewPlayer(mgr,side);const auto *enemy=viewPlayer(mgr,1-side);
     PanelView view;view.character=static_cast<int>(own->characterIndex);
     view.attack=own->attackPower;view.defense=enemy->defensePower;
     view.opponentCharacter=static_cast<int>(enemy->characterIndex);
@@ -372,8 +377,17 @@ void drawCardIcon(const SokuLib::v2::Player &player, int cardId, int y) {
 
 int __fastcall onProcess(SokuLib::BattleManager *mgr) {
     // Take the victim's HP before and after the engine's own update. Never write into game state.
-    if (g_lastManager != mgr) {
+    const int side = ownSide();
+    // An online side change may reuse the same BattleManager address.
+    // Clear all cached cards, player stats and hit records on ANY local side change.
+    if (g_lastManager != mgr || g_lastLocalSide != side) {
         g_lastManager = mgr;
+        g_lastLocalSide = side;
+        g_panelWanted.store(false);
+        {
+            std::lock_guard<std::mutex> lock(g_panelMutex);
+            g_panelView = PanelView{};
+        }
         g_record.reset();
         g_displayText.clear();
         g_rows.clear();
@@ -385,13 +399,19 @@ int __fastcall onProcess(SokuLib::BattleManager *mgr) {
     // Keep the best hit across round transitions; only re-create the HUD.
     if (mgr->frameCount < g_lastFrame) g_lastRefresh = 0;
     g_lastFrame = mgr->frameCount;
-    const int side = ownSide();
+    // Spectator/replay and unsupported sessions MUST NOT read or show either
+    // player as "self". Run the original engine update without any HUD work.
+    if (side == whm::kNoLocalPlayer)
+        return (mgr->*g_originalProcess)();
     const int before = side == 0 ? mgr->rightCharacterManager.objectBase.hp
                                  : mgr->leftCharacterManager.objectBase.hp;
     const int actionBefore = side == 0 ? mgr->leftCharacterManager.objectBase.action
                                        : mgr->rightCharacterManager.objectBase.action;
     const int result = (mgr->*g_originalProcess)();
-    if (!isOwnBattleMode()) return result;
+    if (ownSide() != side) {
+        g_panelWanted.store(false);
+        return result;
+    }
     const int after = side == 0 ? mgr->rightCharacterManager.objectBase.hp
                                 : mgr->leftCharacterManager.objectBase.hp;
     const int actionAfter = side == 0 ? mgr->leftCharacterManager.objectBase.action
@@ -416,6 +436,11 @@ void __fastcall onExit(SokuLib::BattleManager *mgr) {
     g_probeCharacter = -1;
     g_probeDataSource = nullptr;
     g_lastManager = nullptr;
+    g_lastLocalSide = whm::kNoLocalPlayer;
+    {
+        std::lock_guard<std::mutex> lock(g_panelMutex);
+        g_panelView = PanelView{};
+    }
     g_lastFrame = 0;
     g_lastRefresh = 0;
     g_displayText.clear();
