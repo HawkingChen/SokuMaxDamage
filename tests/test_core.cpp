@@ -2,6 +2,7 @@
 #include "MoveCatalog.hpp"
 #include "WikiMax.hpp"
 #include "RecordTracker.hpp"
+#include "LocalPlayerSide.hpp"
 #include <cassert>
 #include <cmath>
 #include <iostream>
@@ -10,6 +11,21 @@
 
 int main() {
     using namespace whm;
+    // Regression: networking roles are the OPPOSITE of the old implementation.
+    // SokuMods DiscordIntegration uses VSCLIENT (4) as local left and
+    // VSSERVER (5) as local right. A wrong side leaks opponent's hand/skills.
+    static_assert(localPlayerSide(4, 1) == 0); // client -> own P1/left
+    static_assert(localPlayerSide(5, 1) == 1); // server -> own P2/right
+    static_assert(localPlayerSide(8, 0) == 0); // practice
+    static_assert(localPlayerSide(2, 0) == 0); // VS COM
+    static_assert(localPlayerSide(3, 1) == 0); // offline P1
+    static_assert(localPlayerSide(6, 1) == kNoLocalPlayer); // spectator
+    static_assert(localPlayerSide(5, 2) == kNoLocalPlayer); // replay
+    static_assert(localPlayerSide(4, 2) == kNoLocalPlayer); // replay
+    static_assert(localPlayerSide(0, 1) == kNoLocalPlayer); // story
+    static_assert(localPlayerSide(99, 1) == kNoLocalPlayer); // unknown
+    assert(localPlayerSide(4, 1) != localPlayerSide(5, 1));
+
     assert(std::abs(gutsFactor(10000) - 1.0) < 0.001);
     assert(std::abs(gutsFactor(0) - 0.7) < 0.001);
     assert(std::abs(gutsFactor(5000) - 0.85) < 0.001);
