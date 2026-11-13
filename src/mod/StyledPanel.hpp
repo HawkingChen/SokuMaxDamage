@@ -312,14 +312,14 @@ inline void paintStyledPanel(HWND window, const PanelView &v, const std::string 
     rule(28,135,198,135,RGB(99,79,126));
     // Only observable and relevant effects are rendered; zero stacks are
     // intentionally not expanded into pretend Buff/Debuff card icons.
-    int effectY=145;
+    int effectY=143;
     auto effect = [&](int character,int card,int copies,const std::wstring &abbr,
                       const std::wstring &label,const std::wstring &value) {
-        if(effectY>237)return;
-        stacked(character,card,30,effectY+1,copies,22,30,6,abbr);
-        write(label,72,effectY-2,124,17,13,cream);
-        write(value,72,effectY+13,126,22,18,bright);
-        effectY+=43;
+        if(effectY>212)return;  // Leave the last row for the weather label.
+        stacked(character,card,30,effectY+2,copies,19,27,5,abbr);
+        write(label,68,effectY-1,130,16,12,cream);
+        write(value,68,effectY+13,130,18,16,bright);
+        effectY+=34;
     };
     if (v.dolls>0 || std::abs(v.defense-1.0)>0.008) {
         swprintf_s(multiplier,L"敌受伤 ×%.2f",v.defense);
