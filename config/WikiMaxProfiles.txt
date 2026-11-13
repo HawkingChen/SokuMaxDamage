@@ -1,0 +1,5 @@
+# Published extreme neutral-state total damage per ONE move. No practical hit probability.
+# character|kind|card_or_action_id|level(-1=any)|maximum|name|source
+# This is NOT a complete 20-character database. The number must be explicitly a full-move max.
+# Original game 1.10a only; check each wiki entry's version and any exceptional state.
+14|spell|207|-1|5851|全人類の緋想天|https://wikiwiki.jp/tenshi/【非想天則】スペルカード
