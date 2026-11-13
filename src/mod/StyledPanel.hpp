@@ -26,9 +26,10 @@ inline constexpr int kPlusLogicalSize = 34;
 struct HudButton { int x, y, w, h; };
 // 2x2 control pad to the right of the "current hand" caption:
 // CN / JP / EN / collapse.
+// Bottom-right corner of the hand strip, clear of all five SC cards.
 inline constexpr HudButton kHudButtons[4] = {
-    {354, 204, 28, 28}, {386, 204, 28, 28},
-    {354, 236, 28, 28}, {386, 236, 28, 28}};
+    {910, 204, 28, 28}, {944, 204, 28, 28},
+    {910, 238, 28, 28}, {944, 238, 28, 28}};
 
 struct PanelCard {
     int character = -1, card = -1, damage = 0;
@@ -50,6 +51,8 @@ struct PanelView {
     bool weatherSealed = false;
     whm::HudLanguage language = whm::HudLanguage::Chinese;
     bool collapsed = false;
+    int cursorX = -1, cursorY = -1;
+    bool systemCursorVisible = true;
     std::vector<PanelEffect> effects;
     PanelCard strongest, record;
     std::vector<PanelCard> hand;
@@ -64,9 +67,7 @@ inline std::wstring panelWide(const std::string &s) {
     return w;
 }
 inline std::string panelFactor(double value, int decimals) {
-    std::ostringstream out;
-    out << std::fixed << std::setprecision(decimals) << value;
-    return out.str();
+    return whm::hudFactor(value, decimals); // identical to effect rows
 }
 inline std::wstring panelPercent(double value) {
     int rounded = static_cast<int>(value + 0.5);
@@ -80,7 +81,9 @@ inline std::wstring panelCardLabel(const PanelCard &card, whm::HudLanguage lang,
     const std::string chosen = !localized.empty() ? localized : card.name;
     if (chosen.empty()) return missing;
     std::wstring out = panelWide(chosen);
-    if (!card.notation.empty()) out += L" · " + panelWide(card.notation);
+    // Normals such as 6A use the notation as their name: do not print "6A · 6A".
+    if (!card.notation.empty() && chosen != card.notation)
+        out += L" · " + panelWide(card.notation);
     return out;
 }
 
@@ -496,11 +499,26 @@ inline void paintStyledPanel(HWND window, const PanelView &v, const std::string 
     highlight(608,whm::HudTextKey::Record,v.record,
               whm::HudTextKey::NoRecord,false);
 
-    // Bottom strip: live hand order only, plus the 2x2 language/collapse pad.
+    // Bottom strip: live hand order, then the square 2x2 pad at its RIGHT edge.
     outlinedPanel(225,194,758,80,false);
     write(localized(whm::HudTextKey::Hand),239,203,110,22,17,cream);
     write(localized(whm::HudTextKey::SpellMax),239,230,110,22,14,RGB(206,181,224));
     rule(348,203,348,267,RGB(110,90,139));
+    const size_t shown=std::min<size_t>(v.hand.size(),5);
+    if (shown==0) {
+        write(localized(whm::HudTextKey::NoHand),380,206,510,60,20,faded,DT_CENTER);
+    } else {
+        for(size_t i=0;i<shown;++i) {
+            const PanelCard &card=v.hand[i];
+            const int x=380+static_cast<int>(i)*100;
+            art(card.character,card.card,x,208,32,45,L"SC");
+            const std::wstring amount=card.damage>0?
+                ((card.approximate?L"≈":L"")+std::to_wstring(card.damage)):L"—";
+            write(amount,x-21,255,80,20,20,bright,DT_CENTER,L"Georgia",true);
+        }
+    }
+    rule(900,203,900,267,RGB(110,90,139));
+    rounded(904,198,72,72,RGB(24,19,38),RGB(103,78,130),8);
     auto button = [&](const HudButton &b,const wchar_t *caption,bool active) {
         rounded(b.x,b.y,b.w,b.h,active?RGB(96,64,44):RGB(28,23,44),
                 active?gold:RGB(103,78,130),5);
@@ -511,19 +529,21 @@ inline void paintStyledPanel(HWND window, const PanelView &v, const std::string 
     button(kHudButtons[1],L"JP",selected==1);
     button(kHudButtons[2],L"EN",selected==2);
     button(kHudButtons[3],L"↑",false);
-    rule(420,203,420,267,RGB(110,90,139));
-    const size_t shown=std::min<size_t>(v.hand.size(),5);
-    if (shown==0) {
-        write(localized(whm::HudTextKey::NoHand),432,206,540,60,20,faded,DT_CENTER);
-    } else {
-        for(size_t i=0;i<shown;++i) {
-            const PanelCard &card=v.hand[i];
-            const int x=430+static_cast<int>(i)*108;
-            art(card.character,card.card,x,208,32,45,L"SC");
-            const std::wstring amount=card.damage>0?
-                ((card.approximate?L"≈":L"")+std::to_wstring(card.damage)):L"—";
-            write(amount,x-21,255,80,20,20,bright,DT_CENTER,L"Georgia",true);
-        }
+    // Fallback arrow for sessions where the game keeps the system cursor
+    // hidden. It is only drawn when the real cursor is not showing.
+    if(!v.systemCursorVisible&&v.cursorX>=0&&v.cursorY>=0) {
+        auto arrow=[&](int dx,int dy,COLORREF color) {
+            POINT a[]{{v.cursorX+dx,v.cursorY+dy},
+                      {v.cursorX+dx,v.cursorY+dy+17},
+                      {v.cursorX+dx+4,v.cursorY+dy+13},
+                      {v.cursorX+dx+7,v.cursorY+dy+20},
+                      {v.cursorX+dx+10,v.cursorY+dy+19},
+                      {v.cursorX+dx+7,v.cursorY+dy+12},
+                      {v.cursorX+dx+13,v.cursorY+dy+11}};
+            shape(a,7,color);
+        };
+        arrow(1,1,RGB(18,14,28));
+        arrow(0,0,RGB(255,246,225));
     }
     SetMapMode(dc,MM_TEXT);
     BitBlt(target,0,0,width,height,dc,0,0,SRCCOPY);

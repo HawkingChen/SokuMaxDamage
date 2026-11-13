@@ -9,6 +9,7 @@
 #include "FirstHit.hpp"
 #include <cassert>
 #include <cmath>
+#include <cstdio>
 #include <iostream>
 #include <sstream>
 #include <vector>
@@ -152,6 +153,13 @@ int main() {
            std::string("根性補正"));
     assert(localizeEffectValue("×1.20 另计", HudLanguage::Japanese) == "×1.20 別途");
     assert(weatherName(4, HudLanguage::English) == std::string("Hail"));
+    // Regression: the big percentage and the "根性补正" row used different
+    // formatters and could show 0.70 vs 0.71 for the same hpFactor.
+    char probe[64]{}; std::snprintf(probe, sizeof(probe), "%.2f", 0.705);
+    assert(hudFactor(0.705, 2) == probe);
+    assert(hudFactor(0.705, 2) == hudFactor(0.705, 2));
+    assert(hudFactor(1., 1) == "1.0");
+    assert(hudFactor(0.7, 2) == "0.70");
 
     // --- Weather text only when effective weather can influence damage.
     assert(weatherLabelVisible(4, false, 1.25, 1.));

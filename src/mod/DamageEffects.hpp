@@ -20,7 +20,8 @@ inline void collectDamageEffects(PanelView &v,const void *own, const void *enemy
     // A sealed effective weather belongs to the affected player (0x526).
     v.weatherSealed=effectField<unsigned short>(own,0x526)>0;
     double accountedAttack=1.,accountedDefense=1.;
-    auto factor=[](double n){char b[64];std::snprintf(b,sizeof(b),"×%.2f",n);return std::string(b);};
+    // Same formatter as the big percentage / grey guts number: no 0.01 drift.
+    auto factor=[](double n){return "×"+whm::hudFactor(n,2);};
     auto add=[&](int ch,int card,int copies,const char *name,const std::string &value){v.effects.push_back({ch,card,copies,name,value});};
     if(v.rods>0){double n=1.+.1*v.rods;accountedAttack*=n;add(v.character,18,v.rods,"自身制御棒",factor(n));}
     int enemyRods=std::clamp(static_cast<int>(effectField<float>(enemy,0x844)),0,4);

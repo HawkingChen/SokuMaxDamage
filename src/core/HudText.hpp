@@ -4,6 +4,7 @@
 // character, card id and notation through config/MoveNames.tsv.
 #include <cmath>
 #include <cstddef>
+#include <cstdio>
 #include <cstring>
 #include <string>
 
@@ -53,6 +54,16 @@ inline const char *hudText(HudTextKey key, HudLanguage lang) {
         case HudLanguage::English: return e.en;
         default: return e.zh;
     }
+}
+
+// ONE formatter for every visible factor. The big percentage, the grey guts
+// number and the explanatory effect rows must never disagree by a rounding
+// step: iostream and snprintf can round a value such as 0.705 differently.
+inline std::string hudFactor(double value, int decimals) {
+    if (!(value == value) || value < -1e9 || value > 1e9) value = 0.;
+    char buffer[64]{};
+    std::snprintf(buffer, sizeof(buffer), "%.*f", decimals, value);
+    return std::string(buffer);
 }
 
 // j/f prefixes become upper case and the separator dot is removed:

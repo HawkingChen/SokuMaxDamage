@@ -11,7 +11,7 @@ An experimental, local-only damage HUD mod for **Touhou Hisoutensoku (TH12.3) v1
 - The SC strip uses one fixed position for both host and client. No card selection or interaction is added to the game window.
 - In ordinary network 1v1, the panel selects **only the locally controlled fighter**: SokuLib `VSCLIENT` uses P1/left, `VSSERVER` uses P2/right (matching SokuMods DiscordIntegration). The opponent contributes only defensive modifiers needed to estimate our outgoing damage. Spectator/replay views never treat a remote player as self.
 - A dedicated window thread and copied display snapshots; the panel hides outside supported battle scenes.
-- A 2×2 control pad (CN / JP / EN / collapse) switches every fixed label and sourced move name; folding reduces the companion to a small **+** at its top-right corner. Language and fold preferences persist in `WhatHurtsMost.ini`.
+- A 2×2 control pad at the **bottom-right** of the hand strip (CN / JP / EN / collapse) switches every fixed label and sourced move name; folding reduces the companion to a small **+** at its top-right corner. Language and fold preferences persist in `WhatHurtsMost.ini`. The window restores a hidden/clipped cursor and handles clicks on mouse-down without taking keyboard focus; a drawn arrow is the fallback when the system cursor stays hidden.
 - `config/FrameData.txt` contains 1,372 sourced static reference records across 20 characters from [Cleista frame data](https://soku.cleista.cc/framedata). Each record retains its source URL. The old animation scan is no longer used to rank moves in the panel.
 - Runtime attack/defense/type multipliers scale the static reference figures. Estimated numbers use an approximation marker.
 

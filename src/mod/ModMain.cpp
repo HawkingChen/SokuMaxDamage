@@ -431,8 +431,48 @@ std::vector<HudRow> composeHUD(const SokuLib::BattleManager *mgr) {
 HWND g_panel = nullptr;
 std::atomic<bool> g_panelWanted{false};
 std::vector<HudRow> g_panelRows;
+std::atomic<int> g_cursorLogicalX{-1}, g_cursorLogicalY{-1};
+
+bool systemCursorVisible() {
+    CURSORINFO info{}; info.cbSize = sizeof(info);
+    return GetCursorInfo(&info) && (info.flags & CURSOR_SHOWING) != 0;
+}
+// The game (or Proton) may hide the system cursor and clip it to the game
+// rectangle. A companion window BELOW the game then gets no mouse messages
+// at all. Restore both, throttled to once per second and only when needed.
+// This touches no game memory, packets, RNG or damage state.
+void releaseCursorRestrictions() {
+    // GetTickCount (not GetTickCount64): this module targets WINVER 0x0501.
+    static DWORD last = 0;
+    static int boosts = 0;
+    const DWORD now = GetTickCount();
+    if (last && now - last < 250) return;
+    last = now;
+    CURSORINFO info{}; info.cbSize = sizeof(info);
+    // Bound the number of ShowCursor(TRUE) calls so the per-thread display
+    // counter cannot grow forever; the drawn arrow is the fallback.
+    if (boosts < 2 && GetCursorInfo(&info) && !(info.flags & CURSOR_SHOWING)) {
+        ++boosts;
+        int count = ShowCursor(TRUE);
+        for (int i = 0; i < 4 && count < 0; ++i) count = ShowCursor(TRUE);
+    }
+    RECT clip{};
+    if (GetClipCursor(&clip)) {
+        RECT screen{};
+        if (GetWindowRect(GetDesktopWindow(), &screen) &&
+            (clip.left > screen.left || clip.top > screen.top ||
+             clip.right < screen.right || clip.bottom < screen.bottom))
+            ClipCursor(nullptr);
+    }
+}
 LRESULT CALLBACK panelProc(HWND hwnd, UINT msg, WPARAM w, LPARAM l) {
     if (msg == WM_MOUSEACTIVATE) return MA_NOACTIVATE;
+    if (msg == WM_SETCURSOR) {
+        // The old window class had NO cursor; when the game hides the system
+        // cursor, nothing was drawn over the panel. Always show an arrow.
+        SetCursor(LoadCursorW(nullptr, IDC_ARROW));
+        return TRUE;
+    }
     if (msg == WM_PAINT) {
         PanelView view;
         { std::lock_guard<std::mutex> guard(g_panelMutex); view=g_panelView; }
@@ -440,31 +480,67 @@ LRESULT CALLBACK panelProc(HWND hwnd, UINT msg, WPARAM w, LPARAM l) {
         // immediately, without the game thread touching any live object.
         view.language=static_cast<whm::HudLanguage>(std::clamp(g_language.load(),0,2));
         view.collapsed=g_collapsed.load();
+        view.cursorX=g_cursorLogicalX.load();
+        view.cursorY=g_cursorLogicalY.load();
+        view.systemCursorVisible=systemCursorVisible();
         paintStyledPanel(hwnd,view,dllFolder()); return 0;
     }
+    if (msg == WM_MOUSEMOVE) {
+        RECT client{}; GetClientRect(hwnd,&client);
+        const int cw=client.right-client.left, chh=client.bottom-client.top;
+        if(cw>0&&chh>0) {
+            const int px=static_cast<short>(LOWORD(l));
+            const int py=static_cast<short>(HIWORD(l));
+            g_cursorLogicalX.store(px*kPanelVirtualWidth/cw);
+            g_cursorLogicalY.store(py*kPanelVirtualHeight/chh);
+        }
+        TRACKMOUSEEVENT track{sizeof(track),TME_LEAVE,hwnd,0};
+        TrackMouseEvent(&track);
+        InvalidateRect(hwnd,nullptr,FALSE);
+        return 0;
+    }
+    if (msg == WM_MOUSELEAVE) {
+        g_cursorLogicalX.store(-1); g_cursorLogicalY.store(-1);
+        InvalidateRect(hwnd,nullptr,FALSE);
+        return 0;
+    }
     if (msg == WM_LBUTTONUP) {
+        // Actions run on DOWN; nothing is left to do on UP. Not forwarding it
+        // to the owner window also avoids an accidental game activation.
+        return 0;
+    }
+    if (msg == WM_LBUTTONDOWN) {
         RECT client{}; GetClientRect(hwnd,&client);
         const int cw=client.right-client.left, chh=client.bottom-client.top;
         if(cw<=0||chh<=0)return 0;
-        const int vx=static_cast<int>(LOWORD(l))*kPanelVirtualWidth/cw;
-        const int vy=static_cast<int>(HIWORD(l))*kPanelVirtualHeight/chh;
+        // Act on press: Proton/DirectInput sessions can swallow the matching
+        // WM_LBUTTONUP, so waiting for the release made the pad feel dead.
+        const int px=static_cast<short>(LOWORD(l));
+        const int py=static_cast<short>(HIWORD(l));
+        const int vx=px*kPanelVirtualWidth/cw;
+        const int vy=py*kPanelVirtualHeight/chh;
         auto inside=[](int x,int y,const HudButton &b){
             return x>=b.x&&x<b.x+b.w&&y>=b.y&&y<b.y+b.h;
         };
+        bool changed=false;
         if(g_collapsed.load()) {
             g_collapsed.store(false); // the whole folded window is the "+"
+            changed=true;
         } else {
-            bool handled=false;
             for(int i=0;i<3;++i)
                 if(inside(vx,vy,kHudButtons[i])) {
-                    g_language.store(i);handled=true;break;
+                    if(g_language.load()!=i)g_language.store(i);
+                    changed=true; break;
                 }
-            if(!handled&&inside(vx,vy,kHudButtons[3]))g_collapsed.store(true);
-            else if(!handled)return 0;
+            if(!changed&&inside(vx,vy,kHudButtons[3])) {
+                g_collapsed.store(true); changed=true;
+            }
         }
-        saveHudPreferences();
-        InvalidateRect(hwnd,nullptr,FALSE);
-        UpdateWindow(hwnd);
+        if(changed) {
+            saveHudPreferences();
+            InvalidateRect(hwnd,nullptr,FALSE);
+            UpdateWindow(hwnd);
+        }
         return 0;
     }
     return DefWindowProcW(hwnd, msg, w, l);
@@ -474,6 +550,7 @@ void refreshPanel() {
     if (!game || !IsWindow(game)) return;
     if (!g_panel) {
         WNDCLASSW cls{}; cls.lpfnWndProc = panelProc; cls.hInstance = g_module;
+        cls.hCursor = LoadCursorW(nullptr, IDC_ARROW);
         cls.lpszClassName = L"SokuMaxDamagePanel";
         RegisterClassW(&cls);
         g_panel = CreateWindowExW(WS_EX_TOOLWINDOW | WS_EX_NOACTIVATE,
@@ -490,6 +567,9 @@ void refreshPanel() {
     const bool battleScene = SokuLib::sceneId == SokuLib::SCENE_BATTLE ||
         SokuLib::sceneId == SokuLib::SCENE_BATTLESV || SokuLib::sceneId == SokuLib::SCENE_BATTLECL;
     if (IsIconic(game) || !battleScene || !g_panelWanted.load()) { ShowWindow(g_panel, SW_HIDE); return; }
+    // Only while the companion is actually shown: restore a hidden/clipped
+    // cursor so its controls can be seen and clicked.
+    releaseCursorRestrictions();
     RECT frame; GetWindowRect(game, &frame);
     RECT work; SystemParametersInfoW(SPI_GETWORKAREA,0,&work,0);
     const int gameWidth=frame.right-frame.left, gameHeight=frame.bottom-frame.top;

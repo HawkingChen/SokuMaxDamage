@@ -2,6 +2,11 @@
 #include <array>
 #include <cassert>
 #include <iostream>
+// The 2x2 language/collapse pad belongs at the bottom-right of the hand
+// strip, clear of every SC card and its damage caption.
+static_assert(kHudButtons[0].x >= 900 && kHudButtons[3].x >= 900);
+static_assert(kHudButtons[3].y > kHudButtons[0].y);
+static_assert(kHudButtons[3].x + kHudButtons[3].w <= kPanelVirtualWidth);
 template<class T> void put(std::array<unsigned char,0x940> &bytes,size_t offset,T value){std::memcpy(bytes.data()+offset,&value,sizeof(value));}
 int main(){
  std::array<unsigned char,0x940> own{},enemy{};
