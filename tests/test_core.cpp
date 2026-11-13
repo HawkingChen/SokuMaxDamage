@@ -4,6 +4,9 @@
 #include "WikiMax.hpp"
 #include "RecordTracker.hpp"
 #include "LocalPlayerSide.hpp"
+#include "HudPalette.hpp"
+#include "HudText.hpp"
+#include "FirstHit.hpp"
 #include <cassert>
 #include <cmath>
 #include <iostream>
@@ -102,5 +105,87 @@ int main() {
         record.observe(9900, 9900, 500, frame);
     record.observe(9900, 9750, 500, 21);
     assert(record.best().damage == 150);
+    // --- Big percentage heat gradient: 100% keeps the existing warm gold.
+    const auto baseline = paletteForPercent(100.);
+    assert(baseline.core.r == kBaselineNumberPalette.core.r &&
+           baseline.core.g == kBaselineNumberPalette.core.g &&
+           baseline.core.b == kBaselineNumberPalette.core.b);
+    assert(baseline.outline.r == kBaselineNumberPalette.outline.r &&
+           baseline.outline.g == kBaselineNumberPalette.outline.g &&
+           baseline.outline.b == kBaselineNumberPalette.outline.b);
+    assert(baseline.glow.r == kBaselineNumberPalette.glow.r &&
+           baseline.glow.g == kBaselineNumberPalette.glow.g &&
+           baseline.glow.b == kBaselineNumberPalette.glow.b);
+    assert(paletteForPercent(10.).core.b == paletteForPercent(50.).core.b);
+    assert(paletteForPercent(400.).outline.r == paletteForPercent(250.).outline.r);
+    // Interpolation stays continuous across every node: no step changes.
+    for (double p = 50.; p < 250.; p += .25) {
+        const auto a = paletteForPercent(p), b = paletteForPercent(p + .25);
+        assert(std::abs(int(a.core.r) - int(b.core.r)) <= 4);
+        assert(std::abs(int(a.outline.r) - int(b.outline.r)) <= 4);
+        assert(std::abs(int(a.glow.g) - int(b.glow.g)) <= 4);
+    }
+    // 110% sits between gold anchors; 160% between orange-gold and orange-red.
+    assert(paletteForPercent(110.).outline.r > paletteForPercent(100.).outline.r);
+    assert(paletteForPercent(160.).outline.g < paletteForPercent(150.).outline.g);
+    assert(paletteForPercent(std::nan("")).core.r == baseline.core.r);
+
+    // --- Fixed UI strings and notation normalization.
+    for (int k = 0; k < int(HudTextKey::KeyCount); ++k) {
+        const auto key = static_cast<HudTextKey>(k);
+        assert(hudText(key, HudLanguage::Chinese)[0] != '\0');
+        assert(hudText(key, HudLanguage::Japanese)[0] != '\0');
+        assert(hudText(key, HudLanguage::English)[0] != '\0');
+    }
+    assert(std::string(hudText(HudTextKey::Strongest, HudLanguage::Chinese)) == "最痛必杀技");
+    assert(std::string(hudText(HudTextKey::Record, HudLanguage::Chinese)) == "最痛记录");
+    assert(std::string(normalizeNotation("j.2A")) == "J2A");
+    assert(std::string(normalizeNotation("f.5A")) == "F5A");
+    assert(normalizeNotation("j.236B") == "J236B");
+    assert(normalizeNotation("j5A") == "J5A");
+    assert(normalizeNotation("J2A") == "J2A"); // idempotent
+    assert(normalizeNotation("623B/C") == "623B/C");
+    assert(normalizeNotation("Hakurei Amulet") == "Hakurei Amulet");
+    assert(std::string(localizeEffectLabel("自身制御棒", HudLanguage::English)) ==
+           "OWN CONTROL RODS");
+    assert(localizeEffectLabel("根性补正", HudLanguage::Japanese) ==
+           std::string("根性補正"));
+    assert(localizeEffectValue("×1.20 另计", HudLanguage::Japanese) == "×1.20 別途");
+    assert(weatherName(4, HudLanguage::English) == std::string("Hail"));
+
+    // --- Weather text only when effective weather can influence damage.
+    assert(weatherLabelVisible(4, false, 1.25, 1.));
+    assert(weatherLabelVisible(1, false, 1., 1.25));
+    assert(!weatherLabelVisible(0, false, 1., 1.));  // clear sky, no effect
+    assert(!weatherLabelVisible(21, false, 1., 1.)); // no weather
+    assert(!weatherLabelVisible(4, true, 1.25, 1.));  // sealed
+    assert(weatherLabelVisible(7, false, 1.1, 1.));   // unexplained effective buff
+
+    // --- First-hit-only bonus: conservative gating, no whole-move inflation.
+    FirstHitSignals ready{1.3, true, true, true, true, false, false, true};
+    auto hit = evaluateFirstHit(ready);
+    assert(hit.applies && std::abs(hit.multiplier - 1.3) < 1e-9);
+    assert(std::abs(commonPercent(1.2, 1., hit) - 156.) < 1e-9);
+    assert(std::abs(commonPercent(1.2, 1., {}) - 120.) < 1e-9);
+    FirstHitSignals unconfirmed = ready; unconfirmed.sourceConfirmed = false;
+    assert(!evaluateFirstHit(unconfirmed).applies);
+    FirstHitSignals stale = ready; stale.localMultiplier = 1.;
+    assert(!evaluateFirstHit(stale).applies);
+    FirstHitSignals wild = ready; wild.localMultiplier = 12.;
+    assert(!evaluateFirstHit(wild).applies);
+    FirstHitSignals capped = ready; capped.localMultiplier = 8.;
+    assert(evaluateFirstHit(capped).multiplier == 4.);
+    FirstHitSignals consumed = ready; consumed.firstHitConsumed = true;
+    assert(!evaluateFirstHit(consumed).applies);
+    FirstHitSignals combo = ready; combo.comboIdle = false;
+    assert(!evaluateFirstHit(combo).applies);
+    FirstHitSignals hitstun = ready; hitstun.targetOutOfHitstun = false;
+    assert(!evaluateFirstHit(hitstun).applies);
+    FirstHitSignals projectile = ready; projectile.attackConfirmed = false;
+    assert(!evaluateFirstHit(projectile).applies);
+    FirstHitSignals duplicate = ready; duplicate.attackPowerAlreadyIncludes = true;
+    assert(!evaluateFirstHit(duplicate).applies);
+    assert(std::abs(commonPercent(0., 1., {}) - 100.) < 1e-9);
+
     std::cout << "All core tests passed\n";
 }

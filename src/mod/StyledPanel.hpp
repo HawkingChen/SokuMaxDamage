@@ -1,20 +1,40 @@
 #pragma once
-// SokuMaxDamage HUD artwork, v2 (Fig. 1 ornament + Fig. 2 information hierarchy).
+// SokuMaxDamage HUD artwork, v3 ("damage influence / total correction" sketch).
 // Read-only companion window. Rendering deliberately stays on the existing
 // dedicated UI thread; never access live game objects from WM_PAINT.
 #include <windows.h>
+#include "HudPalette.hpp"
+#include "HudText.hpp"
+#include "FirstHit.hpp"
 #include <algorithm>
+#include <array>
 #include <cmath>
+#include <iomanip>
 #include <map>
+#include <sstream>
 #include <string>
 #include <utility>
 #include <vector>
 
 static_assert(L"中文"[0] == 0x4E2D, "Compile HUD source as UTF-8 (/utf-8).");
 
+// Logical drawing space. The panel window keeps a 1000:290 aspect ratio, so
+// x and y scales are identical and the collapsed "+" stays square.
+inline constexpr int kPanelVirtualWidth = 1000;
+inline constexpr int kPanelVirtualHeight = 290;
+inline constexpr int kPlusLogicalSize = 34;
+struct HudButton { int x, y, w, h; };
+// 2x2 control pad to the right of the "current hand" caption:
+// CN / JP / EN / collapse.
+inline constexpr HudButton kHudButtons[4] = {
+    {354, 204, 28, 28}, {386, 204, 28, 28},
+    {354, 236, 28, 28}, {386, 236, 28, 28}};
+
 struct PanelCard {
     int character = -1, card = -1, damage = 0;
-    std::string name;
+    std::string name;                    // official fallback name
+    std::array<std::string, 3> names{};  // by HudLanguage, from MoveNames.tsv
+    std::string notation;                // normalized: J2A, 623B/C, ...
     bool approximate = true;
 };
 struct PanelEffect { int character=-1,card=-1,copies=1; std::string label,value; };
@@ -22,7 +42,14 @@ struct PanelView {
     int character = -1, opponentCharacter = -1, rods = 0, dolls = 0, weather = 0;
     double attack = 1., defense = 1.;
     double skillMultiplier = 1., spellMultiplier = 1.;
-    double hpFactor=1.;
+    double hpFactor = 1.;
+    double commonPercent = 100., basePercent = 100.;
+    double firstHitMultiplier = 1.;
+    bool firstHitActive = false;
+    bool weatherVisible = false;
+    bool weatherSealed = false;
+    whm::HudLanguage language = whm::HudLanguage::Chinese;
+    bool collapsed = false;
     std::vector<PanelEffect> effects;
     PanelCard strongest, record;
     std::vector<PanelCard> hand;
@@ -35,6 +62,26 @@ inline std::wstring panelWide(const std::string &s) {
     if (!MultiByteToWideChar(CP_UTF8, 0, s.c_str(), -1, w.data(), n)) return L"";
     w.pop_back();
     return w;
+}
+inline std::string panelFactor(double value, int decimals) {
+    std::ostringstream out;
+    out << std::fixed << std::setprecision(decimals) << value;
+    return out.str();
+}
+inline std::wstring panelPercent(double value) {
+    int rounded = static_cast<int>(value + 0.5);
+    if (rounded < 0) rounded = 0;
+    if (rounded > 9999) rounded = 9999;
+    return std::to_wstring(rounded) + L"%";
+}
+inline std::wstring panelCardLabel(const PanelCard &card, whm::HudLanguage lang,
+                                   const wchar_t *missing) {
+    const std::string &localized = card.names[static_cast<int>(lang)];
+    const std::string chosen = !localized.empty() ? localized : card.name;
+    if (chosen.empty()) return missing;
+    std::wstring out = panelWide(chosen);
+    if (!card.notation.empty()) out += L" · " + panelWide(card.notation);
+    return out;
 }
 
 // Convert existing local card PNGs (icons/<character>-<card>.png) with the
@@ -81,6 +128,33 @@ inline HBITMAP panelBackdrop(const std::string &folder) {
     return panelBitmap(panelWide(folder + "art/panel-bg.png"));
 }
 
+// Folded state: the entire panel disappears; only a small "+" remains. It
+// still obeys the battle/foreground checks in refreshPanel.
+inline void paintFoldedPanel(HWND window, HDC target, int width, int height) {
+    RECT r{0, 0, width, height};
+    HBRUSH brush = CreateSolidBrush(RGB(30, 21, 43));
+    FillRect(target, &r, brush);
+    DeleteObject(brush);
+    HPEN pen = CreatePen(PS_SOLID, 2, RGB(230, 182, 94));
+    HGDIOBJ oldPen = SelectObject(target, pen);
+    HGDIOBJ oldBrush = SelectObject(target, GetStockObject(NULL_BRUSH));
+    RoundRect(target, 1, 1, width - 1, height - 1, 6, 6);
+    SelectObject(target, oldBrush);
+    SelectObject(target, oldPen);
+    DeleteObject(pen);
+    HFONT font = CreateFontW(-std::max(10, std::min(width, height) * 3 / 5), 0, 0, 0,
+                             FW_BOLD, FALSE, FALSE, FALSE, DEFAULT_CHARSET,
+                             OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS,
+                             CLEARTYPE_QUALITY, DEFAULT_PITCH, L"Segoe UI");
+    HGDIOBJ oldFont = SelectObject(target, font);
+    SetBkMode(target, TRANSPARENT);
+    SetTextColor(target, RGB(255, 226, 161));
+    DrawTextW(target, L"+", -1, &r, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
+    SelectObject(target, oldFont);
+    DeleteObject(font);
+    (void)window;
+}
+
 inline void paintStyledPanel(HWND window, const PanelView &v, const std::string &folder) {
     PAINTSTRUCT ps;
     HDC target = BeginPaint(window, &ps);
@@ -88,6 +162,11 @@ inline void paintStyledPanel(HWND window, const PanelView &v, const std::string 
     GetClientRect(window, &bounds);
     const int width = bounds.right - bounds.left, height = bounds.bottom - bounds.top;
     if (width <= 0 || height <= 0) { EndPaint(window, &ps); return; }
+    if (v.collapsed) {
+        paintFoldedPanel(window, target, width, height);
+        EndPaint(window, &ps);
+        return;
+    }
     HDC dc = CreateCompatibleDC(target);
     HBITMAP buffer = CreateCompatibleBitmap(target, width, height);
     if (!dc || !buffer) {
@@ -98,15 +177,17 @@ inline void paintStyledPanel(HWND window, const PanelView &v, const std::string 
     }
     HGDIOBJ previous = SelectObject(dc, buffer);
     SetMapMode(dc, MM_ANISOTROPIC);
-    SetWindowExtEx(dc, 1000, 290, nullptr);
+    SetWindowExtEx(dc, kPanelVirtualWidth, kPanelVirtualHeight, nullptr);
     SetViewportExtEx(dc, width, height, nullptr);
     SetBkMode(dc, TRANSPARENT);
 
+    const auto lang = v.language;
     const COLORREF gold = RGB(230, 182, 94);
     const COLORREF bright = RGB(255, 226, 161);
     const COLORREF cream = RGB(252, 236, 208);
     const COLORREF faded = RGB(185, 180, 203);
     const COLORREF lavender = RGB(156, 125, 196);
+    const COLORREF quietGrey = RGB(146, 140, 162);
     auto fill = [&](int x, int y, int w, int h, COLORREF color) {
         if (w <= 0 || h <= 0) return;
         RECT r{x, y, x + w, y + h};
@@ -154,12 +235,12 @@ inline void paintStyledPanel(HWND window, const PanelView &v, const std::string 
     };
     auto write = [&](const std::wstring &value, int x, int y, int w, int h,
                      int size, COLORREF color, UINT align = DT_LEFT,
-                     const wchar_t *family = L"Microsoft YaHei", bool italic = false,
+                     const wchar_t *family = nullptr, bool italic = false,
                      int weight = FW_BOLD) {
         HFONT font = CreateFontW(-size, 0, 0, 0, weight, italic ? TRUE : FALSE,
                                 FALSE, FALSE, DEFAULT_CHARSET, OUT_DEFAULT_PRECIS,
                                 CLIP_DEFAULT_PRECIS, CLEARTYPE_QUALITY,
-                                DEFAULT_PITCH, family);
+                                DEFAULT_PITCH, family ? family : whm::uiFontFamily(lang));
         HGDIOBJ old = SelectObject(dc, font);
         SetTextColor(dc, color);
         RECT r{x, y, x + w, y + h};
@@ -169,9 +250,13 @@ inline void paintStyledPanel(HWND window, const PanelView &v, const std::string 
         DeleteObject(font);
     };
     auto number = [&](const std::wstring &value, int x, int y, int w, int h,
-                      int fontSize, UINT alignment = DT_CENTER) {
+                      int fontSize, UINT alignment = DT_CENTER,
+                      const whm::NumberPalette *colors = nullptr) {
         // Use ONE font for all glow passes (rather than creating ~20 per
         // number every 100ms) to keep the UI thread lightweight on Proton.
+        const whm::NumberPalette palette =
+            colors ? *colors : whm::kBaselineNumberPalette;
+        auto cr = [](whm::Rgb c) { return RGB(c.r, c.g, c.b); };
         HFONT font=CreateFontW(-fontSize,0,0,0,FW_BOLD,TRUE,FALSE,FALSE,
                               DEFAULT_CHARSET,OUT_DEFAULT_PRECIS,
                               CLIP_DEFAULT_PRECIS,CLEARTYPE_QUALITY,
@@ -185,11 +270,11 @@ inline void paintStyledPanel(HWND window, const PanelView &v, const std::string 
         };
         const int offsets[][2]={{-3,0},{3,0},{0,-3},{0,3},
                                 {-2,-2},{2,2},{-2,2},{2,-2}};
-        for(const auto &p:offsets) drawNumber(p[0],p[1],RGB(113,58,39));
+        for(const auto &p:offsets) drawNumber(p[0],p[1],cr(palette.glow));
         for(int dx=-1;dx<=1;++dx)
             for(int dy=-1;dy<=1;++dy)
-                drawNumber(dx,dy,RGB(225,124,57));
-        drawNumber(0,-1,RGB(255,238,191));
+                drawNumber(dx,dy,cr(palette.outline));
+        drawNumber(0,-1,cr(palette.core));
         SelectObject(dc,old);
         DeleteObject(font);
     };
@@ -212,7 +297,6 @@ inline void paintStyledPanel(HWND window, const PanelView &v, const std::string 
             for (int stripe=0; stripe<6; ++stripe)
                 fill(x, y + stripe*h/6, w, h/6+1,
                      RGB(27+stripe*3, 20+stripe*2, 54+stripe*4));
-            // Decorative fallback is a card-shaped jewel, not an invented move icon.
             disk(x+w/3, y+h/4, std::max(5,w/3), RGB(91, 57, 144));
             disk(x+w/2, y+h/3, std::max(4,w/6), RGB(187, 128, 227));
             write(fallback, x+2, y+h/2, w-4, h/3, std::min(w/2,19),
@@ -227,8 +311,6 @@ inline void paintStyledPanel(HWND window, const PanelView &v, const std::string 
             art(ch, card, x, y, w, h, fallback);
             return;
         }
-        // Draw back cards first; each offset exposes a recognizable stepped
-        // border, rather than compressing a pile into one stretched texture.
         for (int i=count-1; i>=0; --i)
             art(ch, card, x+i*step, y+i*2, w, h, fallback);
     };
@@ -241,7 +323,6 @@ inline void paintStyledPanel(HWND window, const PanelView &v, const std::string 
                 focused ? gold : lavender,11);
         rule(x+17,y+6,x+w-17,y+6,focused?RGB(255,223,144):RGB(151,119,174));
         rule(x+17,y+h-7,x+w-17,y+h-7,focused?RGB(159,100,54):RGB(87,66,116));
-        // Subtle ornamental corners from the Fig. 1 concept.
         const COLORREF corner = focused ? bright : RGB(167,126,194);
         rule(x+6,y+20,x+6,y+9,corner,2);
         rule(x+6,y+9,x+23,y+9,corner,2);
@@ -249,7 +330,7 @@ inline void paintStyledPanel(HWND window, const PanelView &v, const std::string 
         rule(x+w-6,y+h-9,x+w-23,y+h-9,corner,2);
     };
     auto ribbon = [&](int x, int y, int w, const std::wstring &caption,
-                      bool focused) {
+                      bool focused, int fontSize) {
         POINT back[]{{x,y},{x+w-16,y},{x+w,y+16},
                      {x+w-16,y+32},{x,y+32},{x+10,y+16}};
         shape(back,6,focused?RGB(122,77,44):RGB(87,61,113));
@@ -257,13 +338,16 @@ inline void paintStyledPanel(HWND window, const PanelView &v, const std::string 
                       {x+w-17,y+29},{x+2,y+29},{x+12,y+16}};
         shape(inner,6,focused?RGB(64,42,41):RGB(49,36,70));
         rule(x+18,y+3,x+w-20,y+3,focused?bright:RGB(185,150,223));
-        write(caption,x+14,y+2,w-28,28,19,cream,DT_CENTER);
+        write(caption,x+14,y+2,w-28,28,fontSize,cream,DT_CENTER);
+    };
+    auto localized = [&](whm::HudTextKey key) {
+        return panelWide(whm::hudText(key, lang));
     };
     // Base gradient plus a low-contrast hand-drawn night shrine background:
     // this is procedural GDI art, with an optional user-supplied panel-bg.png.
-    for(int y=0; y<290; ++y) {
+    for(int y=0; y<kPanelVirtualHeight; ++y) {
         int b=34+y/9, r=15+y/26, g=15+y/22;
-        fill(0,y,1000,1,RGB(r,g,b));
+        fill(0,y,kPanelVirtualWidth,1,RGB(r,g,b));
     }
     HBITMAP background = panelBackdrop(folder);
     if (background) {
@@ -271,7 +355,8 @@ inline void paintStyledPanel(HWND window, const PanelView &v, const std::string 
         if (GetObjectW(background,sizeof(info),&info)&&info.bmWidth>0&&info.bmHeight>0) {
             HDC source=CreateCompatibleDC(dc);HGDIOBJ old=SelectObject(source,background);
             SetStretchBltMode(dc,HALFTONE);
-            StretchBlt(dc,0,0,1000,290,source,0,0,info.bmWidth,info.bmHeight,SRCCOPY);
+            StretchBlt(dc,0,0,kPanelVirtualWidth,kPanelVirtualHeight,source,0,0,
+                       info.bmWidth,info.bmHeight,SRCCOPY);
             SelectObject(source,old);DeleteDC(source);
         }
     } else {
@@ -281,7 +366,6 @@ inline void paintStyledPanel(HWND window, const PanelView &v, const std::string 
         POINT mountainB[]{{0,186},{107,122},{238,190},{381,137},{504,185},
                           {639,136},{764,181},{901,123},{1000,189},{1000,290},{0,290}};
         shape(mountainB,11,RGB(28,23,45));
-        // Faraway shrine gate and bridge silhouettes.
         fill(480,93,10,105,RGB(68,39,55));
         fill(556,93,10,105,RGB(68,39,55));
         fill(464,85,118,10,RGB(95,56,64));
@@ -293,12 +377,10 @@ inline void paintStyledPanel(HWND window, const PanelView &v, const std::string 
             disk(x,y,i%5==0?3:2,i%3==0?RGB(120,72,117):RGB(98,77,119));
         }
     }
-    // Marginal warm glow streaks around the two focal numbers.
     for (int j=0; j<4; ++j) {
         rule(323,166+j*2,554,166+j*2,RGB(65+j*11,42+j*8,45+j*3));
         rule(707,166+j*2,941,166+j*2,RGB(65+j*11,42+j*8,45+j*3));
     }
-    // Outer frame with a hollow brush: keep the illustrated backdrop visible.
     {
         HPEN edge=CreatePen(PS_SOLID,2,RGB(120,79,145));
         HGDIOBJ oldPen=SelectObject(dc,edge);
@@ -313,62 +395,85 @@ inline void paintStyledPanel(HWND window, const PanelView &v, const std::string 
     disk(9,9,4,gold); disk(987,9,4,gold);
     disk(9,278,4,gold); disk(987,278,4,gold);
 
-    // Totals come from effective game multipliers. Rows below explain them;
-    // their displayed factors are never multiplied into the result again.
+    // ---- "伤害影响 · 总修正": one big common percentage, a quiet guts
+    // number and two independent type multipliers. Rows below only explain.
     outlinedPanel(14,15,200,260,false);
-    write(L"伤害影响 · 总修正",28,18,175,25,18,cream);
-    wchar_t multiplier[96]{};
-    swprintf_s(multiplier,L"必杀 ×%.2f",v.attack*v.defense*v.skillMultiplier*v.hpFactor);
-    number(multiplier,28,43,171,35,24,DT_LEFT);
-    swprintf_s(multiplier,L"SC ×%.2f",v.attack*v.defense*v.spellMultiplier*v.hpFactor);
-    write(multiplier,30,80,170,20,16,bright);
-    rule(28,104,198,104,RGB(111,91,143));
+    write(localized(whm::HudTextKey::PanelTitle),24,18,180,25,17,cream,DT_CENTER);
+    const whm::NumberPalette heat = whm::paletteForPercent(v.commonPercent);
+    number(panelPercent(v.commonPercent),24,44,116,50,42,DT_LEFT,&heat);
+    // Guts stays visually subordinate: small, low-contrast grey.
+    write(L"×"+panelWide(panelFactor(v.hpFactor,2)),142,68,66,20,13,
+          quietGrey,DT_LEFT,L"Georgia");
+    if(v.firstHitActive) {
+        write(localized(whm::HudTextKey::FirstHit)+L" ×"+
+                  panelWide(panelFactor(v.firstHitMultiplier,2)),
+              28,94,174,16,11,RGB(238,177,104));
+    }
+    const int typeY = v.firstHitActive ? 114 : 100;
+    write(localized(whm::HudTextKey::SpecialType)+L"×"+
+              panelWide(panelFactor(v.skillMultiplier,1)),
+          28,typeY,96,20,13,cream);
+    write(localized(whm::HudTextKey::SpellType)+L" ×"+
+              panelWide(panelFactor(v.spellMultiplier,1)),
+          124,typeY,84,20,13,cream);
+    const int dividerY = typeY + 24;
+    rule(28,dividerY,198,dividerY,RGB(111,91,143));
     const int count=static_cast<int>(v.effects.size());
-    const int pitch=count?std::min(48,146/count):48;
-    int effectY=111;
+    const int effectTop=dividerY+7;
+    const int effectBottom=250;
+    const int pitch=count?std::min(46,(effectBottom-effectTop)/count):46;
+    int effectY=effectTop;
     for(const auto &effect:v.effects) {
-        const int cardHeight=std::max(15,pitch-5),cardWidth=std::max(11,cardHeight*41/65);
+        // Never silently drop an effect row: pitch shrinks instead.
+        const int cardHeight=std::max(8,std::min(pitch-2,41));
+        const int cardWidth=std::max(8,cardHeight*41/65);
+        const std::string label=whm::localizeEffectLabel(effect.label.c_str(),lang);
+        const std::string value=whm::localizeEffectValue(effect.value,lang);
+        const std::wstring labelWide=panelWide(label);
+        const std::wstring glyph=labelWide.empty()?L"?":labelWide.substr(0,1);
         stacked(effect.character,effect.card,29,effectY,effect.copies,cardWidth,cardHeight,
-                std::max(3,cardWidth/4),panelWide(effect.label).substr(0,1));
-        std::wstring label=panelWide(effect.label);
-        if(effect.copies>1)label+=L" ×"+std::to_wstring(effect.copies);
+                std::max(3,cardWidth/4),glyph);
+        std::wstring shownLabel=labelWide;
+        if(effect.copies>1)shownLabel+=L" ×"+std::to_wstring(effect.copies);
         if(pitch>=24) {
-            write(label,83,effectY-2,116,pitch/2,13,cream);
-            write(panelWide(effect.value),83,effectY+pitch/2-2,116,pitch/2,17,bright);
+            write(shownLabel,83,effectY-2,116,pitch/2,12,cream);
+            write(panelWide(value),83,effectY+pitch/2-2,116,pitch/2,16,bright);
         } else {
             if(effect.copies>1)write(L"×"+std::to_wstring(effect.copies),51,effectY,29,pitch,11,bright);
-            write(panelWide(effect.label),83,effectY,63,pitch,10,cream);
-            write(panelWide(effect.value),147,effectY,54,pitch,11,bright);
+            write(shownLabel,83,effectY,63,pitch,10,cream);
+            write(panelWide(value),147,effectY,54,pitch,11,bright);
         }
         effectY+=pitch;
     }
-    if(!count)write(L"当前无额外效果",29,124,171,30,15,faded);
-    static const wchar_t *weatherNames[]={L"快晴",L"雾雨",L"阴天",L"苍天",L"冰雹",L"春霭",L"浓雾",L"雪",L"太阳雨",L"疏雨",L"风雨",L"晴岚",L"川雾",L"台风",L"凪",L"钻石尘",L"黄沙",L"烈日",L"梅雨",L"极光",L"黄昏",L"无天气"};
-    const std::wstring weather=v.weather>=0&&v.weather<22?weatherNames[v.weather]:L"未知";
-    write(L"天气 "+weather,30,255,168,16,12,RGB(198,181,219));
+    if(!count)write(localized(whm::HudTextKey::NoEffects),29,effectTop+4,171,30,14,faded);
+    // Only an actually effective weather gets a text line.
+    if(v.weatherVisible)
+        write(localized(whm::HudTextKey::Weather)+L" "+
+                  panelWide(whm::weatherName(v.weather,lang)),
+              30,255,168,16,12,RGB(198,181,219));
 
-    auto highlight = [&](int x,const std::wstring &title,const PanelCard &card,
-                         const std::wstring &missing,bool focused) {
+    auto highlight = [&](int x, whm::HudTextKey titleKey, const PanelCard &card,
+                         whm::HudTextKey missingKey, bool focused) {
         outlinedPanel(x,17,373,163,focused);
-        // Soft illustrated motifs INSIDE the content panels; always subdued
-        // behind readable text and existing character card artwork.
         POINT hill1[]{{x+88,149},{x+139,126},{x+182,146},{x+246,119},
                        {x+297,143},{x+367,128},{x+367,171},{x+88,171}};
         shape(hill1,8,RGB(33,27,48));
         POINT hill2[]{{x+87,157},{x+151,145},{x+208,164},{x+266,141},
                        {x+356,159},{x+366,166},{x+366,173},{x+87,173}};
         shape(hill2,8,RGB(38,27,48));
-        // Small floral-stars / light trails in the empty upper corner.
         for(int p=0;p<7;++p) {
             int px=x+115+(p*41)%230, py=42+(p*19)%33;
             disk(px,py,p%3==0?4:2,focused?RGB(113,83,82):RGB(94,73,117));
         }
         fill(x+99,130,254,17,RGB(49,30,43));
         rule(x+111,148,x+351,148,focused?RGB(159,91,49):RGB(118,77,112));
-        ribbon(x+18,8,337,title,focused);
-        const std::wstring display=card.name.empty()?missing:panelWide(card.name);
+        const int titleSize=lang==whm::HudLanguage::English?14:
+                            lang==whm::HudLanguage::Japanese?17:19;
+        ribbon(x+18,8,337,localized(titleKey),focused,titleSize);
+        const std::wstring display=panelCardLabel(card,lang,localized(missingKey));
         std::wstring fallback = card.card<0 ? L"技" : L"SC";
-        if(card.card<0 && !card.name.empty()) {
+        if(card.card<0 && !card.notation.empty()) fallback=panelWide(card.notation);
+        else if(card.card<0 && !card.name.empty()) {
             const size_t cut=display.rfind(L" · ");
             const std::wstring notation=cut!=std::wstring::npos?
                 display.substr(cut+3):display;
@@ -383,32 +488,41 @@ inline void paintStyledPanel(HWND window, const PanelView &v, const std::string 
         } else {
             write(L"—",x+98,102,248,49,46,faded,DT_CENTER);
         }
-        write(focused?L"THEORETICAL MAX · ESTIMATE":L"MATCH BEST · HIT",
+        write(localized(focused?whm::HudTextKey::Theoretical:whm::HudTextKey::MatchBest),
               x+109,151,240,17,11,RGB(187,162,147),DT_CENTER,L"Segoe UI");
     };
-    highlight(224,L"当前最痛必杀技",v.strongest,L"暂无可靠必杀技资料",true);
-    highlight(608,L"本局最高实际伤害",v.record,L"尚未记录命中",false);
+    highlight(224,whm::HudTextKey::Strongest,v.strongest,
+              whm::HudTextKey::NoSkill,true);
+    highlight(608,whm::HudTextKey::Record,v.record,
+              whm::HudTextKey::NoRecord,false);
 
-    // A single fixed strip. The array's order is the live game hand order;
-    // there is no selection, clicking, or P1/P2-dependent mirroring.
+    // Bottom strip: live hand order only, plus the 2x2 language/collapse pad.
     outlinedPanel(225,194,758,80,false);
-    write(L"当前手牌",239,203,103,22,18,cream);
-    write(L"SC 最大伤害",239,226,111,20,15,RGB(206,181,224));
-    write(L"参考估算 · 随手牌顺序",239,249,114,16,10,faded);
-    rule(356,203,356,267,RGB(110,90,139));
+    write(localized(whm::HudTextKey::Hand),239,203,110,22,17,cream);
+    write(localized(whm::HudTextKey::SpellMax),239,230,110,22,14,RGB(206,181,224));
+    rule(348,203,348,267,RGB(110,90,139));
+    auto button = [&](const HudButton &b,const wchar_t *caption,bool active) {
+        rounded(b.x,b.y,b.w,b.h,active?RGB(96,64,44):RGB(28,23,44),
+                active?gold:RGB(103,78,130),5);
+        write(caption,b.x,b.y,b.w,b.h,11,active?bright:cream,DT_CENTER,L"Segoe UI");
+    };
+    const int selected=static_cast<int>(lang);
+    button(kHudButtons[0],L"CN",selected==0);
+    button(kHudButtons[1],L"JP",selected==1);
+    button(kHudButtons[2],L"EN",selected==2);
+    button(kHudButtons[3],L"↑",false);
+    rule(420,203,420,267,RGB(110,90,139));
     const size_t shown=std::min<size_t>(v.hand.size(),5);
     if (shown==0) {
-        write(L"目前手牌中没有 SC",392,206,555,60,22,faded,DT_CENTER);
+        write(localized(whm::HudTextKey::NoHand),432,206,540,60,20,faded,DT_CENTER);
     } else {
-        // Cards remain in original order and left-aligned consistently,
-        // regardless of the local player's side.
         for(size_t i=0;i<shown;++i) {
             const PanelCard &card=v.hand[i];
-            const int x=377+static_cast<int>(i)*120;
+            const int x=430+static_cast<int>(i)*108;
             art(card.character,card.card,x,208,32,45,L"SC");
             const std::wstring amount=card.damage>0?
                 ((card.approximate?L"≈":L"")+std::to_wstring(card.damage)):L"—";
-            write(amount,x-21,255,80,20,21,bright,DT_CENTER,L"Georgia",true);
+            write(amount,x-21,255,80,20,20,bright,DT_CENTER,L"Georgia",true);
         }
     }
     SetMapMode(dc,MM_TEXT);

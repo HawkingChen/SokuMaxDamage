@@ -11,11 +11,15 @@
 #include "PanelVisibility.hpp"
 #include "LocalPlayerSide.hpp"
 #include "ActionIdentity.hpp"
+#include "HudText.hpp"
+#include "HudPalette.hpp"
+#include "FirstHit.hpp"
 
 #include <windows.h>
 #include <algorithm>
 #include <array>
 #include <atomic>
+#include <map>
 #include <mutex>
 #include <cstdio>
 #include <cmath>
@@ -56,6 +60,15 @@ int g_y = 160;
 int g_w = 230;
 int g_h = 230;
 
+// UI-owned preferences. They are user state, not battle state: a new match
+// must not silently unfold the panel or reset the chosen language.
+std::atomic<int> g_language{0};            // index of whm::HudLanguage
+std::atomic<bool> g_collapsed{false};
+std::atomic<bool> g_firstHitConsumed{false};
+unsigned g_firstHitIdleFrames = 0;         // game thread only, debounce
+struct MoveNameEntry { std::array<std::string, 3> names; };
+std::map<std::string, MoveNameEntry> g_moveNames;
+
 static int (SokuLib::BattleManager::*g_originalProcess)() = nullptr;
 static void (SokuLib::BattleManager::*g_originalRender)() = nullptr;
 static void (SokuLib::BattleManager::*g_originalExit)() = nullptr;
@@ -66,6 +79,15 @@ std::string dllFolder() {
     std::string full(buf);
     auto last = full.find_last_of("\\/");
     return last == std::string::npos ? ".\\" : full.substr(0, last + 1);
+}
+
+void saveHudPreferences() {
+    const std::string ini = dllFolder() + "WhatHurtsMost.ini";
+    static const char *const codes[] = {"CN", "JP", "EN"};
+    WritePrivateProfileStringA("HUD", "Language",
+        codes[std::clamp(g_language.load(), 0, 2)], ini.c_str());
+    WritePrivateProfileStringA("HUD", "Collapsed",
+        g_collapsed.load() ? "1" : "0", ini.c_str());
 }
 
 // Check that the SokuLib runtime enum values match the portable mapping.
@@ -174,6 +196,83 @@ std::string actionName(const SokuLib::v2::Player &player, int action) {
     return "ACTION#" + std::to_string(action);
 }
 
+// Localized move names are keyed by character/card/notation, never by a
+// translated display string. Missing rows fall back to the official name or
+// the notation; internal ids such as CARD#101 must never reach the panel.
+std::string moveNameKey(int character, int card, const std::string &notation) {
+    return std::to_string(character) + "|" + std::to_string(card) + "|" +
+           whm::normalizeNotation(notation);
+}
+std::array<std::string, 3> lookupNames(int character, int card,
+                                       const std::string &lookup,
+                                       const std::string &fallback) {
+    auto exact = g_moveNames.find(moveNameKey(character, card, lookup));
+    if (exact != g_moveNames.end()) return exact->second.names;
+    auto byCard = g_moveNames.find(moveNameKey(character, card, ""));
+    if (byCard != g_moveNames.end()) return byCard->second.names;
+    std::string safe = fallback;
+    if (safe.empty() || safe.rfind("CARD#", 0) == 0 ||
+        safe.rfind("ACTION#", 0) == 0 || safe.rfind("卡牌 ", 0) == 0)
+        safe = whm::normalizeNotation(lookup);
+    return {safe, safe, safe};
+}
+PanelCard makeCard(int character, int card, int damage,
+                   const std::string &lookup, const std::string &display,
+                   const std::string &fallback, bool approximate) {
+    PanelCard c;
+    c.character = character;
+    c.card = card;
+    c.damage = damage;
+    c.approximate = approximate;
+    c.notation = whm::normalizeNotation(display);
+    c.names = lookupNames(character, card, lookup, fallback);
+    c.name = fallback;
+    return c;
+}
+struct MoveLabel {
+    std::array<std::string, 3> names{};
+    std::string notation, fallback;
+};
+MoveLabel labelForAction(const SokuLib::v2::Player &player, int action) {
+    const int character = static_cast<int>(player.characterIndex);
+    const int card = action >= 500 && action < 600
+        ? whm::skillCardForAction(character, action)
+        : action >= 600 && action < 620 ? action - 400 : -1;
+    const std::string raw = actionName(player, action);
+    const std::size_t cut = raw.rfind(" · ");
+    std::string fallback = cut == std::string::npos ? raw : raw.substr(0, cut);
+    std::string notation = cut == std::string::npos ? "" :
+        whm::normalizeNotation(raw.substr(cut + 3));
+    std::string lookup = notation;
+    if (action >= 600 && action < 620) {
+        lookup = "sc" + std::to_string(card); // spell row in MoveNames.tsv
+        notation.clear();                     // a card name is not a notation
+    } else if (cut == std::string::npos) {
+        const unsigned char first = static_cast<unsigned char>(raw.empty() ? 0 : raw[0]);
+        const bool looksLikeNotation =
+            (first >= '0' && first <= '9') || first == 'j' || first == 'J' ||
+            first == 'f' || first == 'F' || first == 'D';
+        if (looksLikeNotation) {
+            notation = whm::normalizeNotation(raw);
+            lookup = notation;
+            fallback = notation;
+        } else {
+            lookup.clear(); // an official card name, not a command
+        }
+    }
+    if (fallback.rfind("ACTION#", 0) == 0 || fallback.rfind("CARD#", 0) == 0)
+        fallback.clear();
+    MoveLabel out;
+    out.names = lookupNames(character, card, lookup, fallback);
+    out.notation = notation;
+    out.fallback = fallback;
+    if (out.names[0].empty()) {
+        const std::string safe = !notation.empty() ? notation : "技";
+        out.names = {safe, safe, safe};
+    }
+    return out;
+}
+
 // Built-in skill mapping is not guaranteed identical across all characters.
 // Only show skill estimates if explicitly present and marked supported in the catalog.
 bool skillOwned(const SokuLib::v2::Player &player, int action) {
@@ -232,11 +331,11 @@ std::vector<HudRow> composeHUD(const SokuLib::BattleManager *mgr) {
     if(!own||!enemy)return {};
     const int ownCharacter=static_cast<int>(own->characterIndex),enemyCharacter=static_cast<int>(enemy->characterIndex);
     if(ownCharacter<0||ownCharacter>19||enemyCharacter<0||enemyCharacter>19)return {};
-    PanelView view;view.character=ownCharacter;
-    view.attack=own->attackPower;view.defense=enemy->defensePower;
-    view.opponentCharacter=static_cast<int>(enemy->characterIndex);
     const auto &ownCounters=side==0?mgr->leftCharacterManager:mgr->rightCharacterManager;
     const auto &enemyCounters=side==0?mgr->rightCharacterManager:mgr->leftCharacterManager;
+    PanelView view;view.character=ownCharacter;
+    view.attack=own->attackPower;view.defense=enemy->defensePower;
+    view.opponentCharacter=enemyCharacter;
     view.rods=static_cast<int>(ownCounters.controlRod);
     view.dolls=static_cast<int>(enemyCounters.sacrificialDolls); // Target's defense cards.
     view.skillMultiplier=own->specialDmgMultiplier;
@@ -244,6 +343,38 @@ std::vector<HudRow> composeHUD(const SokuLib::BattleManager *mgr) {
     view.weather=static_cast<int>(ownCounters.effectiveWeather);
     view.hpFactor=whm::gutsFactor(enemy->HP);
     collectDamageEffects(view,&ownCounters,&enemyCounters);
+    // Weather text follows effective weather / seal, not the global name.
+    view.weatherVisible=whm::weatherLabelVisible(view.weather,view.weatherSealed,
+                                                 view.skillMultiplier,view.spellMultiplier);
+
+    // First-hit-only bonus. SokuLib documents comboCount at +0x4B4 and untech
+    // at +0x4BA but not whose counter owns a combo, so BOTH players must be
+    // idle. A live own hitbox excludes projectiles (whose boxes live on child
+    // objects). Frame counting is mere debounce, never the qualification.
+    const bool comboIdle=effectField<short>(&ownCounters,0x4b4)==0&&
+                         effectField<short>(&enemyCounters,0x4b4)==0;
+    const bool outOfHitstun=effectField<unsigned short>(&enemyCounters,0x4ba)==0;
+    if(comboIdle&&outOfHitstun) {
+        if(++g_firstHitIdleFrames>=3)g_firstHitConsumed.store(false);
+    } else g_firstHitIdleFrames=0;
+    whm::FirstHitSignals signals;
+    signals.localMultiplier=view.firstHitMultiplier;
+    signals.sourceConfirmed=(ownCharacter==17&&view.firstHitMultiplier>1.)||
+                            (view.weather==16&&view.firstHitMultiplier>1.)||
+                            effectField<short>(&ownCounters,0x1a2)>0;
+    signals.comboIdle=comboIdle;
+    signals.targetOutOfHitstun=outOfHitstun;
+    signals.attackConfirmed=own->boxData.hitBoxCount>0;
+    signals.firstHitConsumed=g_firstHitConsumed.load();
+    signals.attackPowerAlreadyIncludes=false; // still needs 1.10a verification
+    const whm::FirstHitDecision hit=whm::evaluateFirstHit(signals);
+    view.basePercent=whm::commonPercent(view.attack,view.defense,{});
+    // The big percentage may describe the NEXT first hit; whole-move damage
+    // estimates below deliberately do not use this first-hit-only factor.
+    view.commonPercent=whm::commonPercent(view.attack,view.defense,hit);
+    view.firstHitActive=hit.applies;
+    view.firstHitMultiplier=hit.applies?hit.multiplier:1.;
+
     auto amount=[&](const StaticMove &m){
         double type=m.kind=="spell"?own->spellDmgMultiplier:m.kind=="skill"?own->specialDmgMultiplier:1.;
         double multiplier=view.attack*view.defense*type;
@@ -253,26 +384,39 @@ std::vector<HudRow> composeHUD(const SokuLib::BattleManager *mgr) {
     std::string bestNotation,bestName;
     for(const auto &m:g_staticMoves){
         if(m.character!=view.character||m.kind!="skill")continue; // A non-SC featured move must be a special skill.
-        if(m.kind=="skill" && (m.card<100||m.card>=132||own->skilledSkillLevel[m.card-100]<0))continue;
+        if(m.card<100||m.card>=132||own->skilledSkillLevel[m.card-100]<0)continue;
         int damage=amount(m);
         if(damage>view.strongest.damage){
-            bestNotation=m.notation;bestName=m.name;
-            view.strongest={view.character,m.card,damage,m.name+" · "+m.notation,true};
+            bestNotation=whm::normalizeNotation(m.notation);bestName=m.name;
+            view.strongest=makeCard(view.character,m.card,damage,m.notation,
+                                    bestNotation,m.name,true);
         } else if(damage==view.strongest.damage&&m.card==view.strongest.card&&m.name==bestName){
-            bestNotation=whm::mergeSkillButtons(bestNotation,m.notation);
-            view.strongest.name=bestName+" · "+bestNotation;
+            bestNotation=whm::mergeSkillButtons(bestNotation,
+                                                whm::normalizeNotation(m.notation));
+            view.strongest.notation=bestNotation;
         }
     }
     for(const auto &card:own->handInfo.hand){
         if(card.id<200||card.id>=220)continue;
-        PanelCard shown{view.character,card.id,0,cardName(*own,card.id),true};
-        for(const auto &m:g_staticMoves)if(m.character==view.character&&m.kind=="spell"&&m.card==card.id)shown.damage=std::max(shown.damage,amount(m));
-        view.hand.push_back(shown);if(view.hand.size()==5)break;
+        const int cardId=static_cast<int>(card.id);
+        int damage=0;
+        for(const auto &m:g_staticMoves)
+            if(m.character==view.character&&m.kind=="spell"&&m.card==cardId)
+                damage=std::max(damage,amount(m));
+        view.hand.push_back(makeCard(view.character,cardId,damage,
+                                     "sc"+std::to_string(cardId),"",
+                                     cardName(*own,card.id),true));
+        if(view.hand.size()==5)break;
     }
     const auto &best=g_record.best();
     if(best.attributed&&best.damage>0){
-        int card=whm::cardForAction(view.character,best.actionId);
-        view.record={view.character,card,best.damage,actionName(*own,best.actionId),false};
+        const int action=best.actionId;
+        const int card=whm::cardForAction(view.character,action);
+        const MoveLabel label=labelForAction(*own,action);
+        PanelCard rec=makeCard(view.character,card,best.damage,
+                               label.notation,label.notation,label.fallback,false);
+        rec.names=label.names;
+        view.record=rec;
     }
     {std::lock_guard<std::mutex> guard(g_panelMutex);g_panelView=std::move(view);}
     return {{"什么最痛",-1}};
@@ -287,7 +431,36 @@ LRESULT CALLBACK panelProc(HWND hwnd, UINT msg, WPARAM w, LPARAM l) {
     if (msg == WM_PAINT) {
         PanelView view;
         { std::lock_guard<std::mutex> guard(g_panelMutex); view=g_panelView; }
+        // UI-owned state is applied at paint time so a button press is visible
+        // immediately, without the game thread touching any live object.
+        view.language=static_cast<whm::HudLanguage>(std::clamp(g_language.load(),0,2));
+        view.collapsed=g_collapsed.load();
         paintStyledPanel(hwnd,view,dllFolder()); return 0;
+    }
+    if (msg == WM_LBUTTONUP) {
+        RECT client{}; GetClientRect(hwnd,&client);
+        const int cw=client.right-client.left, chh=client.bottom-client.top;
+        if(cw<=0||chh<=0)return 0;
+        const int vx=static_cast<int>(LOWORD(l))*kPanelVirtualWidth/cw;
+        const int vy=static_cast<int>(HIWORD(l))*kPanelVirtualHeight/chh;
+        auto inside=[](int x,int y,const HudButton &b){
+            return x>=b.x&&x<b.x+b.w&&y>=b.y&&y<b.y+b.h;
+        };
+        if(g_collapsed.load()) {
+            g_collapsed.store(false); // the whole folded window is the "+"
+        } else {
+            bool handled=false;
+            for(int i=0;i<3;++i)
+                if(inside(vx,vy,kHudButtons[i])) {
+                    g_language.store(i);handled=true;break;
+                }
+            if(!handled&&inside(vx,vy,kHudButtons[3]))g_collapsed.store(true);
+            else if(!handled)return 0;
+        }
+        saveHudPreferences();
+        InvalidateRect(hwnd,nullptr,FALSE);
+        UpdateWindow(hwnd);
+        return 0;
     }
     return DefWindowProcW(hwnd, msg, w, l);
 }
@@ -315,24 +488,36 @@ void refreshPanel() {
     RECT frame; GetWindowRect(game, &frame);
     RECT work; SystemParametersInfoW(SPI_GETWORKAREA,0,&work,0);
     const int gameWidth=frame.right-frame.left, gameHeight=frame.bottom-frame.top;
-    const int panelHeight=std::max(180,gameWidth*290/1000);
-    if(gameHeight+panelHeight>work.bottom-work.top) {
-        const double scale=double(work.bottom-work.top-16)/(gameHeight+panelHeight);
-        int newWidth=static_cast<int>(gameWidth*scale),newHeight=static_cast<int>(gameHeight*scale);
-        SetWindowPos(game,nullptr,std::max<LONG>(work.left,frame.left),work.top,newWidth,newHeight,
-            SWP_NOACTIVATE|SWP_NOZORDER|SWP_ASYNCWINDOWPOS);
-        return;
-    }
-    if(frame.bottom+panelHeight>work.bottom) {
-        SetWindowPos(game,nullptr,frame.left,work.bottom-panelHeight-gameHeight,0,0,
-            SWP_NOSIZE|SWP_NOACTIVATE|SWP_NOZORDER|SWP_ASYNCWINDOWPOS);
-        return;
+    const int panelHeight=std::max(180,gameWidth*kPanelVirtualHeight/kPanelVirtualWidth);
+    const bool folded=g_collapsed.load();
+    // A folded panel reserves NO full-height space and never triggers the
+    // game-window resizing loop. Preference is separate from scene hiding.
+    if(!folded) {
+        if(gameHeight+panelHeight>work.bottom-work.top) {
+            const double scale=double(work.bottom-work.top-16)/(gameHeight+panelHeight);
+            int newWidth=static_cast<int>(gameWidth*scale),newHeight=static_cast<int>(gameHeight*scale);
+            SetWindowPos(game,nullptr,std::max<LONG>(work.left,frame.left),work.top,newWidth,newHeight,
+                SWP_NOACTIVATE|SWP_NOZORDER|SWP_ASYNCWINDOWPOS);
+            return;
+        }
+        if(frame.bottom+panelHeight>work.bottom) {
+            SetWindowPos(game,nullptr,frame.left,work.bottom-panelHeight-gameHeight,0,0,
+                SWP_NOSIZE|SWP_NOACTIVATE|SWP_NOZORDER|SWP_ASYNCWINDOWPOS);
+            return;
+        }
     }
     size_t rowCount;
     { std::lock_guard<std::mutex> guard(g_panelMutex); rowCount = g_panelRows.size(); }
-    SetWindowPos(g_panel, HWND_NOTOPMOST, frame.left, frame.bottom, frame.right-frame.left,
-        std::max<LONG>(180, (frame.right-frame.left)*290/1000),
-        SWP_NOACTIVATE | SWP_SHOWWINDOW);
+    if(folded) {
+        const int small=std::max(24,gameWidth*kPlusLogicalSize/kPanelVirtualWidth);
+        SetWindowPos(g_panel, HWND_NOTOPMOST,
+            frame.right-small-6, frame.bottom+4, small, small,
+            SWP_NOACTIVATE | SWP_SHOWWINDOW);
+    } else {
+        SetWindowPos(g_panel, HWND_NOTOPMOST, frame.left, frame.bottom, gameWidth,
+            std::max<LONG>(180, gameWidth*kPanelVirtualHeight/kPanelVirtualWidth),
+            SWP_NOACTIVATE | SWP_SHOWWINDOW);
+    }
     InvalidateRect(g_panel, nullptr, FALSE);
     // The game render thread does not pump a standard Win32 message loop.
     // Deliver WM_PAINT synchronously instead of leaving it queued forever.
@@ -436,6 +621,9 @@ int __fastcall onProcess(SokuLib::BattleManager *mgr) {
         g_rows.clear();
         g_lastRefresh = 0;
         g_probeCache.clear();
+        // Battle state is reset, but language/fold preferences are user state.
+        g_firstHitConsumed.store(false);
+        g_firstHitIdleFrames = 0;
         g_probeCharacter = -1;
         g_probeDataSource = nullptr;
     }
@@ -468,6 +656,9 @@ int __fastcall onProcess(SokuLib::BattleManager *mgr) {
     const auto *attacker = viewPlayer(mgr, side);
     const int conservativeAction = attacker->boxData.hitBoxCount > 0 ? candidateAction : -1;
     g_record.observe(before, after, conservativeAction, mgr->frameCount);
+    // Only a confirmed direct hit consumes this combo's first-hit qualifier.
+    // Unattributed projectile damage or blocked pokes do not count here.
+    if(after<before&&conservativeAction>=0)g_firstHitConsumed.store(true);
     if (mgr->frameCount - g_lastRefresh >= 12 || g_lastRefresh == 0) {
         g_lastRefresh = mgr->frameCount;
         updateRows(composeHUD(mgr));
@@ -489,6 +680,8 @@ void __fastcall onExit(SokuLib::BattleManager *mgr) {
     }
     g_lastFrame = 0;
     g_lastRefresh = 0;
+    g_firstHitConsumed.store(false);
+    g_firstHitIdleFrames = 0;
     g_displayText.clear();
     g_rows.clear();
     (mgr->*g_originalExit)();
@@ -508,6 +701,25 @@ void loadSettings() {
     g_y = GetPrivateProfileIntA("HUD", "Y", g_y, ini.c_str());
     g_w = std::max(170, std::min(400, static_cast<int>(GetPrivateProfileIntA("HUD", "Width", g_w, ini.c_str()))));
     g_h = std::max(170, std::min(430, static_cast<int>(GetPrivateProfileIntA("HUD", "Height", g_h, ini.c_str()))));
+    char language[8] = {};
+    GetPrivateProfileStringA("HUD", "Language", "CN", language, sizeof(language), ini.c_str());
+    const std::string chosen(language);
+    g_language.store(chosen == "JP" ? 1 : chosen == "EN" ? 2 : 0);
+    g_collapsed.store(GetPrivateProfileIntA("HUD", "Collapsed", 0, ini.c_str()) != 0);
+    // 1602 sourced rows: character, card, notation, zh-CN, en, ja, source.
+    // Index 0/1/2 of names follows HudLanguage (Chinese/Japanese/English).
+    std::ifstream names(dllFolder()+"MoveNames.tsv");
+    std::string nameLine;
+    while(std::getline(names,nameLine)) {
+        if(nameLine.empty()||nameLine[0]=='#')continue;
+        std::vector<std::string> cells;std::istringstream ns(nameLine);std::string cell;
+        while(std::getline(ns,cell,'\t'))cells.push_back(cell);
+        if(cells.size()<6)continue;
+        try {
+            g_moveNames[moveNameKey(std::stoi(cells[0]),std::stoi(cells[1]),cells[2])] =
+                MoveNameEntry{{cells[3],cells[5],cells[4]}};
+        } catch(...) {}
+    }
     std::ifstream data(dllFolder()+"FrameData.txt");
     std::string line;
     while(std::getline(data,line)) {

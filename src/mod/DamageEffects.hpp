@@ -11,6 +11,14 @@ inline void collectDamageEffects(PanelView &v,const void *own, const void *enemy
     auto sane=[](double n){return std::isfinite(n)&&n>0&&n<=50.;};
     if(v.character<0||v.character>19||v.opponentCharacter<0||v.opponentCharacter>19||
        !sane(v.attack)||!sane(v.defense)||!sane(v.skillMultiplier)||!sane(v.spellMultiplier))return;
+    // +0x198 is GameObjectBase::counterHitDmgMultiplier (NOT +0x530). It is
+    // published as a plain signal: only FirstHit.hpp may fold it into the
+    // common percentage, and only when every conservative condition holds.
+    const float chLocal=effectField<float>(own,0x198);
+    v.firstHitMultiplier=(std::isfinite(chLocal)&&chLocal>1.008&&chLocal<10.)?
+        static_cast<double>(chLocal):1.;
+    // A sealed effective weather belongs to the affected player (0x526).
+    v.weatherSealed=effectField<unsigned short>(own,0x526)>0;
     double accountedAttack=1.,accountedDefense=1.;
     auto factor=[](double n){char b[64];std::snprintf(b,sizeof(b),"×%.2f",n);return std::string(b);};
     auto add=[&](int ch,int card,int copies,const char *name,const std::string &value){v.effects.push_back({ch,card,copies,name,value});};
@@ -47,8 +55,7 @@ inline void collectDamageEffects(PanelView &v,const void *own, const void *enemy
     // weather factor. CH and reflection are annotations, never whole-move buffs.
     if(std::abs(v.skillMultiplier-1.)>.008)add(v.character,v.weather==4?1004:-1,1,v.weather==4?"冰雹·必杀":"必杀技修正",factor(v.skillMultiplier));
     if(std::abs(v.spellMultiplier-1.)>.008)add(v.character,v.weather==1?1001:-1,1,v.weather==1?"雾雨·符卡":"符卡修正",factor(v.spellMultiplier));
-    float ch=effectField<float>(own,0x198);
-    if(std::isfinite(ch)&&ch>1.008&&ch<10)add(v.character,v.character==17?(ch>=2?211:109):-1,1,"CH首段强化",factor(ch)+" 仅首段");
+    if(v.firstHitMultiplier>1.)add(v.character,v.character==17?(v.firstHitMultiplier>=2?211:109):-1,1,"CH首段强化",factor(v.firstHitMultiplier)+" 仅首段");
     if(effectField<unsigned short>(enemy,0x526))add(14,201,1,"目标天气封印","按有效倍率");
     const float absorb=effectField<float>(own,0x550);
     if(std::isfinite(absorb)&&absorb>0&&absorb<=1)add(v.character,v.character==6?208:1006,1,"伤害吸血",factor(absorb)+" 另计");
