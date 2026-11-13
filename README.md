@@ -9,6 +9,7 @@ An experimental, local-only damage HUD mod for **Touhou Hisoutensoku (TH12.3) v1
 - A **read-only** Chinese companion panel below the game window, with layered gold/purple frames, illuminated damage numbers, a built-in illustrated night-scene backdrop and actual card artwork where available.
 - Stacked control-rod icons (10% attack per rod), compact defense/type/weather effects, the strongest **special move** (not ordinary normals), the provisional match damage record, and up to five SC cards in **exact live hand order**.
 - The SC strip uses one fixed position for both host and client. No card selection or interaction is added to the game window.
+- In ordinary network 1v1, the panel selects **only the locally controlled fighter**: SokuLib `VSCLIENT` uses P1/left, `VSSERVER` uses P2/right (matching SokuMods DiscordIntegration). The opponent contributes only defensive modifiers needed to estimate our outgoing damage. Spectator/replay views never treat a remote player as self.
 - A dedicated window thread and copied display snapshots; the panel hides outside supported battle scenes.
 - `config/FrameData.txt` contains 1,372 sourced static reference records across 20 characters from [Cleista frame data](https://soku.cleista.cc/framedata). Each record retains its source URL. The old animation scan is no longer used to rank moves in the panel.
 - Runtime attack/defense/type multipliers scale the static reference figures. Estimated numbers use an approximation marker.
