@@ -6,6 +6,10 @@ MOD 在游戏窗口下方绘制一个伴随面板，读取运行时状态做**�
 
 > 当前状态：功能已成型，并已根据用户在 Steam Deck / Proton 上的实机截图完成多轮调整。联网对战、观战、回放等场景仍待真机验收，详见「验证状态与已知限制」。
 
+![WhatHurtsMost HUD 面板实机截图](docs/hud-panel.png)
+
+*实机截图，仅截取 MOD 面板部分：左侧「伤害影响 · 总修正」，中间「最痛必杀技」与「最痛记录」，底部为当前手牌，右下角是 CN / JP / EN / 收起控制区。*
+
 ---
 
 ## 面板内容
@@ -118,6 +122,7 @@ CMake 会拉取固定版本的 [SokuLib](https://github.com/SokuDev/SokuLib) 与
 | `src/mod/` | SWRSToys 1.10a DLL、运行时快照采集、Win32/GDI 面板绘制与交互 |
 | `config/` | 配置样例与带来源的静态数据 |
 | `deploy/` | Steam Deck 安装脚本与说明 |
+| `docs/` | README 使用的面板截图 |
 | `tests/` | 可移植核心测试与 Windows 效果快照测试 |
 | `.github/workflows/build.yml` | Windows x86 CI |
 
