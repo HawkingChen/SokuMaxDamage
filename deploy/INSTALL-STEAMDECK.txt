@@ -1,0 +1,30 @@
+SokuMaxDamage v0.3.0-test.1 — 安装说明 (Steam Deck / Proton)
+=================================================
+
+此 ZIP 是《东方非想天则》1.10a 的实验性 MOD 构建（非稳定版）。
+已知限制：没有随包提供卡牌 icons/ PNG 素材，需保留你此前安装版本的 icons/。
+新增图1＋图2风格：制御棒卡堆、金紫边框、夜景剪影、发光数字、固定底部 SC。
+目前不保证所有招式/天气/角色 Buff 的伤害估值准确，也未完成联网测试。
+
+安装：
+1. 完全退出 TH123、SokuLauncher 和正在使用游戏文件的程序。
+2. 将 ZIP 解压到任意目录；不要覆盖原游戏整个目录。
+3. 在 Steam Deck 桌面模式打开 Konsole，进入解压目录：
+   cd "/path/to/extracted"
+   bash install-steamdeck.sh /run/media/deck/share/fxtz/th123
+4. 脚本自动备份原有 modules/WhatHurtsMost，并只替换 DLL 和数据/配置文件；
+   原有 icons/、art/、其它 MOD、游戏文件、SokuLauncher/SokuModLoader 配置保留。
+5. 如果是第一次安装，需要在实际使用的 SWRSToys/SokuModLoader 模块配置中启用
+   modules/WhatHurtsMost/WhatHurtsMost.dll；
+   你此前已安装 0.2.0-test，通常无需重复配置。
+6. 推荐先用 VS Player 或练习模式确认可进入/退出、不卡死、扩展窗口能显示。
+
+回滚：脚本会打印备份目录，退出游戏后将备份中全部内容复制回
+ /run/media/deck/share/fxtz/th123/modules/WhatHurtsMost/
+（例如 cp -a /home/deck/Backups/SokuMaxDamage/test-某个时间/. /run/media/deck/share/fxtz/th123/modules/WhatHurtsMost/）
+
+注意：
+- 没有游戏内点击操作，SC 底部统一排布，按实际手牌顺序更新。
+- 额外 PNG 背景可选 art/panel-bg.png；不提供时使用内置夜景。
+- 伤害估值依据运行时倍率和 1372 条 Cleista 参考数据，部分值标示估算。
+- 本包由 Windows x86 GitHub Actions 自动构建，未在本会话中操作 Steam Deck 实机。
