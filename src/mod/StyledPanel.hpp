@@ -284,10 +284,16 @@ inline void paintStyledPanel(HWND window, const PanelView &v, const std::string 
         rule(323,166+j*2,554,166+j*2,RGB(65+j*11,42+j*8,45+j*3));
         rule(707,166+j*2,941,166+j*2,RGB(65+j*11,42+j*8,45+j*3));
     }
-    // Overall layered decorative frame.
-    rounded(2,2,996,286,RGB(24,20,38),RGB(120,79,145),16,2);
-    // Fill the inside without covering the scene above. Outline frame is
-    // decorative; the actual content panels are solid and legible.
+    // Outer frame with a hollow brush: keep the illustrated backdrop visible.
+    {
+        HPEN edge=CreatePen(PS_SOLID,2,RGB(120,79,145));
+        HGDIOBJ oldPen=SelectObject(dc,edge);
+        HGDIOBJ oldBrush=SelectObject(dc,GetStockObject(NULL_BRUSH));
+        RoundRect(dc,2,2,998,288,16,16);
+        SelectObject(dc,oldBrush);
+        SelectObject(dc,oldPen);
+        DeleteObject(edge);
+    }
     rule(14,11,986,11,RGB(180,127,191));
     rule(14,281,986,281,RGB(159,109,176));
     disk(9,9,4,gold); disk(987,9,4,gold);
