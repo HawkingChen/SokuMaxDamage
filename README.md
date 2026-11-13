@@ -28,7 +28,23 @@ ctest --test-dir build -C Release --output-on-failure
 cmake --install build --config Release --prefix staging
 ```
 
-CMake fetches pinned upstream [SokuLib](https://github.com/SokuDev/SokuLib) and [ModTemplate](https://github.com/SokuDev/ModTemplate) sources. Windows x86 compilation and linking, as well as portable core tests, **passed GitHub Actions on 2026-11-13** ([CI run](https://github.com/HawkingChen/SokuMaxDamage/actions/runs/43396029191)). This confirms buildability only: **loading in the game and online compatibility remain unverified**. The workflow does not publish artifacts or releases.
+CMake fetches pinned upstream [SokuLib](https://github.com/SokuDev/SokuLib) and [ModTemplate](https://github.com/SokuDev/ModTemplate) sources. Windows x86 compilation and linking, as well as portable core tests, **passed GitHub Actions on 2026-11-13** ([CI run](https://github.com/HawkingChen/SokuMaxDamage/actions/runs/43396029191)). The latest [v0.3.0-test.1 CI run](https://github.com/HawkingChen/SokuMaxDamage/actions/runs/43433396053) successfully compiled and packaged a Windows x86 DLL, ran core tests, checked the PE32 machine type and published a **test pre-release ZIP**. **Runtime compatibility, accurate damage values and real online play remain unverified.**
+
+## Test ZIP: v0.3.0-test.1
+
+**[Download the Windows x86 Steam Deck test ZIP](https://github.com/HawkingChen/SokuMaxDamage/releases/download/v0.3.0-test.1/SokuMaxDamage-v0.3.0-test.1-win32.zip)** (prerelease, not yet gameplay verified).
+
+The ZIP contains `WhatHurtsMost.dll`, `FrameData.txt`, `MoveProfiles.txt`, `WikiMaxProfiles.txt`, `WhatHurtsMost.ini`, `SHA256SUMS.txt`, `INSTALL-STEAMDECK.txt`, and a backup-first `install-steamdeck.sh`.
+
+**Steam Deck upgrade (existing installation):** exit the game, extract the ZIP to an arbitrary directory, open Konsole there and run:
+
+```bash
+bash install-steamdeck.sh /run/media/deck/share/fxtz/th123
+```
+
+The script backs up `modules/WhatHurtsMost/` in `~/Backups/SokuMaxDamage/` before replacing the DLL and data/config files. It **does not delete existing `icons/`, `art/` or change any other mods or launcher settings**. The 460 card PNGs from an earlier test are **not included** (they were not uploaded into this public repository). To see the full artwork, retain the preexisting icons folder.
+
+If this is a first installation, enable the DLL in your actual SokuModLoader/SWRSToys module settings. Read the included `INSTALL-STEAMDECK.txt` for rollback instructions.
 
 ## Installation (unverified)
 
