@@ -29,7 +29,7 @@ inline constexpr HudTextEntry kHudTexts[] = {
     /* Strongest   */ {"最痛必杀技", "最大ダメージ必殺技", "STRONGEST SPECIAL"},
     /* Record      */ {"最痛记录", "最大ダメージ記録", "BEST HIT"},
     /* Hand        */ {"当前手牌", "手札", "CURRENT HAND"},
-    /* SpellMax    */ {"SC 最大伤害", "スペカ最大ダメージ", "SC MAX DAMAGE"},
+    /* SpellMax    */ {"SC 最大伤害", "スペカ最大値", "SC MAX DAMAGE"},
     /* NoEffects   */ {"当前无额外效果", "追加効果なし", "NO EXTRA EFFECTS"},
     /* NoHand      */ {"目前手牌中没有 SC", "手札にスペルカードなし", "NO SC IN HAND"},
     /* NoSkill     */ {"暂无可靠必杀技资料", "必殺技データなし", "NO VERIFIED SPECIAL DATA"},
