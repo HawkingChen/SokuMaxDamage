@@ -24,6 +24,7 @@ private:
     ActualRecord best_{};
     ActualRecord active_{};
     unsigned lastFrame_ = 0;
+    unsigned lastHitFrame_ = 0;
     int unattributedDamage_ = 0;
 };
 }

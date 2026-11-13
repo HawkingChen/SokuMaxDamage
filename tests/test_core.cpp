@@ -70,5 +70,10 @@ int main() {
     assert(record.best().damage == 600);
     record.reset();
     assert(record.best().damage == 0);
+    record.observe(10000, 9900, 500, 1);
+    for (unsigned frame = 2; frame <= 20; ++frame)
+        record.observe(9900, 9900, 500, frame);
+    record.observe(9900, 9750, 500, 21);
+    assert(record.best().damage == 150);
     std::cout << "All core tests passed\n";
 }
