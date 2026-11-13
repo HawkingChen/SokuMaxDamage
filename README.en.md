@@ -6,9 +6,13 @@ A damage reference HUD for **Touhou Hisoutensoku v1.10a**. A companion panel bel
 
 **Battle data is read-only.** The mod reads runtime battle state for estimates and display. It does not change actual damage, character stats or battle state, modify network packets, interfere with the random number generator (RNG), or send gameplay inputs. Image extraction leaves the original game archives untouched; generated images and UI preferences are stored in the mod’s own folder.
 
-![Meiling: damage modifiers and Colorful Rain record](docs/hud-meiling.png)
+![Full interface: game and companion HUD](docs/hud-meiling.png)
 
-![Youmu: spell cards in hand and best hit](docs/hud-youmu.png)
+*Full interface*
+
+![HUD detail: damage modifiers, best hit and current hand](docs/hud-youmu.png)
+
+*HUD detail*
 
 ## Install
 
