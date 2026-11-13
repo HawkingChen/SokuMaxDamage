@@ -17,6 +17,12 @@ inline void collectDamageEffects(PanelView &v,const void *own, const void *enemy
     const float chLocal=effectField<float>(own,0x198);
     v.firstHitMultiplier=(std::isfinite(chLocal)&&chLocal>1.008&&chLocal<10.)?
         static_cast<double>(chLocal):1.;
+    // Meiling update: +0x890 is the buff timer; +0x1A2 counts forced
+    // first-hit CHs. Unlike an attack box, these remain valid while idle.
+    // Require both: a leftover multiplier alone must never arm the display.
+    v.forcedFirstHitArmed=v.character==17&&
+        effectField<unsigned short>(own,0x890)>0&&
+        effectField<short>(own,0x1a2)>0;
     // A sealed effective weather belongs to the affected player (0x526).
     v.weatherSealed=effectField<unsigned short>(own,0x526)>0;
     double accountedAttack=1.,accountedDefense=1.;

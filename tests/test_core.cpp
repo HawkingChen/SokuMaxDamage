@@ -213,6 +213,20 @@ int main() {
     assert(!evaluateFirstHit(hitstun).applies);
     FirstHitSignals projectile = ready; projectile.attackConfirmed = false;
     assert(!evaluateFirstHit(projectile).applies);
+    // Regression: armed Tiger Chi Release must show the NEXT first hit
+    // while standing idle, not only flash during active hitbox frames.
+    FirstHitSignals tigerIdle = ready;
+    tigerIdle.attackConfirmed = false;
+    tigerIdle.forcedFirstHitArmed = true;
+    assert(evaluateFirstHit(tigerIdle).applies);
+    tigerIdle.firstHitConsumed = true;
+    assert(!evaluateFirstHit(tigerIdle).applies);
+    tigerIdle.firstHitConsumed = false;
+    tigerIdle.comboIdle = false;
+    assert(!evaluateFirstHit(tigerIdle).applies);
+    tigerIdle.comboIdle = true;
+    tigerIdle.sourceConfirmed = false;
+    assert(!evaluateFirstHit(tigerIdle).applies);
     FirstHitSignals duplicate = ready; duplicate.attackPowerAlreadyIncludes = true;
     assert(!evaluateFirstHit(duplicate).applies);
     assert(std::abs(commonPercent(0., 1., {}) - 100.) < 1e-9);

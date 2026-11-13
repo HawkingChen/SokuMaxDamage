@@ -26,6 +26,9 @@ struct FirstHitSignals {
     // the same effect twice.
     bool attackPowerAlreadyIncludes = false;
     bool moveCategorySupported = true;
+    // An active Meiling buff guarantees a forced CH on the next first hit.
+    // This is readiness, so idle/startup needs no currently active hitbox.
+    bool forcedFirstHitArmed = false;
 };
 
 struct FirstHitDecision {
@@ -37,7 +40,7 @@ constexpr FirstHitDecision evaluateFirstHit(const FirstHitSignals &s) {
     const double m = s.localMultiplier;
     if (!(m > 1.008) || !(m < 10.)) return {};
     if (!s.sourceConfirmed || !s.comboIdle || !s.targetOutOfHitstun ||
-        !s.attackConfirmed || s.firstHitConsumed ||
+        (!s.attackConfirmed && !s.forcedFirstHitArmed) || s.firstHitConsumed ||
         s.attackPowerAlreadyIncludes || !s.moveCategorySupported) return {};
     return {true, m > 4. ? 4. : m};
 }

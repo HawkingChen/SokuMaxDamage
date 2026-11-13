@@ -20,6 +20,21 @@ int main(){
  put<signed char>(own,0x6a7,4);put<signed char>(own,0x6ab,-1);put<int>(own,0x894,1);put<int>(own,0x8a0,120);put<signed char>(own,0x6af,4);put<int>(own,0x8a4,60);
  collectDamageEffects(curse,own.data(),enemy.data());assert(curse.effects.size()==2);assert(curse.effects[0].card==103&&curse.effects[1].card==111);
  own={};enemy={};PanelView conditional;conditional.character=17;conditional.opponentCharacter=0;put<float>(own,0x198,2.f);put<float>(enemy,0x558,.3f);collectDamageEffects(conditional,own.data(),enemy.data());assert(conditional.effects.size()==2);assert(conditional.attack==1.&&conditional.defense==1.); // No whole-move CH/reflection multiplication.
+ // Byte-level readiness requires the correct character, live timer and
+ // unconsumed forced-CH count; a stale +0x198 value is insufficient.
+ assert(!conditional.forcedFirstHitArmed);
+ put<unsigned short>(own,0x890,120);put<short>(own,0x1a2,1);
+ PanelView armed;armed.character=17;armed.opponentCharacter=0;
+ collectDamageEffects(armed,own.data(),enemy.data());assert(armed.forcedFirstHitArmed);
+ put<short>(own,0x1a2,0);
+ PanelView spent;spent.character=17;spent.opponentCharacter=0;
+ collectDamageEffects(spent,own.data(),enemy.data());assert(!spent.forcedFirstHitArmed);
+ put<short>(own,0x1a2,1);put<unsigned short>(own,0x890,0);
+ PanelView expired;expired.character=17;expired.opponentCharacter=0;
+ collectDamageEffects(expired,own.data(),enemy.data());assert(!expired.forcedFirstHitArmed);
+ put<unsigned short>(own,0x890,120);
+ PanelView other;other.character=0;other.opponentCharacter=17;
+ collectDamageEffects(other,own.data(),enemy.data());assert(!other.forcedFirstHitArmed);
  PanelView invalid;invalid.character=-1;collectDamageEffects(invalid,own.data(),enemy.data());assert(invalid.effects.empty());
  std::cout<<"Effect snapshots, stack counts, attribution and no-double-counting passed\n";
 }

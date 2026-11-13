@@ -353,8 +353,9 @@ std::vector<HudRow> composeHUD(const SokuLib::BattleManager *mgr) {
 
     // First-hit-only bonus. SokuLib documents comboCount at +0x4B4 and untech
     // at +0x4BA but not whose counter owns a combo, so BOTH players must be
-    // idle. A live own hitbox excludes projectiles (whose boxes live on child
-    // objects). Frame counting is mere debounce, never the qualification.
+    // idle. Meiling's active forced-first-hit buff is visible even while idle;
+    // other conditional CH sources still require a live own attack box.
+    // Frame counting is mere debounce, never the qualification.
     const bool comboIdle=effectField<short>(&ownCounters,0x4b4)==0&&
                          effectField<short>(&enemyCounters,0x4b4)==0;
     const bool outOfHitstun=effectField<unsigned short>(&enemyCounters,0x4ba)==0;
@@ -367,12 +368,13 @@ std::vector<HudRow> composeHUD(const SokuLib::BattleManager *mgr) {
     } else if(++g_firstHitIdleFrames>=3) g_firstHitConsumed.store(false);
     whm::FirstHitSignals signals;
     signals.localMultiplier=view.firstHitMultiplier;
-    signals.sourceConfirmed=(ownCharacter==17&&view.firstHitMultiplier>1.)||
+    signals.sourceConfirmed=(view.forcedFirstHitArmed&&view.firstHitMultiplier>1.)||
                             (view.weather==16&&view.firstHitMultiplier>1.)||
                             effectField<short>(&ownCounters,0x1a2)>0;
     signals.comboIdle=comboIdle;
     signals.targetOutOfHitstun=outOfHitstun;
     signals.attackConfirmed=own->boxData.hitBoxCount>0;
+    signals.forcedFirstHitArmed=view.forcedFirstHitArmed;
     signals.firstHitConsumed=g_firstHitConsumed.load();
     signals.attackPowerAlreadyIncludes=false; // still needs 1.10a verification
     const whm::FirstHitDecision hit=whm::evaluateFirstHit(signals);

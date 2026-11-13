@@ -48,6 +48,7 @@ struct PanelView {
     double commonPercent = 100., basePercent = 100.;
     double firstHitMultiplier = 1.;
     bool firstHitActive = false;
+    bool forcedFirstHitArmed = false;
     bool weatherVisible = false;
     bool weatherSealed = false;
     whm::HudLanguage language = whm::HudLanguage::Chinese;
