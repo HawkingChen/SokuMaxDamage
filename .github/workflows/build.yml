@@ -1,8 +1,10 @@
-name: Windows x86 build and portable core tests
+name: Windows x86 build, tests and test ZIP
 on:
   push:
   workflow_dispatch:
   pull_request:
+permissions:
+  contents: write
 jobs:
   windows:
     runs-on: windows-2022
@@ -15,3 +17,47 @@ jobs:
         run: cmake --build build --config Release --target WhatHurtsMost whm_tests --parallel
       - name: Test core
         run: ctest --test-dir build -C Release --output-on-failure
+      - name: Stage and validate test ZIP
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $root = Join-Path $PWD 'dist/WhatHurtsMost'
+          cmake --install build --config Release --prefix $root
+          if ($LASTEXITCODE -ne 0) { throw 'CMake install failed' }
+          $required = @('WhatHurtsMost.dll','FrameData.txt','MoveProfiles.txt','WikiMaxProfiles.txt','WhatHurtsMost.ini')
+          foreach ($name in $required) {
+            $p = Join-Path $root $name
+            if (!(Test-Path -LiteralPath $p) -or (Get-Item -LiteralPath $p).Length -eq 0) { throw "Missing package file: $name" }
+          }
+          $dllPath = Join-Path $root 'WhatHurtsMost.dll'
+          $data = [System.IO.File]::ReadAllBytes($dllPath)
+          if ($data.Length -lt 4096 -or $data[0] -ne 0x4d -or $data[1] -ne 0x5a) { throw 'Invalid PE/DLL header' }
+          $pe = [BitConverter]::ToInt32($data, 0x3c)
+          if ($pe -lt 64 -or $pe + 6 -ge $data.Length -or [BitConverter]::ToUInt16($data, $pe + 4) -ne 0x14c) { throw 'Expected Windows x86 DLL' }
+          Copy-Item deploy/INSTALL-STEAMDECK.txt (Join-Path $root 'INSTALL-STEAMDECK.txt')
+          $script = [IO.File]::ReadAllText((Join-Path $PWD 'deploy/install-steamdeck.sh')).Replace("`r`n", "`n")
+          [IO.File]::WriteAllText((Join-Path $root 'install-steamdeck.sh'), $script, [System.Text.UTF8Encoding]::new($false))
+          $lines = foreach ($name in ($required + 'install-steamdeck.sh' + 'INSTALL-STEAMDECK.txt')) {
+            $hash = (Get-FileHash -Algorithm SHA256 -LiteralPath (Join-Path $root $name)).Hash.ToLowerInvariant()
+            "$hash  $name"
+          }
+          [IO.File]::WriteAllLines((Join-Path $root 'SHA256SUMS.txt'), $lines, [System.Text.UTF8Encoding]::new($false))
+          New-Item -ItemType Directory -Force -Path 'dist' | Out-Null
+          Compress-Archive -Path (Join-Path $root '*') -DestinationPath 'dist/SokuMaxDamage-v0.3.0-test.1-win32.zip' -Force
+          Get-ChildItem $root | Select-Object Name,Length | Format-Table
+          Get-Item 'dist/SokuMaxDamage-v0.3.0-test.1-win32.zip' | Select-Object Name,Length | Format-Table
+      - name: Upload test ZIP artifact
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: SokuMaxDamage-v0.3.0-test.1-win32
+          path: dist/SokuMaxDamage-v0.3.0-test.1-win32.zip
+          if-no-files-found: error
+          retention-days: 30
+      - name: Publish one-off test prerelease
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main' && contains(github.event.head_commit.message, '[package-test]')
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create 'v0.3.0-test.1' 'dist/SokuMaxDamage-v0.3.0-test.1-win32.zip' --repo '${{ github.repository }}' --target '${{ github.sha }}' --title 'SokuMaxDamage v0.3.0-test.1 (Windows x86 / Steam Deck)' --prerelease --notes 'Experimental test ZIP. Includes Win32 DLL, 1372 sourced frame-data records, config, Steam Deck backup/install script and SHA256 hashes. No PNG icons included: keep the preexisting icons folder. No online or Steam Deck gameplay verification on this build.'
