@@ -343,6 +343,9 @@ std::vector<HudRow> composeHUD(const SokuLib::BattleManager *mgr) {
     view.spellMultiplier=own->spellDmgMultiplier;
     view.weather=static_cast<int>(ownCounters.effectiveWeather);
     view.hpFactor=whm::gutsFactor(enemy->HP);
+    // Format ONCE, before the effect rows are built, so the grey factor and
+    // the "根性补正" row are byte-identical strings in the same snapshot.
+    view.gutsText=whm::gutsLabel(view.hpFactor);
     collectDamageEffects(view,&ownCounters,&enemyCounters);
     // Weather text follows effective weather / seal, not the global name.
     view.weatherVisible=whm::weatherLabelVisible(view.weather,view.weatherSealed,

@@ -66,6 +66,14 @@ inline std::string hudFactor(double value, int decimals) {
     return std::string(buffer);
 }
 
+// One shared, already-formatted guts label. The grey factor next to the big
+// percentage and the "根性补正" effect row MUST use this exact same string:
+// formatting them independently previously produced 0.70 vs 0.71 at a
+// rounding boundary, and two snapshots could drift apart for other reasons.
+inline std::string gutsLabel(double hpFactor) {
+    return "×" + hudFactor(hpFactor, 2);
+}
+
 // j/f prefixes become upper case and the separator dot is removed:
 // j.2A -> J2A, f.5A -> F5A, j.623B/C -> J623B/C. Full English skill names
 // are deliberately left untouched, and ground/air variants stay distinct.

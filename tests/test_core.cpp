@@ -160,6 +160,10 @@ int main() {
     assert(hudFactor(0.705, 2) == hudFactor(0.705, 2));
     assert(hudFactor(1., 1) == "1.0");
     assert(hudFactor(0.7, 2) == "0.70");
+    // Regression: the grey factor and the "根性补正" row share ONE formatted
+    // string, so a rounding boundary can never show 0.70 vs 0.71 again.
+    assert(gutsLabel(0.705) == std::string("×") + hudFactor(0.705, 2));
+    assert(gutsLabel(1.) == "×1.00");
 
     // Regression: normal attacks keep the source spelling (j.2A) as their
     // "name" while notation is normalized (J2A). The caption must show one

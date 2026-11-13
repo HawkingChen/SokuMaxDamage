@@ -61,5 +61,8 @@ inline void collectDamageEffects(PanelView &v,const void *own, const void *enemy
     const float absorb=effectField<float>(own,0x550);
     if(std::isfinite(absorb)&&absorb>0&&absorb<=1)add(v.character,v.character==6?208:1006,1,"伤害吸血",factor(absorb)+" 另计");
     if(v.weather==16)add(v.character,1016,1,"黄沙CH","可CH首段×1.33");
-    if(v.hpFactor<.999)add(v.opponentCharacter,-1,1,"根性补正",factor(v.hpFactor));
+    // Reuse the exact label rendered beside the big percentage. Never format
+    // hpFactor a second time here: that was the source of the 0.01 discrepancy.
+    if(v.hpFactor<.999)add(v.opponentCharacter,-1,1,"根性补正",
+                           v.gutsText.empty()?factor(v.hpFactor):v.gutsText);
 }

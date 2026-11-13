@@ -44,6 +44,7 @@ struct PanelView {
     double attack = 1., defense = 1.;
     double skillMultiplier = 1., spellMultiplier = 1.;
     double hpFactor = 1.;
+    std::string gutsText;  // one formatted label shared by both guts displays
     double commonPercent = 100., basePercent = 100.;
     double firstHitMultiplier = 1.;
     bool firstHitActive = false;
@@ -403,7 +404,8 @@ inline void paintStyledPanel(HWND window, const PanelView &v, const std::string 
     const whm::NumberPalette heat = whm::paletteForPercent(v.commonPercent);
     number(panelPercent(v.commonPercent),24,44,116,50,42,DT_LEFT,&heat);
     // Guts stays visually subordinate: small, low-contrast grey.
-    write(L"×"+panelWide(panelFactor(v.hpFactor,2)),142,68,66,20,13,
+    const std::string guts=v.gutsText.empty()?whm::gutsLabel(v.hpFactor):v.gutsText;
+    write(panelWide(guts),142,68,66,20,13,
           quietGrey,DT_LEFT,L"Georgia");
     if(v.firstHitActive) {
         write(localized(whm::HudTextKey::FirstHit)+L" ×"+
