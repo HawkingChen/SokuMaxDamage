@@ -17,6 +17,7 @@
 #include <mutex>
 #include <cstdio>
 #include <cmath>
+#include <cstddef>
 #include <cstring>
 #include <fstream>
 #include <sstream>
@@ -201,6 +202,10 @@ const whm::Move *findProbe(whm::MoveKind kind, int id) {
 
 std::mutex g_panelMutex;
 PanelView g_panelView;
+// The pinned v2::Player has incorrect late-layout card-counter offsets.
+// The legacy manager exposes the verified original 1.10a layout.
+static_assert(offsetof(SokuLib::CharacterManager, sacrificialDolls)==0x840);
+static_assert(offsetof(SokuLib::CharacterManager, controlRod)==0x844);
 struct StaticMove { int character,card,damage; std::string kind,name,notation; };
 std::vector<StaticMove> g_staticMoves;
 std::vector<HudRow> composeHUD(const SokuLib::BattleManager *mgr) {
@@ -210,8 +215,10 @@ std::vector<HudRow> composeHUD(const SokuLib::BattleManager *mgr) {
     PanelView view;view.character=static_cast<int>(own->characterIndex);
     view.attack=own->attackPower;view.defense=enemy->defensePower;
     view.opponentCharacter=static_cast<int>(enemy->characterIndex);
-    view.rods=static_cast<int>(own->controlRod);
-    view.dolls=static_cast<int>(enemy->sacrificialDolls); // Damage dealt: use opponent's defense cards.
+    const auto &ownCounters=side==0?mgr->leftCharacterManager:mgr->rightCharacterManager;
+    const auto &enemyCounters=side==0?mgr->rightCharacterManager:mgr->leftCharacterManager;
+    view.rods=static_cast<int>(ownCounters.controlRod);
+    view.dolls=static_cast<int>(enemyCounters.sacrificialDolls); // Target's defense cards.
     view.skillMultiplier=own->specialDmgMultiplier;
     view.spellMultiplier=own->spellDmgMultiplier;
     view.weather=static_cast<int>(SokuLib::activeWeather);
